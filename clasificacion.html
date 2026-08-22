@@ -10,9 +10,8 @@
     <title>Clasificación | Azulones News</title>
 
     <meta name="description"
-        content="Clasificación actualizada de LaLiga 2026/27. Todos los equipos, puntos, partidos y resultados.">
+        content="Clasificación actualizada de LaLiga EA Sports 2026/27. Todos los equipos, puntos, resultados y estadísticas.">
 
-    <!-- Favicon -->
     <link rel="icon" href="img/logo/logo.png">
 
     <!-- Bootstrap -->
@@ -25,28 +24,23 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
 
-    <!-- API-SPORTS WIDGETS V3 -->
-    <script
-        type="module"
-        crossorigin
-        src="https://widgets.api-sports.io/3.1.0/widgets.js">
-    </script>
-
     <style>
 
         body {
             background: #f5f7fa;
         }
 
-        /* CABECERA */
+        /* ==========================
+           CABECERA
+        ========================== */
 
         .classification-header {
             background: linear-gradient(135deg, #0066cc, #004b99);
             color: white;
             border-radius: 0 0 20px 20px;
             padding: 45px 35px;
-            margin-bottom: 35px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            margin-bottom: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
         }
 
         .classification-header h1 {
@@ -61,18 +55,33 @@
             opacity: 0.9;
         }
 
-        /* AVISO */
+
+        /* ==========================
+           AVISO ACTUALIZACIÓN
+        ========================== */
 
         .update-box {
-            background: #f1f6fc;
+            background: #f1f7fc;
             border-left: 5px solid #0066cc;
             border-radius: 12px;
             padding: 20px 24px;
             margin-bottom: 30px;
         }
 
-        .update-box strong {
+        .update-status {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
             font-size: 1.05rem;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            background: #20a464;
+            border-radius: 50%;
+            display: inline-block;
         }
 
         .update-box p {
@@ -80,48 +89,235 @@
             color: #555;
         }
 
-        /* TARJETA */
 
-        .classification-card {
+        /* ==========================
+           TABLA
+        ========================== */
+
+        .table-card {
             background: white;
             border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
             overflow: hidden;
-            margin-bottom: 40px;
         }
 
-        .classification-title {
-            padding: 30px 30px 15px;
+        .table-title {
+            padding: 28px 30px;
+            border-bottom: 1px solid #eee;
         }
 
-        .classification-title h2 {
+        .table-title h2 {
             font-weight: 800;
             margin-bottom: 5px;
         }
 
-        /* WIDGET */
-
-        #standings-content {
-            width: 100%;
-            min-height: 600px;
-            padding: 0 20px 30px;
+        .table-title p {
+            margin: 0;
+            color: #777;
         }
 
-        api-sports-widget {
-            width: 100%;
-            --primary-font-size: 0.9rem;
-            --secondary-font-size: 0.82rem;
-            --button-font-size: 0.85rem;
-            --title-font-size: 1rem;
+
+        .standings-wrapper {
+            overflow-x: auto;
         }
 
-        /* INFORMACIÓN */
+        .standings-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 850px;
+        }
+
+        .standings-table thead {
+            background: #0066cc;
+            color: white;
+        }
+
+        .standings-table th {
+            padding: 14px 10px;
+            text-align: center;
+            font-size: 0.82rem;
+            white-space: nowrap;
+        }
+
+        .standings-table th:nth-child(2) {
+            text-align: left;
+        }
+
+        .standings-table td {
+            padding: 13px 10px;
+            border-bottom: 1px solid #eeeeee;
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        .standings-table td:nth-child(2) {
+            text-align: left;
+        }
+
+        .standings-table tbody tr {
+            transition: 0.2s;
+        }
+
+        .standings-table tbody tr:hover {
+            background: #f5f9ff;
+        }
+
+
+        /* EQUIPO */
+
+        .team-cell {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+        }
+
+        .team-logo {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+
+        /* POSICIÓN */
+
+        .position {
+            font-weight: 800;
+            width: 45px;
+        }
+
+
+        /* PUNTOS */
+
+        .points {
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
+
+        /* GETAFE */
+
+        .getafe-row {
+            background: #eaf3ff !important;
+            border-left: 5px solid #0066cc;
+        }
+
+        .getafe-row td {
+            font-weight: 600;
+        }
+
+
+        /* ZONAS */
+
+        .champions {
+            border-left: 5px solid #198754;
+        }
+
+        .europa {
+            border-left: 5px solid #ffc107;
+        }
+
+        .conference {
+            border-left: 5px solid #0dcaf0;
+        }
+
+        .relegation {
+            border-left: 5px solid #dc3545;
+        }
+
+
+        /* ==========================
+           LEYENDA
+        ========================== */
+
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 25px 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .legend-dot {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+        }
+
+        .legend-champions {
+            background: #198754;
+        }
+
+        .legend-europa {
+            background: #ffc107;
+        }
+
+        .legend-conference {
+            background: #0dcaf0;
+        }
+
+        .legend-relegation {
+            background: #dc3545;
+        }
+
+
+        /* ==========================
+           LOADING
+        ========================== */
+
+        .loading {
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .spinner {
+            width: 45px;
+            height: 45px;
+            border: 4px solid #e5e5e5;
+            border-top: 4px solid #0066cc;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* ==========================
+           ERROR
+        ========================== */
+
+        .error-box {
+            text-align: center;
+            padding: 60px 25px;
+        }
+
+        .error-box h3 {
+            color: #dc3545;
+            font-weight: 800;
+        }
+
+
+        /* ==========================
+           INFORMACIÓN
+        ========================== */
 
         .info-card {
             background: white;
-            border: 0;
             border-radius: 16px;
-            box-shadow: 0 6px 22px rgba(0, 0, 0, 0.07);
+            border: 0;
+            box-shadow: 0 6px 22px rgba(0,0,0,0.07);
             height: 100%;
         }
 
@@ -130,13 +326,10 @@
             font-weight: 800;
         }
 
-        /* FOOTER */
 
-        footer {
-            margin-top: 60px;
-        }
-
-        /* RESPONSIVE */
+        /* ==========================
+           RESPONSIVE
+        ========================== */
 
         @media (max-width: 768px) {
 
@@ -149,8 +342,8 @@
                 font-size: 2.2rem;
             }
 
-            #standings-content {
-                padding: 0 5px 20px;
+            .table-title {
+                padding: 22px 18px;
             }
 
         }
@@ -249,7 +442,7 @@
 
 
 <!-- =====================================================
-     CONTENIDO PRINCIPAL
+     CONTENIDO
 ===================================================== -->
 
 <main class="container py-4">
@@ -271,17 +464,20 @@
 
 
 
-    <!-- AVISO -->
+    <!-- ESTADO -->
 
     <div class="update-box">
 
-        <strong>
-            🟢 Clasificación actualizada automáticamente
-        </strong>
+        <div class="update-status">
 
-        <p>
-            La tabla se obtiene mediante API-SPORTS y se actualiza
-            automáticamente con los datos disponibles de LaLiga.
+            <span class="status-dot"></span>
+
+            Clasificación actualizada automáticamente
+
+        </div>
+
+        <p id="last-update">
+            Cargando clasificación oficial...
         </p>
 
     </div>
@@ -289,38 +485,78 @@
 
 
     <!-- =================================================
-         CLASIFICACIÓN
-    ================================================== -->
+         TABLA
+    ================================================= -->
 
-    <section class="classification-card">
+    <section class="table-card">
 
-        <div class="classification-title">
+
+        <div class="table-title">
 
             <h2>
                 LaLiga EA Sports
             </h2>
 
-            <p class="text-muted mb-0">
-                Clasificación oficial · Temporada 2026/27
+            <p>
+                Clasificación oficial de la temporada 2026/27
             </p>
 
         </div>
 
 
-        <!--
-            IMPORTANTE:
-            El widget de standings NO lleva aquí
-            API key, liga ni temporada.
+        <div id="standings-container">
 
-            Toda esa configuración está abajo,
-            en el widget CONFIG.
-        -->
+            <div class="loading">
 
-        <div id="standings-content">
+                <div class="spinner"></div>
 
-            <api-sports-widget
-                data-type="standings">
-            </api-sports-widget>
+                <p>
+                    Cargando clasificación...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- LEYENDA -->
+
+        <div class="legend">
+
+            <div class="legend-item">
+
+                <span class="legend-dot legend-champions"></span>
+
+                Champions League
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot legend-europa"></span>
+
+                Europa League
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot legend-conference"></span>
+
+                Conference League
+
+            </div>
+
+
+            <div class="legend-item">
+
+                <span class="legend-dot legend-relegation"></span>
+
+                Descenso
+
+            </div>
 
         </div>
 
@@ -330,9 +566,9 @@
 
     <!-- =================================================
          INFORMACIÓN
-    ================================================== -->
+    ================================================= -->
 
-    <section class="row g-4 mb-5">
+    <section class="row g-4 mt-4 mb-5">
 
 
         <div class="col-lg-8">
@@ -346,20 +582,16 @@
                     </h3>
 
                     <p>
-                        Consulta la clasificación completa de LaLiga
-                        2026/27 con todos los equipos de la competición.
-                    </p>
-
-                    <p>
-                        La tabla incluye la posición, partidos disputados,
-                        victorias, empates, derrotas, goles a favor,
-                        goles en contra, diferencia de goles y puntos.
+                        Consulta todos los equipos de LaLiga con su
+                        posición, partidos jugados, victorias, empates,
+                        derrotas, goles a favor, goles en contra,
+                        diferencia de goles y puntos.
                     </p>
 
                     <p class="mb-0">
-                        Los datos proceden de API-SPORTS y se actualizan
-                        automáticamente según la disponibilidad de los
-                        resultados oficiales.
+                        Los datos se obtienen automáticamente desde
+                        football-data.org. No tendrás que modificar
+                        manualmente la tabla después de cada jornada.
                     </p>
 
                 </div>
@@ -369,7 +601,6 @@
         </div>
 
 
-
         <div class="col-lg-4">
 
             <div class="info-card">
@@ -377,35 +608,27 @@
                 <div class="card-body p-4">
 
                     <h4 class="mb-4">
-                        ⚽ Datos de la competición
+                        ⚽ Competición
                     </h4>
 
-                    <p class="mb-3">
-
+                    <p>
                         <strong>Competición:</strong><br>
                         LaLiga EA Sports
-
                     </p>
 
-                    <p class="mb-3">
+                    <p>
+                        <strong>Código:</strong><br>
+                        PD
+                    </p>
 
+                    <p>
                         <strong>Temporada:</strong><br>
                         2026/27
-
-                    </p>
-
-                    <p class="mb-3">
-
-                        <strong>League ID:</strong><br>
-                        140
-
                     </p>
 
                     <p class="mb-0">
-
                         <strong>Actualización:</strong><br>
                         Automática
-
                     </p>
 
                 </div>
@@ -430,7 +653,6 @@
     <div class="container">
 
         <div class="row">
-
 
             <div class="col-lg-6">
 
@@ -458,7 +680,6 @@
 
             </div>
 
-
         </div>
 
     </div>
@@ -467,44 +688,465 @@
 
 
 
-<!-- =====================================================
-     CONFIGURACIÓN GLOBAL API-SPORTS
-===================================================== -->
-
-<api-sports-widget
-
-    data-type="config"
-
-    data-key="11c6a0d6aa72e2ab0c2f78554b838f0c"
-
-    data-sport="football"
-
-    data-lang="es"
-
-    data-theme="white"
-
-    data-show-errors="true"
-
-    data-show-logos="true"
-
-    data-refresh="3600"
-
-    data-standings="true"
-
-    data-target-standings="true"
-
-    data-league="140"
-
-    data-season="2026">
-
-</api-sports-widget>
-
-
-
 <!-- Bootstrap -->
 
 <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+
+<!-- =====================================================
+     API FOOTBALL-DATA.ORG
+===================================================== -->
+
+<script>
+
+    /*
+     * =====================================================
+     * CONFIGURACIÓN
+     * =====================================================
+     *
+     * PEGA AQUÍ TU TOKEN DE FOOTBALL-DATA.ORG
+     *
+     * NO ME LO ENVÍES POR EL CHAT.
+     *
+     */
+
+    const API_TOKEN = "e184b2f827a24ce484df6c52d0814351";
+
+
+    /*
+     * LaLiga = PD
+     */
+
+    const API_URL =
+        "https://api.football-data.org/v4/competitions/PD/standings";
+
+
+    /*
+     * Tiempo entre actualizaciones:
+     * 1 hora = 3600000 ms
+     *
+     * El plan gratuito permite 10 peticiones/minuto,
+     * por lo que no tiene sentido consultar cada pocos segundos.
+     */
+
+    const REFRESH_TIME = 60 * 60 * 1000;
+
+
+    /*
+     * =====================================================
+     * CARGAR CLASIFICACIÓN
+     * =====================================================
+     */
+
+    async function loadStandings() {
+
+        const container =
+            document.getElementById("standings-container");
+
+        const updateText =
+            document.getElementById("last-update");
+
+
+        try {
+
+            const response = await fetch(API_URL, {
+
+                method: "GET",
+
+                headers: {
+
+                    "X-Auth-Token": API_TOKEN
+
+                }
+
+            });
+
+
+            /*
+             * Comprobamos errores HTTP
+             */
+
+            if (!response.ok) {
+
+                throw new Error(
+                    "Error HTTP " + response.status
+                );
+
+            }
+
+
+            const data = await response.json();
+
+
+            /*
+             * Comprobamos que existen datos
+             */
+
+            if (
+                !data.standings ||
+                !data.standings.length ||
+                !data.standings[0].table
+            ) {
+
+                throw new Error(
+                    "La API no ha devuelto ninguna clasificación."
+                );
+
+            }
+
+
+            /*
+             * La clasificación TOTAL
+             */
+
+            const table =
+                data.standings.find(
+                    standing => standing.type === "TOTAL"
+                )?.table
+                || data.standings[0].table;
+
+
+            /*
+             * Dibujar tabla
+             */
+
+            renderStandings(table);
+
+
+            /*
+             * Fecha de actualización
+             */
+
+            const now =
+                new Date().toLocaleString(
+                    "es-ES",
+                    {
+                        dateStyle: "medium",
+                        timeStyle: "short"
+                    }
+                );
+
+
+            updateText.textContent =
+                "Última actualización: " + now;
+
+
+        } catch (error) {
+
+            console.error(
+                "Error cargando clasificación:",
+                error
+            );
+
+
+            container.innerHTML = `
+
+                <div class="error-box">
+
+                    <h3>
+                        No se pudo cargar la clasificación
+                    </h3>
+
+                    <p class="text-muted mb-3">
+                        Comprueba que el token de football-data.org
+                        sea correcto y que la API esté disponible.
+                    </p>
+
+                    <small class="text-muted">
+                        Error: ${escapeHtml(error.message)}
+                    </small>
+
+                </div>
+
+            `;
+
+            updateText.textContent =
+                "No se pudo actualizar la clasificación.";
+
+        }
+
+    }
+
+
+
+    /*
+     * =====================================================
+     * CREAR TABLA
+     * =====================================================
+     */
+
+    function renderStandings(table) {
+
+        const container =
+            document.getElementById(
+                "standings-container"
+            );
+
+
+        let html = `
+
+            <div class="standings-wrapper">
+
+                <table class="standings-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                EQUIPO
+                            </th>
+
+                            <th>
+                                PJ
+                            </th>
+
+                            <th>
+                                PG
+                            </th>
+
+                            <th>
+                                PE
+                            </th>
+
+                            <th>
+                                PP
+                            </th>
+
+                            <th>
+                                GF
+                            </th>
+
+                            <th>
+                                GC
+                            </th>
+
+                            <th>
+                                DG
+                            </th>
+
+                            <th>
+                                PTS
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+        `;
+
+
+        table.forEach(team => {
+
+            const position =
+                team.position;
+
+            const teamName =
+                team.team?.name || "Equipo";
+
+
+            const crest =
+                team.team?.crest || "";
+
+
+            /*
+             * Clases para las zonas europeas
+             * y descenso
+             */
+
+            let zoneClass = "";
+
+
+            if (position >= 1 && position <= 4) {
+
+                zoneClass = "champions";
+
+            }
+            else if (position === 5) {
+
+                zoneClass = "europa";
+
+            }
+            else if (position === 6) {
+
+                zoneClass = "conference";
+
+            }
+            else if (position >= 18) {
+
+                zoneClass = "relegation";
+
+            }
+
+
+            /*
+             * Destacar Getafe
+             */
+
+            const isGetafe =
+                teamName
+                    .toLowerCase()
+                    .includes("getafe");
+
+
+            if (isGetafe) {
+
+                zoneClass += " getafe-row";
+
+            }
+
+
+            html += `
+
+                <tr class="${zoneClass}">
+
+                    <td class="position">
+
+                        ${position}
+
+                    </td>
+
+
+                    <td>
+
+                        <div class="team-cell">
+
+                            <img
+                                src="${escapeAttribute(crest)}"
+                                alt="${escapeAttribute(teamName)}"
+                                class="team-logo"
+                                loading="lazy"
+                                onerror="this.style.display='none';"
+                            >
+
+                            <span>
+                                ${escapeHtml(teamName)}
+                            </span>
+
+                        </div>
+
+                    </td>
+
+
+                    <td>
+                        ${team.playedGames ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.won ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.draw ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.lost ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.goalsFor ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.goalsAgainst ?? 0}
+                    </td>
+
+
+                    <td>
+                        ${team.goalDifference ?? 0}
+                    </td>
+
+
+                    <td class="points">
+                        ${team.points ?? 0}
+                    </td>
+
+                </tr>
+
+            `;
+
+        });
+
+
+        html += `
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        `;
+
+
+        container.innerHTML = html;
+
+    }
+
+
+
+    /*
+     * =====================================================
+     * SEGURIDAD BÁSICA PARA TEXTO HTML
+     * =====================================================
+     */
+
+    function escapeHtml(value) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    function escapeAttribute(value) {
+
+        return String(value)
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+
+    /*
+     * =====================================================
+     * PRIMERA CARGA
+     * =====================================================
+     */
+
+    loadStandings();
+
+
+    /*
+     * =====================================================
+     * ACTUALIZACIÓN AUTOMÁTICA
+     * =====================================================
+     */
+
+    setInterval(
+        loadStandings,
+        REFRESH_TIME
+    );
+
 </script>
 
 
