@@ -14,119 +14,14 @@
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
 
-<!-- API-FOOTBALL WIDGETS -->
-<script
-    type="module"
-    crossorigin
-    src="https://widgets.api-sports.io/3.1.0/widgets.js">
-</script>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-    dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-
-gtag('config', 'G-F0WS5LY799');
-</script>
-
-<style>
-
-.clasificacion-header {
-    background: linear-gradient(135deg, #0066cc, #004a99);
-    color: white;
-    border-radius: 18px;
-    padding: 45px 30px;
-    margin-bottom: 35px;
-}
-
-.clasificacion-header h1 {
-    font-weight: 800;
-}
-
-.info-actualizacion {
-    border-left: 5px solid #0066cc;
-    background: #f4f7fb;
-    border-radius: 12px;
-    padding: 22px 25px;
-    margin-bottom: 30px;
-}
-
-.info-actualizacion .punto {
-    display: inline-block;
-    width: 11px;
-    height: 11px;
-    background: #19a463;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.tabla-contenedor {
-    background: white;
-    border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-    padding: 20px;
-    overflow: hidden;
-}
-
-.seccion-titulo {
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-
-.info-card {
-    border: 0;
-    border-radius: 16px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-    height: 100%;
-}
-
-.info-card .icono {
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-api-sports-widget {
-    width: 100%;
-    min-height: 600px;
-
-    --primary-font-size: 0.9rem;
-    --secondary-font-size: 0.82rem;
-    --button-font-size: 0.85rem;
-    --title-font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-
-    .clasificacion-header {
-        padding: 30px 20px;
-    }
-
-    .clasificacion-header h1 {
-        font-size: 2rem;
-    }
-
-    .tabla-contenedor {
-        padding: 10px;
-    }
-
-}
-
-</style>
+<!-- API-SPORTS WIDGETS -->
+<script type="module" crossorigin src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
 
 </head>
 
-
 <body>
 
-
-<!-- ================= NAVBAR ================= -->
+<!-- NAVBAR -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
@@ -140,50 +35,36 @@ AZULONES NEWS
 
 </a>
 
-
-<button
-    class="navbar-toggler"
-    type="button"
-    data-bs-toggle="collapse"
-    data-bs-target="#menu">
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
 
 <span class="navbar-toggler-icon"></span>
 
 </button>
-
 
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
-<a class="nav-link" href="index.html">
-Inicio
-</a>
+<a class="nav-link" href="index.html">Inicio</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="noticias.html">
-Noticias
-</a>
+<a class="nav-link" href="noticias.html">Noticias</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="rumores.html">
-Mercado
-</a>
+<a class="nav-link" href="rumores.html">Mercado</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="plantilla.html">
-Plantilla
-</a>
+<a class="nav-link" href="plantilla.html">Plantilla</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="partidos.html">
-Partidos
-</a>
+<a class="nav-link" href="partidos.html">Partidos</a>
 </li>
 
 <li class="nav-item">
@@ -201,110 +82,118 @@ Clasificación
 </nav>
 
 
-
-<!-- ================= CONTENIDO ================= -->
+<!-- CABECERA -->
 
 <section class="container py-5">
 
+<div class="text-center mb-5">
 
-<!-- CABECERA -->
-
-<div class="clasificacion-header text-center">
-
-<span class="badge bg-light text-primary fs-6 mb-3">
-
-LALIGA EA SPORTS 2026/27
-
+<span class="badge bg-primary fs-6 mb-3">
+LALIGA EA SPORTS
 </span>
 
-<h1 class="display-4">
-
-Clasificación de LaLiga
-
+<h1 class="display-4 fw-bold">
+Clasificación LaLiga
 </h1>
 
-<p class="lead mb-0">
-
-Consulta la posición del Getafe CF y del resto de equipos de Primera División.
-
+<p class="lead text-muted">
+Consulta la clasificación actualizada automáticamente con los resultados oficiales.
 </p>
 
 </div>
 
 
+<!-- AVISO -->
 
-<!-- ACTUALIZACIÓN -->
+<div class="alert alert-primary border-0 shadow-sm mb-5">
 
-<div class="info-actualizacion">
+<div class="d-flex align-items-center">
 
-<h5 class="fw-bold mb-2">
+<div class="fs-3 me-3">
+📊
+</div>
 
-<span class="punto"></span>
+<div>
 
+<h5 class="fw-bold mb-1">
 Clasificación actualizada automáticamente
-
 </h5>
 
-<p class="mb-0 text-muted">
-
+<p class="mb-0">
 Los resultados oficiales de LaLiga actualizan automáticamente la tabla.
-
-La información procede directamente de API-Football.
-
 </p>
 
 </div>
 
+</div>
+
+</div>
 
 
-<!-- ================= TABLA ================= -->
+<!-- CLASIFICACIÓN -->
 
-<div class="tabla-contenedor mb-5">
+<div class="card border-0 shadow-lg overflow-hidden">
 
-<h3 class="seccion-titulo">
+<div class="card-header bg-primary text-white py-3">
 
-📊 Clasificación LaLiga
-
+<h3 class="fw-bold mb-0">
+🏆 LaLiga EA Sports
 </h3>
 
+</div>
+
+<div class="card-body p-0">
 
 <div id="standings-content">
 
 <api-sports-widget
-    data-type="standings"
-    data-league="140"
-    data-season="2026">
+data-type="standings">
 </api-sports-widget>
 
 </div>
 
 </div>
 
+</div>
 
 
-<!-- ================= INFORMACIÓN ================= -->
+<!-- INFORMACIÓN -->
 
-<div class="row g-4 mb-5">
+<div class="row g-4 mt-5">
+
+<div class="col-lg-4">
+
+<div class="card border-0 shadow-sm h-100">
+
+<div class="card-body p-4">
+
+<h4 class="fw-bold">
+🟢 Champions League
+</h4>
+
+<p class="text-muted mb-0">
+Puestos que dan acceso a la UEFA Champions League.
+</p>
+
+</div>
+
+</div>
+
+</div>
 
 
 <div class="col-lg-4">
 
-<div class="card info-card">
+<div class="card border-0 shadow-sm h-100">
 
 <div class="card-body p-4">
 
-<div class="icono">
-🟢
-</div>
-
 <h4 class="fw-bold">
-Champions League
+🟡 Europa
 </h4>
 
 <p class="text-muted mb-0">
-
-Los primeros puestos de la clasificación dan acceso a la UEFA Champions League según la distribución de plazas de la competición.
-
+Puestos de clasificación para competiciones europeas.
 </p>
 
 </div>
@@ -312,27 +201,20 @@ Los primeros puestos de la clasificación dan acceso a la UEFA Champions League 
 </div>
 
 </div>
-
 
 
 <div class="col-lg-4">
 
-<div class="card info-card">
+<div class="card border-0 shadow-sm h-100">
 
 <div class="card-body p-4">
 
-<div class="icono">
-🟡
-</div>
-
 <h4 class="fw-bold">
-Europa
+🔴 Descenso
 </h4>
 
 <p class="text-muted mb-0">
-
-Los puestos europeos permiten acceder a las diferentes competiciones continentales.
-
+Últimos puestos de la clasificación.
 </p>
 
 </div>
@@ -341,92 +223,12 @@ Los puestos europeos permiten acceder a las diferentes competiciones continental
 
 </div>
 
-
-
-<div class="col-lg-4">
-
-<div class="card info-card">
-
-<div class="card-body p-4">
-
-<div class="icono">
-🔴
 </div>
-
-<h4 class="fw-bold">
-Descenso
-</h4>
-
-<p class="text-muted mb-0">
-
-Los últimos clasificados ocupan las posiciones de descenso a Segunda División.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<!-- ================= GETAFE ================= -->
-
-<div class="card border-0 shadow-sm mb-5">
-
-<div class="card-body p-4">
-
-<div class="row align-items-center">
-
-<div class="col-md-8">
-
-<span class="badge bg-primary mb-2">
-
-GETAFE CF
-
-</span>
-
-<h3 class="fw-bold">
-
-El Getafe en LaLiga
-
-</h3>
-
-<p class="text-muted mb-0">
-
-Sigue la posición del conjunto azulón jornada a jornada y consulta sus puntos, victorias, empates, derrotas, goles a favor y goles en contra.
-
-</p>
-
-</div>
-
-
-<div class="col-md-4 text-md-end mt-3 mt-md-0">
-
-<img
-    src="img/iconos/getafe.png"
-    alt="Getafe CF"
-    style="max-width:90px; max-height:90px;">
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
 
 </section>
 
 
-
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
 <footer class="bg-dark text-white py-5 mt-5">
 
@@ -434,40 +236,29 @@ Sigue la posición del conjunto azulón jornada a jornada y consulta sus puntos,
 
 <div class="row">
 
-
 <div class="col-lg-6">
 
 <h3 class="fw-bold">
-
 AZULONES NEWS
-
 </h3>
 
 <p>
-
 Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
-
 </p>
 
 </div>
-
 
 <div class="col-lg-6 text-lg-end">
 
 <p>
-
 Mercado • Noticias • Plantilla • Partidos • Clasificación
-
 </p>
 
 <p class="mb-0">
-
 © 2026 Azulones News
-
 </p>
 
 </div>
-
 
 </div>
 
@@ -476,24 +267,36 @@ Mercado • Noticias • Plantilla • Partidos • Clasificación
 </footer>
 
 
-
-<!-- ================= CONFIGURACIÓN API-FOOTBALL ================= -->
+<!-- CONFIGURACIÓN API-SPORTS -->
 
 <api-sports-widget
-    data-type="config"
-    data-key="11c6a0d6aa72e2ab0c2f78554b838f0c"
-    data-sport="football"
-    data-lang="es"
-    data-theme="white"
-    data-show-errors="true"
-    data-show-logos="true"
-    data-refresh="3600"
-    data-standings="true"
-    data-target-standings="#standings-content"
-    data-league="140"
-    data-season="2026">
-</api-sports-widget>
+data-type="config"
 
+<!-- PEGA TU API KEY AQUÍ -->
+
+data-key="11c6a0d6aa72e2ab0c2f78554b838f0c"
+
+data-sport="football"
+
+data-lang="es"
+
+data-theme="white"
+
+data-show-errors="true"
+
+data-show-logos="true"
+
+data-refresh="60"
+
+data-standings="true"
+
+data-target-standings="#standings-content"
+
+data-league="140"
+
+data-season="2026"
+
+></api-sports-widget>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
