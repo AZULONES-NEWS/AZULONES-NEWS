@@ -3,352 +3,178 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Clasificación | Azulones News</title>
-
-    <meta name="description"
-        content="Clasificación actualizada de LaLiga EA Sports 2026/27. Todos los equipos, puntos, resultados y estadísticas.">
-
-    <link rel="icon" href="img/logo/logo.png">
-
-    <!-- Bootstrap -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <!-- CSS Azulones News -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-
-    <style>
-
-        body {
-            background: #f5f7fa;
-        }
-
-        /* ==========================
-           CABECERA
-        ========================== */
-
-        .classification-header {
-            background: linear-gradient(135deg, #0066cc, #004b99);
-            color: white;
-            border-radius: 0 0 20px 20px;
-            padding: 45px 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-        }
-
-        .classification-header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .classification-header p {
-            margin: 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-
-        /* ==========================
-           AVISO ACTUALIZACIÓN
-        ========================== */
-
-        .update-box {
-            background: #f1f7fc;
-            border-left: 5px solid #0066cc;
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-bottom: 30px;
-        }
-
-        .update-status {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 700;
-            font-size: 1.05rem;
-        }
-
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            background: #20a464;
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .update-box p {
-            margin: 6px 0 0;
-            color: #555;
-        }
-
-
-        /* ==========================
-           TABLA
-        ========================== */
-
-        .table-card {
-            background: white;
-            border-radius: 18px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-
-        .table-title {
-            padding: 28px 30px;
-            border-bottom: 1px solid #eee;
-        }
-
-        .table-title h2 {
-            font-weight: 800;
-            margin-bottom: 5px;
-        }
-
-        .table-title p {
-            margin: 0;
-            color: #777;
-        }
-
-
-        .standings-wrapper {
-            overflow-x: auto;
-        }
-
-        .standings-table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 850px;
-        }
-
-        .standings-table thead {
-            background: #0066cc;
-            color: white;
-        }
-
-        .standings-table th {
-            padding: 14px 10px;
-            text-align: center;
-            font-size: 0.82rem;
-            white-space: nowrap;
-        }
-
-        .standings-table th:nth-child(2) {
-            text-align: left;
-        }
-
-        .standings-table td {
-            padding: 13px 10px;
-            border-bottom: 1px solid #eeeeee;
-            text-align: center;
-            font-size: 0.92rem;
-        }
-
-        .standings-table td:nth-child(2) {
-            text-align: left;
-        }
-
-        .standings-table tbody tr {
-            transition: 0.2s;
-        }
-
-        .standings-table tbody tr:hover {
-            background: #f5f9ff;
-        }
-
-
-        /* EQUIPO */
-
-        .team-cell {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 600;
-        }
-
-        .team-logo {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-        }
-
-
-        /* POSICIÓN */
-
-        .position {
-            font-weight: 800;
-            width: 45px;
-        }
-
-
-        /* PUNTOS */
-
-        .points {
-            font-weight: 800;
-            font-size: 1rem;
-        }
-
-
-        /* GETAFE */
-
-        .getafe-row {
-            background: #eaf3ff !important;
-            border-left: 5px solid #0066cc;
-        }
-
-        .getafe-row td {
-            font-weight: 600;
-        }
-
-
-        /* ZONAS */
-
-        .champions {
-            border-left: 5px solid #198754;
-        }
-
-        .europa {
-            border-left: 5px solid #ffc107;
-        }
-
-        .conference {
-            border-left: 5px solid #0dcaf0;
-        }
-
-        .relegation {
-            border-left: 5px solid #dc3545;
-        }
-
-
-        /* ==========================
-           LEYENDA
-        ========================== */
-
-        .legend {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 25px 30px;
-            border-top: 1px solid #eee;
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-
-        .legend-dot {
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-        }
-
-        .legend-champions {
-            background: #198754;
-        }
-
-        .legend-europa {
-            background: #ffc107;
-        }
-
-        .legend-conference {
-            background: #0dcaf0;
-        }
-
-        .legend-relegation {
-            background: #dc3545;
-        }
-
-
-        /* ==========================
-           LOADING
-        ========================== */
-
-        .loading {
-            text-align: center;
-            padding: 70px 20px;
-        }
-
-        .spinner {
-            width: 45px;
-            height: 45px;
-            border: 4px solid #e5e5e5;
-            border-top: 4px solid #0066cc;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 20px;
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-
-        /* ==========================
-           ERROR
-        ========================== */
-
-        .error-box {
-            text-align: center;
-            padding: 60px 25px;
-        }
-
-        .error-box h3 {
-            color: #dc3545;
-            font-weight: 800;
-        }
-
-
-        /* ==========================
-           INFORMACIÓN
-        ========================== */
-
-        .info-card {
-            background: white;
-            border-radius: 16px;
-            border: 0;
-            box-shadow: 0 6px 22px rgba(0,0,0,0.07);
-            height: 100%;
-        }
-
-        .info-card h3,
-        .info-card h4 {
-            font-weight: 800;
-        }
-
-
-        /* ==========================
-           RESPONSIVE
-        ========================== */
-
-        @media (max-width: 768px) {
-
-            .classification-header {
-                padding: 30px 20px;
-                text-align: center;
-            }
-
-            .classification-header h1 {
-                font-size: 2.2rem;
-            }
-
-            .table-title {
-                padding: 22px 18px;
-            }
-
-        }
-
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Clasificación | Azulones News</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<style>
+
+body {
+    background: #f5f7fa;
+}
+
+.classification-header {
+    background: linear-gradient(135deg, #0066cc, #004b99);
+    color: white;
+    border-radius: 0 0 18px 18px;
+    padding: 45px 30px;
+    margin-bottom: 35px;
+}
+
+.classification-header h1 {
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.update-box {
+    background: white;
+    border-left: 5px solid #0066cc;
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.update-dot {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    background: #198754;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead {
+    background: #0066cc;
+    color: white;
+}
+
+.table thead th {
+    border: none;
+    padding: 16px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 14px 10px;
+    vertical-align: middle;
+}
+
+.team-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.team-logo {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.position {
+    font-weight: 800;
+    width: 45px;
+}
+
+.points {
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.zone-champions {
+    border-left: 5px solid #198754;
+}
+
+.zone-europa {
+    border-left: 5px solid #ffc107;
+}
+
+.zone-conference {
+    border-left: 5px solid #0dcaf0;
+}
+
+.zone-relegation {
+    border-left: 5px solid #dc3545;
+}
+
+.legend {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 25px;
+    margin-bottom: 8px;
+}
+
+.legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.loading {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.error-box {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.error-box h3 {
+    color: #dc3545;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+
+    .classification-header {
+        padding: 35px 20px;
+    }
+
+    .classification-header h1 {
+        font-size: 2rem;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .table {
+        min-width: 850px;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -356,799 +182,548 @@
 <body>
 
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <div class="container">
+<div class="container">
 
-        <a
-            class="navbar-brand fw-bold d-flex align-items-center"
-            href="index.html">
+<a class="navbar-brand fw-bold" href="index.html">
 
-            <img
-                src="img/logo/logo.png"
-                width="42"
-                height="42"
-                class="me-2"
-                alt="Azulones News">
+<img src="img/logo/logo.png" width="42" alt="Azulones News">
 
-            AZULONES NEWS
+AZULONES NEWS
 
-        </a>
+</a>
 
+<button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu">
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
 
-            <span class="navbar-toggler-icon"></span>
+</button>
 
-        </button>
+<div class="collapse navbar-collapse" id="menu">
 
+<ul class="navbar-nav ms-auto">
 
-        <div class="collapse navbar-collapse" id="menu">
+<li class="nav-item">
+<a class="nav-link" href="index.html">Inicio</a>
+</li>
 
-            <ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="noticias.html">Noticias</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        Inicio
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link" href="rumores.html">Mercado</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="noticias.html">
-                        Noticias
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link" href="plantilla.html">Plantilla</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="rumores.html">
-                        Mercado
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">Partidos</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="plantilla.html">
-                        Plantilla
-                    </a>
-                </li>
+<li class="nav-item">
+<a class="nav-link active" href="clasificacion.html">Clasificación</a>
+</li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="partidos.html">
-                        Partidos
-                    </a>
-                </li>
+</ul>
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="clasificacion.html">
-                        Clasificación
-                    </a>
-                </li>
+</div>
 
-            </ul>
-
-        </div>
-
-    </div>
+</div>
 
 </nav>
 
 
 
-<!-- =====================================================
-     CONTENIDO
-===================================================== -->
+<!-- ================= CABECERA ================= -->
 
-<main class="container py-4">
+<header class="classification-header">
 
+<div class="container">
 
-    <!-- CABECERA -->
+<h1>🏆 Clasificación LaLiga</h1>
 
-    <section class="classification-header">
+<p class="lead mb-0">
+Clasificación oficial de LaLiga EA Sports 2026/27
+</p>
 
-        <h1>
-            🏆 Clasificación LaLiga
-        </h1>
+</div>
 
-        <p>
-            Temporada 2026/27 · Datos actualizados automáticamente
-        </p>
+</header>
 
-    </section>
 
 
+<!-- ================= CONTENIDO ================= -->
 
-    <!-- ESTADO -->
+<main class="container pb-5">
 
-    <div class="update-box">
 
-        <div class="update-status">
+<!-- ACTUALIZACIÓN -->
 
-            <span class="status-dot"></span>
+<div class="update-box">
 
-            Clasificación actualizada automáticamente
+<div class="fw-bold fs-5">
 
-        </div>
+<span class="update-dot"></span>
 
-        <p id="last-update">
-            Cargando clasificación oficial...
-        </p>
+Clasificación actualizada automáticamente
 
-    </div>
+</div>
 
+<div class="text-muted mt-2">
 
+Los resultados oficiales actualizan esta tabla automáticamente.
 
-    <!-- =================================================
-         TABLA
-    ================================================= -->
+<span id="last-update">Cargando última actualización...</span>
 
-    <section class="table-card">
+</div>
 
+</div>
 
-        <div class="table-title">
 
-            <h2>
-                LaLiga EA Sports
-            </h2>
 
-            <p>
-                Clasificación oficial de la temporada 2026/27
-            </p>
+<!-- TABLA -->
 
-        </div>
+<div class="table-container">
 
+<div id="loading" class="loading">
 
-        <div id="standings-container">
+<div class="spinner-border text-primary mb-3" role="status"></div>
 
-            <div class="loading">
+<h5>Cargando clasificación...</h5>
 
-                <div class="spinner"></div>
+<p class="text-muted mb-0">
+Consultando los últimos datos disponibles.
+</p>
 
-                <p>
-                    Cargando clasificación...
-                </p>
+</div>
 
-            </div>
 
-        </div>
+<div id="error" class="error-box d-none">
 
+<h3>No se pudo cargar la clasificación</h3>
 
-        <!-- LEYENDA -->
+<p class="text-muted mb-0" id="error-message">
 
-        <div class="legend">
+Comprueba que la clasificación esté disponible.
 
-            <div class="legend-item">
+</p>
 
-                <span class="legend-dot legend-champions"></span>
+</div>
 
-                Champions League
 
-            </div>
+<div id="table-wrapper" class="d-none">
 
+<div class="table-responsive">
 
-            <div class="legend-item">
+<table class="table table-hover align-middle">
 
-                <span class="legend-dot legend-europa"></span>
+<thead>
 
-                Europa League
+<tr>
 
-            </div>
+<th>#</th>
 
+<th>Equipo</th>
 
-            <div class="legend-item">
+<th>PTS</th>
 
-                <span class="legend-dot legend-conference"></span>
+<th>PJ</th>
 
-                Conference League
+<th>PG</th>
 
-            </div>
+<th>PE</th>
 
+<th>PP</th>
 
-            <div class="legend-item">
+<th>GF</th>
 
-                <span class="legend-dot legend-relegation"></span>
+<th>GC</th>
 
-                Descenso
+<th>DG</th>
 
-            </div>
+</tr>
 
-        </div>
+</thead>
 
-    </section>
+<tbody id="standings-body">
 
+</tbody>
 
+</table>
 
-    <!-- =================================================
-         INFORMACIÓN
-    ================================================= -->
+</div>
 
-    <section class="row g-4 mt-4 mb-5">
+</div>
 
+</div>
 
-        <div class="col-lg-8">
 
-            <div class="info-card">
 
-                <div class="card-body p-4">
+<!-- ================= LEYENDA ================= -->
 
-                    <h3 class="mb-3">
-                        📊 Clasificación de LaLiga
-                    </h3>
+<div class="legend mt-4">
 
-                    <p>
-                        Consulta todos los equipos de LaLiga con su
-                        posición, partidos jugados, victorias, empates,
-                        derrotas, goles a favor, goles en contra,
-                        diferencia de goles y puntos.
-                    </p>
+<h5 class="fw-bold mb-3">
+¿Qué significa cada zona?
+</h5>
 
-                    <p class="mb-0">
-                        Los datos se obtienen automáticamente desde
-                        football-data.org. No tendrás que modificar
-                        manualmente la tabla después de cada jornada.
-                    </p>
+<div class="legend-item">
 
-                </div>
+<span class="legend-dot" style="background:#198754;"></span>
 
-            </div>
+Champions League
 
-        </div>
+</div>
 
+<div class="legend-item">
 
-        <div class="col-lg-4">
+<span class="legend-dot" style="background:#ffc107;"></span>
 
-            <div class="info-card">
+Europa League
 
-                <div class="card-body p-4">
+</div>
 
-                    <h4 class="mb-4">
-                        ⚽ Competición
-                    </h4>
+<div class="legend-item">
 
-                    <p>
-                        <strong>Competición:</strong><br>
-                        LaLiga EA Sports
-                    </p>
+<span class="legend-dot" style="background:#0dcaf0;"></span>
 
-                    <p>
-                        <strong>Código:</strong><br>
-                        PD
-                    </p>
+Conference League
 
-                    <p>
-                        <strong>Temporada:</strong><br>
-                        2026/27
-                    </p>
+</div>
 
-                    <p class="mb-0">
-                        <strong>Actualización:</strong><br>
-                        Automática
-                    </p>
+<div class="legend-item">
 
-                </div>
+<span class="legend-dot" style="background:#dc3545;"></span>
 
-            </div>
+Descenso
 
-        </div>
+</div>
 
-    </section>
+</div>
+
 
 
 </main>
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- ================= FOOTER ================= -->
 
-<footer class="bg-dark text-white py-5">
+<footer class="bg-dark text-white py-5 mt-5">
 
-    <div class="container">
+<div class="container">
 
-        <div class="row">
+<div class="row">
 
-            <div class="col-lg-6">
+<div class="col-lg-6">
 
-                <h3 class="fw-bold">
-                    AZULONES NEWS
-                </h3>
+<h3 class="fw-bold">
+AZULONES NEWS
+</h3>
 
-                <p>
-                    Toda la actualidad del Getafe Club de Fútbol
-                    en un solo lugar.
-                </p>
+<p>
+Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
+</p>
 
-            </div>
+</div>
 
+<div class="col-lg-6 text-lg-end">
 
-            <div class="col-lg-6 text-lg-end">
+<p>
+Mercado • Noticias • Plantilla • Partidos • Clasificación
+</p>
 
-                <p>
-                    Mercado • Noticias • Plantilla • Partidos • Clasificación
-                </p>
+<p class="mb-0">
+© 2026 Azulones News
+</p>
 
-                <p class="mb-0">
-                    © 2026 Azulones News
-                </p>
+</div>
 
-            </div>
+</div>
 
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
 
 
-<!-- Bootstrap -->
-
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-
-<!-- =====================================================
-     API FOOTBALL-DATA.ORG
-===================================================== -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script>
 
-    /*
-     * =====================================================
-     * CONFIGURACIÓN
-     * =====================================================
-     *
-     * PEGA AQUÍ TU TOKEN DE FOOTBALL-DATA.ORG
-     *
-     * NO ME LO ENVÍES POR EL CHAT.
-     *
-     */
+async function cargarClasificacion() {
 
-    const API_TOKEN = "e184b2f827a24ce484df6c52d0814351";
+    const loading = document.getElementById("loading");
+    const error = document.getElementById("error");
+    const errorMessage = document.getElementById("error-message");
+    const tableWrapper = document.getElementById("table-wrapper");
+    const tbody = document.getElementById("standings-body");
+    const lastUpdate = document.getElementById("last-update");
 
+    try {
 
-    /*
-     * LaLiga = PD
-     */
+        /*
+         * Añadimos una marca de tiempo para evitar que el navegador
+         * utilice una versión antigua del JSON almacenada en caché.
+         */
 
-    const API_URL =
-        "https://api.football-data.org/v4/competitions/PD/standings";
+        const cacheBuster = "?t=" + Date.now();
 
+        const response = await fetch("clasificacion.json" + cacheBuster);
 
-    /*
-     * Tiempo entre actualizaciones:
-     * 1 hora = 3600000 ms
-     *
-     * El plan gratuito permite 10 peticiones/minuto,
-     * por lo que no tiene sentido consultar cada pocos segundos.
-     */
+        if (!response.ok) {
 
-    const REFRESH_TIME = 60 * 60 * 1000;
-
-
-    /*
-     * =====================================================
-     * CARGAR CLASIFICACIÓN
-     * =====================================================
-     */
-
-    async function loadStandings() {
-
-        const container =
-            document.getElementById("standings-container");
-
-        const updateText =
-            document.getElementById("last-update");
-
-
-        try {
-
-            const response = await fetch(API_URL, {
-
-                method: "GET",
-
-                headers: {
-
-                    "X-Auth-Token": API_TOKEN
-
-                }
-
-            });
-
-
-            /*
-             * Comprobamos errores HTTP
-             */
-
-            if (!response.ok) {
-
-                throw new Error(
-                    "Error HTTP " + response.status
-                );
-
-            }
-
-
-            const data = await response.json();
-
-
-            /*
-             * Comprobamos que existen datos
-             */
-
-            if (
-                !data.standings ||
-                !data.standings.length ||
-                !data.standings[0].table
-            ) {
-
-                throw new Error(
-                    "La API no ha devuelto ninguna clasificación."
-                );
-
-            }
-
-
-            /*
-             * La clasificación TOTAL
-             */
-
-            const table =
-                data.standings.find(
-                    standing => standing.type === "TOTAL"
-                )?.table
-                || data.standings[0].table;
-
-
-            /*
-             * Dibujar tabla
-             */
-
-            renderStandings(table);
-
-
-            /*
-             * Fecha de actualización
-             */
-
-            const now =
-                new Date().toLocaleString(
-                    "es-ES",
-                    {
-                        dateStyle: "medium",
-                        timeStyle: "short"
-                    }
-                );
-
-
-            updateText.textContent =
-                "Última actualización: " + now;
-
-
-        } catch (error) {
-
-            console.error(
-                "Error cargando clasificación:",
-                error
+            throw new Error(
+                "No se ha podido cargar clasificacion.json (" +
+                response.status +
+                ")"
             );
 
+        }
 
-            container.innerHTML = `
+        const data = await response.json();
 
-                <div class="error-box">
 
-                    <h3>
-                        No se pudo cargar la clasificación
-                    </h3>
+        /*
+         * Football-data.org devuelve la clasificación dentro
+         * del array standings.
+         */
 
-                    <p class="text-muted mb-3">
-                        Comprueba que el token de football-data.org
-                        sea correcto y que la API esté disponible.
-                    </p>
+        if (!data.standings || data.standings.length === 0) {
 
-                    <small class="text-muted">
-                        Error: ${escapeHtml(error.message)}
-                    </small>
+            throw new Error(
+                "El archivo no contiene una clasificación válida."
+            );
 
-                </div>
+        }
+
+
+        /*
+         * Normalmente existe una clasificación TOTAL.
+         */
+
+        const standings =
+            data.standings.find(
+                standing => standing.type === "TOTAL"
+            ) || data.standings[0];
+
+
+        if (!standings.table || standings.table.length === 0) {
+
+            throw new Error(
+                "La tabla de equipos está vacía."
+            );
+
+        }
+
+
+        tbody.innerHTML = "";
+
+
+        standings.table.forEach(team => {
+
+            const position = team.position;
+
+            let zoneClass = "";
+
+            if (position >= 1 && position <= 4) {
+
+                zoneClass = "zone-champions";
+
+            } else if (position === 5) {
+
+                zoneClass = "zone-europa";
+
+            } else if (position === 6) {
+
+                zoneClass = "zone-conference";
+
+            } else if (position >= 18) {
+
+                zoneClass = "zone-relegation";
+
+            }
+
+
+            const row = document.createElement("tr");
+
+            if (zoneClass) {
+
+                row.classList.add(zoneClass);
+
+            }
+
+
+            const teamName =
+                team.team.shortName ||
+                team.team.name;
+
+
+            const crest =
+                team.team.crest ||
+                "";
+
+
+            row.innerHTML = `
+
+                <td class="position">
+                    ${position}
+                </td>
+
+                <td>
+
+                    <div class="team-cell">
+
+                        ${
+                            crest
+                            ?
+                            `<img
+                                src="${crest}"
+                                alt="${teamName}"
+                                class="team-logo"
+                                loading="lazy"
+                            >`
+                            :
+                            ""
+                        }
+
+                        <span>
+                            ${teamName}
+                        </span>
+
+                    </div>
+
+                </td>
+
+                <td class="points">
+                    ${team.points}
+                </td>
+
+                <td>
+                    ${team.playedGames}
+                </td>
+
+                <td>
+                    ${team.won}
+                </td>
+
+                <td>
+                    ${team.draw}
+                </td>
+
+                <td>
+                    ${team.lost}
+                </td>
+
+                <td>
+                    ${team.goalsFor}
+                </td>
+
+                <td>
+                    ${team.goalsAgainst}
+                </td>
+
+                <td>
+                    ${team.goalDifference > 0
+                        ? "+" + team.goalDifference
+                        : team.goalDifference}
+                </td>
 
             `;
 
-            updateText.textContent =
-                "No se pudo actualizar la clasificación.";
+
+            tbody.appendChild(row);
+
+        });
+
+
+        /*
+         * Ocultamos el mensaje de carga y mostramos la tabla.
+         */
+
+        loading.classList.add("d-none");
+
+        error.classList.add("d-none");
+
+        tableWrapper.classList.remove("d-none");
+
+
+        /*
+         * Mostramos la fecha de actualización del JSON.
+         */
+
+        if (data.lastUpdated) {
+
+            const date = new Date(data.lastUpdated);
+
+            lastUpdate.textContent =
+                " Última actualización: " +
+                date.toLocaleString("es-ES");
+
+        } else {
+
+            lastUpdate.textContent =
+                " Datos oficiales disponibles.";
 
         }
 
     }
 
 
+    catch (err) {
 
-    /*
-     * =====================================================
-     * CREAR TABLA
-     * =====================================================
-     */
+        console.error(
+            "Error cargando clasificación:",
+            err
+        );
 
-    function renderStandings(table) {
+        loading.classList.add("d-none");
 
-        const container =
-            document.getElementById(
-                "standings-container"
-            );
+        tableWrapper.classList.add("d-none");
 
+        error.classList.remove("d-none");
 
-        let html = `
-
-            <div class="standings-wrapper">
-
-                <table class="standings-table">
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                #
-                            </th>
-
-                            <th>
-                                EQUIPO
-                            </th>
-
-                            <th>
-                                PJ
-                            </th>
-
-                            <th>
-                                PG
-                            </th>
-
-                            <th>
-                                PE
-                            </th>
-
-                            <th>
-                                PP
-                            </th>
-
-                            <th>
-                                GF
-                            </th>
-
-                            <th>
-                                GC
-                            </th>
-
-                            <th>
-                                DG
-                            </th>
-
-                            <th>
-                                PTS
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-                    <tbody>
-        `;
-
-
-        table.forEach(team => {
-
-            const position =
-                team.position;
-
-            const teamName =
-                team.team?.name || "Equipo";
-
-
-            const crest =
-                team.team?.crest || "";
-
-
-            /*
-             * Clases para las zonas europeas
-             * y descenso
-             */
-
-            let zoneClass = "";
-
-
-            if (position >= 1 && position <= 4) {
-
-                zoneClass = "champions";
-
-            }
-            else if (position === 5) {
-
-                zoneClass = "europa";
-
-            }
-            else if (position === 6) {
-
-                zoneClass = "conference";
-
-            }
-            else if (position >= 18) {
-
-                zoneClass = "relegation";
-
-            }
-
-
-            /*
-             * Destacar Getafe
-             */
-
-            const isGetafe =
-                teamName
-                    .toLowerCase()
-                    .includes("getafe");
-
-
-            if (isGetafe) {
-
-                zoneClass += " getafe-row";
-
-            }
-
-
-            html += `
-
-                <tr class="${zoneClass}">
-
-                    <td class="position">
-
-                        ${position}
-
-                    </td>
-
-
-                    <td>
-
-                        <div class="team-cell">
-
-                            <img
-                                src="${escapeAttribute(crest)}"
-                                alt="${escapeAttribute(teamName)}"
-                                class="team-logo"
-                                loading="lazy"
-                                onerror="this.style.display='none';"
-                            >
-
-                            <span>
-                                ${escapeHtml(teamName)}
-                            </span>
-
-                        </div>
-
-                    </td>
-
-
-                    <td>
-                        ${team.playedGames ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.won ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.draw ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.lost ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.goalsFor ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.goalsAgainst ?? 0}
-                    </td>
-
-
-                    <td>
-                        ${team.goalDifference ?? 0}
-                    </td>
-
-
-                    <td class="points">
-                        ${team.points ?? 0}
-                    </td>
-
-                </tr>
-
-            `;
-
-        });
-
-
-        html += `
-
-                    </tbody>
-
-                </table>
-
-            </div>
-
-        `;
-
-
-        container.innerHTML = html;
+        errorMessage.textContent =
+            err.message ||
+            "No se pudo cargar la clasificación.";
 
     }
 
+}
 
 
-    /*
-     * =====================================================
-     * SEGURIDAD BÁSICA PARA TEXTO HTML
-     * =====================================================
-     */
+/*
+ * Cargar clasificación al abrir la página.
+ */
 
-    function escapeHtml(value) {
-
-        return String(value)
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-
-    }
+cargarClasificacion();
 
 
-    function escapeAttribute(value) {
+/*
+ * Volver a comprobar cada 15 minutos.
+ * Esto permite actualizar la tabla si el usuario
+ * mantiene abierta la página.
+ */
 
-        return String(value)
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#039;");
-
-    }
-
-
-
-    /*
-     * =====================================================
-     * PRIMERA CARGA
-     * =====================================================
-     */
-
-    loadStandings();
-
-
-    /*
-     * =====================================================
-     * ACTUALIZACIÓN AUTOMÁTICA
-     * =====================================================
-     */
-
-    setInterval(
-        loadStandings,
-        REFRESH_TIME
-    );
+setInterval(
+    cargarClasificacion,
+    15 * 60 * 1000
+);
 
 </script>
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
