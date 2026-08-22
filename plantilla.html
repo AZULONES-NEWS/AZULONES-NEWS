@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Plantilla | Azulones News</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-F0WS5LY799');
+</script>
+
+<style>
+
+/* ================================
+   PLANTILLA AZULONES NEWS
+================================ */
+
+.squad-header {
+    background: linear-gradient(135deg, #0057b8, #003b7a);
+    color: white;
+    border-radius: 0 0 25px 25px;
+    padding: 70px 20px;
+    margin-bottom: 55px;
+}
+
+.squad-header .badge {
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 10px 18px;
+}
+
+.squad-header h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.squad-header p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+
+/* TITULOS */
+
+.position-section {
+    margin-bottom: 65px;
+}
+
+.position-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 15px;
+}
+
+.position-title span {
+    width: 45px;
+    height: 45px;
+    background: #0057b8;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.position-title h2 {
+    margin: 0;
+    font-weight: 800;
+}
+
+
+/* TARJETAS */
+
+.player-card {
+    position: relative;
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.player-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.14);
+}
+
+
+/* PARTE SUPERIOR */
+
+.player-top {
+    height: 245px;
+    background: linear-gradient(145deg, #eaf3ff, #ffffff);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+/* SILUETA / INICIALES */
+
+.player-avatar {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #0057b8, #003b7a);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,87,184,0.25);
+}
+
+
+/* DORSAL */
+
+.player-number {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(0,87,184,0.12);
+    line-height: 1;
+}
+
+
+/* INFORMACION */
+
+.player-info {
+    padding: 22px;
+}
+
+.player-position {
+    color: #0057b8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.player-name {
+    font-size: 1.45rem;
+    font-weight: 800;
+    margin: 5px 0 10px;
+}
+
+.player-country {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+/* PIE DE TARJETA */
+
+.player-footer {
+    border-top: 1px solid #eee;
+    padding: 13px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player-footer small {
+    color: #777;
+}
+
+
+/* INFO LALIGA */
+
+.laliga-box {
+    background: #f5f8fc;
+    border-left: 5px solid #0057b8;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 55px;
+}
+
+.laliga-box h4 {
+    font-weight: 800;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .squad-header {
+        padding: 45px 15px;
+    }
+
+    .squad-header h1 {
+        font-size: 2.7rem;
+    }
+
+    .player-top {
+        height: 220px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================================
+     NAVBAR
+================================ -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="index.html">
+
+<img src="img/logo/logo.png" width="42">
+
+AZULONES NEWS
+
+</a>
+
+
+<button class="navbar-toggler"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div class="collapse navbar-collapse" id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">Inicio</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="noticias.html">Noticias</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="rumores.html">Mercado</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link active" href="plantilla.html">Plantilla</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">Partidos</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="clasificacion.html">Clasificación</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- ================================
+     CABECERA
+================================ -->
+
+<section class="squad-header text-center">
+
+<div class="container">
+
+<span class="badge rounded-pill">
+
+GETAFE CF · PRIMER EQUIPO
+
+</span>
+
+<h1 class="mt-4">
+
+Plantilla 2026/27
+
+</h1>
+
+<p>
+
+Todos los jugadores del Getafe CF para la temporada 2026/27.
+Dorsales, posiciones y nacionalidades del conjunto azulón.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<section class="container">
+
+
+<!-- INFORMACION -->
+
+<div class="laliga-box">
+
+<h4>
+
+🔵 Plantilla del Getafe CF 2026/27
+
+</h4>
+
+<p class="mb-0">
+
+La plantilla está organizada por posiciones siguiendo la estructura habitual de las páginas oficiales de los clubes y LALIGA. Los jugadores se encuentran distribuidos entre porteros, defensas, centrocampistas y delanteros.
+
+</p>
+
+</div>
+
+
+
+<!-- ================================
+     PORTEROS
+================================ -->
+
+<section class="position-section">
+
+<div class="position-title">
+
+<span>🧤</span>
+
+<h2>Porteros</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- SORIA -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">13</div>
+
+<div class="player-avatar">
+DS
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Portero
+</div>
+
+<div class="player-name">
+David Soria
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+<div class="player-footer">
+
+<small>Dorsal</small>
+
+<strong>13</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- LETACEK -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">1</div>
+
+<div class="player-avatar">
+JL
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Portero
+</div>
+
+<div class="player-name">
+Jirí Letáček
+</div>
+
+<div class="player-country">
+🇨🇿 República Checa
+</div>
+
+</div>
+
+<div class="player-footer">
+
+<small>Dorsal</small>
+
+<strong>1</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     DEFENSAS
+================================ -->
+
+<section class="position-section">
+
+<div class="position-title">
+
+<span>🛡️</span>
+
+<h2>Defensas</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- VALOU -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+JV
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Jean-Ives Valou
+</div>
+
+<div class="player-country">
+🇫🇷 Francia
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- KIKO -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+KF
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Kiko Femenía
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BOSELLI -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+SB
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Sebastián Boselli
+</div>
+
+<div class="player-country">
+🇺🇾 Uruguay
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ANDRES GARCIA -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+AG
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Andrés García
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DJENE -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">2</div>
+
+<div class="player-avatar">
+DJ
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Djené
+</div>
+
+<div class="player-country">
+🇹🇬 Togo
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MOJICA -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+JM
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Johan Mojica
+</div>
+
+<div class="player-country">
+🇨🇴 Colombia
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ABQAR -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">5</div>
+
+<div class="player-avatar">
+AA
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Abdel Abqar
+</div>
+
+<div class="player-country">
+🇲🇦 Marruecos
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- DAVINCHI -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+DV
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Davinchi
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BERROCAL -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+JB
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Juan Berrocal
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SAZONOV -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+SS
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Saba Sazonov
+</div>
+
+<div class="player-country">
+🇬🇪 Georgia
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ZAID -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+ZR
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Defensa
+</div>
+
+<div class="player-name">
+Zaid Romero
+</div>
+
+<div class="player-country">
+🇦🇷 Argentina
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     CENTROCAMPISTAS
+================================ -->
+
+<section class="position-section">
+
+<div class="position-title">
+
+<span>⚙️</span>
+
+<h2>Centrocampistas</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- JAVI MUÑOZ -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+JM
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Javi Muñoz
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FRANCHO -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+FS
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Francho Serrano
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MARIO MARTIN -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+MM
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Mario Martín
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- UCHE -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+CU
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Christantus Uche
+</div>
+
+<div class="player-country">
+🇳🇬 Nigeria
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MANGALA -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+OM
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Orel Mangala
+</div>
+
+<div class="player-country">
+🇧🇪 Bélgica
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TERRATS -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+RT
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Ramón Terrats
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+<div class="player-footer">
+
+<small>LaLiga</small>
+
+<strong>90 min</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NEYOU -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+YN
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Centrocampista
+</div>
+
+<div class="player-name">
+Yvan Neyou
+</div>
+
+<div class="player-country">
+🇨🇲 Camerún
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     DELANTEROS
+================================ -->
+
+<section class="position-section">
+
+<div class="position-title">
+
+<span>⚽</span>
+
+<h2>Delanteros</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+
+<!-- ALEX -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+AL
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Delantero
+</div>
+
+<div class="player-name">
+Álex
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- MAYORAL -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">9</div>
+
+<div class="player-avatar">
+BM
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Delantero
+</div>
+
+<div class="player-name">
+Borja Mayoral
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- SATRIANO -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+MS
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Delantero
+</div>
+
+<div class="player-name">
+Martín Satriano
+</div>
+
+<div class="player-country">
+🇺🇾 Uruguay
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- UNAL -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">10</div>
+
+<div class="player-avatar">
+EU
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Delantero
+</div>
+
+<div class="player-name">
+Enes Ünal
+</div>
+
+<div class="player-country">
+🇹🇷 Turquía
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- JUANMI -->
+
+<div class="col-sm-6 col-lg-4">
+
+<div class="player-card">
+
+<div class="player-top">
+
+<div class="player-number">—</div>
+
+<div class="player-avatar">
+JJ
+</div>
+
+</div>
+
+<div class="player-info">
+
+<div class="player-position">
+Delantero
+</div>
+
+<div class="player-name">
+Juanmi
+</div>
+
+<div class="player-country">
+🇪🇸 España
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================================
+     CUERPO TECNICO
+================================ -->
+
+<section class="position-section">
+
+<div class="position-title">
+
+<span>🧠</span>
+
+<h2>Cuerpo técnico</h2>
+
+</div>
+
+
+<div class="row g-4">
+
+<div class="col-md-6">
+
+<div class="card border-0 shadow-sm">
+
+<div class="card-body p-4">
+
+<small class="text-primary fw-bold">
+ENTRENADOR
+</small>
+
+<h3 class="fw-bold mt-2 mb-0">
+José Bordalás
+</h3>
+
+<p class="text-muted mb-0">
+Primer equipo
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6">
+
+<div class="card border-0 shadow-sm">
+
+<div class="card-body p-4">
+
+<small class="text-primary fw-bold">
+CLUB
+</small>
+
+<h3 class="fw-bold mt-2 mb-0">
+Getafe CF
+</h3>
+
+<p class="text-muted mb-0">
+Temporada 2026/27
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FUENTE -->
+
+<div class="text-center text-muted mb-5">
+
+<small>
+
+Información de plantilla contrastada con las fuentes oficiales de LALIGA y Getafe CF.
+
+</small>
+
+</div>
+
+
+</section>
+
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer class="bg-dark text-white py-5 mt-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<h3 class="fw-bold">
+AZULONES NEWS
+</h3>
+
+<p>
+Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
+</p>
+
+</div>
+
+
+<div class="col-lg-6 text-lg-end">
+
+<p>
+Mercado • Noticias • Plantilla • Partidos • Clasificación
+</p>
+
+<p class="mb-0">
+© 2026 Azulones News
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
