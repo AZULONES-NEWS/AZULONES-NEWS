@@ -1,0 +1,52 @@
+name: Actualizar clasificacion LaLiga
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-clasificacion:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Obtener clasificacion
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+        run: |
+          curl -L \
+            -H "X-Auth-Token: $FOOTBALL_DATA_TOKEN" \
+            "https://api.football-data.org/v4/competitions/PD/standings" \
+            -o clasificacion.json
+
+      - name: Comprobar datos
+        run: |
+          echo "Comprobando respuesta de la API..."
+
+          if ! grep -q '"standings"' clasificacion.json; then
+            echo "ERROR: La API no ha devuelto una clasificacion valida."
+            cat clasificacion.json
+            exit 1
+          fi
+
+          echo "Clasificacion recibida correctamente."
+
+      - name: Guardar clasificacion
+        run: |
+          git config user.name "Azulones News Bot"
+          git config user.email "actions@github.com"
+
+          git add clasificacion.json
+
+          if git diff --cached --quiet; then
+            echo "No hay cambios en la clasificacion."
+          else
+            git commit -m "actualizar clasificacion LaLiga"
+            git push
+          fi
