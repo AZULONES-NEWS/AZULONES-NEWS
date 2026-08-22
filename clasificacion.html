@@ -3,179 +3,191 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Clasificación | Azulones News</title>
+<title>Clasificación | Azulones News</title>
 
-    <meta name="description"
-        content="Clasificación actualizada de LaLiga con todos los equipos, resultados y posiciones.">
+<meta name="description"
+content="Clasificación actualizada de LaLiga 2026/27 con todos los equipos y resultados. Azulones News.">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- CSS de Azulones News -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
+<!-- CSS de Azulones News -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
 
-    <!-- API-SPORTS WIDGETS V3 -->
-    <script type="module"
-        src="https://widgets.api-sports.io/3.1.0/widgets.js">
-    </script>
+<!-- API-SPORTS WIDGETS V3 -->
+<script
+type="module"
+crossorigin
+src="https://widgets.api-sports.io/3.1.0/widgets.js">
+</script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+<style>
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
+/* ===============================
+   CABECERA CLASIFICACIÓN
+================================ */
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+.classification-header {
+    background: linear-gradient(135deg, #0066cc, #004a99);
+    color: white;
+    border-radius: 0 0 18px 18px;
+    padding: 45px 30px;
+    margin-bottom: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
 
-        gtag('js', new Date());
+.classification-header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
 
-        gtag('config', 'G-F0WS5LY799');
-    </script>
+.classification-header p {
+    font-size: 1.1rem;
+    margin: 0;
+    opacity: 0.9;
+}
 
-    <style>
 
-        /* ===============================
-           CLASIFICACIÓN AZULONES NEWS
-           =============================== */
+/* ===============================
+   TARJETA PRINCIPAL
+================================ */
 
-        .classification-page {
-            background: #f5f7fb;
-            min-height: 70vh;
-        }
+.classification-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    overflow: hidden;
+    margin-bottom: 40px;
+}
 
-        .classification-header {
-            background: linear-gradient(135deg, #0066cc, #0052a3);
-            color: white;
-            border-radius: 18px;
-            padding: 35px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 82, 163, 0.18);
-        }
 
-        .classification-header h1 {
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
+/* ===============================
+   INFORMACIÓN ACTUALIZACIÓN
+================================ */
 
-        .classification-header p {
-            margin-bottom: 0;
-            opacity: 0.9;
-        }
+.update-box {
+    background: #f3f7fc;
+    border-left: 5px solid #0066cc;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 30px;
+}
 
-        .automatic-box {
-            background: white;
-            border-left: 5px solid #0066cc;
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-        }
+.update-box strong {
+    font-size: 1.05rem;
+}
 
-        .automatic-title {
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 4px;
-        }
+.update-box p {
+    margin: 5px 0 0;
+    color: #555;
+}
 
-        .status-dot {
-            display: inline-block;
-            width: 11px;
-            height: 11px;
-            background: #198754;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
 
-        .standings-card {
-            background: white;
-            border-radius: 18px;
-            padding: 20px;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
+/* ===============================
+   WIDGET API-SPORTS
+================================ */
 
-        .standings-title {
-            font-weight: 800;
-            margin-bottom: 20px;
-            color: #111827;
-        }
+#standings-content {
+    width: 100%;
+    min-height: 500px;
+    padding: 10px;
+}
 
-        /*
-         * El widget oficial de API-SPORTS se encarga
-         * de generar la tabla con los equipos, escudos,
-         * partidos, victorias, empates, derrotas,
-         * goles y puntos.
-         */
+/*
+   Ajustes visuales del widget oficial
+*/
 
-        #standings-content {
-            width: 100%;
-            min-height: 500px;
-        }
+api-sports-widget {
+    --primary-color: #0066cc;
+    --primary-font-size: 15px;
+    --secondary-font-size: 13px;
+    --title-font-size: 18px;
+    --button-font-size: 14px;
 
-        api-sports-widget {
-            width: 100%;
-        }
+    width: 100%;
+}
 
-        .info-card {
-            height: 100%;
-            border: 0;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-        }
 
-        .info-card h4 {
-            font-weight: 800;
-        }
+/* ===============================
+   LEYENDA
+================================ */
 
-        .legend-dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
 
-        .champions {
-            background: #198754;
-        }
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
 
-        .europa {
-            background: #ffc107;
-        }
+.legend-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    display: inline-block;
+}
 
-        .conference {
-            background: #0dcaf0;
-        }
+.champions {
+    background: #198754;
+}
 
-        .relegation {
-            background: #dc3545;
-        }
+.europa {
+    background: #ffc107;
+}
 
-        @media (max-width: 768px) {
+.conference {
+    background: #0dcaf0;
+}
 
-            .classification-header {
-                padding: 25px;
-                border-radius: 14px;
-            }
+.relegation {
+    background: #dc3545;
+}
 
-            .classification-header h1 {
-                font-size: 2rem;
-            }
 
-            .standings-card {
-                padding: 10px;
-            }
+/* ===============================
+   FOOTER
+================================ */
 
-        }
+footer {
+    margin-top: 60px;
+}
 
-    </style>
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .classification-header {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .classification-header h1 {
+        font-size: 2.1rem;
+    }
+
+    #standings-content {
+        padding: 0;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -183,400 +195,368 @@
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- ==========================================
+     NAVBAR
+=========================================== -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <div class="container">
+<div class="container">
 
-        <a class="navbar-brand fw-bold" href="index.html">
+<a class="navbar-brand fw-bold d-flex align-items-center"
+href="index.html">
 
-            <img
-                src="img/logo/logo.png"
-                width="42"
-                alt="Azulones News"
-                class="me-2"
-            >
+<img
+src="img/logo/logo.png"
+width="42"
+height="42"
+class="me-2"
+alt="Azulones News">
 
-            AZULONES NEWS
+AZULONES NEWS
 
-        </a>
-
-
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu"
-        >
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
+</a>
 
 
-        <div class="collapse navbar-collapse" id="menu">
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
 
-            <ul class="navbar-nav ms-auto">
+<span class="navbar-toggler-icon"></span>
 
-                <li class="nav-item">
-
-                    <a class="nav-link" href="index.html">
-                        Inicio
-                    </a>
-
-                </li>
+</button>
 
 
-                <li class="nav-item">
+<div class="collapse navbar-collapse" id="menu">
 
-                    <a class="nav-link" href="noticias.html">
-                        Noticias
-                    </a>
+<ul class="navbar-nav ms-auto">
 
-                </li>
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Inicio
+</a>
+</li>
 
+<li class="nav-item">
+<a class="nav-link" href="noticias.html">
+Noticias
+</a>
+</li>
 
-                <li class="nav-item">
+<li class="nav-item">
+<a class="nav-link" href="rumores.html">
+Mercado
+</a>
+</li>
 
-                    <a class="nav-link" href="rumores.html">
-                        Mercado
-                    </a>
+<li class="nav-item">
+<a class="nav-link" href="plantilla.html">
+Plantilla
+</a>
+</li>
 
-                </li>
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">
+Partidos
+</a>
+</li>
 
+<li class="nav-item">
+<a class="nav-link active" href="clasificacion.html">
+Clasificación
+</a>
+</li>
 
-                <li class="nav-item">
+</ul>
 
-                    <a class="nav-link" href="plantilla.html">
-                        Plantilla
-                    </a>
+</div>
 
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link" href="partidos.html">
-                        Partidos
-                    </a>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a class="nav-link active" href="clasificacion.html">
-                        Clasificación
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
+</div>
 
 </nav>
 
 
 
-<!-- ================= CONTENIDO ================= -->
+<!-- ==========================================
+     CONTENIDO
+=========================================== -->
 
-<main class="classification-page py-5">
+<main class="container py-4">
 
-    <div class="container">
 
+<!-- CABECERA -->
 
-        <!-- CABECERA -->
+<section class="classification-header">
 
-        <div class="classification-header">
+<div class="container">
 
-            <h1>
+<h1>
+🏆 Clasificación LaLiga
+</h1>
 
-                🏆 Clasificación LaLiga
+<p>
+Temporada 2026/27 · Actualización automática
+</p>
 
-            </h1>
+</div>
 
-            <p>
+</section>
 
-                Tabla oficial de LaLiga 2026/27 actualizada automáticamente.
 
-            </p>
 
-        </div>
+<!-- AVISO -->
 
+<div class="update-box">
 
+<strong>
+🟢 Clasificación actualizada automáticamente
+</strong>
 
-        <!-- AVISO ACTUALIZACIÓN -->
+<p>
+La tabla se obtiene directamente de API-SPORTS y se actualiza
+automáticamente según los datos oficiales disponibles.
+</p>
 
-        <div class="automatic-box">
+</div>
 
-            <div class="automatic-title">
 
-                <span class="status-dot"></span>
 
-                Clasificación actualizada automáticamente
+<!-- CLASIFICACIÓN -->
 
-            </div>
+<section class="classification-card">
 
-            <div class="text-muted">
+<div class="p-4">
 
-                Los resultados oficiales modifican automáticamente la tabla.
+<h2 class="fw-bold mb-1">
+LaLiga EA Sports
+</h2>
 
-                La información se obtiene directamente de API-SPORTS.
+<p class="text-muted mb-4">
+Clasificación oficial de la temporada 2026/27
+</p>
 
-            </div>
 
-        </div>
+<!-- CONTENEDOR DEL WIDGET -->
 
+<div id="standings-content">
 
+<api-sports-widget
+data-type="standings">
+</api-sports-widget>
 
-        <!-- TABLA -->
+</div>
 
-        <div class="standings-card mb-5">
 
-            <h2 class="standings-title">
+<!-- LEYENDA -->
 
-                Clasificación de LaLiga
+<div class="legend">
 
-            </h2>
+<div class="legend-item">
 
+<span class="legend-dot champions"></span>
 
-            <div id="standings-content">
+Champions League
 
-                <api-sports-widget
-                    data-type="standings">
-                </api-sports-widget>
+</div>
 
-            </div>
 
-        </div>
+<div class="legend-item">
 
+<span class="legend-dot europa"></span>
 
+Europa League
 
-        <!-- INFORMACIÓN -->
+</div>
 
-        <div class="row g-4">
 
+<div class="legend-item">
 
-            <!-- CHAMPIONS -->
+<span class="legend-dot conference"></span>
 
-            <div class="col-lg-3 col-md-6">
+Conference League
 
-                <div class="card info-card">
+</div>
 
-                    <div class="card-body">
 
-                        <h4>
+<div class="legend-item">
 
-                            <span class="legend-dot champions"></span>
+<span class="legend-dot relegation"></span>
 
-                            Champions League
+Descenso
 
-                        </h4>
+</div>
 
-                        <p class="text-muted mb-0">
+</div>
 
-                            Puestos que dan acceso a la UEFA Champions League.
+</div>
 
-                        </p>
+</section>
 
-                    </div>
 
-                </div>
 
-            </div>
+<!-- INFORMACIÓN -->
 
+<section class="row g-4 mb-5">
 
+<div class="col-lg-8">
 
-            <!-- EUROPA -->
+<div class="card border-0 shadow-sm h-100">
 
-            <div class="col-lg-3 col-md-6">
+<div class="card-body p-4">
 
-                <div class="card info-card">
+<h3 class="fw-bold mb-3">
+📊 La clasificación en Azulones News
+</h3>
 
-                    <div class="card-body">
+<p>
+Consulta en esta página la clasificación completa de LaLiga
+2026/27, con todos los equipos, puntos, partidos disputados,
+victorias, empates, derrotas y diferencia de goles.
+</p>
 
-                        <h4>
+<p class="mb-0">
+Los datos proceden del servicio oficial de API-SPORTS y se
+actualizan automáticamente sin necesidad de modificar
+manualmente esta página después de cada jornada.
+</p>
 
-                            <span class="legend-dot europa"></span>
+</div>
 
-                            Europa League
+</div>
 
-                        </h4>
+</div>
 
-                        <p class="text-muted mb-0">
 
-                            Puestos de clasificación para competiciones europeas.
+<div class="col-lg-4">
 
-                        </p>
+<div class="card border-0 shadow-sm h-100">
 
-                    </div>
+<div class="card-body p-4">
 
-                </div>
+<h4 class="fw-bold mb-3">
+🔄 Actualización
+</h4>
 
-            </div>
+<p>
+<strong>Competición:</strong><br>
+LaLiga EA Sports
+</p>
 
+<p>
+<strong>Temporada:</strong><br>
+2026/27
+</p>
 
+<p>
+<strong>Fuente:</strong><br>
+API-SPORTS
+</p>
 
-            <!-- CONFERENCE -->
+<p class="mb-0">
+<strong>Actualización:</strong><br>
+Automática
+</p>
 
-            <div class="col-lg-3 col-md-6">
+</div>
 
-                <div class="card info-card">
+</div>
 
-                    <div class="card-body">
+</div>
 
-                        <h4>
+</section>
 
-                            <span class="legend-dot conference"></span>
-
-                            Conference League
-
-                        </h4>
-
-                        <p class="text-muted mb-0">
-
-                            Puestos que pueden dar acceso a la UEFA Conference League.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- DESCENSO -->
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="card info-card">
-
-                    <div class="card-body">
-
-                        <h4>
-
-                            <span class="legend-dot relegation"></span>
-
-                            Descenso
-
-                        </h4>
-
-                        <p class="text-muted mb-0">
-
-                            Últimos puestos de la clasificación.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
 
 </main>
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ==========================================
+     FOOTER
+=========================================== -->
 
 <footer class="bg-dark text-white py-5 mt-5">
 
-    <div class="container">
+<div class="container">
 
-        <div class="row">
+<div class="row">
 
+<div class="col-lg-6">
 
-            <div class="col-lg-6">
+<h3 class="fw-bold">
+AZULONES NEWS
+</h3>
 
-                <h3 class="fw-bold">
+<p>
+Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
+</p>
 
-                    AZULONES NEWS
-
-                </h3>
-
-                <p>
-
-                    Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
-
-                </p>
-
-            </div>
+</div>
 
 
-            <div class="col-lg-6 text-lg-end">
+<div class="col-lg-6 text-lg-end">
 
-                <p>
+<p>
+Mercado • Noticias • Plantilla • Partidos • Clasificación
+</p>
 
-                    Mercado • Noticias • Plantilla • Partidos • Clasificación
+<p class="mb-0">
+© 2026 Azulones News
+</p>
 
-                </p>
+</div>
 
-                <p class="mb-0">
+</div>
 
-                    © 2026 Azulones News
-
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </div>
+</div>
 
 </footer>
 
 
 
-<!-- ================= CONFIGURACIÓN API-SPORTS ================= -->
+<!-- ==========================================
+     CONFIGURACIÓN API-SPORTS
+=========================================== -->
 
 <api-sports-widget
 
-    data-type="config"
+data-type="config"
 
-    data-sport="football"
+data-key="11c6a0d6aa72e2ab0c2f78554b838f0c"
 
-    data-key="11c6a0d6aa72e2ab0c2f78554b838f0c"
+data-sport="football"
 
-    data-lang="es"
+data-lang="es"
 
-    data-theme="white"
+data-theme="white"
 
-    data-show-errors="true"
+data-show-errors="true"
 
-    data-show-logos="true"
+data-show-logos="true"
 
-    data-refresh="3600"
+data-refresh="3600"
 
-    data-standings="true"
+data-standings="true"
 
-    data-target-standings="#standings-content"
+data-target-standings="#standings-content"
 
-    data-league="140"
+data-league="140"
 
-    data-season="2026"
+data-season="2026"
 
-></api-sports-widget>
+>
+</api-sports-widget>
 
 
 
 <!-- Bootstrap -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
+</script>
 
-<script type="module" crossorigin src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
+
 </body>
 
 </html>
