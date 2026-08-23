@@ -412,3 +412,22 @@
     }
 
 }
+/* =========================================================
+   NOTICIAS - IMÁGENES EN MÓVIL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    /* Imágenes de las tarjetas de noticias */
+    .noticia-card img,
+    .news-card img,
+    .noticia img,
+    .news-item img {
+        width: 100% !important;
+        height: 210px !important;
+        max-height: 210px !important;
+        object-fit: cover !important;
+        display: block;
+    }
+
+}
