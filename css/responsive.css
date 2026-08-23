@@ -431,3 +431,46 @@
     }
 
 }
+/* ==========================
+   PRÓXIMO PARTIDO - MÓVIL
+========================== */
+
+@media (max-width: 767px) {
+
+    .proximo-partido {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .proximo-partido .card {
+        min-height: auto !important;
+        height: auto !important;
+    }
+
+    .proximo-partido .card-body {
+        padding: 30px 15px !important;
+    }
+
+    .proximo-partido .row {
+        margin: 0;
+    }
+
+    .proximo-partido .escudo-partido {
+        width: 85px;
+        height: 85px;
+    }
+
+    .proximo-partido h2 {
+        font-size: 28px !important;
+        margin-bottom: 25px;
+    }
+
+    .proximo-partido h3 {
+        font-size: 20px;
+    }
+
+    .proximo-partido .display-3 {
+        font-size: 38px !important;
+    }
+
+}
