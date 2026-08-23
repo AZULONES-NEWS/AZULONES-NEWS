@@ -1,14 +1,16 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Azulones News | Toda la actualidad del Getafe CF</title>
 
     <meta name="description"
-        content="Azulones News, toda la actualidad del Getafe CF: noticias, fichajes, rumores, partidos y clasificación.">
+        content="Noticias, fichajes, rumores, resultados, clasificación y toda la actualidad del Getafe Club de Fútbol.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,741 +32,27 @@
         gtag('config', 'G-F0WS5LY799');
     </script>
 
-    <style>
-
-        /* =====================================================
-           ESTILO FUTURISTA DEL INICIO
-        ===================================================== */
-
-        body {
-            background:
-                radial-gradient(circle at 10% 10%, rgba(0, 119, 255, .12), transparent 30%),
-                radial-gradient(circle at 90% 30%, rgba(0, 183, 255, .08), transparent 30%),
-                #f5f8fc;
-        }
-
-        /* =====================================================
-           NAVBAR
-        ===================================================== */
-
-        .future-navbar {
-            background: rgba(3, 18, 35, .94);
-            backdrop-filter: blur(15px);
-            border-bottom: 1px solid rgba(0, 174, 255, .25);
-        }
-
-        .future-navbar .navbar-brand {
-            letter-spacing: 1px;
-        }
-
-        .future-navbar .nav-link {
-            color: rgba(255,255,255,.75);
-            transition: .3s;
-        }
-
-        .future-navbar .nav-link:hover,
-        .future-navbar .nav-link.active {
-            color: #fff;
-            text-shadow: 0 0 15px rgba(0, 183, 255, .8);
-        }
-
-        /* =====================================================
-           HERO
-        ===================================================== */
-
-        .future-hero {
-            min-height: 720px;
-            position: relative;
-            overflow: hidden;
-
-            display: flex;
-            align-items: center;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(2, 15, 30, .96) 0%,
-                    rgba(2, 22, 42, .82) 45%,
-                    rgba(0, 67, 125, .35) 100%
-                ),
-                url("img/estadio/hero.jpg");
-
-            background-size: cover;
-            background-position: center;
-        }
-
-        .future-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    transparent 95%,
-                    rgba(0, 183, 255, .15) 100%
-                );
-
-            pointer-events: none;
-        }
-
-        .future-hero::after {
-            content: "";
-            position: absolute;
-
-            width: 500px;
-            height: 500px;
-
-            right: -150px;
-            top: 50px;
-
-            border-radius: 50%;
-
-            background: rgba(0, 145, 255, .12);
-            filter: blur(80px);
-        }
-
-        .future-hero-content {
-            position: relative;
-            z-index: 3;
-        }
-
-        .future-kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-
-            padding: 9px 17px;
-
-            border-radius: 50px;
-
-            background: rgba(255, 35, 85, .14);
-            border: 1px solid rgba(255, 60, 100, .5);
-
-            color: #ff5c7c;
-
-            font-size: 13px;
-            font-weight: 800;
-
-            letter-spacing: 1.5px;
-        }
-
-        .future-kicker::before {
-            content: "";
-            width: 8px;
-            height: 8px;
-
-            background: #ff3d65;
-
-            border-radius: 50%;
-
-            box-shadow: 0 0 15px #ff3d65;
-        }
-
-        .future-title {
-            margin-top: 25px;
-
-            color: white;
-
-            font-size: clamp(48px, 7vw, 92px);
-            font-weight: 900;
-
-            line-height: .95;
-
-            letter-spacing: -4px;
-
-            max-width: 900px;
-        }
-
-        .future-title span {
-            background: linear-gradient(
-                90deg,
-                #ffffff,
-                #5bc8ff
-            );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            color: transparent;
-        }
-
-        .future-description {
-            max-width: 650px;
-
-            margin-top: 28px;
-
-            color: rgba(255,255,255,.72);
-
-            font-size: 20px;
-            line-height: 1.6;
-        }
-
-        .future-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-
-            margin-top: 35px;
-        }
-
-        .future-btn {
-            padding: 15px 25px;
-
-            border-radius: 12px;
-
-            font-weight: 800;
-
-            text-decoration: none;
-
-            transition: .3s;
-        }
-
-        .future-btn-primary {
-            color: white;
-
-            background: linear-gradient(
-                135deg,
-                #0077ff,
-                #00b7ff
-            );
-
-            box-shadow:
-                0 10px 30px rgba(0, 119, 255, .3);
-        }
-
-        .future-btn-primary:hover {
-            color: white;
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 15px 40px rgba(0, 183, 255, .45);
-        }
-
-        .future-btn-secondary {
-            color: white;
-
-            border: 1px solid rgba(255,255,255,.25);
-
-            background: rgba(255,255,255,.06);
-
-            backdrop-filter: blur(10px);
-        }
-
-        .future-btn-secondary:hover {
-            color: white;
-
-            background: rgba(255,255,255,.12);
-
-            transform: translateY(-3px);
-        }
-
-        /* =====================================================
-           TITULOS
-        ===================================================== */
-
-        .future-section {
-            padding: 90px 0;
-        }
-
-        .future-section-title {
-            font-size: 42px;
-            font-weight: 900;
-
-            letter-spacing: -1.5px;
-
-            color: #071b2e;
-        }
-
-        .future-section-subtitle {
-            color: #6b7c8f;
-        }
-
-        .future-line {
-            width: 60px;
-            height: 4px;
-
-            margin-top: 15px;
-
-            border-radius: 10px;
-
-            background: linear-gradient(
-                90deg,
-                #0077ff,
-                #00c6ff
-            );
-        }
-
-        /* =====================================================
-           NOTICIAS
-        ===================================================== */
-
-        .future-news-card {
-            position: relative;
-
-            height: 440px;
-
-            overflow: hidden;
-
-            border-radius: 24px;
-
-            background: #071b2e;
-
-            box-shadow:
-                0 20px 50px rgba(0, 25, 55, .12);
-
-            transition: .4s;
-        }
-
-        .future-news-card:hover {
-            transform: translateY(-8px);
-
-            box-shadow:
-                0 30px 65px rgba(0, 100, 180, .22);
-        }
-
-        .future-news-card img {
-            width: 100%;
-            height: 100%;
-
-            object-fit: cover;
-
-            transition: .6s;
-        }
-
-        .future-news-card:hover img {
-            transform: scale(1.07);
-        }
-
-        .future-news-overlay {
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(2, 13, 25, .96),
-                    rgba(2, 13, 25, .1) 65%
-                );
-        }
-
-        .future-news-content {
-            position: absolute;
-
-            left: 28px;
-            right: 28px;
-            bottom: 28px;
-
-            color: white;
-
-            z-index: 2;
-        }
-
-        .future-tag {
-            display: inline-block;
-
-            padding: 6px 12px;
-
-            border-radius: 50px;
-
-            background: #0077ff;
-
-            font-size: 11px;
-            font-weight: 900;
-
-            letter-spacing: .8px;
-        }
-
-        .future-news-content h3 {
-            margin-top: 14px;
-
-            font-size: 28px;
-            font-weight: 850;
-
-            line-height: 1.15;
-        }
-
-        .future-news-content p {
-            margin-top: 12px;
-
-            color: rgba(255,255,255,.65);
-
-            font-size: 14px;
-        }
-
-        .future-small-news {
-            height: 208px;
-        }
-
-        .future-small-news h3 {
-            font-size: 21px;
-        }
-
-        /* =====================================================
-           ACCESOS
-        ===================================================== */
-
-        .future-menu-card {
-            display: block;
-
-            padding: 28px;
-
-            border-radius: 20px;
-
-            color: #071b2e;
-
-            background: white;
-
-            border: 1px solid rgba(0, 100, 180, .08);
-
-            box-shadow:
-                0 15px 40px rgba(0, 40, 80, .07);
-
-            text-decoration: none;
-
-            transition: .3s;
-        }
-
-        .future-menu-card:hover {
-            color: #071b2e;
-
-            transform: translateY(-6px);
-
-            border-color: rgba(0, 119, 255, .35);
-
-            box-shadow:
-                0 20px 50px rgba(0, 119, 255, .15);
-        }
-
-        .future-menu-icon {
-            width: 55px;
-            height: 55px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 15px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #0077ff,
-                    #00b7ff
-                );
-
-            color: white;
-
-            font-size: 25px;
-
-            margin-bottom: 18px;
-        }
-
-        .future-menu-card h4 {
-            font-weight: 850;
-        }
-
-        .future-menu-card p {
-            margin: 0;
-
-            color: #718196;
-        }
-
-        /* =====================================================
-           PROXIMO PARTIDO
-        ===================================================== */
-
-        .future-match {
-            position: relative;
-
-            overflow: hidden;
-
-            padding: 55px 35px;
-
-            border-radius: 30px;
-
-            background:
-                radial-gradient(
-                    circle at 50% 0%,
-                    rgba(0, 154, 255, .22),
-                    transparent 45%
-                ),
-                #061a2c;
-
-            color: white;
-
-            border: 1px solid rgba(0, 183, 255, .25);
-
-            box-shadow:
-                0 25px 70px rgba(0, 35, 70, .25);
-        }
-
-        .future-match::before {
-            content: "";
-
-            position: absolute;
-
-            width: 300px;
-            height: 300px;
-
-            left: -120px;
-            bottom: -150px;
-
-            border-radius: 50%;
-
-            background: rgba(0, 119, 255, .15);
-
-            filter: blur(40px);
-        }
-
-        .future-match-badge {
-            display: inline-block;
-
-            padding: 9px 18px;
-
-            border-radius: 50px;
-
-            background: linear-gradient(
-                90deg,
-                #ff315f,
-                #ff5478
-            );
-
-            font-size: 12px;
-            font-weight: 900;
-
-            letter-spacing: 1px;
-
-            box-shadow:
-                0 10px 30px rgba(255, 49, 95, .3);
-        }
-
-        .future-team img {
-            width: 120px;
-            height: 120px;
-
-            object-fit: contain;
-
-            margin-bottom: 20px;
-        }
-
-        .future-team h3 {
-            font-size: 25px;
-            font-weight: 850;
-        }
-
-        .future-vs {
-            font-size: 58px;
-            font-weight: 950;
-
-            background:
-                linear-gradient(
-                    180deg,
-                    #fff,
-                    #54bdff
-                );
-
-            -webkit-background-clip: text;
-            background-clip: text;
-
-            color: transparent;
-        }
-
-        .future-match-date {
-            color: rgba(255,255,255,.65);
-
-            margin-top: 10px;
-        }
-
-        .future-match-time {
-            font-size: 30px;
-            font-weight: 900;
-
-            margin-top: 5px;
-        }
-
-        .future-competition {
-            display: inline-block;
-
-            margin-top: 12px;
-
-            padding: 8px 15px;
-
-            border: 1px solid rgba(255,255,255,.18);
-
-            border-radius: 50px;
-
-            color: #7bd0ff;
-
-            background: rgba(255,255,255,.04);
-
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        /* =====================================================
-           RUMORES
-        ===================================================== */
-
-        .future-rumor {
-            position: relative;
-
-            padding: 25px;
-
-            border-radius: 20px;
-
-            background: white;
-
-            border: 1px solid rgba(0, 119, 255, .08);
-
-            transition: .3s;
-        }
-
-        .future-rumor:hover {
-            transform: translateX(5px);
-
-            border-color: rgba(0, 119, 255, .3);
-
-            box-shadow:
-                0 15px 40px rgba(0, 119, 255, .1);
-        }
-
-        .future-rumor-label {
-            color: #0077ff;
-
-            font-size: 11px;
-            font-weight: 900;
-
-            letter-spacing: 1px;
-        }
-
-        .future-rumor h4 {
-            margin-top: 8px;
-
-            font-weight: 850;
-        }
-
-        .future-rumor p {
-            margin: 0;
-
-            color: #728196;
-        }
-
-        /* =====================================================
-           FOOTER
-        ===================================================== */
-
-        .future-footer {
-            padding: 65px 0 30px;
-
-            background: #031321;
-
-            color: white;
-
-            border-top: 1px solid rgba(0, 183, 255, .2);
-        }
-
-        .future-footer p {
-            color: rgba(255,255,255,.55);
-        }
-
-        .future-footer a {
-            color: rgba(255,255,255,.65);
-
-            text-decoration: none;
-
-            transition: .3s;
-        }
-
-        .future-footer a:hover {
-            color: #4dc8ff;
-        }
-
-        /* =====================================================
-           MOVIL
-        ===================================================== */
-
-        @media (max-width: 768px) {
-
-            .future-hero {
-                min-height: 650px;
-
-                background-position: 60% center;
-            }
-
-            .future-title {
-                font-size: 52px;
-
-                letter-spacing: -2px;
-            }
-
-            .future-description {
-                font-size: 17px;
-            }
-
-            .future-section {
-                padding: 60px 0;
-            }
-
-            .future-section-title {
-                font-size: 32px;
-            }
-
-            .future-news-card {
-                height: 350px;
-            }
-
-            .future-small-news {
-                height: 280px;
-            }
-
-            .future-match {
-                padding: 40px 15px;
-            }
-
-            .future-team img {
-                width: 85px;
-                height: 85px;
-            }
-
-            .future-team h3 {
-                font-size: 18px;
-            }
-
-            .future-vs {
-                font-size: 40px;
-            }
-
-            .future-match-time {
-                font-size: 25px;
-            }
-        }
-
-    </style>
-
 </head>
 
 <body>
 
-    <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+    <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark future-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
 
         <div class="container">
 
             <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
-               href="index.html">
+                href="index.html">
 
                 <img src="img/logo/logo.png"
-                     width="48"
-                     height="48"
-                     alt="Azulones News">
+                    width="50"
+                    height="50"
+                    alt="Azulones News">
 
                 <div>
 
-                    <div class="fw-bold">
+                    <div class="fs-4 fw-bold">
                         AZULONES NEWS
                     </div>
 
@@ -777,8 +65,8 @@
             </a>
 
             <button class="navbar-toggler"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu">
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
 
                 <span class="navbar-toggler-icon"></span>
 
@@ -786,7 +74,7 @@
 
             <div class="collapse navbar-collapse" id="menu">
 
-                <ul class="navbar-nav ms-auto gap-lg-2">
+                <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">
@@ -833,410 +121,41 @@
     </nav>
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+    <!-- ================= HERO ================= -->
 
-    <section class="future-hero">
+    <section class="hero">
 
         <div class="container">
 
-            <div class="future-hero-content">
+            <div class="row align-items-center">
 
-                <div class="future-kicker">
-                    ACTUALIDAD AZULONA
-                </div>
+                <div class="col-lg-8">
 
-                <h1 class="future-title">
+                    <span class="badge bg-danger fs-6 mb-4">
 
-                     En un solo lugar.
-                    <span>Todo el Getafe.</span>
+                        🔥 VICTORIA AZULONA
 
-                </h1>
-
-                <p class="future-description">
-
-                    Todas las noticias, fichajes, rumores,
-                    partidos y actualidad del Getafe CF
-                    en un solo lugar.
-
-                </p>
-
-                <div class="future-buttons">
-
-                    <a href="noticias.html"
-                       class="future-btn future-btn-primary">
-
-                        📰 Ver últimas noticias
-
-                    </a>
-
-                    <a href="partidos.html"
-                       class="future-btn future-btn-secondary">
-
-                        ⚽ Ver partidos
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         ACCESOS RAPIDOS
-    ===================================================== -->
-
-    <section class="future-section">
-
-        <div class="container">
-
-            <div class="mb-5">
-
-                <h2 class="future-section-title">
-                    Todo el Getafe en un vistazo
-                </h2>
-
-                <p class="future-section-subtitle">
-                    Accede rápidamente a toda la información del conjunto azulón.
-                </p>
-
-                <div class="future-line"></div>
-
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-6 col-lg-3">
-
-                    <a href="noticias.html"
-                       class="future-menu-card">
-
-                        <div class="future-menu-icon">
-                            📰
-                        </div>
-
-                        <h4>
-                            Noticias
-                        </h4>
-
-                        <p>
-                            Toda la actualidad.
-                        </p>
-
-                    </a>
-
-                </div>
-
-                <div class="col-6 col-lg-3">
-
-                    <a href="rumores.html"
-                       class="future-menu-card">
-
-                        <div class="future-menu-icon">
-                            🔥
-                        </div>
-
-                        <h4>
-                            Rumores
-                        </h4>
-
-                        <p>
-                            Mercado azulón.
-                        </p>
-
-                    </a>
-
-                </div>
-
-                <div class="col-6 col-lg-3">
-
-                    <a href="partidos.html"
-                       class="future-menu-card">
-
-                        <div class="future-menu-icon">
-                            ⚽
-                        </div>
-
-                        <h4>
-                            Partidos
-                        </h4>
-
-                        <p>
-                            Calendario y resultados.
-                        </p>
-
-                    </a>
-
-                </div>
-
-                <div class="col-6 col-lg-3">
-
-                    <a href="clasificacion.html"
-                       class="future-menu-card">
-
-                        <div class="future-menu-icon">
-                            📊
-                        </div>
-
-                        <h4>
-                            Clasificación
-                        </h4>
-
-                        <p>
-                            LaLiga EA Sports.
-                        </p>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         NOTICIAS DESTACADAS
-    ===================================================== -->
-
-    <section class="future-section pt-0">
-
-        <div class="container">
-
-            <div class="d-flex justify-content-between align-items-end mb-5">
-
-                <div>
-
-                    <h2 class="future-section-title mb-1">
-                        Últimas noticias
-                    </h2>
-
-                    <p class="future-section-subtitle mb-0">
-                        Lo más importante del Getafe CF.
-                    </p>
-
-                    <div class="future-line"></div>
-
-                </div>
-
-                <a href="noticias.html"
-                   class="btn btn-outline-primary d-none d-md-block">
-
-                    Ver todas
-
-                </a>
-
-            </div>
-
-
-            <div class="row g-4">
-
-
-                <!-- NOTICIA PRINCIPAL -->
-
-                <div class="col-lg-7">
-
-                    <a href="noticias.html"
-                       class="text-decoration-none">
-
-                        <article class="future-news-card">
-
-                            <img src="img/noticias/noticia1.jpg"
-                                 alt="Getafe CF">
-
-                            <div class="future-news-overlay"></div>
-
-                            <div class="future-news-content">
-
-                                <span class="future-tag">
-                                    EUROPA
-                                </span>
-
-                                <h3>
-                                    El Getafe se impone por 3-1 al Partizán
-                                    en una gran noche europea
-                                </h3>
-
-                                <p>
-                                    21 Agosto 2026 · Redacción Azulones News
-                                </p>
-
-                            </div>
-
-                        </article>
-
-                    </a>
-
-                </div>
-
-
-                <!-- NOTICIAS SECUNDARIAS -->
-
-                <div class="col-lg-5">
-
-                    <div class="row g-4">
-
-
-                        <div class="col-12">
-
-                            <a href="noticias.html"
-                               class="text-decoration-none">
-
-                                <article class="future-news-card future-small-news">
-
-                                    <img src="img/noticias/noticia2.jpg"
-                                         alt="Francho Serrano">
-
-                                    <div class="future-news-overlay"></div>
-
-                                    <div class="future-news-content">
-
-                                        <span class="future-tag">
-                                            FICHAJE
-                                        </span>
-
-                                        <h3>
-                                            Francho Serrano ya es nuevo jugador
-                                            del Getafe hasta 2029
-                                        </h3>
-
-                                    </div>
-
-                                </article>
-
-                            </a>
-
-                        </div>
-
-
-                        <div class="col-12">
-
-                            <a href="noticias.html"
-                               class="text-decoration-none">
-
-                                <article class="future-news-card future-small-news">
-
-                                    <img src="img/noticias/noticia3.jpg"
-                                         alt="Getafe CF">
-
-                                    <div class="future-news-overlay"></div>
-
-                                    <div class="future-news-content">
-
-                                        <span class="future-tag">
-                                            ACTUALIDAD
-                                        </span>
-
-                                        <h3>
-                                            Todo preparado para el próximo
-                                            partido del Getafe
-                                        </h3>
-
-                                    </div>
-
-                                </article>
-
-                            </a>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         PROXIMO PARTIDO
-    ===================================================== -->
-
-    <section class="future-section pt-0">
-
-        <div class="container">
-
-            <div class="future-match">
-
-                <div class="text-center">
-
-                    <span class="future-match-badge">
-                        PRÓXIMO PARTIDO
                     </span>
 
-                </div>
+                    <h1 class="display-2 fw-bold text-white">
 
-                <div class="row align-items-center text-center mt-5">
+                        ¡El Getafe vuelve a ganar!
 
+                    </h1>
 
-                    <!-- GETAFE -->
+                    <p class="lead text-white my-4">
 
-                    <div class="col-5">
+                        El conjunto de José Bordalás supera al Racing de Santander
+                        por 1-0 en el Coliseum y suma sus primeros tres puntos de la temporada.
 
-                        <div class="future-team">
+                    </p>
 
-                            <img src="img/iconos/getafe.png"
-                                 alt="Getafe CF">
+                    <a href="noticias.html"
+                        class="btn btn-light btn-lg px-4">
 
-                            <h3>
-                                Getafe
-                            </h3>
+                        Leer la noticia
 
-                        </div>
-
-                    </div>
-
-
-                    <!-- VS -->
-
-                    <div class="col-2">
-
-                        <div class="future-vs">
-                            VS
-                        </div>
-
-                        <div class="future-match-date">
-                            Domingo 23 de agosto
-                        </div>
-
-                        <div class="future-match-time">
-                            19:30
-                        </div>
-
-                        <span class="future-competition">
-                            LaLiga EA Sports
-                        </span>
-
-                    </div>
-
-
-                    <!-- RACING -->
-
-                    <div class="col-5">
-
-                        <div class="future-team">
-
-                            <img src="img/iconos/rival.png"
-                                 alt="Racing de Santander">
-
-                            <h3>
-                                Racing de Santander
-                            </h3>
-
-                        </div>
-
-                    </div>
+                    </a>
 
                 </div>
 
@@ -1247,96 +166,137 @@
     </section>
 
 
-    <!-- =====================================================
-         RUMORES
-    ===================================================== -->
+    <!-- ================= NOTICIAS DESTACADAS ================= -->
 
-    <section class="future-section pt-0">
+    <section class="container py-5">
 
-        <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
 
-            <div class="d-flex justify-content-between align-items-end mb-5">
+            <h2 class="fw-bold">
+                📰 Noticias destacadas
+            </h2>
 
-                <div>
+            <a href="noticias.html"
+                class="btn btn-outline-primary">
 
-                    <h2 class="future-section-title mb-1">
-                        🔥 Mercado azulón
-                    </h2>
+                Ver todas
 
-                    <p class="future-section-subtitle mb-0">
-                        Los nombres que rodean al Getafe.
-                    </p>
+            </a>
 
-                    <div class="future-line"></div>
+        </div>
 
-                </div>
 
-                <a href="rumores.html"
-                   class="btn btn-outline-primary d-none d-md-block">
+        <div class="row g-4">
 
-                    Ver rumores
+
+            <!-- NOTICIA PRINCIPAL -->
+
+            <div class="col-lg-8">
+
+                <a href="noticia-victoria-racing.html"
+                    class="text-decoration-none">
+
+                    <div class="noticia-principal">
+
+                        <img src="img/noticias/victoria-racing.jpg"
+                            alt="Getafe celebra la victoria ante el Racing de Santander">
+
+                        <div class="overlay"></div>
+
+                        <div class="contenido">
+
+                            <span class="categoria">
+
+                                🔥 VICTORIA
+
+                            </span>
+
+                            <h2>
+
+                                El Getafe se impone al Racing y suma su primera victoria liguera
+
+                            </h2>
+
+                            <p>
+
+                                23 Agosto 2026 · Redacción Azulones News
+
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </a>
 
             </div>
 
 
-            <div class="row g-4">
+            <!-- NOTICIAS SECUNDARIAS -->
+
+            <div class="col-lg-4">
 
 
-                <div class="col-md-6">
+                <!-- DAVID SORIA -->
 
-                    <a href="rumores.html"
-                       class="text-decoration-none text-dark">
+                <a href="noticia-david-soria.html"
+                    class="text-decoration-none">
 
-                        <article class="future-rumor">
+                    <div class="mini-noticia">
 
-                            <span class="future-rumor-label">
-                                RUMOR · MEDIOCENTRO
+                        <img src="img/noticias/davidsoria.jpg"
+                            alt="David Soria durante el Getafe Racing">
+
+                        <div class="overlay"></div>
+
+                        <div class="contenido-mini">
+
+                            <span>
+                                PORTERÍA
                             </span>
 
-                            <h4>
-                                El Getafe sigue atento al mercado
-                                para reforzar la medular
-                            </h4>
+                            <h5>
 
-                            <p>
-                                Todas las novedades del mercado azulón.
-                            </p>
+                                David Soria vuelve a ser decisivo y detiene un penalti clave
 
-                        </article>
+                            </h5>
 
-                    </a>
+                        </div>
 
-                </div>
+                    </div>
+
+                </a>
 
 
-                <div class="col-md-6">
+                <!-- ENES ÜNAL -->
 
-                    <a href="rumores.html"
-                       class="text-decoration-none text-dark">
+                <a href="noticia-victoria-racing.html"
+                    class="text-decoration-none">
 
-                        <article class="future-rumor">
+                    <div class="mini-noticia mt-4">
 
-                            <span class="future-rumor-label">
-                                RUMOR · FICHAJES
+                        <img src="img/noticias/noticia2.jpg"
+                            alt="Enes Ünal">
+
+                        <div class="overlay"></div>
+
+                        <div class="contenido-mini">
+
+                            <span>
+                                LALIGA
                             </span>
 
-                            <h4>
-                                Nuevos nombres aparecen en la agenda
-                                del conjunto azulón
-                            </h4>
+                            <h5>
 
-                            <p>
-                                Consulta los últimos movimientos.
-                            </p>
+                                Enes Ünal decide el partido y los tres puntos se quedan en el Coliseum
 
-                        </article>
+                            </h5>
 
-                    </a>
+                        </div>
 
-                </div>
+                    </div>
 
+                </a>
 
             </div>
 
@@ -1345,82 +305,147 @@
     </section>
 
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+    <!-- ================= PRÓXIMO PARTIDO ================= -->
 
-    <footer class="future-footer">
+    <section class="container py-5">
+
+        <div class="card shadow-lg border-0">
+
+            <div class="card-body py-5">
+
+                <h2 class="text-center fw-bold mb-5">
+
+                    ⚽ Próximo partido
+
+                </h2>
+
+                <div class="row align-items-center text-center">
+
+                    <div class="col">
+
+                        <img src="img/iconos/getafe.png"
+                            width="110"
+                            alt="Getafe CF">
+
+                        <h3 class="mt-3">
+
+                            Getafe CF
+
+                        </h3>
+
+                    </div>
+
+
+                    <div class="col-md-2">
+
+                        <h1 class="display-3 fw-bold text-primary">
+
+                            VS
+
+                        </h1>
+
+                        <p>
+
+                            Próximamente
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col">
+
+                        <img src="img/iconos/rival.png"
+                            width="110"
+                            alt="Próximo rival">
+
+                        <h3 class="mt-3">
+
+                            Próximo rival
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="bg-primary text-white py-5 mt-5">
 
         <div class="container">
 
-            <div class="row g-5">
+            <div class="row">
 
                 <div class="col-lg-6">
 
-                    <h3 class="fw-bold">
-                        AZULONES NEWS
+                    <h3>
+                        Azulones News
                     </h3>
 
-                    <p class="mt-3">
-                        Toda la actualidad del Getafe Club de Fútbol
-                        desde el corazón del Getafismo.
+                    <p>
+                        Toda la actualidad del Getafe Club de Fútbol.
                     </p>
 
                 </div>
 
 
-                <div class="col-6 col-lg-3">
+                <div class="col-lg-3">
 
-                    <h5 class="fw-bold">
+                    <h5>
                         Navegación
                     </h5>
 
-                    <div class="d-flex flex-column gap-2 mt-3">
+                    <ul class="list-unstyled">
 
-                        <a href="index.html">
-                            Inicio
-                        </a>
+                        <li>
+                            <a href="index.html"
+                                class="text-white text-decoration-none">
+                                Inicio
+                            </a>
+                        </li>
 
-                        <a href="noticias.html">
-                            Noticias
-                        </a>
+                        <li>
+                            <a href="noticias.html"
+                                class="text-white text-decoration-none">
+                                Noticias
+                            </a>
+                        </li>
 
-                        <a href="rumores.html">
-                            Rumores
-                        </a>
+                        <li>
+                            <a href="rumores.html"
+                                class="text-white text-decoration-none">
+                                Rumores
+                            </a>
+                        </li>
 
-                        <a href="plantilla.html">
-                            Plantilla
-                        </a>
-
-                    </div>
+                    </ul>
 
                 </div>
 
 
-                <div class="col-6 col-lg-3">
+                <div class="col-lg-3">
 
-                    <h5 class="fw-bold">
-                        Competición
+                    <h5>
+                        Redes
                     </h5>
 
-                    <div class="d-flex flex-column gap-2 mt-3">
-
-                        <a href="partidos.html">
-                            Partidos
-                        </a>
-
-                        <a href="clasificacion.html">
-                            Clasificación
-                        </a>
-
-                    </div>
+                    <p>
+                        X · Instagram · YouTube
+                    </p>
 
                 </div>
 
             </div>
 
-            <hr class="border-secondary my-5">
+            <hr>
 
             <p class="text-center mb-0">
 
@@ -1440,3 +465,4 @@
 </body>
 
 </html>
+```
