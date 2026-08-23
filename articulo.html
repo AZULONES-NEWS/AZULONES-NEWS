@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Artículo | Azulones News</title>
+
+<meta name="description"
+      content="Toda la actualidad del Getafe CF en Azulones News.">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+
+<!-- Google tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+
+<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag(){
+    dataLayer.push(arguments);
+}
+
+gtag('js', new Date());
+
+gtag('config', 'G-F0WS5LY799');
+</script>
+
+
+<style>
+
+.article-page {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.article-category {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+}
+
+.article-title {
+    font-size: 3.2rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.article-meta {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.article-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.article-content {
+    font-size: 1.12rem;
+    line-height: 1.85;
+    color: #333;
+}
+
+.article-content p {
+    margin-bottom: 25px;
+}
+
+.article-content h2 {
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 18px;
+}
+
+.back-button {
+    margin-top: 35px;
+    margin-bottom: 60px;
+}
+
+.article-error {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+@media (max-width: 768px) {
+
+    .article-title {
+        font-size: 2.2rem;
+    }
+
+    .article-image {
+        height: 300px;
+        border-radius: 12px;
+    }
+
+    .article-content {
+        font-size: 1rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold d-flex align-items-center gap-3"
+   href="index.html">
+
+<img
+    src="img/logo/logo.png"
+    width="50"
+    alt="Azulones News"
+>
+
+<div>
+
+<div class="fs-4 fw-bold">
+AZULONES NEWS
+</div>
+
+<small class="text-white-50">
+El medio del Getafismo
+</small>
+
+</div>
+
+</a>
+
+
+<button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menu">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div
+    class="collapse navbar-collapse"
+    id="menu">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Inicio
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="noticias.html">
+Noticias
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="rumores.html">
+Rumores
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="plantilla.html">
+Plantilla
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">
+Partidos
+</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="clasificacion.html">
+Clasificación
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- ================= ARTÍCULO ================= -->
+
+<main class="container py-5">
+
+<div id="article-container" class="article-page">
+
+<!-- El contenido se genera automáticamente -->
+
+</div>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-primary text-white py-5 mt-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<h3>
+Azulones News
+</h3>
+
+<p>
+Toda la actualidad del Getafe Club de Fútbol.
+</p>
+
+</div>
+
+
+<div class="col-lg-3">
+
+<h5>
+Navegación
+</h5>
+
+<ul class="list-unstyled">
+
+<li>
+<a href="index.html"
+   class="text-white text-decoration-none">
+Inicio
+</a>
+</li>
+
+<li>
+<a href="noticias.html"
+   class="text-white text-decoration-none">
+Noticias
+</a>
+</li>
+
+<li>
+<a href="rumores.html"
+   class="text-white text-decoration-none">
+Rumores
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+<div class="col-lg-3">
+
+<h5>
+Redes
+</h5>
+
+<p>
+X · Instagram · YouTube
+</p>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="text-center mb-0">
+
+© 2026 Azulones News · Proyecto no oficial del Getafe CF.
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+const articulos = {
+
+    partizan: {
+
+        categoria: "EUROPA",
+
+        titulo:
+        "El conjunto de José Bordalás se impone por 3-1 al Partizán en una gran noche europea",
+
+        fecha:
+        "21 Agosto 2026",
+
+        autor:
+        "Redacción Azulones News",
+
+        imagen:
+        "img/noticias/noticia1.jpg",
+
+        contenido: `
+
+        <p>
+        El Getafe CF volvió a demostrar su competitividad en Europa
+        con una importante victoria por 3-1 frente al Partizán.
+        El conjunto azulón completó una actuación sólida y consiguió
+        hacerse con el control del encuentro en una noche especial
+        para la afición del Coliseum.
+        </p>
+
+        <p>
+        El equipo dirigido por José Bordalás salió al terreno de juego
+        con la intención de imponer un ritmo intenso desde los primeros
+        minutos. La presión y la intensidad azulona permitieron al
+        Getafe generar peligro y adelantarse en el marcador.
+        </p>
+
+        <h2>
+        Un Getafe intenso y competitivo
+        </h2>
+
+        <p>
+        Tras el primer gol, el conjunto madrileño mantuvo la iniciativa
+        y no permitió que el Partizán se sintiera cómodo. La presión
+        tras pérdida y el trabajo colectivo fueron algunas de las claves
+        de una actuación que terminó siendo decisiva.
+        </p>
+
+        <p>
+        El Partizán consiguió encontrar su momento durante el encuentro,
+        pero el Getafe respondió con personalidad y volvió a ampliar
+        la ventaja para encarrilar definitivamente el partido.
+        </p>
+
+        <h2>
+        Una victoria importante
+        </h2>
+
+        <p>
+        El 3-1 final supone un resultado muy positivo para el conjunto
+        azulón y refuerza las buenas sensaciones del equipo en Europa.
+        El Getafe continúa así avanzando en su proyecto con Bordalás
+        y deja una imagen de equipo competitivo y difícil de superar.
+        </p>
+
+        `
+
+    },
+
+
+    francho: {
+
+        categoria: "FICHAJE",
+
+        titulo:
+        "Francho Serrano ficha por el Getafe",
+
+        fecha:
+        "Agosto 2026",
+
+        autor:
+        "Redacción Azulones News",
+
+        imagen:
+        "img/noticias/noticia2.jpg",
+
+        contenido: `
+
+        <p>
+        El Getafe CF ha cerrado la incorporación de Francho Serrano
+        para reforzar su centro del campo de cara a la nueva temporada.
+        El futbolista se incorpora al proyecto azulón como una nueva
+        alternativa para una de las zonas más importantes del equipo.
+        </p>
+
+        <p>
+        El centrocampista llega al Coliseum después de una etapa en la
+        que ha ido adquiriendo experiencia y protagonismo en el fútbol
+        profesional. Su capacidad para participar en la construcción
+        del juego y su trabajo sin balón son algunas de las características
+        que han convencido al club.
+        </p>
+
+        <h2>
+        Refuerzo para el centro del campo
+        </h2>
+
+        <p>
+        José Bordalás contará así con una nueva pieza para aumentar las
+        posibilidades de rotación de la plantilla. La llegada de Francho
+        permite al técnico disponer de más alternativas para afrontar
+        una temporada exigente.
+        </p>
+
+        <p>
+        El objetivo del futbolista será adaptarse rápidamente al sistema
+        azulón y ganarse un puesto en una plantilla que busca competir
+        al máximo nivel durante toda la campaña.
+        </p>
+
+        <h2>
+        Nueva etapa en Getafe
+        </h2>
+
+        <p>
+        Francho Serrano comienza ahora una nueva etapa defendiendo la
+        camiseta azulona. La afición espera que su incorporación ayude
+        al equipo a mantener el nivel competitivo durante la temporada.
+        </p>
+
+        `
+
+    },
+
+
+    racing: {
+
+        categoria: "PREVIA",
+
+        titulo:
+        "Todo preparado para el próximo partido del Getafe",
+
+        fecha:
+        "Próximo partido",
+
+        autor:
+        "Redacción Azulones News",
+
+        imagen:
+        "img/noticias/noticia3.jpg",
+
+        contenido: `
+
+        <p>
+        El Getafe CF ya tiene la mirada puesta en su próximo compromiso.
+        El conjunto azulón se enfrentará al Racing de Santander en un
+        encuentro que volverá a poner a prueba al equipo de José Bordalás.
+        </p>
+
+        <p>
+        El partido se disputará el domingo a las 19:30 y el Getafe
+        buscará aprovechar el factor campo para conseguir un nuevo
+        resultado positivo ante su afición.
+        </p>
+
+        <h2>
+        El Coliseum, preparado
+        </h2>
+
+        <p>
+        La afición azulona volverá a ser una de las protagonistas del
+        encuentro. El ambiente del Coliseum será importante para ayudar
+        al equipo durante los noventa minutos.
+        </p>
+
+        <p>
+        El cuerpo técnico ha trabajado durante los últimos días para
+        preparar el encuentro y analizar las principales fortalezas
+        del conjunto cántabro.
+        </p>
+
+        <h2>
+        Objetivo: sumar tres puntos
+        </h2>
+
+        <p>
+        El Getafe afronta el partido con la intención de conseguir una
+        victoria que permita continuar con buenas sensaciones y seguir
+        avanzando en los objetivos marcados para la temporada.
+        </p>
+
+        `
+
+    }
+
+};
+
+
+
+function obtenerArticulo() {
+
+    const parametros =
+        new URLSearchParams(window.location.search);
+
+    return parametros.get("id");
+
+}
+
+
+
+function cargarArticulo() {
+
+    const id = obtenerArticulo();
+
+    const articulo = articulos[id];
+
+    const container =
+        document.getElementById("article-container");
+
+
+    if (!articulo) {
+
+        container.innerHTML = `
+
+        <div class="article-error">
+
+            <h1 class="fw-bold">
+                Artículo no encontrado
+            </h1>
+
+            <p class="text-muted mt-3">
+                La noticia que buscas no existe o ya no está disponible.
+            </p>
+
+            <a
+                href="index.html"
+                class="btn btn-primary mt-4">
+
+                ← Volver al inicio
+
+            </a>
+
+        </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    document.title =
+        articulo.titulo + " | Azulones News";
+
+
+    container.innerHTML = `
+
+        <span class="article-category">
+            ${articulo.categoria}
+        </span>
+
+
+        <h1 class="article-title">
+            ${articulo.titulo}
+        </h1>
+
+
+        <div class="article-meta">
+
+            ${articulo.fecha}
+            ·
+            ${articulo.autor}
+
+        </div>
+
+
+        <img
+            src="${articulo.imagen}"
+            alt="${articulo.titulo}"
+            class="article-image"
+        >
+
+
+        <article class="article-content">
+
+            ${articulo.contenido}
+
+        </article>
+
+
+        <div class="back-button">
+
+            <a
+                href="index.html"
+                class="btn btn-primary">
+
+                ← Volver a Azulones News
+
+            </a>
+
+        </div>
+
+    `;
+
+}
+
+
+cargarArticulo();
+
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
