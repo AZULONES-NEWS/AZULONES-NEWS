@@ -1,0 +1,414 @@
+/* =========================================================
+   AZULONES NEWS - DISEÑO RESPONSIVE
+   ========================================================= */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 991px) {
+
+    /* NAVBAR */
+
+    .navbar-brand .fs-4 {
+        font-size: 1.15rem !important;
+    }
+
+    .navbar-brand small {
+        font-size: 0.75rem;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem !important;
+    }
+
+
+    /* NOTICIA PRINCIPAL */
+
+    .noticia-principal {
+        min-height: 420px;
+    }
+
+
+    /* NOTICIAS PEQUEÑAS */
+
+    .mini-noticia {
+        min-height: 230px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+
+    /* -----------------------------------------------------
+       GENERAL
+       ----------------------------------------------------- */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+
+    /* -----------------------------------------------------
+       NAVBAR
+       ----------------------------------------------------- */
+
+    .navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-brand {
+        gap: 10px !important;
+    }
+
+    .navbar-brand img {
+        width: 42px !important;
+        height: 42px;
+        object-fit: contain;
+    }
+
+    .navbar-brand .fs-4 {
+        font-size: 1rem !important;
+        line-height: 1.1;
+    }
+
+    .navbar-brand small {
+        font-size: 0.68rem;
+    }
+
+    .navbar-toggler {
+        padding: 5px 8px;
+    }
+
+    .navbar-nav {
+        padding-top: 12px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 5px;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+       ----------------------------------------------------- */
+
+    .hero {
+        min-height: 470px;
+        padding: 70px 0 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2.45rem !important;
+        line-height: 1.08;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .hero .badge {
+        font-size: 0.8rem !important;
+        margin-bottom: 18px !important;
+    }
+
+    .hero .btn {
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+    /* -----------------------------------------------------
+       TÍTULOS DE SECCIÓN
+       ----------------------------------------------------- */
+
+    section h2 {
+        font-size: 1.65rem;
+    }
+
+    .d-flex.justify-content-between.align-items-center {
+        gap: 15px;
+    }
+
+    .d-flex.justify-content-between.align-items-center h2 {
+        margin-bottom: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       NOTICIA PRINCIPAL
+       ----------------------------------------------------- */
+
+    .noticia-principal {
+        min-height: 390px;
+        height: 390px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .noticia-principal img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .noticia-principal .contenido {
+        padding: 20px;
+    }
+
+    .noticia-principal .contenido h2 {
+        font-size: 1.45rem;
+        line-height: 1.2;
+    }
+
+    .noticia-principal .contenido p {
+        font-size: 0.8rem;
+    }
+
+
+    /* -----------------------------------------------------
+       NOTICIAS PEQUEÑAS
+       ----------------------------------------------------- */
+
+    .mini-noticia {
+        width: 100%;
+        min-height: 220px;
+        height: 220px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    .mini-noticia img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .mini-noticia .contenido-mini {
+        padding: 18px;
+    }
+
+    .mini-noticia h5 {
+        font-size: 1.1rem;
+        line-height: 1.25;
+    }
+
+
+    /* -----------------------------------------------------
+       PRÓXIMO PARTIDO
+       ----------------------------------------------------- */
+
+    .card-body {
+        padding: 35px 20px !important;
+    }
+
+    .card-body h2 {
+        font-size: 1.6rem;
+    }
+
+    .card-body .row {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .card-body .col-md-2 {
+        width: 100%;
+    }
+
+    .card-body .display-3 {
+        font-size: 2.4rem !important;
+    }
+
+    .card-body img {
+        width: 80px !important;
+        height: 80px;
+        object-fit: contain;
+    }
+
+    .card-body h3 {
+        font-size: 1.35rem;
+    }
+
+
+    /* -----------------------------------------------------
+       FOOTER
+       ----------------------------------------------------- */
+
+    footer {
+        text-align: center;
+    }
+
+    footer .col-lg-6,
+    footer .col-lg-3 {
+        margin-bottom: 25px;
+    }
+
+    footer h3 {
+        font-size: 1.5rem;
+    }
+
+
+    /* -----------------------------------------------------
+       ARTÍCULOS
+       ----------------------------------------------------- */
+
+    .article-page {
+        width: 100%;
+    }
+
+    .article-title {
+        font-size: 2rem !important;
+        line-height: 1.15;
+    }
+
+    .article-image {
+        width: 100%;
+        height: 280px !important;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .article-content h2 {
+        font-size: 1.5rem;
+    }
+
+
+    /* -----------------------------------------------------
+       TABLAS
+       ----------------------------------------------------- */
+
+    table {
+        width: 100%;
+        font-size: 0.85rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    /* -----------------------------------------------------
+       IMÁGENES GENERALES
+       ----------------------------------------------------- */
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar-brand img {
+        width: 38px !important;
+        height: 38px;
+    }
+
+    .navbar-brand .fs-4 {
+        font-size: 0.9rem !important;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 430px;
+        padding: 55px 0 40px;
+    }
+
+    .hero h1 {
+        font-size: 2.05rem !important;
+    }
+
+
+    /* NOTICIAS */
+
+    .noticia-principal {
+        min-height: 340px;
+        height: 340px;
+    }
+
+    .noticia-principal .contenido h2 {
+        font-size: 1.25rem;
+    }
+
+    .mini-noticia {
+        min-height: 190px;
+        height: 190px;
+    }
+
+    .mini-noticia h5 {
+        font-size: 1rem;
+    }
+
+
+    /* PRÓXIMO PARTIDO */
+
+    .card-body {
+        padding: 28px 15px !important;
+    }
+
+    .card-body .display-3 {
+        font-size: 2rem !important;
+    }
+
+
+    /* ARTÍCULOS */
+
+    .article-title {
+        font-size: 1.7rem !important;
+    }
+
+    .article-image {
+        height: 230px !important;
+    }
+
+}
