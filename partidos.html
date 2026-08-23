@@ -3,823 +3,1458 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Partidos | Azulones News</title>
+    <title>Partidos | Azulones News</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animations.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
 
-  gtag('config', 'G-F0WS5LY799');
-</script>
+    <!-- Google tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-F0WS5LY799');
+    </script>
+
+
+    <style>
+
+        /* =====================================================
+           PARTIDOS - ESTILO FUTURISTA AZULONES NEWS
+        ===================================================== */
+
+        body {
+            background:
+                radial-gradient(circle at top right, rgba(0, 91, 172, .12), transparent 35%),
+                radial-gradient(circle at bottom left, rgba(0, 91, 172, .08), transparent 35%),
+                #f5f7fb;
+        }
+
+
+        /* CABECERA */
+
+        .partidos-header {
+            padding: 55px 20px 35px;
+        }
+
+        .partidos-header .season-badge {
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 50px;
+            background: linear-gradient(135deg, #005BAC, #008cff);
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(0, 91, 172, .25);
+        }
+
+        .partidos-header h1 {
+            font-size: clamp(2.4rem, 5vw, 4.3rem);
+            font-weight: 900;
+            margin-top: 20px;
+            background: linear-gradient(90deg, #003b78, #008cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+
+        /* =====================================================
+           PRÓXIMO PARTIDO
+        ===================================================== */
+
+        .proximo-partido-futurista {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            padding: 4px;
+            background: linear-gradient(
+                135deg,
+                #005BAC,
+                #00aaff,
+                #005BAC
+            );
+            box-shadow:
+                0 25px 60px rgba(0, 70, 140, .18),
+                0 0 35px rgba(0, 140, 255, .10);
+        }
+
+        .proximo-partido-inner {
+            position: relative;
+            overflow: hidden;
+            border-radius: 26px;
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0, 140, 255, .14),
+                    transparent 45%
+                ),
+                #071827;
+            color: white;
+            padding: 50px 35px;
+        }
+
+        .proximo-partido-inner::before {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(0, 153, 255, .08);
+            top: -150px;
+            left: -100px;
+            filter: blur(5px);
+        }
+
+        .proximo-partido-inner::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(0, 102, 255, .07);
+            bottom: -200px;
+            right: -100px;
+        }
+
+        .proximo-badge {
+            position: relative;
+            z-index: 2;
+            display: inline-block;
+            background: linear-gradient(90deg, #ff1744, #ff4d67);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1px;
+            box-shadow: 0 7px 20px rgba(255, 23, 68, .25);
+        }
+
+        .partido-equipo {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .escudo-futurista {
+            width: 145px;
+            height: 145px;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 18px rgba(0, 0, 0, .35));
+            transition: .4s ease;
+        }
+
+        .partido-equipo:hover .escudo-futurista {
+            transform: translateY(-8px) scale(1.06);
+            filter:
+                drop-shadow(0 15px 25px rgba(0, 153, 255, .35));
+        }
+
+        .nombre-equipo {
+            margin-top: 18px;
+            font-size: 1.35rem;
+            font-weight: 800;
+        }
+
+        .versus {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .versus-text {
+            font-size: 3.5rem;
+            line-height: 1;
+            font-weight: 950;
+            background: linear-gradient(180deg, #ffffff, #69c7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .fecha-partido {
+            margin-top: 20px;
+            color: #b9dfff;
+            font-size: 1rem;
+        }
+
+        .hora-partido {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: white;
+            margin-top: 3px;
+        }
+
+        .competicion {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 7px 15px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,.2);
+            background: rgba(255,255,255,.08);
+            color: #aee0ff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           TÍTULOS DE COMPETICIÓN
+        ===================================================== */
+
+        .competicion-titulo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 65px;
+            margin-bottom: 28px;
+        }
+
+        .competicion-titulo .icono {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #005BAC, #008cff);
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 10px 25px rgba(0, 91, 172, .22);
+        }
+
+        .competicion-titulo h2 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #073763;
+        }
+
+
+        /* =====================================================
+           TARJETAS DE PARTIDOS
+        ===================================================== */
+
+        .partido-card {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(0, 91, 172, .10);
+            border-radius: 22px;
+            background: rgba(255,255,255,.82);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 12px 35px rgba(0, 48, 100, .08);
+            transition: .35s ease;
+        }
+
+        .partido-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #005BAC, #00aaff);
+        }
+
+        .partido-card:hover {
+            transform: translateY(-7px);
+            box-shadow:
+                0 20px 45px rgba(0, 70, 140, .15),
+                0 0 25px rgba(0, 153, 255, .08);
+            border-color: rgba(0, 91, 172, .25);
+        }
+
+        .partido-card .card-body {
+            padding: 27px;
+        }
+
+        .jornada {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 50px;
+            background: #eaf5ff;
+            color: #005BAC;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: .6px;
+        }
+
+        .partido-card hr {
+            border: 0;
+            border-top: 1px solid rgba(0, 91, 172, .10);
+            margin: 18px 0;
+        }
+
+        .equipo-linea {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 16px;
+        }
+
+        .equipo-linea span:first-child {
+            font-weight: 650;
+            color: #263b50;
+        }
+
+        .fecha-linea {
+            color: #005BAC;
+            font-weight: 900;
+            white-space: nowrap;
+        }
+
+        .hora-linea {
+            color: #718096;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .estadio-linea {
+            color: #7b8794;
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           RESULTADO
+        ===================================================== */
+
+        .resultado {
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: #005BAC;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 767px) {
+
+            .partidos-header {
+                padding: 35px 12px 25px;
+            }
+
+            .partidos-header h1 {
+                font-size: 2.35rem;
+            }
+
+            .partidos-header p {
+                font-size: .95rem;
+            }
+
+            .proximo-partido-inner {
+                padding: 35px 15px;
+            }
+
+            .escudo-futurista {
+                width: 90px;
+                height: 90px;
+            }
+
+            .nombre-equipo {
+                font-size: 1.05rem;
+            }
+
+            .versus {
+                margin: 22px 0;
+            }
+
+            .versus-text {
+                font-size: 2.3rem;
+            }
+
+            .fecha-partido {
+                margin-top: 12px;
+                font-size: .9rem;
+            }
+
+            .hora-partido {
+                font-size: 1.4rem;
+            }
+
+            .competicion-titulo {
+                margin-top: 45px;
+            }
+
+            .competicion-titulo h2 {
+                font-size: 1.45rem;
+            }
+
+            .partido-card .card-body {
+                padding: 22px;
+            }
+
+            .equipo-linea {
+                font-size: 14px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-<div class="container">
+    <!-- ================= NAVBAR ================= -->
 
-<a class="navbar-brand fw-bold" href="index.html">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-<img src="img/logo/logo.png" width="42">
+        <div class="container">
 
-AZULONES NEWS
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2"
+               href="index.html">
 
-</a>
+                <img src="img/logo/logo.png"
+                     width="42"
+                     alt="Azulones News">
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span>
+                    AZULONES NEWS
+                </span>
 
-<span class="navbar-toggler-icon"></span>
+            </a>
 
-</button>
 
-<div class="collapse navbar-collapse" id="menu">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
 
-<ul class="navbar-nav ms-auto">
+                <span class="navbar-toggler-icon"></span>
 
-<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            </button>
 
-<li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
 
-<li class="nav-item"><a class="nav-link" href="rumores.html">Mercado</a></li>
+            <div class="collapse navbar-collapse" id="menu">
 
-<li class="nav-item"><a class="nav-link" href="plantilla.html">Plantilla</a></li>
+                <ul class="navbar-nav ms-auto">
 
-<li class="nav-item"><a class="nav-link active" href="partidos.html">Partidos</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
 
-<li class="nav-item"><a class="nav-link" href="clasificacion.html">Clasificación</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="noticias.html">
+                            Noticias
+                        </a>
+                    </li>
 
-</ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rumores.html">
+                            Mercado
+                        </a>
+                    </li>
 
-</div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plantilla.html">
+                            Plantilla
+                        </a>
+                    </li>
 
-</div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="partidos.html">
+                            Partidos
+                        </a>
+                    </li>
 
-</nav>
+                    <li class="nav-item">
+                        <a class="nav-link" href="clasificacion.html">
+                            Clasificación
+                        </a>
+                    </li>
 
-<section class="container py-5">
-
-<div class="text-center mb-5">
-
-<span class="badge bg-primary fs-6 mb-3">
-
-TEMPORADA 2026/27
-
-</span>
-
-<h1 class="display-4 fw-bold">
-
-Calendario del Getafe CF
-
-</h1>
-
-<p class="lead text-muted">
-
-Consulta todos los partidos oficiales del conjunto azulón.
-
-</p>
-
-</div>
-
-<!-- PRÓXIMO PARTIDO -->
-
-<div class="card shadow-lg border-0 mb-5">
-
-<div class="card-body p-5 text-center">
-
-<span class="badge bg-danger mb-3 fs-6">
-
-PRÓXIMO PARTIDO
-
-</span>
-
-<div class="row align-items-center">
-
-<div class="col-md-4">
-
-<img src="img/iconos/getafe.png" class="escudo-partido">
-
-<h2 class="mt-3 fw-bold">
-
-Getafe
-
-</h2>
-
-</div>
-
-<div class="col-md-4">
-
-<h1 class="display-3 fw-bold text-primary">
-
-VS
-
-</h1>
-
-<p class="fs-5">
-
-Domingo 23 de agosto
-
-</p>
-
-<p class="fs-5">
-
-19:30
-
-</p>
-
-<span class="badge bg-primary">
-
-LaLiga EA Sports
-
-</span>
-
-</div>
-
-<div class="col-md-4">
-
-<img src="img/logo/racing.png" class="escudo-partido">
-
-<h2 class="mt-3 fw-bold">
-
-Racing de Santander
-
-</h2>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- CONFERENCE -->
-
-<h2 class="fw-bold mb-4">
-
-🏆 UEFA Conference League
-
-</h2>
-
-<div class="row g-4 mb-5">
-
-<div class="col-lg-6">
-
-<div class="card h-100 shadow-sm">
-
-<div class="card-body">
-
-<h4 class="fw-bold">
-
-Eliminatoria (Ida)
-
-</h4>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<strong>Getafe 3</strong>
-
-<strong>20 AGO</strong>
-
-</div>
-
-<div class="d-flex justify-content-between mt-2">
-
-<span> Partizan 1</span>
-
-<span>21:00</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<div class="card h-100 shadow-sm">
-
-<div class="card-body">
-
-<h4 class="fw-bold">
-
-Eliminatoria (Vuelta)
-
-</h4>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<strong>Partizan</strong>
-
-<strong>27 AGO</strong>
-
-</div>
-
-<div class="d-flex justify-content-between mt-2">
-
-<span>Getafe</span>
-
-<span>21:00</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<h2 class="fw-bold mb-4">
-
-📅 LaLiga EA Sports
-
-</h2>
-
-<div class="row g-4">
-
-<div class="col-lg-6">
-
-<div class="card shadow-sm">
-
-<div class="card-body">
-
-<h5 class="fw-bold">
-
-Jornada 1
-
-</h5>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<span>Alavés 3</span>
-
-<strong>15 AGO</strong>
-
-</div>
-
-<div class="d-flex justify-content-between">
-
-<span>Getafe 0</span>
-
-<span>19:30</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="col-lg-6">
-
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-                Jornada 2
-            </h5>
-
-            <div class="d-flex justify-content-between align-items-center">
-
-                <span>Getafe</span>
-
-                <span>23 Agosto · 19:30</span>
-
-                <span>Racing de Santander</span>
-
-            </div>
-
-            <small class="text-muted d-block mt-2">
-                Coliseum · LaLiga EA Sports
-            </small>
-
-        </div>
-
-    </div>
-
-</div>
-<div class="col-lg-6">
-
-<div class="card shadow-sm">
-
-<div class="card-body">
-
-<h5 class="fw-bold">
-
-Jornada 3
-
-</h5>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<span>Osasuna</span>
-
-<strong>31 AGO</strong>
-
-</div>
-
-<div class="d-flex justify-content-between">
-
-<span>Getafe</span>
-
-<span>19:30</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<div class="card shadow-sm">
-
-<div class="card-body">
-
-<h5 class="fw-bold">
-
-Jornada 4
-
-</h5>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<span>Getafe</span>
-
-<strong>7 SEP</strong>
-
-</div>
-
-<div class="d-flex justify-content-between">
-
-<span>Celta</span>
-
-<span>19:00</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="col-lg-6">
-
-<div class="card shadow-sm">
-
-<div class="card-body">
-
-<h5 class="fw-bold">
-
-Jornada 5
-
-</h5>
-
-<hr>
-
-<div class="d-flex justify-content-between">
-
-<span>Getafe</span>
-
-<strong>13 SEP</strong>
-
-</div>
-
-<div class="d-flex justify-content-between">
-
-<span>Deportivo</span>
-
-<span>Por definir</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<div class="col-lg-6">
-
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 6
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Real Betis</span>
-
-                <strong>16 SEP</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <span>Por definir</span>
+                </ul>
 
             </div>
 
         </div>
 
-    </div>
+    </nav>
 
-</div>
 
-<div class="col-lg-6">
 
-    <div class="card shadow-sm">
+    <!-- ================= CABECERA ================= -->
 
-        <div class="card-body">
+    <section class="container partidos-header">
 
-            <h5 class="fw-bold">
+        <div class="text-center">
 
-                Jornada 7
+            <span class="season-badge">
+                TEMPORADA 2026/27
+            </span>
 
-            </h5>
+            <h1>
+                Calendario del Getafe CF
+            </h1>
 
-            <hr>
+            <p class="lead text-muted">
+                Consulta todos los partidos oficiales del conjunto azulón.
+            </p>
 
-            <div class="d-flex justify-content-between">
+        </div>
 
-                <span>Getafe</span>
+    </section>
 
-                <strong>20 SEP</strong>
 
-            </div>
 
-            <div class="d-flex justify-content-between">
+    <!-- ================= CONTENIDO ================= -->
 
-                <span>Málaga</span>
+    <main class="container pb-5">
 
-                <span>Por definir</span>
+
+        <!-- ================= PRÓXIMO PARTIDO ================= -->
+
+        <div class="proximo-partido-futurista mb-5">
+
+            <div class="proximo-partido-inner">
+
+                <div class="text-center mb-4">
+
+                    <span class="proximo-badge">
+                        PRÓXIMO PARTIDO
+                    </span>
+
+                </div>
+
+
+                <div class="row align-items-center">
+
+                    <div class="col-md-4">
+
+                        <div class="partido-equipo">
+
+                            <img
+                                src="img/iconos/getafe.png"
+                                class="escudo-futurista"
+                                alt="Getafe CF">
+
+                            <div class="nombre-equipo">
+                                Getafe
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="versus">
+
+                            <div class="versus-text">
+                                VS
+                            </div>
+
+                            <div class="fecha-partido">
+                                Domingo 23 de agosto
+                            </div>
+
+                            <div class="hora-partido">
+                                19:30
+                            </div>
+
+                            <span class="competicion">
+                                LaLiga EA Sports
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-4">
+
+                        <div class="partido-equipo">
+
+                            <img
+                                src="img/logo/racing.png"
+                                class="escudo-futurista"
+                                alt="Racing de Santander">
+
+                            <div class="nombre-equipo">
+                                Racing de Santander
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
 
-</div>
 
-<div class="col-lg-6">
+        <!-- ================= CONFERENCE LEAGUE ================= -->
 
-    <div class="card shadow-sm">
+        <div class="competicion-titulo">
 
-        <div class="card-body">
+            <div class="icono">
+                🏆
+            </div>
 
-            <h5 class="fw-bold">
+            <h2>
+                UEFA Conference League
+            </h2>
 
-                Jornada 8
+        </div>
 
-            </h5>
 
-            <hr>
+        <div class="row g-4 mb-5">
 
-            <div class="d-flex justify-content-between">
 
-                <span>Barcelona</span>
+            <div class="col-lg-6">
 
-                <strong>11 OCT</strong>
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            ELIMINATORIA · IDA
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe 3
+                            </span>
+
+                            <strong class="fecha-linea">
+                                20 AGO
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Partizan 1
+                            </span>
+
+                            <span class="hora-linea">
+                                21:00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="d-flex justify-content-between">
 
-                <span>Getafe</span>
+            <div class="col-lg-6">
 
-                <span>Por definir</span>
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            ELIMINATORIA · VUELTA
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Partizan
+                            </span>
+
+                            <strong class="fecha-linea">
+                                27 AGO
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                21:00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
 
-</div>
 
-<div class="col-lg-6">
+        <!-- ================= LALIGA ================= -->
 
-    <div class="card shadow-sm">
+        <div class="competicion-titulo">
 
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 9
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <strong>18 OCT</strong>
-
+            <div class="icono">
+                📅
             </div>
 
-            <div class="d-flex justify-content-between">
-
-                <span>Rayo Vallecano</span>
-
-                <span>Por definir</span>
-
-            </div>
+            <h2>
+                LaLiga EA Sports
+            </h2>
 
         </div>
 
-    </div>
 
-</div>
+        <div class="row g-4">
 
-<div class="col-lg-6">
 
-    <div class="card shadow-sm">
+            <!-- JORNADA 1 -->
 
-        <div class="card-body">
+            <div class="col-lg-6">
 
-            <h5 class="fw-bold">
+                <div class="partido-card">
 
-                Jornada 10
+                    <div class="card-body">
 
-            </h5>
+                        <span class="jornada">
+                            JORNADA 1
+                        </span>
 
-            <hr>
+                        <hr>
 
-            <div class="d-flex justify-content-between">
+                        <div class="equipo-linea">
 
-                <span>Athletic Club</span>
+                            <span>
+                                Alavés 3
+                            </span>
 
-                <strong>25 OCT</strong>
+                            <strong class="fecha-linea">
+                                15 AGO
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe 0
+                            </span>
+
+                            <span class="hora-linea">
+                                19:30
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
 
-            <div class="d-flex justify-content-between">
 
-                <span>Getafe</span>
 
-                <span>Por definir</span>
+            <!-- JORNADA 2 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 2
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                23 AGO
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Racing de Santander
+                            </span>
+
+                            <span class="hora-linea">
+                                19:30
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
+
+
+
+            <!-- JORNADA 3 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 3
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Osasuna
+                            </span>
+
+                            <strong class="fecha-linea">
+                                31 AGO
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                19:30
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 4 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 4
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                7 SEP
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Celta
+                            </span>
+
+                            <span class="hora-linea">
+                                19:00
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 5 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 5
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                13 SEP
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Deportivo
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 6 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 6
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Real Betis
+                            </span>
+
+                            <strong class="fecha-linea">
+                                16 SEP
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 7 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 7
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                20 SEP
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Málaga
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 8 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 8
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Barcelona
+                            </span>
+
+                            <strong class="fecha-linea">
+                                11 OCT
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 9 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 9
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                18 OCT
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Rayo Vallecano
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 10 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 10
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Athletic Club
+                            </span>
+
+                            <strong class="fecha-linea">
+                                25 OCT
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 11 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 11
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                1 NOV
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Sevilla
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 12 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 12
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Villarreal
+                            </span>
+
+                            <strong class="fecha-linea">
+                                8 NOV
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 13 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 13
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                22 NOV
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Atlético de Madrid
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 14 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 14
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                RCD Espanyol
+                            </span>
+
+                            <strong class="fecha-linea">
+                                29 NOV
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JORNADA 15 -->
+
+            <div class="col-lg-6">
+
+                <div class="partido-card">
+
+                    <div class="card-body">
+
+                        <span class="jornada">
+                            JORNADA 15
+                        </span>
+
+                        <hr>
+
+                        <div class="equipo-linea">
+
+                            <span>
+                                Getafe
+                            </span>
+
+                            <strong class="fecha-linea">
+                                6 DIC
+                            </strong>
+
+                        </div>
+
+                        <div class="equipo-linea mt-3">
+
+                            <span>
+                                Valencia CF
+                            </span>
+
+                            <span class="hora-linea">
+                                Por definir
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
 
         </div>
 
-    </div>
+    </main>
 
-</div>
 
-<div class="col-lg-6">
 
-    <div class="card shadow-sm">
+    <!-- ================= FOOTER ================= -->
 
-        <div class="card-body">
+    <footer class="bg-dark text-white py-5 mt-5">
 
-            <h5 class="fw-bold">
+        <div class="container text-center">
 
-                Jornada 11
+            <h3 class="fw-bold">
+                AZULONES NEWS
+            </h3>
 
-            </h5>
+            <p>
+                Calendario del Getafe CF · Temporada 2026/27
+            </p>
 
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <strong>1 NOV</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Sevilla</span>
-
-                <span>Por definir</span>
-
-            </div>
+            <p class="mb-0">
+                © 2026 Azulones News
+            </p>
 
         </div>
 
-    </div>
+    </footer>
 
-</div>
 
-<div class="col-lg-6">
 
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 12
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Villarreal</span>
-
-                <strong>8 NOV</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <span>Por definir</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="col-lg-6">
-
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 13
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <strong>22 NOV</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Atlético de Madrid</span>
-
-                <span>Por definir</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="col-lg-6">
-
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 14
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>RCD Espanyol</span>
-
-                <strong>29 NOV</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <span>Por definir</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-<div class="col-lg-6">
-
-    <div class="card shadow-sm">
-
-        <div class="card-body">
-
-            <h5 class="fw-bold">
-
-                Jornada 15
-
-            </h5>
-
-            <hr>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Getafe</span>
-
-                <strong>6 DIC</strong>
-
-            </div>
-
-            <div class="d-flex justify-content-between">
-
-                <span>Valencia CF</span>
-
-                <span>Por definir</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer class="bg-dark text-white py-5 mt-5">
-
-<div class="container text-center">
-
-<h3 class="fw-bold">
-
-AZULONES NEWS
-
-</h3>
-
-<p>
-
-Calendario oficial del Getafe CF · Temporada 2026/27
-
-</p>
-
-<p class="mb-0">
-
-© 2026 Azulones News
-
-</p>
-
-</div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
->>>>>>> 092d75ba5ca8c2736b9937df9d8a22583c44d54e
