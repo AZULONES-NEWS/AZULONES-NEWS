@@ -1,323 +1,1172 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Noticias | Azulones News</title>
+    <title>Noticias | Azulones News</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description"
+        content="Todas las noticias y actualidad del Getafe CF en Azulones News.">
 
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/responsive.css">
-<link rel="stylesheet" href="css/animations.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  gtag('config', 'G-F0WS5LY799');
-</script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-F0WS5LY799');
+    </script>
+
+    <style>
+
+        /* =====================================================
+           ESTILO FUTURISTA - NOTICIAS
+        ===================================================== */
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(0,119,255,.08), transparent 30%),
+                radial-gradient(circle at 90% 30%, rgba(0,183,255,.06), transparent 30%),
+                #f4f7fb;
+        }
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .news-navbar {
+            background: rgba(3,18,35,.96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,183,255,.22);
+        }
+
+        .news-navbar .navbar-brand {
+            letter-spacing: 1px;
+        }
+
+        .news-navbar .nav-link {
+            color: rgba(255,255,255,.72);
+            transition: .3s;
+        }
+
+        .news-navbar .nav-link:hover,
+        .news-navbar .nav-link.active {
+            color: white;
+            text-shadow: 0 0 15px rgba(0,183,255,.8);
+        }
+
+        /* =====================================================
+           CABECERA
+        ===================================================== */
+
+        .news-header {
+            position: relative;
+            overflow: hidden;
+
+            padding: 100px 0 80px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321 0%,
+                    #06294a 55%,
+                    #005baa 100%
+                );
+
+            color: white;
+        }
+
+        .news-header::after {
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            right: -150px;
+            top: -200px;
+
+            border-radius: 50%;
+
+            background: rgba(0,183,255,.15);
+            filter: blur(70px);
+        }
+
+        .news-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .news-kicker {
+            display: inline-block;
+
+            padding: 8px 15px;
+
+            border-radius: 50px;
+
+            background: rgba(0,183,255,.12);
+            border: 1px solid rgba(0,183,255,.4);
+
+            color: #65ceff;
+
+            font-size: 12px;
+            font-weight: 900;
+
+            letter-spacing: 1.5px;
+        }
+
+        .news-header h1 {
+            margin-top: 20px;
+
+            font-size: clamp(45px, 6vw, 75px);
+
+            font-weight: 900;
+
+            letter-spacing: -3px;
+        }
+
+        .news-header h1 span {
+            background: linear-gradient(
+                90deg,
+                white,
+                #55c8ff
+            );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .news-header p {
+            max-width: 650px;
+
+            margin-top: 20px;
+
+            color: rgba(255,255,255,.65);
+
+            font-size: 19px;
+        }
+
+        /* =====================================================
+           CONTENIDO
+        ===================================================== */
+
+        .news-page {
+            padding: 70px 0;
+        }
+
+        /* =====================================================
+           NOTICIA PRINCIPAL
+        ===================================================== */
+
+        .main-news {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 28px;
+
+            background: #061a2c;
+
+            box-shadow:
+                0 25px 60px rgba(0,35,70,.14);
+
+            transition: .4s;
+        }
+
+        .main-news:hover {
+            transform: translateY(-6px);
+
+            box-shadow:
+                0 30px 70px rgba(0,100,180,.22);
+        }
+
+        .main-news-image {
+            position: relative;
+
+            height: 500px;
+
+            overflow: hidden;
+        }
+
+        .main-news-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .6s;
+        }
+
+        .main-news:hover .main-news-image img {
+            transform: scale(1.06);
+        }
+
+        .main-news-image::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(3,15,28,.95),
+                    rgba(3,15,28,.05) 70%
+                );
+        }
+
+        .main-news-content {
+            padding: 35px;
+
+            color: white;
+        }
+
+        .news-tag {
+            display: inline-block;
+
+            padding: 7px 14px;
+
+            border-radius: 50px;
+
+            background: linear-gradient(
+                90deg,
+                #0077ff,
+                #00b7ff
+            );
+
+            color: white;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            letter-spacing: 1px;
+        }
+
+        .main-news-content h2 {
+            margin-top: 17px;
+
+            font-size: clamp(28px, 4vw, 42px);
+
+            font-weight: 900;
+
+            line-height: 1.12;
+
+            color: white;
+        }
+
+        .news-meta {
+            color: rgba(255,255,255,.5);
+
+            font-size: 13px;
+
+            margin-top: 18px;
+        }
+
+        .main-news-content p {
+            color: rgba(255,255,255,.7);
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+        .read-button {
+            display: inline-block;
+
+            margin-top: 12px;
+
+            padding: 12px 20px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            background: rgba(0,119,255,.9);
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .read-button:hover {
+            color: white;
+
+            background: #00a8ff;
+
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           NOTICIAS SECUNDARIAS
+        ===================================================== */
+
+        .secondary-news {
+            display: flex;
+
+            overflow: hidden;
+
+            margin-bottom: 22px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,35,70,.07);
+
+            transition: .35s;
+        }
+
+        .secondary-news:hover {
+            transform: translateY(-4px);
+
+            border-color: rgba(0,119,255,.25);
+
+            box-shadow:
+                0 20px 45px rgba(0,119,255,.12);
+        }
+
+        .secondary-news-image {
+            width: 38%;
+
+            min-height: 220px;
+
+            overflow: hidden;
+        }
+
+        .secondary-news-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            transition: .5s;
+        }
+
+        .secondary-news:hover img {
+            transform: scale(1.07);
+        }
+
+        .secondary-news-content {
+            width: 62%;
+
+            padding: 25px;
+        }
+
+        .secondary-news-content h3 {
+            margin-top: 12px;
+
+            font-size: 24px;
+
+            font-weight: 850;
+
+            color: #071b2e;
+        }
+
+        .secondary-news-content p {
+            color: #718196;
+
+            line-height: 1.6;
+        }
+
+        .secondary-news-date {
+            display: block;
+
+            margin-top: 15px;
+
+            color: #8a98a8;
+
+            font-size: 12px;
+        }
+
+        /* =====================================================
+           PRESENTACION
+        ===================================================== */
+
+        .presentation-news {
+            overflow: hidden;
+
+            margin-top: 25px;
+
+            border-radius: 22px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,35,70,.07);
+        }
+
+        .presentation-news img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .presentation-content {
+            padding: 30px;
+        }
+
+        .presentation-content h2 {
+            margin-top: 15px;
+
+            color: #071b2e;
+
+            font-size: 30px;
+
+            font-weight: 900;
+        }
+
+        .presentation-content p {
+            color: #718196;
+
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           SIDEBAR
+        ===================================================== */
+
+        .sidebar-card {
+            overflow: hidden;
+
+            margin-bottom: 25px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,35,70,.07);
+        }
+
+        .sidebar-title {
+            padding: 20px 22px;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321,
+                    #005baa
+                );
+
+            font-weight: 900;
+
+            letter-spacing: .5px;
+        }
+
+        .popular-item {
+            display: block;
+
+            padding: 18px 20px;
+
+            color: #182b3d;
+
+            text-decoration: none;
+
+            border-bottom: 1px solid #edf1f5;
+
+            font-weight: 750;
+
+            transition: .25s;
+        }
+
+        .popular-item:last-child {
+            border-bottom: none;
+        }
+
+        .popular-item:hover {
+            color: #0077ff;
+
+            background: #f4f9ff;
+
+            padding-left: 25px;
+        }
+
+        /* =====================================================
+           ULTIMA HORA
+        ===================================================== */
+
+        .breaking-title {
+            background:
+                linear-gradient(
+                    135deg,
+                    #c9163d,
+                    #ff315f
+                );
+        }
+
+        .breaking-item {
+            padding: 18px 20px;
+
+            border-bottom: 1px solid #edf1f5;
+        }
+
+        .breaking-item:last-child {
+            border-bottom: none;
+        }
+
+        .breaking-time {
+            color: #ff315f;
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+        .breaking-item p {
+            margin: 5px 0 0;
+
+            color: #536477;
+
+            line-height: 1.5;
+        }
+
+        /* =====================================================
+           REDES
+        ===================================================== */
+
+        .social-button {
+            display: block;
+
+            padding: 12px;
+
+            margin-bottom: 10px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            color: white;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            transition: .3s;
+        }
+
+        .social-button:hover {
+            color: white;
+
+            transform: translateY(-2px);
+        }
+
+        .social-facebook {
+            background: #1877f2;
+        }
+
+        .social-x {
+            background: #111;
+        }
+
+        .social-instagram {
+            background: linear-gradient(
+                45deg,
+                #f58529,
+                #dd2a7b,
+                #8134af
+            );
+        }
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .news-footer {
+            padding: 60px 0 30px;
+
+            background: #031321;
+
+            color: white;
+
+            border-top: 1px solid rgba(0,183,255,.2);
+        }
+
+        .news-footer p {
+            color: rgba(255,255,255,.5);
+        }
+
+        /* =====================================================
+           MOVIL
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .news-header {
+                padding: 70px 0 55px;
+            }
+
+            .news-header h1 {
+                letter-spacing: -2px;
+            }
+
+            .news-page {
+                padding: 45px 0;
+            }
+
+            .main-news-image {
+                height: 300px;
+            }
+
+            .main-news-content {
+                padding: 25px;
+            }
+
+            .secondary-news {
+                display: block;
+            }
+
+            .secondary-news-image,
+            .secondary-news-content {
+                width: 100%;
+            }
+
+            .secondary-news-image {
+                height: 220px;
+                min-height: 0;
+            }
+
+            .secondary-news-content {
+                padding: 22px;
+            }
+
+            .presentation-news img {
+                height: 240px;
+            }
+
+            .presentation-content {
+                padding: 22px;
+            }
+
+            .presentation-content h2 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
 
-<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark news-navbar sticky-top">
 
-<a class="navbar-brand fw-bold" href="index.html">
+        <div class="container">
 
-<img src="img/logo/logo.png" width="42">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
+               href="index.html">
 
-AZULONES NEWS
+                <img src="img/logo/logo.png"
+                     width="45"
+                     height="45"
+                     alt="Azulones News">
 
-</a>
+                <div>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <div class="fw-bold">
+                        AZULONES NEWS
+                    </div>
 
-<span class="navbar-toggler-icon"></span>
+                    <small class="text-white-50">
+                        El medio del Getafismo
+                    </small>
 
-</button>
+                </div>
 
-<div class="collapse navbar-collapse" id="menu">
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-
-<li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
-
-<li class="nav-item"><a class="nav-link" href="rumores.html">Rumores</a></li>
-
-<li class="nav-item"><a class="nav-link" href="plantilla.html">Plantilla</a></li>
-
-<li class="nav-item"><a class="nav-link" href="partidos.html">Partidos</a></li>
-
-<li class="nav-item"><a class="nav-link" href="clasificacion.html">Clasificación</a></li>
-
-</ul>
-
-</div>
-
-</div>
-
-</nav>
-
-<section class="container my-5">
-
-<h1 class="display-4 fw-bold mb-5">
-
-📰 Todas las noticias
-
-</h1>
-
-<div class="row">
-
-<div class="col-lg-8">
-    <div class="card border-0 shadow-lg mb-5 overflow-hidden">
-
-    <img src="img/noticias/noticia1.jpg" class="img-fluid">
-
-    <div class="card-body p-5">
-
-        <span class="badge bg-primary fs-6 mb-3">
-            EUROPA
-        </span>
-
-        <h2 class="fw-bold display-6">
-
-         El Getafe vence al Partizán y se acerca a la fase de grupos de la Conference League
-</p>
-        </h2>
-
-        <p class="text-muted mt-3">
-
-            📅 21 Agosto 2026 · ✍️ Redacción Azulones News
-
-        </p>
-
-        <p class="fs-5 mt-4">
-
-           El Getafe se impuso por 3-1 al Partizán de Belgrado en el Coliseum y viajará a Serbia con una ventaja de dos goles en la eliminatoria.
-        </p>
-
-        <p>
-
-El conjunto de José Bordalás respondió ante su afición en su regreso a Europa y dejó muy buenas sensaciones pese a las dificultades del encuentro.
-        </p>
-
-        <button class="btn btn-primary btn-lg mt-3">
-
-            Leer noticia completa
-
-        </button>
-
-    </div>
-
-</div>
-<div class="card mb-4 border-0 shadow-sm">
-
-<div class="row g-0">
-
-<div class="col-md-4">
-
-<img src="img/noticias/noticia2.jpg" class="img-fluid h-100 object-fit-cover">
-
-</div>
-
-<div class="col-md-8">
-
-<div class="card-body">
-
-<span class="badge bg-danger">
-
-FICHAJES
-
-</span>
-
-<h3 class="fw-bold mt-3">
-
-Francho Serrano ya es nuevo jugador del Getafe hasta 2029
-</h3>
-
-<p>
-
-  El centrocampista aragonés se convierte oficialmente en jugador azulón después de abandonar el Real Zaragoza.
-</p>
-   <p>
- Francho firma hasta junio de 2029 y da el salto a Primera División después de desarrollar toda su carrera profesional en el conjunto maño.
-<small class="text-muted">
-
-18 Agosto · Redacción Azulones News
-
-</small>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-<article class="news-card">
-
-    <img src="img/noticias/presentacion.jpg" alt="Presentación de los nuevos fichajes del Getafe">
-
-    <div class="news-content">
-
-        <span class="tag">ACTUALIDAD</span>
-
-        <h2>Ünal, Mojica y Francho se presentan como nuevos jugadores del Getafe</h2>
-
-        <p class="news-date">18 Agosto 2026 · Redacción Azulones News</p>
-
-        <p>
-            El Getafe presentó oficialmente a tres de sus nuevas incorporaciones para la temporada 2026/27.
-        </p>
-
-        <p>
-            Enes Ünal, Johan Mojica y Francho Serrano comparecieron ante los medios y mostraron su ilusión por formar parte del nuevo proyecto de José Bordalás.
-        </p>
-
-    </div>
-
-</article>
-<div class="col-lg-4">
-
-    <div class="card border-0 shadow-lg mb-4">
-
-        <div class="card-header bg-primary text-white fw-bold">
-            🔥 Más leídas
-        </div>
-
-        <div class="list-group list-group-flush">
-
-            <a href="#" class="list-group-item list-group-item-action">
-                Saba Sazonov ya es oficialmente jugador del Getafe
             </a>
 
-            <a href="#" class="list-group-item list-group-item-action">
-                Uche preocupa tras abandonar el entrenamiento
-            </a>
+            <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
 
-            <a href="#" class="list-group-item list-group-item-action">
-                Bordalás analiza el mercado de fichajes
-            </a>
+                <span class="navbar-toggler-icon"></span>
 
-            <a href="#" class="list-group-item list-group-item-action">
-                El Coliseum rozará el lleno en el estreno liguero
-            </a>
+            </button>
 
-            <a href="#" class="list-group-item list-group-item-action">
-                Todo lo que debes saber del Getafe - Alavés
-            </a>
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto gap-lg-2">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="noticias.html">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="rumores.html">
+                            Rumores
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="plantilla.html">
+                            Plantilla
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="partidos.html">
+                            Partidos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="clasificacion.html">
+                            Clasificación
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
-    </div>
+    </nav>
 
-    <div class="card border-0 shadow-lg mb-4">
 
-        <div class="card-header bg-danger text-white fw-bold">
+    <!-- =====================================================
+         CABECERA
+    ===================================================== -->
 
-            🔴 Última hora
+    <header class="news-header">
+
+        <div class="container">
+
+            <div class="news-header-content">
+
+                <span class="news-kicker">
+                    ACTUALIDAD AZULONA
+                </span>
+
+                <h1>
+                    Noticias del <span>Getafe CF.</span>
+                </h1>
+
+                <p>
+                    Toda la actualidad del conjunto azulón,
+                    fichajes, partidos y las noticias que marcan
+                    el día a día del Getafe.
+                </p>
+
+            </div>
 
         </div>
 
-        <div class="card-body">
+    </header>
 
-            <p>
 
-                <strong>18:30</strong><br>
+    <!-- =====================================================
+         CONTENIDO
+    ===================================================== -->
 
-                Bordalás confirma que espera un refuerzo antes del cierre del mercado.
+    <main class="news-page">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- =================================================
+                     NOTICIAS
+                ================================================= -->
+
+                <div class="col-lg-8">
+
+
+                    <!-- NOTICIA PRINCIPAL -->
+
+                    <article class="main-news mb-4">
+
+                        <div class="main-news-image">
+
+                            <img src="img/noticias/noticia1.jpg"
+                                 alt="Getafe CF ante el Partizán">
+
+                        </div>
+
+                        <div class="main-news-content">
+
+                            <span class="news-tag">
+                                EUROPA
+                            </span>
+
+                            <h2>
+                                El Getafe vence al Partizán y se acerca
+                                a la fase de grupos de la Conference League
+                            </h2>
+
+                            <div class="news-meta">
+                                📅 21 Agosto 2026 · ✍️ Redacción Azulones News
+                            </div>
+
+                            <p class="mt-4">
+                                El Getafe se impuso por 3-1 al Partizán
+                                de Belgrado en el Coliseum y viajará a Serbia
+                                con una ventaja de dos goles en la eliminatoria.
+                            </p>
+
+                            <p>
+                                El conjunto de José Bordalás respondió ante
+                                su afición en su regreso a Europa y dejó muy
+                                buenas sensaciones pese a las dificultades
+                                del encuentro.
+                            </p>
+
+                            <a href="#"
+                               class="read-button">
+                                Leer noticia completa →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FRANCHO -->
+
+                    <article class="secondary-news">
+
+                        <div class="secondary-news-image">
+
+                            <img src="img/noticias/noticia2.jpg"
+                                 alt="Francho Serrano">
+
+                        </div>
+
+                        <div class="secondary-news-content">
+
+                            <span class="news-tag">
+                                FICHAJES
+                            </span>
+
+                            <h3>
+                                Francho Serrano ya es nuevo jugador
+                                del Getafe hasta 2029
+                            </h3>
+
+                            <p>
+                                El centrocampista aragonés se convierte
+                                oficialmente en jugador azulón después
+                                de abandonar el Real Zaragoza.
+                            </p>
+
+                            <p>
+                                Francho firma hasta junio de 2029 y da
+                                el salto a Primera División después de
+                                desarrollar toda su carrera profesional
+                                en el conjunto maño.
+                            </p>
+
+                            <span class="secondary-news-date">
+                                18 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRESENTACION -->
+
+                    <article class="presentation-news">
+
+                        <img src="img/noticias/presentacion.jpg"
+                             alt="Presentación de los nuevos fichajes del Getafe">
+
+                        <div class="presentation-content">
+
+                            <span class="news-tag">
+                                ACTUALIDAD
+                            </span>
+
+                            <h2>
+                                Ünal, Mojica y Francho se presentan
+                                como nuevos jugadores del Getafe
+                            </h2>
+
+                            <span class="secondary-news-date">
+                                18 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <p class="mt-4">
+                                El Getafe presentó oficialmente a tres
+                                de sus nuevas incorporaciones para la
+                                temporada 2026/27.
+                            </p>
+
+                            <p>
+                                Enes Ünal, Johan Mojica y Francho Serrano
+                                comparecieron ante los medios y mostraron
+                                su ilusión por formar parte del nuevo
+                                proyecto de José Bordalás.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =================================================
+                     SIDEBAR
+                ================================================= -->
+
+                <div class="col-lg-4">
+
+
+                    <!-- MÁS LEÍDAS -->
+
+                    <div class="sidebar-card">
+
+                        <div class="sidebar-title">
+                            🔥 Más leídas
+                        </div>
+
+                        <a href="#"
+                           class="popular-item">
+                            Saba Sazonov ya es oficialmente jugador del Getafe
+                        </a>
+
+                        <a href="#"
+                           class="popular-item">
+                            Uche preocupa tras abandonar el entrenamiento
+                        </a>
+
+                        <a href="#"
+                           class="popular-item">
+                            Bordalás analiza el mercado de fichajes
+                        </a>
+
+                        <a href="#"
+                           class="popular-item">
+                            El Coliseum rozará el lleno en el estreno liguero
+                        </a>
+
+                        <a href="#"
+                           class="popular-item">
+                            Todo lo que debes saber del Getafe - Alavés
+                        </a>
+
+                    </div>
+
+
+                    <!-- ÚLTIMA HORA -->
+
+                    <div class="sidebar-card">
+
+                        <div class="sidebar-title breaking-title">
+                            🔴 Última hora
+                        </div>
+
+                        <div class="breaking-item">
+
+                            <span class="breaking-time">
+                                18:30
+                            </span>
+
+                            <p>
+                                Bordalás confirma que espera un refuerzo
+                                antes del cierre del mercado.
+                            </p>
+
+                        </div>
+
+                        <div class="breaking-item">
+
+                            <span class="breaking-time">
+                                17:15
+                            </span>
+
+                            <p>
+                                El Getafe anuncia la convocatoria
+                                para el amistoso.
+                            </p>
+
+                        </div>
+
+                        <div class="breaking-item">
+
+                            <span class="breaking-time">
+                                15:40
+                            </span>
+
+                            <p>
+                                Ya hay más de 12.000 abonados para
+                                la nueva temporada.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- REDES -->
+
+                    <div class="sidebar-card">
+
+                        <div class="sidebar-title">
+                            📱 Síguenos
+                        </div>
+
+                        <div class="p-4">
+
+                            <a href="#"
+                               class="social-button social-facebook">
+                                Facebook
+                            </a>
+
+                            <a href="#"
+                               class="social-button social-x">
+                                X (Twitter)
+                            </a>
+
+                            <a href="#"
+                               class="social-button social-instagram">
+                                Instagram
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <footer class="news-footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <div class="col-lg-6">
+
+                    <h3 class="fw-bold">
+                        AZULONES NEWS
+                    </h3>
+
+                    <p class="mt-3">
+                        Toda la actualidad del Getafe Club de Fútbol
+                        desde el corazón del Getafismo.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5 class="fw-bold">
+                        Navegación
+                    </h5>
+
+                    <div class="d-flex flex-column gap-2 mt-3">
+
+                        <a href="index.html">
+                            Inicio
+                        </a>
+
+                        <a href="noticias.html">
+                            Noticias
+                        </a>
+
+                        <a href="rumores.html">
+                            Rumores
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-3">
+
+                    <h5 class="fw-bold">
+                        Competición
+                    </h5>
+
+                    <div class="d-flex flex-column gap-2 mt-3">
+
+                        <a href="partidos.html">
+                            Partidos
+                        </a>
+
+                        <a href="clasificacion.html">
+                            Clasificación
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-5">
+
+            <p class="text-center mb-0">
+
+                © 2026 Azulones News · Proyecto no oficial del Getafe CF.
 
             </p>
 
-            <hr>
-
-            <p>
-
-                <strong>17:15</strong><br>
-
-                El Getafe anuncia la convocatoria para el amistoso.
-
-            </p>
-
-            <hr>
-
-            <p>
-
-                <strong>15:40</strong><br>
-
-                Ya hay más de 12.000 abonados para la nueva temporada.
-
-            </p>
-
         </div>
 
-    </div>
+    </footer>
 
-    <div class="card border-0 shadow-lg">
 
-        <div class="card-header bg-dark text-white fw-bold">
-
-            📱 Síguenos
-
-        </div>
-
-        <div class="card-body text-center">
-
-            <a class="btn btn-primary w-100 mb-2" href="#">
-                Facebook
-            </a>
-
-            <a class="btn btn-info text-white w-100 mb-2" href="#">
-                X (Twitter)
-            </a>
-
-            <a class="btn btn-danger w-100" href="#">
-                Instagram
-            </a>
-
-        </div>
-
-    </div>
-
-</div>
-
-</div>
-
-</section>
-
-<footer class="bg-dark text-white text-center py-4 mt-5">
-
-    <div class="container">
-
-        <h4 class="mb-3">
-            AZULONES NEWS
-        </h4>
-
-        <p class="mb-2">
-            Toda la actualidad del Getafe Club de Fútbol.
-        </p>
-
-        <small>
-            © 2026 Azulones News. Todos los derechos reservados.
-        </small>
-
-    </div>
-
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
->>>>>>> 092d75ba5ca8c2736b9937df9d8a22583c44d54e
 </html>
+```
