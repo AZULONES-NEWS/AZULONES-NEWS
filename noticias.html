@@ -336,8 +336,6 @@
                 0 15px 40px rgba(0,35,70,.07);
 
             transition: .35s;
-
-            cursor: pointer;
         }
 
         .secondary-news:hover {
@@ -400,6 +398,54 @@
             color: #8a98a8;
 
             font-size: 12px;
+        }
+
+        /* =====================================================
+           PRESENTACION
+        ===================================================== */
+
+        .presentation-news {
+            overflow: hidden;
+
+            margin-top: 25px;
+
+            border-radius: 22px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,35,70,.07);
+        }
+
+        .presentation-news img {
+            width: 100%;
+            height: 350px;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+        .presentation-content {
+            padding: 30px;
+        }
+
+        .presentation-content h2 {
+            margin-top: 15px;
+
+            color: #071b2e;
+
+            font-size: 30px;
+
+            font-weight: 900;
+        }
+
+        .presentation-content p {
+            color: #718196;
+
+            line-height: 1.7;
         }
 
         /* =====================================================
@@ -570,25 +616,6 @@
             color: rgba(255,255,255,.5);
         }
 
-        .news-footer a {
-            color: rgba(255,255,255,.6);
-            text-decoration: none;
-        }
-
-        .news-footer a:hover {
-            color: #55c8ff;
-        }
-
-        /* =====================================================
-           CARGANDO
-        ===================================================== */
-
-        .news-loading {
-            padding: 50px;
-            text-align: center;
-            color: #718196;
-        }
-
         /* =====================================================
            MOVIL
         ===================================================== */
@@ -633,12 +660,23 @@
                 padding: 22px;
             }
 
+            .presentation-news img {
+                height: 240px;
+            }
+
+            .presentation-content {
+                padding: 22px;
+            }
+
+            .presentation-content h2 {
+                font-size: 25px;
+            }
+
         }
 
     </style>
 
 </head>
-
 
 <body>
 
@@ -673,7 +711,6 @@
 
             </a>
 
-
             <button class="navbar-toggler"
                     data-bs-toggle="collapse"
                     data-bs-target="#menu">
@@ -681,7 +718,6 @@
                 <span class="navbar-toggler-icon"></span>
 
             </button>
-
 
             <div class="collapse navbar-collapse" id="menu">
 
@@ -781,13 +817,333 @@
                 <div class="col-lg-8">
 
 
-                    <div id="lista-noticias">
+                    <!-- =================================================
+                         NOTICIA PRINCIPAL
+                    ================================================= -->
 
-                        <div class="news-loading">
-                            Cargando noticias...
+                    <article class="main-news mb-4">
+
+                        <div class="main-news-image">
+
+                            <img src="img/noticias/victoria-racing.jpg"
+                                 alt="Getafe celebra la victoria ante el Racing">
+
                         </div>
 
-                    </div>
+                        <div class="main-news-content">
+
+                            <span class="news-tag">
+                                VICTORIA
+                            </span>
+
+                            <h2>
+                                El Getafe se impone al Racing y consigue
+                                su primera victoria liguera
+                            </h2>
+
+                            <div class="news-meta">
+                                📅 23 Agosto 2026 · ✍️ Redacción Azulones News
+                            </div>
+
+                            <p class="mt-4">
+                                El Getafe consiguió su primera victoria de
+                                la temporada tras imponerse por 1-0 al Racing
+                                de Santander en el Coliseum.
+                            </p>
+
+                            <p>
+                                Enes Ünal decidió el encuentro en el tramo
+                                final después de una gran intervención de
+                                David Soria desde el punto de penalti.
+                            </p>
+
+                            <a href="noticia-victoria-racing.html"
+                               class="read-button">
+                                Leer noticia completa →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         DAVID SORIA
+                    ================================================= -->
+
+                    <article class="secondary-news">
+
+                        <div class="secondary-news-image">
+
+                            <img src="img/noticias/davidsoria.jpg"
+                                 alt="David Soria durante el partido del Getafe">
+
+                        </div>
+
+                        <div class="secondary-news-content">
+
+                            <span class="news-tag">
+                                PORTERÍA
+                            </span>
+
+                            <h3>
+                                David Soria vuelve a ser decisivo
+                                y se acerca al récord histórico
+                            </h3>
+
+                            <p>
+                                El guardameta azulón volvió a demostrar su
+                                importancia bajo los palos y fue protagonista
+                                en la primera victoria liguera del Getafe.
+                            </p>
+
+                            <p>
+                                Soria detuvo un penalti decisivo ante el Racing
+                                y mantuvo al conjunto de Bordalás con vida
+                                hasta que llegó el gol de Enes Ünal.
+                            </p>
+
+                            <span class="secondary-news-date">
+                                23 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <a href="noticia-david-soria.html"
+                               class="read-button">
+                                Leer noticia completa →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         ENES ÜNAL
+                    ================================================= -->
+
+                    <article class="secondary-news">
+
+                        <div class="secondary-news-image">
+
+                            <img src="img/noticias/enes-unal-racing.jpg"
+                                 alt="Enes Ünal celebra su gol ante el Racing">
+
+                        </div>
+
+                        <div class="secondary-news-content">
+
+                            <span class="news-tag">
+                                LALIGA
+                            </span>
+
+                            <h3>
+                                Enes Ünal decide el partido y da al Getafe
+                                sus primeros tres puntos
+                            </h3>
+
+                            <p>
+                                El delantero turco apareció en el momento
+                                decisivo para marcar el único gol del encuentro
+                                ante el Racing de Santander.
+                            </p>
+
+                            <p>
+                                Su tanto en el minuto 81 permitió al Getafe
+                                sumar tres puntos muy importantes después de
+                                la derrota en la primera jornada.
+                            </p>
+
+                            <span class="secondary-news-date">
+                                23 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <a href="noticia-enes-unal.html"
+                               class="read-button">
+                                Leer noticia completa →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         ANDRÉS GARCÍA
+                    ================================================= -->
+
+                    <article class="secondary-news">
+
+                        <div class="secondary-news-image">
+
+                            <img src="img/noticias/andres-garcia.jpg"
+                                 alt="Andrés García celebra con el Getafe">
+
+                        </div>
+
+                        <div class="secondary-news-content">
+
+                            <span class="news-tag">
+                                ACTUALIDAD
+                            </span>
+
+                            <h3>
+                                Andrés García: «La gente nos ha empujado
+                                a meter ese gol»
+                            </h3>
+
+                            <p>
+                                El futbolista azulón destacó el papel de la
+                                afición del Coliseum después de la victoria
+                                ante el Racing.
+                            </p>
+
+                            <p>
+                                El jugador puso en valor el apoyo de la grada
+                                durante un encuentro muy exigente que terminó
+                                con los tres puntos para el conjunto azulón.
+                            </p>
+
+                            <span class="secondary-news-date">
+                                24 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <a href="#"
+                               class="read-button">
+                                Leer noticia completa →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         COLISEUM
+                    ================================================= -->
+
+                    <article class="presentation-news">
+
+                        <img src="img/noticias/coliseum.jpg"
+                             alt="Nuevo Coliseum del Getafe">
+
+                        <div class="presentation-content">
+
+                            <span class="news-tag">
+                                CLUB
+                            </span>
+
+                            <h2>
+                                El nuevo Coliseum continúa su transformación
+                                para convertirse en la nueva casa azulona
+                            </h2>
+
+                            <span class="secondary-news-date">
+                                24 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <p class="mt-4">
+                                El Coliseum continúa avanzando en su proceso
+                                de renovación mientras el Getafe afronta una
+                                temporada marcada también por su regreso a
+                                la competición europea.
+                            </p>
+
+                            <p>
+                                Las nuevas zonas del estadio y los cambios
+                                en los accesos buscan ofrecer una experiencia
+                                renovada a los aficionados azulones.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PARTIZÁN
+                    ================================================= -->
+
+                    <article class="secondary-news mt-4">
+
+                        <div class="secondary-news-image">
+
+                            <img src="img/noticias/partizan-vuelta.jpg"
+                                 alt="Getafe prepara la vuelta ante el Partizán">
+
+                        </div>
+
+                        <div class="secondary-news-content">
+
+                            <span class="news-tag">
+                                EUROPA
+                            </span>
+
+                            <h3>
+                                El Getafe prepara la vuelta ante el Partizán
+                                con el pase europeo en juego
+                            </h3>
+
+                            <p>
+                                El conjunto azulón afronta la recta final de
+                                la eliminatoria después del 3-1 conseguido
+                                en el Coliseum.
+                            </p>
+
+                            <p>
+                                Bordalás y sus jugadores buscarán mantener la
+                                ventaja conseguida en Madrid y certificar el
+                                pase a la siguiente fase de la Conference League.
+                            </p>
+
+                            <span class="secondary-news-date">
+                                24 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- =================================================
+                         PRESENTACIÓN
+                    ================================================= -->
+
+                    <article class="presentation-news">
+
+                        <img src="img/noticias/presentacion.jpg"
+                             alt="Presentación de los nuevos fichajes del Getafe">
+
+                        <div class="presentation-content">
+
+                            <span class="news-tag">
+                                ACTUALIDAD
+                            </span>
+
+                            <h2>
+                                Ünal, Mojica y Francho se presentan
+                                como nuevos jugadores del Getafe
+                            </h2>
+
+                            <span class="secondary-news-date">
+                                18 Agosto 2026 · Redacción Azulones News
+                            </span>
+
+                            <p class="mt-4">
+                                El Getafe presentó oficialmente a tres
+                                de sus nuevas incorporaciones para la
+                                temporada 2026/27.
+                            </p>
+
+                            <p>
+                                Enes Ünal, Johan Mojica y Francho Serrano
+                                comparecieron ante los medios y mostraron
+                                su ilusión por formar parte del nuevo
+                                proyecto de José Bordalás.
+                            </p>
+
+                        </div>
+
+                    </article>
 
 
                 </div>
@@ -802,17 +1158,43 @@
 
                     <!-- MÁS LEÍDAS -->
 
-                    <div class="sidebar-card">
+                    <div class="card border-0 shadow-lg mb-4">
 
-                        <div class="sidebar-title">
+                        <div class="card-header bg-primary text-white fw-bold">
                             🔥 Más leídas
                         </div>
 
-                        <div id="mas-leidas">
+                        <div class="list-group list-group-flush">
 
-                            <div class="popular-item">
-                                Cargando...
-                            </div>
+                            <a href="noticia-victoria-racing.html"
+                               class="list-group-item list-group-item-action">
+                                El Getafe se impone al Racing y consigue
+                                su primera victoria liguera
+                            </a>
+
+                            <a href="noticia-david-soria.html"
+                               class="list-group-item list-group-item-action">
+                                David Soria vuelve a ser decisivo y se acerca
+                                al récord histórico
+                            </a>
+
+                            <a href="noticia-enes-unal.html"
+                               class="list-group-item list-group-item-action">
+                                Enes Ünal decide el partido y da al Getafe
+                                sus primeros tres puntos
+                            </a>
+
+                            <a href="#"
+                               class="list-group-item list-group-item-action">
+                                Andrés García destaca el papel de la afición
+                                en la victoria
+                            </a>
+
+                            <a href="#"
+                               class="list-group-item list-group-item-action">
+                                El Getafe prepara su vuelta europea ante
+                                el Partizán
+                            </a>
 
                         </div>
 
@@ -821,25 +1203,46 @@
 
                     <!-- ÚLTIMA HORA -->
 
-                    <div class="sidebar-card">
+                    <div class="card border-0 shadow-lg mb-4">
 
-                        <div class="sidebar-title breaking-title">
+                        <div class="card-header bg-danger text-white fw-bold">
+
                             🔴 Última hora
+
                         </div>
 
-                        <div id="ultima-hora">
+                        <div class="card-body">
 
-                            <div class="breaking-item">
+                            <p>
 
-                                <span class="breaking-time">
-                                    AHORA
-                                </span>
+                                <strong>Ahora</strong><br>
 
-                                <p>
-                                    Cargando actualidad...
-                                </p>
+                                El Getafe ya prepara la vuelta de la
+                                eliminatoria ante el Partizán.
 
-                            </div>
+                            </p>
+
+                            <hr>
+
+                            <p>
+
+                                <strong>Hoy</strong><br>
+
+                                Andrés García destaca el apoyo recibido
+                                por la afición del Coliseum.
+
+                            </p>
+
+                            <hr>
+
+                            <p>
+
+                                <strong>Hoy</strong><br>
+
+                                El conjunto azulón continúa preparando
+                                su próximo compromiso europeo.
+
+                            </p>
 
                         </div>
 
@@ -875,7 +1278,6 @@
 
                     </div>
 
-
                 </div>
 
             </div>
@@ -908,7 +1310,6 @@
 
                 </div>
 
-
                 <div class="col-lg-3">
 
                     <h5 class="fw-bold">
@@ -933,7 +1334,6 @@
 
                 </div>
 
-
                 <div class="col-lg-3">
 
                     <h5 class="fw-bold">
@@ -956,9 +1356,7 @@
 
             </div>
 
-
             <hr class="border-secondary my-5">
-
 
             <p class="text-center mb-0">
 
@@ -971,320 +1369,7 @@
     </footer>
 
 
-    <!-- =====================================================
-         SCRIPTS
-    ===================================================== -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/noticias.js"></script>
-
-
-    <!-- =====================================================
-         CARGADOR DE NOTICIAS
-    ===================================================== -->
-
-    <script>
-
-        document.addEventListener(
-            "DOMContentLoaded",
-            async function () {
-
-                try {
-
-                    const respuesta =
-                        await fetch("data/noticias.json");
-
-                    if (!respuesta.ok) {
-                        throw new Error(
-                            "No se pudo cargar noticias.json"
-                        );
-                    }
-
-                    const noticias =
-                        await respuesta.json();
-
-
-                    /* =========================================
-                       CONTENEDOR
-                    ========================================= */
-
-                    const contenedor =
-                        document.getElementById(
-                            "lista-noticias"
-                        );
-
-                    if (!contenedor) return;
-
-
-                    contenedor.innerHTML = "";
-
-
-                    /* =========================================
-                       NOTICIA PRINCIPAL
-                    ========================================= */
-
-                    if (noticias.length > 0) {
-
-                        const noticia =
-                            noticias[0];
-
-                        const principal =
-                            document.createElement(
-                                "article"
-                            );
-
-                        principal.className =
-                            "main-news mb-4";
-
-
-                        principal.innerHTML = `
-
-                            <div class="main-news-image">
-
-                                <img
-                                    src="${noticia.imagen}"
-                                    alt="${noticia.titulo}"
-                                >
-
-                            </div>
-
-                            <div class="main-news-content">
-
-                                <span class="news-tag">
-                                    ${noticia.categoria}
-                                </span>
-
-                                <h2>
-                                    ${noticia.titulo}
-                                </h2>
-
-                                <div class="news-meta">
-                                    📅 ${noticia.fecha}
-                                    · ✍️ Redacción Azulones News
-                                </div>
-
-                                <p class="mt-4">
-                                    ${noticia.resumen || ""}
-                                </p>
-
-                                <a
-                                    href="${noticia.enlace}"
-                                    class="read-button"
-                                >
-                                    Leer noticia completa →
-                                </a>
-
-                            </div>
-
-                        `;
-
-
-                        contenedor.appendChild(
-                            principal
-                        );
-
-                    }
-
-
-                    /* =========================================
-                       NOTICIAS SECUNDARIAS
-                    ========================================= */
-
-                    noticias
-                        .slice(1)
-                        .forEach(function (noticia) {
-
-                            const article =
-                                document.createElement(
-                                    "article"
-                                );
-
-                            article.className =
-                                "secondary-news";
-
-
-                            article.innerHTML = `
-
-                                <div class="secondary-news-image">
-
-                                    <img
-                                        src="${noticia.imagen}"
-                                        alt="${noticia.titulo}"
-                                    >
-
-                                </div>
-
-                                <div class="secondary-news-content">
-
-                                    <span class="news-tag">
-                                        ${noticia.categoria}
-                                    </span>
-
-                                    <h3>
-                                        ${noticia.titulo}
-                                    </h3>
-
-                                    <p>
-                                        ${noticia.resumen || ""}
-                                    </p>
-
-                                    <span class="secondary-news-date">
-                                        ${noticia.fecha}
-                                        · Redacción Azulones News
-                                    </span>
-
-                                </div>
-
-                            `;
-
-
-                            article.addEventListener(
-                                "click",
-                                function () {
-
-                                    window.location.href =
-                                        noticia.enlace;
-
-                                }
-                            );
-
-
-                            contenedor.appendChild(
-                                article
-                            );
-
-                        });
-
-
-                    /* =========================================
-                       MÁS LEÍDAS
-                    ========================================= */
-
-                    const masLeidas =
-                        document.getElementById(
-                            "mas-leidas"
-                        );
-
-
-                    if (masLeidas) {
-
-                        masLeidas.innerHTML = "";
-
-
-                        noticias
-                            .slice(0, 5)
-                            .forEach(function (noticia) {
-
-                                const enlace =
-                                    document.createElement(
-                                        "a"
-                                    );
-
-                                enlace.href =
-                                    noticia.enlace;
-
-                                enlace.className =
-                                    "popular-item";
-
-                                enlace.textContent =
-                                    noticia.titulo;
-
-                                masLeidas.appendChild(
-                                    enlace
-                                );
-
-                            });
-
-                    }
-
-
-                    /* =========================================
-                       ÚLTIMA HORA
-                    ========================================= */
-
-                    const ultimaHora =
-                        document.getElementById(
-                            "ultima-hora"
-                        );
-
-
-                    if (ultimaHora && noticias.length) {
-
-                        ultimaHora.innerHTML = "";
-
-
-                        noticias
-                            .slice(0, 3)
-                            .forEach(function (noticia) {
-
-                                const bloque =
-                                    document.createElement(
-                                        "div"
-                                    );
-
-                                bloque.className =
-                                    "breaking-item";
-
-
-                                bloque.innerHTML = `
-
-                                    <span class="breaking-time">
-                                        ${noticia.fecha}
-                                    </span>
-
-                                    <p>
-                                        ${noticia.titulo}
-                                    </p>
-
-                                `;
-
-
-                                ultimaHora.appendChild(
-                                    bloque
-                                );
-
-                            });
-
-                    }
-
-
-                } catch (error) {
-
-                    console.error(
-                        "Error cargando noticias:",
-                        error
-                    );
-
-
-                    const contenedor =
-                        document.getElementById(
-                            "lista-noticias"
-                        );
-
-
-                    if (contenedor) {
-
-                        contenedor.innerHTML = `
-
-                            <div class="news-loading">
-
-                                No se han podido cargar
-                                las noticias.
-
-                            </div>
-
-                        `;
-
-                    }
-
-                }
-
-            }
-
-        );
-
-    </script>
 
 </body>
 
