@@ -16,162 +16,508 @@
 
 <style>
 
+/* =========================================================
+   CLASIFICACIÓN · AZULONES NEWS
+========================================================= */
+
 body {
     background: #f5f7fa;
 }
 
+
+/* =========================================================
+   CABECERA
+========================================================= */
+
 .classification-header {
-    background: linear-gradient(135deg, #0066cc, #004b99);
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,0.14), transparent 35%),
+        linear-gradient(135deg, #0057b8, #003b7a);
+
     color: white;
-    border-radius: 0 0 18px 18px;
-    padding: 45px 30px;
-    margin-bottom: 35px;
+
+    padding: 70px 20px 65px;
+
+    margin-bottom: 50px;
+
+    border-radius: 0 0 28px 28px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.classification-header::after {
+    content: "🏆";
+
+    position: absolute;
+
+    right: 8%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 130px;
+
+    opacity: 0.08;
+}
+
+.classification-header .badge {
+    background: rgba(255,255,255,0.14);
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
 }
 
 .classification-header h1 {
     font-weight: 800;
-    margin-bottom: 8px;
+
+    letter-spacing: -1.5px;
+
+    margin-top: 15px;
 }
 
+.classification-header p {
+    opacity: 0.9;
+
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   AVISO ACTUALIZACIÓN
+========================================================= */
+
 .update-box {
+
     background: white;
-    border-left: 5px solid #0066cc;
-    border-radius: 12px;
-    padding: 18px 22px;
+
+    border: 1px solid #e9edf2;
+
+    border-left: 5px solid #0057b8;
+
+    border-radius: 16px;
+
+    padding: 22px 25px;
+
     margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+
+    box-shadow: 0 6px 22px rgba(0,0,0,0.06);
+
+    transition: 0.25s ease;
+}
+
+.update-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
 .update-dot {
+
     display: inline-block;
+
     width: 11px;
     height: 11px;
+
     background: #198754;
+
     border-radius: 50%;
-    margin-right: 10px;
+
+    margin-right: 9px;
+
+    box-shadow: 0 0 0 4px rgba(25,135,84,0.12);
 }
+
+
+/* =========================================================
+   TABLA
+========================================================= */
 
 .table-container {
+
     background: white;
-    border-radius: 16px;
+
+    border-radius: 20px;
+
     overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+
+    border: 1px solid #e8edf3;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
 }
 
-.table {
-    margin-bottom: 0;
-}
+
+/* CABECERA TABLA */
 
 .table thead {
-    background: #0066cc;
+
+    background:
+        linear-gradient(135deg, #0057b8, #00458f);
+
     color: white;
 }
 
 .table thead th {
+
     border: none;
-    padding: 16px 10px;
-    font-size: 14px;
+
+    padding: 17px 12px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: .6px;
+
+    text-transform: uppercase;
+
     white-space: nowrap;
 }
 
+
+/* CUERPO */
+
 .table tbody td {
-    padding: 14px 10px;
+
+    padding: 15px 12px;
+
     vertical-align: middle;
+
+    border-color: #edf0f4;
+
+    font-size: 14px;
 }
 
+
+/* FILAS */
+
+.table tbody tr {
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.table tbody tr:hover {
+
+    background: #f4f8fd;
+
+}
+
+
+/* POSICIÓN */
+
+.position {
+
+    font-weight: 800;
+
+    width: 50px;
+
+    color: #495057;
+}
+
+
+/* EQUIPO */
+
 .team-cell {
+
     display: flex;
+
     align-items: center;
-    gap: 12px;
-    font-weight: 600;
+
+    gap: 13px;
+
+    font-weight: 700;
+
+    min-width: 190px;
 }
 
 .team-logo {
-    width: 34px;
-    height: 34px;
+
+    width: 38px;
+    height: 38px;
+
     object-fit: contain;
+
+    flex-shrink: 0;
 }
 
-.position {
-    font-weight: 800;
-    width: 45px;
-}
+
+/* PUNTOS */
 
 .points {
-    font-weight: 800;
-    font-size: 17px;
+
+    font-weight: 900;
+
+    font-size: 18px;
+
+    color: #0057b8;
 }
 
+
+/* =========================================================
+   ZONAS
+========================================================= */
+
 .zone-champions {
-    border-left: 5px solid #198754;
+
+    border-left: 5px solid #198754 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25,135,84,0.06),
+            transparent 25%
+        );
 }
 
 .zone-europa {
-    border-left: 5px solid #ffc107;
+
+    border-left: 5px solid #ffc107 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,193,7,0.07),
+            transparent 25%
+        );
 }
 
 .zone-conference {
-    border-left: 5px solid #0dcaf0;
+
+    border-left: 5px solid #0dcaf0 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(13,202,240,0.06),
+            transparent 25%
+        );
 }
 
 .zone-relegation {
-    border-left: 5px solid #dc3545;
+
+    border-left: 5px solid #dc3545 !important;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(220,53,69,0.06),
+            transparent 25%
+        );
 }
 
+
+/* =========================================================
+   LEYENDA
+========================================================= */
+
 .legend {
+
     background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
+    border: 1px solid #e8edf3;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow: 0 6px 22px rgba(0,0,0,0.05);
+}
+
+.legend h5 {
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
 }
 
 .legend-item {
+
     display: inline-flex;
+
     align-items: center;
-    margin-right: 25px;
-    margin-bottom: 8px;
+
+    margin-right: 28px;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #555;
 }
 
 .legend-dot {
+
     width: 12px;
     height: 12px;
+
     border-radius: 50%;
-    margin-right: 8px;
+
+    margin-right: 9px;
 }
 
+
+/* =========================================================
+   CARGANDO
+========================================================= */
+
 .loading {
-    padding: 70px 20px;
+
+    padding: 85px 20px;
+
     text-align: center;
 }
 
+.loading .spinner-border {
+
+    width: 42px;
+    height: 42px;
+}
+
+.loading h5 {
+
+    font-weight: 700;
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
 .error-box {
-    padding: 60px 20px;
+
+    padding: 80px 20px;
+
     text-align: center;
 }
 
 .error-box h3 {
+
     color: #dc3545;
-    font-weight: 700;
+
+    font-weight: 800;
 }
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    margin-top: 70px;
+}
+
+
+/* =========================================================
+   MÓVIL
+========================================================= */
 
 @media (max-width: 768px) {
 
     .classification-header {
-        padding: 35px 20px;
+
+        padding: 50px 20px 45px;
+
+        margin-bottom: 35px;
+    }
+
+    .classification-header::after {
+
+        right: -20px;
+
+        font-size: 90px;
     }
 
     .classification-header h1 {
-        font-size: 2rem;
+
+        font-size: 2.3rem;
+
+        letter-spacing: -1px;
+    }
+
+    .classification-header p {
+
+        font-size: 1rem;
+    }
+
+    .update-box {
+
+        padding: 19px;
     }
 
     .table-container {
-        overflow-x: auto;
+
+        border-radius: 15px;
     }
 
     .table {
+
         min-width: 850px;
     }
 
+    .table thead th {
+
+        padding: 15px 10px;
+    }
+
+    .table tbody td {
+
+        padding: 13px 10px;
+    }
+
+    .team-cell {
+
+        min-width: 180px;
+    }
+
+    .legend {
+
+        padding: 20px;
+    }
+
+}
+
+
+/* =========================================================
+   SCROLL TABLA MÓVIL
+========================================================= */
+
+.table-responsive {
+
+    scrollbar-width: thin;
+    scrollbar-color: #0057b8 #eef1f5;
+}
+
+.table-responsive::-webkit-scrollbar {
+
+    height: 7px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+
+    background: #eef1f5;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+
+    background: #0057b8;
+
+    border-radius: 10px;
 }
 
 </style>
@@ -182,7 +528,9 @@ body {
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- ======================================================
+     NAVBAR
+====================================================== -->
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
@@ -190,48 +538,75 @@ body {
 
 <a class="navbar-brand fw-bold" href="index.html">
 
-<img src="img/logo/logo.png" width="42" alt="Azulones News">
+<img
+    src="img/logo/logo.png"
+    width="42"
+    alt="Azulones News"
+>
 
 AZULONES NEWS
 
 </a>
 
-<button class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#menu">
+
+<button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#menu"
+>
 
 <span class="navbar-toggler-icon"></span>
 
 </button>
 
+
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
-<li class="nav-item">
-<a class="nav-link" href="index.html">Inicio</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link" href="noticias.html">Noticias</a>
+<a class="nav-link" href="index.html">
+Inicio
+</a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="rumores.html">Mercado</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link" href="plantilla.html">Plantilla</a>
+<a class="nav-link" href="noticias.html">
+Noticias
+</a>
 </li>
 
-<li class="nav-item">
-<a class="nav-link" href="partidos.html">Partidos</a>
-</li>
 
 <li class="nav-item">
-<a class="nav-link active" href="clasificacion.html">Clasificación</a>
+<a class="nav-link" href="rumores.html">
+Mercado
+</a>
 </li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="plantilla.html">
+Plantilla
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">
+Partidos
+</a>
+</li>
+
+
+<li class="nav-item">
+<a class="nav-link active" href="clasificacion.html">
+Clasificación
+</a>
+</li>
+
 
 </ul>
 
@@ -243,16 +618,30 @@ AZULONES NEWS
 
 
 
-<!-- ================= CABECERA ================= -->
+<!-- ======================================================
+     CABECERA
+====================================================== -->
 
 <header class="classification-header">
 
-<div class="container">
+<div class="container text-center">
 
-<h1>🏆 Clasificación LaLiga</h1>
+<span class="badge">
+
+GETAFE CF · LALIGA EA SPORTS
+
+</span>
+
+<h1 class="display-4">
+
+Clasificación LaLiga
+
+</h1>
 
 <p class="lead mb-0">
-Clasificación oficial de LaLiga EA Sports 2026/27
+
+La clasificación del campeonato actualizada automáticamente con los últimos resultados oficiales.
+
 </p>
 
 </div>
@@ -261,7 +650,9 @@ Clasificación oficial de LaLiga EA Sports 2026/27
 
 
 
-<!-- ================= CONTENIDO ================= -->
+<!-- ======================================================
+     CONTENIDO
+====================================================== -->
 
 <main class="container pb-5">
 
@@ -282,7 +673,9 @@ Clasificación actualizada automáticamente
 
 Los resultados oficiales actualizan esta tabla automáticamente.
 
-<span id="last-update">Cargando última actualización...</span>
+<span id="last-update">
+Cargando última actualización...
+</span>
 
 </div>
 
@@ -290,15 +683,23 @@ Los resultados oficiales actualizan esta tabla automáticamente.
 
 
 
-<!-- TABLA -->
+<!-- ======================================================
+     TABLA
+====================================================== -->
 
 <div class="table-container">
 
 <div id="loading" class="loading">
 
-<div class="spinner-border text-primary mb-3" role="status"></div>
+<div
+    class="spinner-border text-primary mb-3"
+    role="status"
+>
+</div>
 
-<h5>Cargando clasificación...</h5>
+<h5>
+Cargando clasificación...
+</h5>
 
 <p class="text-muted mb-0">
 Consultando los últimos datos disponibles.
@@ -309,9 +710,14 @@ Consultando los últimos datos disponibles.
 
 <div id="error" class="error-box d-none">
 
-<h3>No se pudo cargar la clasificación</h3>
+<h3>
+No se pudo cargar la clasificación
+</h3>
 
-<p class="text-muted mb-0" id="error-message">
+<p
+    class="text-muted mb-0"
+    id="error-message"
+>
 
 Comprueba que la clasificación esté disponible.
 
@@ -368,41 +774,59 @@ Comprueba que la clasificación esté disponible.
 
 
 
-<!-- ================= LEYENDA ================= -->
+<!-- ======================================================
+     LEYENDA
+====================================================== -->
 
 <div class="legend mt-4">
 
-<h5 class="fw-bold mb-3">
+<h5>
 ¿Qué significa cada zona?
 </h5>
 
+
 <div class="legend-item">
 
-<span class="legend-dot" style="background:#198754;"></span>
+<span
+    class="legend-dot"
+    style="background:#198754;"
+></span>
 
 Champions League
 
 </div>
 
+
 <div class="legend-item">
 
-<span class="legend-dot" style="background:#ffc107;"></span>
+<span
+    class="legend-dot"
+    style="background:#ffc107;"
+></span>
 
 Europa League
 
 </div>
 
+
 <div class="legend-item">
 
-<span class="legend-dot" style="background:#0dcaf0;"></span>
+<span
+    class="legend-dot"
+    style="background:#0dcaf0;"
+></span>
 
 Conference League
 
 </div>
 
+
 <div class="legend-item">
 
-<span class="legend-dot" style="background:#dc3545;"></span>
+<span
+    class="legend-dot"
+    style="background:#dc3545;"
+></span>
 
 Descenso
 
@@ -411,12 +835,13 @@ Descenso
 </div>
 
 
-
 </main>
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- ======================================================
+     FOOTER
+====================================================== -->
 
 <footer class="bg-dark text-white py-5 mt-5">
 
@@ -424,29 +849,40 @@ Descenso
 
 <div class="row">
 
+
 <div class="col-lg-6">
 
 <h3 class="fw-bold">
+
 AZULONES NEWS
+
 </h3>
 
 <p>
+
 Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
+
 </p>
 
 </div>
+
 
 <div class="col-lg-6 text-lg-end">
 
 <p>
+
 Mercado • Noticias • Plantilla • Partidos • Clasificación
+
 </p>
 
 <p class="mb-0">
+
 © 2026 Azulones News
+
 </p>
 
 </div>
+
 
 </div>
 
@@ -456,7 +892,11 @@ Mercado • Noticias • Plantilla • Partidos • Clasificación
 
 
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- ======================================================
+     JAVASCRIPT AUTOMÁTICO
+     
+     NO MODIFICADO
+====================================================== -->
 
 <script>
 
@@ -470,11 +910,6 @@ async function cargarClasificacion() {
     const lastUpdate = document.getElementById("last-update");
 
     try {
-
-        /*
-         * Añadimos una marca de tiempo para evitar que el navegador
-         * utilice una versión antigua del JSON almacenada en caché.
-         */
 
         const cacheBuster = "?t=" + Date.now();
 
@@ -493,11 +928,6 @@ async function cargarClasificacion() {
         const data = await response.json();
 
 
-        /*
-         * Football-data.org devuelve la clasificación dentro
-         * del array standings.
-         */
-
         if (!data.standings || data.standings.length === 0) {
 
             throw new Error(
@@ -506,10 +936,6 @@ async function cargarClasificacion() {
 
         }
 
-
-        /*
-         * Normalmente existe una clasificación TOTAL.
-         */
 
         const standings =
             data.standings.find(
@@ -646,20 +1072,12 @@ async function cargarClasificacion() {
         });
 
 
-        /*
-         * Ocultamos el mensaje de carga y mostramos la tabla.
-         */
-
         loading.classList.add("d-none");
 
         error.classList.add("d-none");
 
         tableWrapper.classList.remove("d-none");
 
-
-        /*
-         * Mostramos la fecha de actualización del JSON.
-         */
 
         if (data.lastUpdated) {
 
@@ -701,18 +1119,8 @@ async function cargarClasificacion() {
 }
 
 
-/*
- * Cargar clasificación al abrir la página.
- */
-
 cargarClasificacion();
 
-
-/*
- * Volver a comprobar cada 15 minutos.
- * Esto permite actualizar la tabla si el usuario
- * mantiene abierta la página.
- */
 
 setInterval(
     cargarClasificacion,
