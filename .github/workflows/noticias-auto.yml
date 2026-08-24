@@ -2,30 +2,46 @@ name: Automatización de noticias
 
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: "0 */6 * * *"
+    # Ejecutar cada 2 horas
+    - cron: "0 */2 * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: noticias-automaticas
+  cancel-in-progress: false
+
 jobs:
   actualizar-noticias:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Descargar repositorio
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Preparar Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Mostrar estado
+      - name: Comprobar Python
         run: |
-          echo "🤖 Automatización de Azulones News"
-          echo "📡 Comprobando noticias..."
-          echo "📰 Archivo noticias.json encontrado"
+          python --version
+
+      - name: Ejecutar automatización de noticias
+        run: |
+          python scripts/actualizar_noticias.py
+
+      - name: Comprobar cambios
+        run: |
+          git status
 
       - name: Guardar cambios
         run: |
@@ -34,6 +50,9 @@ jobs:
 
           git add data/noticias.json
 
-          git diff --cached --quiet || git commit -m "🤖 Actualizar noticias automáticamente"
-
-          git push
+          if git diff --cached --quiet; then
+            echo "ℹ️ No hay noticias nuevas."
+          else
+            git commit -m "🤖 Actualizar noticias automáticamente"
+            git push
+          fi
