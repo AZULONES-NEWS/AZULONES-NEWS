@@ -2,277 +2,241 @@
    ESTILOS GENERALES
 ========================== */
 
-body{
-    background:#f5f7fb;
-    font-family:Arial, Helvetica, sans-serif;
+body {
+    background: #f5f7fb;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-h2{
-    font-size:40px;
-    font-weight:700;
+h2 {
+    font-size: 40px;
+    font-weight: 700;
 }
+
 
 /* ==========================
    NAVBAR
 ========================== */
 
-.navbar{
-    padding:18px 0;
+.navbar {
+    padding: 18px 0;
 }
+
 
 /* ==========================
    HERO
 ========================== */
 
-.hero{
-    height:100vh;
+.hero {
+    height: 100vh;
     background:
-    linear-gradient(rgba(0,55,120,.70),rgba(0,55,120,.70)),
-    url("../img/estadio/hero.jpg");
-
-    background-size:cover;
-    background-position:center;
-
-    display:flex;
-    align-items:center;
+        linear-gradient(rgba(0, 55, 120, .70), rgba(0, 55, 120, .70)),
+        url("../img/estadio/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-.hero h1{
-    text-shadow:0 5px 20px rgba(0,0,0,.35);
+.hero h1 {
+    text-shadow: 0 5px 20px rgba(0, 0, 0, .35);
 }
 
-.hero .btn{
-    padding:16px 38px;
-    border-radius:40px;
-    font-weight:bold;
+.hero .btn {
+    padding: 16px 38px;
+    border-radius: 40px;
+    font-weight: bold;
 }
+
 
 /* ==========================
    TARJETAS ANTIGUAS
 ========================== */
 
-.noticia{
-    border:none;
-    overflow:hidden;
-    border-radius:20px;
-    transition:.35s;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+.noticia {
+    border: none;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
 }
 
-.noticia:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
+.noticia:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .15);
 }
 
-.noticia img{
-    height:240px;
-    object-fit:cover;
+.noticia img {
+    height: 240px;
+    object-fit: cover;
 }
 
-.card-body{
-    padding:30px;
+.card-body {
+    padding: 30px;
 }
+
 
 /* ==========================
    NOTICIA PRINCIPAL
 ========================== */
 
-.noticia-principal{
-
-    position:relative;
-    height:600px;
-    overflow:hidden;
-    border-radius:25px;
-    cursor:pointer;
-
+.noticia-principal {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 25px;
+    cursor: pointer;
 }
 
-.noticia-principal img{
-
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    transition:.6s;
-
+.noticia-principal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
 }
 
-.noticia-principal:hover img{
-
-    transform:scale(1.08);
-
+.noticia-principal:hover img {
+    transform: scale(1.08);
 }
 
-.overlay{
-
-    position:absolute;
-    inset:0;
-
-    background:linear-gradient(
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
         to top,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.10)
+        rgba(0, 0, 0, .88),
+        rgba(0, 0, 0, .10)
     );
-
 }
 
-.contenido{
-
-    position:absolute;
-
-    left:40px;
-    right:40px;
-    bottom:40px;
-
-    color:white;
-
-    z-index:5;
-
+.contenido {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    color: white;
+    z-index: 5;
 }
 
-.categoria{
-
-    background:#005BAC;
-
-    padding:8px 18px;
-
-    border-radius:30px;
-
-    font-size:14px;
-
-    font-weight:bold;
-
+.categoria {
+    background: #005BAC;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.contenido h2{
-
-    margin-top:20px;
-
-    font-size:44px;
-
-    font-weight:800;
-
-    line-height:1.2;
-
+.contenido h2 {
+    margin-top: 20px;
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
-.contenido p{
-
-    margin-top:15px;
-
-    font-size:18px;
-
+.contenido p {
+    margin-top: 15px;
+    font-size: 18px;
 }
+
 
 /* ==========================
    MINI NOTICIAS
 ========================== */
 
-.mini-noticia{
-
-    position:relative;
-
-    height:288px;
-
-    overflow:hidden;
-
-    border-radius:20px;
-
-    cursor:pointer;
-
+.mini-noticia {
+    position: relative;
+    height: 288px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
-.mini-noticia img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.6s;
-
+.mini-noticia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
 }
 
-.mini-noticia:hover img{
-
-    transform:scale(1.08);
-
+.mini-noticia:hover img {
+    transform: scale(1.08);
 }
 
-.contenido-mini{
-
-    position:absolute;
-
-    left:20px;
-    right:20px;
-    bottom:20px;
-
-    color:white;
-
-    z-index:5;
-
+.contenido-mini {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    color: white;
+    z-index: 5;
 }
 
-.contenido-mini span{
-
-    background:#005BAC;
-
-    padding:6px 14px;
-
-    border-radius:30px;
-
-    font-size:12px;
-
-    font-weight:bold;
-
+.contenido-mini span {
+    background: #005BAC;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.contenido-mini h5{
-
-    margin-top:15px;
-
-    font-size:24px;
-
-    line-height:1.3;
-
-    font-weight:700;
-
+.contenido-mini h5 {
+    margin-top: 15px;
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
 }
-/* ===========================
+
+
+/* ==========================
    RUMORES
-=========================== */
+========================== */
 
-.card{
-    border-radius:18px;
-    overflow:hidden;
+.card {
+    border-radius: 18px;
+    overflow: hidden;
 }
 
-.card img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    display:block;
-    transition:.4s;
+.card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    transition: .4s;
 }
 
-.card:first-of-type img{
-    height:450px;
+.card:first-of-type img {
+    height: 450px;
 }
 
-.card:hover img{
-    transform:scale(1.05);
-}
-/* ESCUDOS PARTIDOS */
-
-.escudo-partido{
-    width:150px;
-    height:150px;
-    object-fit:contain;
+.card:hover img {
+    transform: scale(1.05);
 }
 
-.proximo-partido h2{
-    margin-top:20px;
-    font-size:48px;
-    font-weight:700;
->>>>>>> 092d75ba5ca8c2736b9937df9d8a22583c44d54e
+
+/* ==========================
+   IMÁGENES DE NOTICIAS
+========================== */
+
+.imagen-noticia {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+
+/* ==========================
+   ESCUDOS PARTIDOS
+========================== */
+
+.escudo-partido {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.proximo-partido h2 {
+    margin-top: 20px;
+    font-size: 48px;
+    font-weight: 700;
 }

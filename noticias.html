@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -337,6 +336,8 @@
                 0 15px 40px rgba(0,35,70,.07);
 
             transition: .35s;
+
+            cursor: pointer;
         }
 
         .secondary-news:hover {
@@ -399,54 +400,6 @@
             color: #8a98a8;
 
             font-size: 12px;
-        }
-
-        /* =====================================================
-           PRESENTACION
-        ===================================================== */
-
-        .presentation-news {
-            overflow: hidden;
-
-            margin-top: 25px;
-
-            border-radius: 22px;
-
-            background: white;
-
-            border: 1px solid rgba(0,119,255,.08);
-
-            box-shadow:
-                0 15px 40px rgba(0,35,70,.07);
-        }
-
-        .presentation-news img {
-            width: 100%;
-            height: 350px;
-
-            object-fit: cover;
-
-            display: block;
-        }
-
-        .presentation-content {
-            padding: 30px;
-        }
-
-        .presentation-content h2 {
-            margin-top: 15px;
-
-            color: #071b2e;
-
-            font-size: 30px;
-
-            font-weight: 900;
-        }
-
-        .presentation-content p {
-            color: #718196;
-
-            line-height: 1.7;
         }
 
         /* =====================================================
@@ -617,6 +570,25 @@
             color: rgba(255,255,255,.5);
         }
 
+        .news-footer a {
+            color: rgba(255,255,255,.6);
+            text-decoration: none;
+        }
+
+        .news-footer a:hover {
+            color: #55c8ff;
+        }
+
+        /* =====================================================
+           CARGANDO
+        ===================================================== */
+
+        .news-loading {
+            padding: 50px;
+            text-align: center;
+            color: #718196;
+        }
+
         /* =====================================================
            MOVIL
         ===================================================== */
@@ -661,25 +633,15 @@
                 padding: 22px;
             }
 
-            .presentation-news img {
-                height: 240px;
-            }
-
-            .presentation-content {
-                padding: 22px;
-            }
-
-            .presentation-content h2 {
-                font-size: 25px;
-            }
-
         }
 
     </style>
 
 </head>
 
+
 <body>
+
 
     <!-- =====================================================
          NAVBAR
@@ -711,6 +673,7 @@
 
             </a>
 
+
             <button class="navbar-toggler"
                     data-bs-toggle="collapse"
                     data-bs-target="#menu">
@@ -718,6 +681,7 @@
                 <span class="navbar-toggler-icon"></span>
 
             </button>
+
 
             <div class="collapse navbar-collapse" id="menu">
 
@@ -809,6 +773,7 @@
 
             <div class="row g-5">
 
+
                 <!-- =================================================
                      NOTICIAS
                 ================================================= -->
@@ -816,137 +781,14 @@
                 <div class="col-lg-8">
 
 
-                    <!-- NOTICIA PRINCIPAL -->
+                    <div id="lista-noticias">
 
-                    <article class="main-news mb-4">
-
-                        <div class="main-news-image">
-
-                            <img src="img/noticias/noticia1.jpg"
-                                 alt="Getafe CF ante el Partizán">
-
+                        <div class="news-loading">
+                            Cargando noticias...
                         </div>
 
-                        <div class="main-news-content">
+                    </div>
 
-                            <span class="news-tag">
-                                EUROPA
-                            </span>
-
-                            <h2>
-                                El Getafe vence al Partizán y se acerca
-                                a la fase de grupos de la Conference League
-                            </h2>
-
-                            <div class="news-meta">
-                                📅 21 Agosto 2026 · ✍️ Redacción Azulones News
-                            </div>
-
-                            <p class="mt-4">
-                                El Getafe se impuso por 3-1 al Partizán
-                                de Belgrado en el Coliseum y viajará a Serbia
-                                con una ventaja de dos goles en la eliminatoria.
-                            </p>
-
-                            <p>
-                                El conjunto de José Bordalás respondió ante
-                                su afición en su regreso a Europa y dejó muy
-                                buenas sensaciones pese a las dificultades
-                                del encuentro.
-                            </p>
-
-                            <a href="#"
-                               class="read-button">
-                                Leer noticia completa →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- FRANCHO -->
-
-                    <article class="secondary-news">
-
-                        <div class="secondary-news-image">
-
-                            <img src="img/noticias/noticia2.jpg"
-                                 alt="Francho Serrano">
-
-                        </div>
-
-                        <div class="secondary-news-content">
-
-                            <span class="news-tag">
-                                FICHAJES
-                            </span>
-
-                            <h3>
-                                Francho Serrano ya es nuevo jugador
-                                del Getafe hasta 2029
-                            </h3>
-
-                            <p>
-                                El centrocampista aragonés se convierte
-                                oficialmente en jugador azulón después
-                                de abandonar el Real Zaragoza.
-                            </p>
-
-                            <p>
-                                Francho firma hasta junio de 2029 y da
-                                el salto a Primera División después de
-                                desarrollar toda su carrera profesional
-                                en el conjunto maño.
-                            </p>
-
-                            <span class="secondary-news-date">
-                                18 Agosto 2026 · Redacción Azulones News
-                            </span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRESENTACION -->
-
-                    <article class="presentation-news">
-
-                        <img src="img/noticias/presentacion.jpg"
-                             alt="Presentación de los nuevos fichajes del Getafe">
-
-                        <div class="presentation-content">
-
-                            <span class="news-tag">
-                                ACTUALIDAD
-                            </span>
-
-                            <h2>
-                                Ünal, Mojica y Francho se presentan
-                                como nuevos jugadores del Getafe
-                            </h2>
-
-                            <span class="secondary-news-date">
-                                18 Agosto 2026 · Redacción Azulones News
-                            </span>
-
-                            <p class="mt-4">
-                                El Getafe presentó oficialmente a tres
-                                de sus nuevas incorporaciones para la
-                                temporada 2026/27.
-                            </p>
-
-                            <p>
-                                Enes Ünal, Johan Mojica y Francho Serrano
-                                comparecieron ante los medios y mostraron
-                                su ilusión por formar parte del nuevo
-                                proyecto de José Bordalás.
-                            </p>
-
-                        </div>
-
-                    </article>
 
                 </div>
 
@@ -958,82 +800,50 @@
                 <div class="col-lg-4">
 
 
-<!-- MÁS LEÍDAS -->
-<div class="card border-0 shadow-lg mb-4">
+                    <!-- MÁS LEÍDAS -->
 
-    <div class="card-header bg-primary text-white fw-bold">
-        🔥 Más leídas
-    </div>
+                    <div class="sidebar-card">
 
-    <div class="list-group list-group-flush">
+                        <div class="sidebar-title">
+                            🔥 Más leídas
+                        </div>
 
-        <a href="#" class="list-group-item list-group-item-action">
-            El Getafe vence al Partizán y se acerca a la fase de grupos
-        </a>
+                        <div id="mas-leidas">
 
-        <a href="#" class="list-group-item list-group-item-action">
-            Francho Serrano ya es nuevo jugador del Getafe hasta 2029
-        </a>
+                            <div class="popular-item">
+                                Cargando...
+                            </div>
 
-        <a href="#" class="list-group-item list-group-item-action">
-            Ünal, Mojica y Francho se presentan como nuevos jugadores azulones
-        </a>
+                        </div>
 
-        <a href="#" class="list-group-item list-group-item-action">
-            El Getafe prepara su próximo compromiso ante el Racing de Santander
-        </a>
-
-        <a href="#" class="list-group-item list-group-item-action">
-            El conjunto de Bordalás sigue moviéndose en el mercado de fichajes
-        </a>
-
-    </div>
-
-</div>
+                    </div>
 
 
-<!-- ÚLTIMA HORA -->
-<div class="card border-0 shadow-lg mb-4">
+                    <!-- ÚLTIMA HORA -->
 
-    <div class="card-header bg-danger text-white fw-bold">
+                    <div class="sidebar-card">
 
-        🔴 Última hora
+                        <div class="sidebar-title breaking-title">
+                            🔴 Última hora
+                        </div>
 
-    </div>
+                        <div id="ultima-hora">
 
-    <div class="card-body">
+                            <div class="breaking-item">
 
-        <p>
+                                <span class="breaking-time">
+                                    AHORA
+                                </span>
 
-            <strong>Ahora</strong><br>
+                                <p>
+                                    Cargando actualidad...
+                                </p>
 
-            El Getafe ya prepara el próximo partido ante el Racing de Santander.
+                            </div>
 
-        </p>
+                        </div>
 
-        <hr>
-
-        <p>
-
-            <strong>Hoy</strong><br>
-
-            Francho Serrano continúa adaptándose al conjunto azulón tras su llegada.
-
-        </p>
-
-        <hr>
-
-        <p>
-
-            <strong>Hoy</strong><br>
-
-            El Getafe mantiene su planificación deportiva de cara al nuevo curso.
-
-        </p>
-
-    </div>
-
-</div>
+                    </div>
 
 
                     <!-- REDES -->
@@ -1064,6 +874,7 @@
                         </div>
 
                     </div>
+
 
                 </div>
 
@@ -1097,6 +908,7 @@
 
                 </div>
 
+
                 <div class="col-lg-3">
 
                     <h5 class="fw-bold">
@@ -1121,6 +933,7 @@
 
                 </div>
 
+
                 <div class="col-lg-3">
 
                     <h5 class="fw-bold">
@@ -1143,7 +956,9 @@
 
             </div>
 
+
             <hr class="border-secondary my-5">
+
 
             <p class="text-center mb-0">
 
@@ -1156,9 +971,321 @@
     </footer>
 
 
+    <!-- =====================================================
+         SCRIPTS
+    ===================================================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/noticias.js"></script>
+
+
+    <!-- =====================================================
+         CARGADOR DE NOTICIAS
+    ===================================================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            async function () {
+
+                try {
+
+                    const respuesta =
+                        await fetch("data/noticias.json");
+
+                    if (!respuesta.ok) {
+                        throw new Error(
+                            "No se pudo cargar noticias.json"
+                        );
+                    }
+
+                    const noticias =
+                        await respuesta.json();
+
+
+                    /* =========================================
+                       CONTENEDOR
+                    ========================================= */
+
+                    const contenedor =
+                        document.getElementById(
+                            "lista-noticias"
+                        );
+
+                    if (!contenedor) return;
+
+
+                    contenedor.innerHTML = "";
+
+
+                    /* =========================================
+                       NOTICIA PRINCIPAL
+                    ========================================= */
+
+                    if (noticias.length > 0) {
+
+                        const noticia =
+                            noticias[0];
+
+                        const principal =
+                            document.createElement(
+                                "article"
+                            );
+
+                        principal.className =
+                            "main-news mb-4";
+
+
+                        principal.innerHTML = `
+
+                            <div class="main-news-image">
+
+                                <img
+                                    src="${noticia.imagen}"
+                                    alt="${noticia.titulo}"
+                                >
+
+                            </div>
+
+                            <div class="main-news-content">
+
+                                <span class="news-tag">
+                                    ${noticia.categoria}
+                                </span>
+
+                                <h2>
+                                    ${noticia.titulo}
+                                </h2>
+
+                                <div class="news-meta">
+                                    📅 ${noticia.fecha}
+                                    · ✍️ Redacción Azulones News
+                                </div>
+
+                                <p class="mt-4">
+                                    ${noticia.resumen || ""}
+                                </p>
+
+                                <a
+                                    href="${noticia.enlace}"
+                                    class="read-button"
+                                >
+                                    Leer noticia completa →
+                                </a>
+
+                            </div>
+
+                        `;
+
+
+                        contenedor.appendChild(
+                            principal
+                        );
+
+                    }
+
+
+                    /* =========================================
+                       NOTICIAS SECUNDARIAS
+                    ========================================= */
+
+                    noticias
+                        .slice(1)
+                        .forEach(function (noticia) {
+
+                            const article =
+                                document.createElement(
+                                    "article"
+                                );
+
+                            article.className =
+                                "secondary-news";
+
+
+                            article.innerHTML = `
+
+                                <div class="secondary-news-image">
+
+                                    <img
+                                        src="${noticia.imagen}"
+                                        alt="${noticia.titulo}"
+                                    >
+
+                                </div>
+
+                                <div class="secondary-news-content">
+
+                                    <span class="news-tag">
+                                        ${noticia.categoria}
+                                    </span>
+
+                                    <h3>
+                                        ${noticia.titulo}
+                                    </h3>
+
+                                    <p>
+                                        ${noticia.resumen || ""}
+                                    </p>
+
+                                    <span class="secondary-news-date">
+                                        ${noticia.fecha}
+                                        · Redacción Azulones News
+                                    </span>
+
+                                </div>
+
+                            `;
+
+
+                            article.addEventListener(
+                                "click",
+                                function () {
+
+                                    window.location.href =
+                                        noticia.enlace;
+
+                                }
+                            );
+
+
+                            contenedor.appendChild(
+                                article
+                            );
+
+                        });
+
+
+                    /* =========================================
+                       MÁS LEÍDAS
+                    ========================================= */
+
+                    const masLeidas =
+                        document.getElementById(
+                            "mas-leidas"
+                        );
+
+
+                    if (masLeidas) {
+
+                        masLeidas.innerHTML = "";
+
+
+                        noticias
+                            .slice(0, 5)
+                            .forEach(function (noticia) {
+
+                                const enlace =
+                                    document.createElement(
+                                        "a"
+                                    );
+
+                                enlace.href =
+                                    noticia.enlace;
+
+                                enlace.className =
+                                    "popular-item";
+
+                                enlace.textContent =
+                                    noticia.titulo;
+
+                                masLeidas.appendChild(
+                                    enlace
+                                );
+
+                            });
+
+                    }
+
+
+                    /* =========================================
+                       ÚLTIMA HORA
+                    ========================================= */
+
+                    const ultimaHora =
+                        document.getElementById(
+                            "ultima-hora"
+                        );
+
+
+                    if (ultimaHora && noticias.length) {
+
+                        ultimaHora.innerHTML = "";
+
+
+                        noticias
+                            .slice(0, 3)
+                            .forEach(function (noticia) {
+
+                                const bloque =
+                                    document.createElement(
+                                        "div"
+                                    );
+
+                                bloque.className =
+                                    "breaking-item";
+
+
+                                bloque.innerHTML = `
+
+                                    <span class="breaking-time">
+                                        ${noticia.fecha}
+                                    </span>
+
+                                    <p>
+                                        ${noticia.titulo}
+                                    </p>
+
+                                `;
+
+
+                                ultimaHora.appendChild(
+                                    bloque
+                                );
+
+                            });
+
+                    }
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Error cargando noticias:",
+                        error
+                    );
+
+
+                    const contenedor =
+                        document.getElementById(
+                            "lista-noticias"
+                        );
+
+
+                    if (contenedor) {
+
+                        contenedor.innerHTML = `
+
+                            <div class="news-loading">
+
+                                No se han podido cargar
+                                las noticias.
+
+                            </div>
+
+                        `;
+
+                    }
+
+                }
+
+            }
+
+        );
+
+    </script>
 
 </body>
 
 </html>
-```

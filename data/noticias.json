@@ -1,0 +1,26 @@
+[
+  {
+    "titulo": "El Getafe se impone al Racing y consigue su primera victoria liguera",
+    "categoria": "VICTORIA",
+    "fecha": "23 Agosto 2026",
+    "imagen": "img/noticias/victoria-racing.jpg",
+    "resumen": "El Getafe consigue su primera victoria liguera ante el Racing de Santander y suma tres puntos importantes para comenzar la temporada.",
+    "enlace": "noticia-victoria-racing.html"
+  },
+  {
+    "titulo": "David Soria vuelve a ser decisivo y se acerca al récord histórico",
+    "categoria": "PORTERÍA",
+    "fecha": "23 Agosto 2026",
+    "imagen": "img/noticias/davidsoria.jpg",
+    "resumen": "David Soria volvió a ser protagonista bajo palos y se acerca a un récord histórico del Getafe tras su actuación ante el Racing.",
+    "enlace": "noticia-david-soria.html"
+  },
+  {
+    "titulo": "Enes Ünal decide el partido y da al Getafe sus primeros tres puntos",
+    "categoria": "LALIGA",
+    "fecha": "23 Agosto 2026",
+    "imagen": "img/noticias/enes-unal-racing.jpg",
+    "resumen": "Enes Ünal fue decisivo ante el Racing y ayudó al conjunto azulón a conseguir sus primeros tres puntos de la temporada.",
+    "enlace": "noticia-enes-unal.html"
+  }
+]
