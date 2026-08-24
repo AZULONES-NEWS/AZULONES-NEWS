@@ -7,10 +7,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Enes Ünal decide ante el Racing | Azulones News</title>
+    <title>Enes Ünal decide el partido | Azulones News</title>
 
     <meta name="description"
-        content="Enes Ünal marca el gol de la victoria del Getafe ante el Racing de Santander.">
+        content="Enes Ünal decide el partido ante el Racing y da al Getafe sus primeros tres puntos de la temporada.">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,21 +18,193 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
 
+    <style>
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(0,119,255,.08), transparent 30%),
+                radial-gradient(circle at 90% 30%, rgba(0,183,255,.06), transparent 30%),
+                #f4f7fb;
+        }
+
+        .article-navbar {
+            background: rgba(3,18,35,.96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,183,255,.22);
+        }
+
+        .article-hero {
+            position: relative;
+            min-height: 620px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            background: #031321;
+        }
+
+        .article-hero img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to top,
+                rgba(3,15,28,.98),
+                rgba(3,15,28,.65) 45%,
+                rgba(3,15,28,.08)
+            );
+        }
+
+        .article-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 80px 0 70px;
+            color: white;
+        }
+
+        .article-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 50px;
+            background: linear-gradient(90deg,#0077ff,#00b7ff);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .article-hero h1 {
+            max-width: 950px;
+            margin-top: 18px;
+            font-size: clamp(38px,6vw,72px);
+            line-height: 1.05;
+            font-weight: 900;
+            letter-spacing: -3px;
+        }
+
+        .article-meta {
+            margin-top: 20px;
+            color: rgba(255,255,255,.65);
+        }
+
+        .article-wrapper {
+            padding: 70px 0;
+        }
+
+        .article-body {
+            background: white;
+            border-radius: 28px;
+            padding: 45px;
+            box-shadow: 0 20px 60px rgba(0,35,70,.10);
+        }
+
+        .article-body p {
+            color: #526477;
+            font-size: 18px;
+            line-height: 1.85;
+        }
+
+        .article-body p:first-of-type {
+            font-size: 21px;
+            color: #263b50;
+        }
+
+        .article-body h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #071b2e;
+            font-size: 32px;
+            font-weight: 900;
+        }
+
+        .match-card {
+            margin: 35px 0;
+            padding: 30px;
+            border-radius: 22px;
+            background: linear-gradient(135deg,#031321,#005baa);
+            color: white;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,70,140,.18);
+        }
+
+        .match-card .score {
+            font-size: clamp(40px,7vw,70px);
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+        .goal-highlight {
+            margin: 40px 0;
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg,#f4f9ff,#e8f5ff);
+            border: 1px solid rgba(0,119,255,.12);
+        }
+
+        .goal-highlight h3 {
+            color: #006dcc;
+            font-weight: 900;
+        }
+
+        .article-footer {
+            background: #031321;
+            color: white;
+            padding: 55px 0 30px;
+            border-top: 1px solid rgba(0,183,255,.2);
+        }
+
+        .article-footer p {
+            color: rgba(255,255,255,.55);
+        }
+
+        @media (max-width:768px) {
+
+            .article-hero {
+                min-height: 520px;
+            }
+
+            .article-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .article-body {
+                padding: 25px;
+                border-radius: 20px;
+            }
+
+            .article-body p {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+<nav class="navbar navbar-expand-lg navbar-dark article-navbar sticky-top">
 
     <div class="container">
 
         <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
            href="index.html">
 
-            <img src="img/logo/logo.png" width="50" height="50" alt="Azulones News">
+            <img src="img/logo/logo.png"
+                 width="45"
+                 height="45"
+                 alt="Azulones News">
 
             <div>
-                <div class="fs-4 fw-bold">AZULONES NEWS</div>
+                <div class="fw-bold">AZULONES NEWS</div>
                 <small class="text-white-50">El medio del Getafismo</small>
             </div>
 
@@ -48,14 +220,31 @@
 
         <div class="collapse navbar-collapse" id="menu">
 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto gap-lg-2">
 
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
-                <li class="nav-item"><a class="nav-link" href="rumores.html">Rumores</a></li>
-                <li class="nav-item"><a class="nav-link" href="plantilla.html">Plantilla</a></li>
-                <li class="nav-item"><a class="nav-link" href="partidos.html">Partidos</a></li>
-                <li class="nav-item"><a class="nav-link" href="clasificacion.html">Clasificación</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="noticias.html">Noticias</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="rumores.html">Rumores</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="plantilla.html">Plantilla</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="partidos.html">Partidos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="clasificacion.html">Clasificación</a>
+                </li>
 
             </ul>
 
@@ -66,120 +255,237 @@
 </nav>
 
 
-<main class="container py-5">
+<section class="article-hero">
 
-    <article class="card border-0 shadow-lg overflow-hidden">
+    <img src="img/noticias/enes-unal-racing.jpg"
+         alt="Enes Ünal celebra su gol con el Getafe">
 
-        <img src="img/noticias/enes-unal-racing.jpg"
-             class="w-100"
-             style="max-height:600px; object-fit:cover;"
-             alt="Enes Ünal celebra su gol ante el Racing">
+    <div class="container article-hero-content">
 
-        <div class="card-body p-4 p-lg-5">
+        <span class="article-tag">
+            LALIGA
+        </span>
 
-            <span class="badge bg-primary fs-6 mb-3">
-                ⚽ LALIGA
-            </span>
+        <h1>
+            Enes Ünal decide el partido y da al Getafe sus primeros tres puntos
+        </h1>
 
-            <h1 class="display-4 fw-bold">
-                Enes Ünal decide el partido y da al Getafe sus primeros tres puntos
-            </h1>
+        <div class="article-meta">
+            📅 23 Agosto 2026 · ✍️ Redacción Azulones News
+        </div>
 
-            <p class="text-muted mt-3">
-                📅 23 Agosto 2026 · ✍️ Redacción Azulones News
-            </p>
+    </div>
 
-            <p class="fs-5 mt-4">
-                El Getafe encontró en Enes Ünal al hombre decisivo para conseguir
-                su primera victoria liguera de la temporada.
-            </p>
+</section>
 
-            <p>
-                Cuando el partido parecía encaminado al empate, el delantero turco
-                apareció para romper la igualdad y hacer estallar al Coliseum.
-            </p>
 
-            <h2 class="fw-bold mt-5">
-                El gol que cambió el partido
-            </h2>
+<main class="article-wrapper">
 
-            <p>
-                El Getafe encontró espacios en los últimos minutos y consiguió
-                construir una jugada que terminó con un centro de Andrés García.
-            </p>
+    <div class="container">
 
-            <p>
-                Ünal apareció en el área y aprovechó la oportunidad para marcar
-                el <strong>1-0 en el minuto 81</strong>.
-            </p>
+        <div class="row justify-content-center">
 
-            <p>
-                El delantero puso así el broche a una tarde en la que el conjunto
-                azulón tuvo que sufrir hasta el final para conseguir los tres puntos.
-            </p>
+            <div class="col-lg-9">
 
-            <div class="my-5 p-4 bg-light rounded-4 text-center">
+                <article class="article-body">
 
-                <h2 class="display-2 fw-bold text-primary">
-                    1-0
-                </h2>
+                    <p>
+                        Enes Ünal fue el gran protagonista de la victoria del Getafe
+                        ante el Racing de Santander. El delantero turco marcó el
+                        único tanto del encuentro y permitió al conjunto azulón
+                        sumar sus primeros tres puntos de la temporada.
+                    </p>
 
-                <p class="fs-5 mb-0">
-                    Gol de Enes Ünal · Minuto 81
-                </p>
+                    <p>
+                        El partido estuvo marcado por la igualdad y por las
+                        dificultades que encontró el Getafe para encontrar espacios
+                        en el último tercio del campo. Sin embargo, el equipo de
+                        José Bordalás no dejó de buscar el gol.
+                    </p>
 
-            </div>
 
-            <h2 class="fw-bold mt-5">
-                Una victoria de equipo
-            </h2>
+                    <div class="match-card">
 
-            <p>
-                Aunque Ünal fue el encargado de marcar el tanto decisivo,
-                la victoria tuvo varios protagonistas.
-            </p>
+                        <div class="fw-bold">
+                            JORNADA 2
+                        </div>
 
-            <p>
-                David Soria mantuvo al Getafe con vida al detener un penalti
-                de Andrés Martín, mientras que la defensa azulona consiguió
-                mantener la portería a cero durante todo el encuentro.
-            </p>
+                        <div class="score">
+                            GETAFE 1 - 0 RACING
+                        </div>
 
-            <p>
-                La victoria permite al Getafe sumar sus primeros tres puntos
-                ligueros y coger confianza de cara a los próximos compromisos
-                de la temporada.
-            </p>
+                        <div>
+                            Coliseum · 23 Agosto 2026
+                        </div>
 
-            <div class="alert alert-primary mt-5 fs-5">
-                🔵 <strong>Ünal vuelve a aparecer en un momento decisivo
-                y le da al Getafe una victoria de enorme valor.</strong>
+                    </div>
+
+
+                    <h2>
+                        Ünal aparece cuando más se necesitaba
+                    </h2>
+
+                    <p>
+                        El encuentro avanzaba hacia su tramo final con todo por
+                        decidir. El Getafe necesitaba encontrar una acción que
+                        rompiera el equilibrio y permitiera a los azulones
+                        ponerse por delante.
+                    </p>
+
+                    <p>
+                        Esa acción llegó en la segunda parte. Una buena jugada
+                        ofensiva terminó encontrando a Enes Ünal, que no perdonó
+                        ante la portería del Racing.
+                    </p>
+
+
+                    <div class="goal-highlight">
+
+                        <h3>
+                            ⚽ El gol de la victoria
+                        </h3>
+
+                        <p class="mb-0">
+                            Enes Ünal apareció en el tramo decisivo del encuentro
+                            para marcar el 1-0 y poner al Coliseum patas arriba.
+                        </p>
+
+                    </div>
+
+
+                    <h2>
+                        Tres puntos de mucho valor
+                    </h2>
+
+                    <p>
+                        El tanto del delantero turco permitió al Getafe afrontar
+                        los últimos minutos con ventaja. El Racing intentó buscar
+                        el empate, pero la defensa azulona consiguió resistir.
+                    </p>
+
+                    <p>
+                        David Soria volvió a ser importante bajo los palos,
+                        especialmente después de intervenir en una de las acciones
+                        más peligrosas del encuentro.
+                    </p>
+
+                    <h2>
+                        Ünal comienza a marcar diferencias
+                    </h2>
+
+                    <p>
+                        El delantero se convierte así en uno de los nombres propios
+                        del inicio de temporada. Su capacidad para aparecer en los
+                        momentos importantes puede ser una de las grandes bazas del
+                        conjunto de José Bordalás durante este nuevo curso.
+                    </p>
+
+                    <p>
+                        El Getafe suma así una victoria fundamental para comenzar
+                        a ganar confianza y afrontar con mayor tranquilidad los
+                        próximos compromisos de la temporada.
+                    </p>
+
+
+                    <div class="alert alert-primary mt-5 fs-5 rounded-4">
+
+                        🔵 <strong>Enes Ünal fue el héroe del Coliseum</strong> con
+                        un gol que permitió al Getafe conseguir su primera victoria
+                        liguera y sumar tres puntos muy importantes.
+
+                    </div>
+
+                </article>
+
             </div>
 
         </div>
 
-    </article>
+    </div>
 
 </main>
 
 
-<footer class="bg-primary text-white py-5 mt-5">
+<footer class="article-footer">
 
-    <div class="container text-center">
+    <div class="container">
 
-        <h3>AZULONES NEWS</h3>
+        <div class="row">
 
-        <p>
-            Toda la actualidad del Getafe Club de Fútbol.
-        </p>
+            <div class="col-lg-6">
 
-        <small>
+                <h3 class="fw-bold">
+                    AZULONES NEWS
+                </h3>
+
+                <p class="mt-3">
+                    Toda la actualidad del Getafe Club de Fútbol
+                    desde el corazón del Getafismo.
+                </p>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5 class="fw-bold">
+                    Navegación
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a class="text-white text-decoration-none"
+                       href="index.html">
+                        Inicio
+                    </a>
+
+                    <a class="text-white text-decoration-none"
+                       href="noticias.html">
+                        Noticias
+                    </a>
+
+                    <a class="text-white text-decoration-none"
+                       href="rumores.html">
+                        Rumores
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5 class="fw-bold">
+                    Competición
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a class="text-white text-decoration-none"
+                       href="partidos.html">
+                        Partidos
+                    </a>
+
+                    <a class="text-white text-decoration-none"
+                       href="clasificacion.html">
+                        Clasificación
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-5">
+
+        <p class="text-center mb-0">
             © 2026 Azulones News · Proyecto no oficial del Getafe CF.
-        </small>
+        </p>
 
     </div>
 
 </footer>
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 

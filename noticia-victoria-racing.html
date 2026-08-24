@@ -3,10 +3,11 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>El Getafe vence al Racing | Azulones News</title>
+    <title>El Getafe se impone al Racing | Azulones News</title>
 
     <meta name="description"
         content="El Getafe derrota 1-0 al Racing de Santander y consigue su primera victoria liguera.">
@@ -16,39 +17,559 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+
+        /* =====================================================
+           ESTILO ARTÍCULO - AZULONES NEWS
+        ===================================================== */
+
+        body {
+            background:
+                radial-gradient(circle at 10% 10%, rgba(0,119,255,.08), transparent 30%),
+                radial-gradient(circle at 90% 30%, rgba(0,183,255,.06), transparent 30%),
+                #f4f7fb;
+        }
+
+        /* NAVBAR */
+
+        .article-navbar {
+            background: rgba(3,18,35,.96);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,183,255,.22);
+        }
+
+        .article-navbar .nav-link {
+            color: rgba(255,255,255,.72);
+            transition: .3s;
+        }
+
+        .article-navbar .nav-link:hover,
+        .article-navbar .nav-link.active {
+            color: white;
+            text-shadow: 0 0 15px rgba(0,183,255,.8);
+        }
+
+        /* HERO */
+
+        .article-hero {
+            position: relative;
+            min-height: 650px;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321,
+                    #06294a 55%,
+                    #005baa
+                );
+        }
+
+        .article-hero-image {
+            position: absolute;
+            inset: 0;
+        }
+
+        .article-hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero-image::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(3,15,28,1) 0%,
+                    rgba(3,15,28,.88) 28%,
+                    rgba(3,15,28,.25) 70%,
+                    rgba(3,15,28,.15)
+                );
+        }
+
+        .article-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 80px 0 65px;
+        }
+
+        .article-tag {
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            background: linear-gradient(
+                90deg,
+                #0077ff,
+                #00b7ff
+            );
+
+            color: white;
+
+            font-size: 11px;
+            font-weight: 900;
+
+            letter-spacing: 1.3px;
+        }
+
+        .article-hero h1 {
+            max-width: 1000px;
+
+            margin-top: 20px;
+
+            font-size: clamp(42px, 6vw, 76px);
+
+            line-height: 1.04;
+
+            font-weight: 900;
+
+            letter-spacing: -3px;
+        }
+
+        .article-meta {
+            margin-top: 25px;
+
+            color: rgba(255,255,255,.65);
+
+            font-size: 14px;
+        }
+
+        /* CONTENIDO */
+
+        .article-page {
+            padding: 65px 0;
+        }
+
+        .article-card {
+            overflow: hidden;
+
+            border-radius: 28px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 25px 60px rgba(0,35,70,.10);
+        }
+
+        .article-content {
+            padding: 45px;
+        }
+
+        .article-content p {
+            color: #536477;
+
+            font-size: 18px;
+
+            line-height: 1.85;
+
+            margin-bottom: 25px;
+        }
+
+        .article-content p:first-of-type {
+            font-size: 21px;
+
+            color: #26384a;
+
+            font-weight: 500;
+        }
+
+        .article-content h2 {
+            position: relative;
+
+            margin-top: 55px;
+            margin-bottom: 25px;
+
+            padding-left: 18px;
+
+            color: #071b2e;
+
+            font-size: 32px;
+
+            font-weight: 900;
+        }
+
+        .article-content h2::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 5px;
+
+            width: 5px;
+            height: calc(100% - 10px);
+
+            border-radius: 5px;
+
+            background: linear-gradient(
+                180deg,
+                #0077ff,
+                #00b7ff
+            );
+        }
+
+        /* MARCADOR */
+
+        .match-box {
+            position: relative;
+
+            overflow: hidden;
+
+            margin: 40px 0;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321,
+                    #005baa
+                );
+
+            color: white;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 45px rgba(0,55,110,.18);
+        }
+
+        .match-box::after {
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            right: -80px;
+            top: -100px;
+
+            border-radius: 50%;
+
+            background: rgba(0,183,255,.18);
+
+            filter: blur(30px);
+        }
+
+        .match-round {
+            position: relative;
+            z-index: 2;
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+            color: #65ceff;
+        }
+
+        .match-score {
+            position: relative;
+            z-index: 2;
+
+            margin: 12px 0;
+
+            font-size: clamp(40px, 6vw, 62px);
+
+            font-weight: 900;
+
+            letter-spacing: -2px;
+        }
+
+        .match-info {
+            position: relative;
+            z-index: 2;
+
+            color: rgba(255,255,255,.65);
+
+            font-size: 14px;
+        }
+
+        /* DESTACADO */
+
+        .article-highlight {
+            margin: 45px 0;
+
+            padding: 28px 30px;
+
+            border-left: 5px solid #0077ff;
+
+            border-radius: 0 18px 18px 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #eef7ff,
+                    #f8fbff
+                );
+
+            color: #17324c;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            box-shadow:
+                0 10px 30px rgba(0,119,255,.07);
+        }
+
+        /* SIDEBAR */
+
+        .article-sidebar-card {
+            overflow: hidden;
+
+            margin-bottom: 25px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.08);
+
+            box-shadow:
+                0 15px 40px rgba(0,35,70,.07);
+        }
+
+        .article-sidebar-title {
+            padding: 20px 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321,
+                    #005baa
+                );
+
+            color: white;
+
+            font-weight: 900;
+        }
+
+        .article-sidebar-item {
+            display: block;
+
+            padding: 18px 20px;
+
+            border-bottom: 1px solid #edf1f5;
+
+            color: #182b3d;
+
+            text-decoration: none;
+
+            font-weight: 700;
+
+            transition: .25s;
+        }
+
+        .article-sidebar-item:last-child {
+            border-bottom: none;
+        }
+
+        .article-sidebar-item:hover {
+            color: #0077ff;
+
+            background: #f4f9ff;
+
+            padding-left: 25px;
+        }
+
+        .back-button {
+            display: inline-block;
+
+            margin-bottom: 30px;
+
+            padding: 11px 18px;
+
+            border-radius: 10px;
+
+            background: white;
+
+            border: 1px solid rgba(0,119,255,.12);
+
+            color: #0077ff;
+
+            text-decoration: none;
+
+            font-weight: 800;
+
+            box-shadow:
+                0 8px 25px rgba(0,35,70,.06);
+
+            transition: .3s;
+        }
+
+        .back-button:hover {
+            color: white;
+
+            background: #0077ff;
+
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+
+        .article-footer {
+            padding: 60px 0 30px;
+
+            background: #031321;
+
+            color: white;
+
+            border-top: 1px solid rgba(0,183,255,.2);
+        }
+
+        .article-footer p {
+            color: rgba(255,255,255,.5);
+        }
+
+        /* MÓVIL */
+
+        @media (max-width: 768px) {
+
+            .article-hero {
+                min-height: 560px;
+            }
+
+            .article-hero-content {
+                padding: 60px 0 45px;
+            }
+
+            .article-hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .article-page {
+                padding: 40px 0;
+            }
+
+            .article-content {
+                padding: 28px 22px;
+            }
+
+            .article-content p {
+                font-size: 16px;
+            }
+
+            .article-content p:first-of-type {
+                font-size: 18px;
+            }
+
+            .article-content h2 {
+                font-size: 26px;
+            }
+
+            .match-box {
+                padding: 28px 18px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark article-navbar sticky-top">
 
     <div class="container">
 
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-3" href="index.html">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
+           href="index.html">
 
-            <img src="img/logo/logo.png" width="50" height="50" alt="Azulones News">
+            <img src="img/logo/logo.png"
+                 width="45"
+                 height="45"
+                 alt="Azulones News">
 
             <div>
-                <div class="fs-4 fw-bold">AZULONES NEWS</div>
-                <small class="text-white-50">El medio del Getafismo</small>
+
+                <div class="fw-bold">
+                    AZULONES NEWS
+                </div>
+
+                <small class="text-white-50">
+                    El medio del Getafismo
+                </small>
+
             </div>
 
         </a>
 
-        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
             <span class="navbar-toggler-icon"></span>
+
         </button>
 
         <div class="collapse navbar-collapse" id="menu">
 
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto gap-lg-2">
 
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link active" href="noticias.html">Noticias</a></li>
-                <li class="nav-item"><a class="nav-link" href="rumores.html">Rumores</a></li>
-                <li class="nav-item"><a class="nav-link" href="plantilla.html">Plantilla</a></li>
-                <li class="nav-item"><a class="nav-link" href="partidos.html">Partidos</a></li>
-                <li class="nav-item"><a class="nav-link" href="clasificacion.html">Clasificación</a></li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="noticias.html">
+                        Noticias
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="rumores.html">
+                        Rumores
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="plantilla.html">
+                        Plantilla
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="partidos.html">
+                        Partidos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="clasificacion.html">
+                        Clasificación
+                    </a>
+                </li>
 
             </ul>
 
@@ -59,131 +580,340 @@
 </nav>
 
 
-<main class="container py-5">
+<!-- =====================================================
+     HERO DEL ARTÍCULO
+===================================================== -->
 
-    <article class="card border-0 shadow-lg overflow-hidden">
+<header class="article-hero">
+
+    <div class="article-hero-image">
 
         <img src="img/noticias/victoria-racing.jpg"
-             class="w-100"
-             style="max-height:600px; object-fit:cover;"
              alt="Getafe celebra la victoria ante el Racing">
 
-        <div class="card-body p-4 p-lg-5">
+    </div>
 
-            <span class="badge bg-primary fs-6 mb-3">
+    <div class="container">
+
+        <div class="article-hero-content">
+
+            <span class="article-tag">
                 🔥 VICTORIA
             </span>
 
-            <h1 class="display-4 fw-bold">
+            <h1>
                 El Getafe se impone al Racing y consigue su primera victoria liguera
             </h1>
 
-            <p class="text-muted mt-3">
-                📅 23 Agosto 2026 · ✍️ Redacción Azulones News
-            </p>
-
-            <div class="my-4 p-4 bg-light rounded-4 text-center">
-
-                <span class="fs-5 fw-bold">JORNADA 2</span>
-
-                <h2 class="display-3 fw-bold text-primary my-2">
-                    GETAFE 1 - 0 RACING
-                </h2>
-
-                <p class="mb-0">
-                    Coliseum · 23 Agosto 2026
-                </p>
-
-            </div>
-
-            <p class="fs-5">
-                El Getafe consiguió este domingo su primera victoria de la temporada
-                tras derrotar por 1-0 al Racing de Santander en el Coliseum.
-                El conjunto azulón tuvo que trabajar hasta los últimos minutos
-                para encontrar el gol que decidió el encuentro.
-            </p>
-
-            <p>
-                El equipo dirigido por José Bordalás afrontaba el encuentro después
-                del importante desgaste acumulado en Europa, pero salió con intensidad
-                y buscó desde el inicio hacerse con el control del partido.
-            </p>
-
-            <p>
-                El Getafe tuvo varias oportunidades durante la primera mitad,
-                mientras que David Soria volvió a demostrar su importancia bajo
-                los palos manteniendo su portería a cero.
-            </p>
-
-            <h2 class="fw-bold mt-5">
-                Soria aparece en el momento decisivo
-            </h2>
-
-            <p>
-                En la segunda parte el Racing consiguió generar más peligro y tuvo
-                una oportunidad inmejorable desde el punto de penalti.
-            </p>
-
-            <p>
-                David Soria, sin embargo, volvió a ser protagonista. El guardameta
-                azulón detuvo el lanzamiento de Andrés Martín y evitó que el conjunto
-                cántabro se adelantara en el marcador.
-            </p>
-
-            <h2 class="fw-bold mt-5">
-                Ünal decide el partido
-            </h2>
-
-            <p>
-                Poco después llegó la respuesta del Getafe. Una gran acción colectiva
-                terminó con un centro de Andrés García que encontró a Enes Ünal.
-            </p>
-
-            <p>
-                El delantero turco apareció en el momento perfecto y marcó el
-                <strong>1-0 en el minuto 81</strong>, desatando la celebración
-                en el Coliseum.
-            </p>
-
-            <p>
-                El Racing intentó reaccionar en los minutos finales, pero el Getafe
-                supo defender la ventaja y terminó asegurando tres puntos muy
-                importantes.
-            </p>
-
-            <div class="alert alert-primary mt-5 fs-5">
-                🔵 <strong>Primera victoria liguera para el Getafe</strong> y
-                tres puntos que permiten al conjunto azulón comenzar a coger
-                confianza en este nuevo curso.
+            <div class="article-meta">
+                📅 23 Agosto 2026 &nbsp; · &nbsp;
+                ✍️ Redacción Azulones News
             </div>
 
         </div>
 
-    </article>
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     CONTENIDO
+===================================================== -->
+
+<main class="article-page">
+
+    <div class="container">
+
+        <a href="noticias.html"
+           class="back-button">
+            ← Volver a noticias
+        </a>
+
+        <div class="row g-5">
+
+            <!-- ARTÍCULO -->
+
+            <div class="col-lg-8">
+
+                <article class="article-card">
+
+                    <div class="article-content">
+
+                        <div class="match-box">
+
+                            <div class="match-round">
+                                JORNADA 2
+                            </div>
+
+                            <div class="match-score">
+                                GETAFE 1 - 0 RACING
+                            </div>
+
+                            <div class="match-info">
+                                Coliseum · 23 Agosto 2026
+                            </div>
+
+                        </div>
+
+
+                        <p>
+                            El Getafe consiguió este domingo su primera victoria
+                            de la temporada tras derrotar por 1-0 al Racing de
+                            Santander en el Coliseum. El conjunto azulón tuvo que
+                            trabajar hasta los últimos minutos para encontrar
+                            el gol que decidió el encuentro.
+                        </p>
+
+                        <p>
+                            El equipo dirigido por José Bordalás afrontaba el
+                            encuentro después del importante desgaste acumulado
+                            en Europa, pero salió con intensidad y buscó desde
+                            el inicio hacerse con el control del partido.
+                        </p>
+
+                        <p>
+                            El Getafe tuvo varias oportunidades durante la
+                            primera mitad, mientras que David Soria volvió a
+                            demostrar su importancia bajo los palos manteniendo
+                            su portería a cero.
+                        </p>
+
+
+                        <h2>
+                            Soria aparece en el momento decisivo
+                        </h2>
+
+                        <p>
+                            En la segunda parte el Racing consiguió generar más
+                            peligro y tuvo una oportunidad inmejorable desde
+                            el punto de penalti.
+                        </p>
+
+                        <p>
+                            David Soria, sin embargo, volvió a ser protagonista.
+                            El guardameta azulón detuvo el lanzamiento de Andrés
+                            Martín y evitó que el conjunto cántabro se adelantara
+                            en el marcador.
+                        </p>
+
+
+                        <h2>
+                            Ünal decide el partido
+                        </h2>
+
+                        <p>
+                            Poco después llegó la respuesta del Getafe. Una gran
+                            acción colectiva terminó con un centro de Andrés
+                            García que encontró a Enes Ünal.
+                        </p>
+
+                        <p>
+                            El delantero turco apareció en el momento perfecto
+                            y marcó el <strong>1-0 en el minuto 81</strong>,
+                            desatando la celebración en el Coliseum.
+                        </p>
+
+                        <p>
+                            El Racing intentó reaccionar en los minutos finales,
+                            pero el Getafe supo defender la ventaja y terminó
+                            asegurando tres puntos muy importantes.
+                        </p>
+
+
+                        <div class="article-highlight">
+
+                            🔵 <strong>Primera victoria liguera para el Getafe.</strong>
+                            Tres puntos importantes que permiten al conjunto
+                            azulón comenzar a coger confianza en este nuevo curso.
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- SIDEBAR -->
+
+            <div class="col-lg-4">
+
+                <div class="article-sidebar-card">
+
+                    <div class="article-sidebar-title">
+                        🔥 Más leídas
+                    </div>
+
+                    <a href="noticia-victoria-racing.html"
+                       class="article-sidebar-item">
+
+                        El Getafe se impone al Racing y consigue su primera
+                        victoria liguera
+
+                    </a>
+
+                    <a href="noticia-david-soria.html"
+                       class="article-sidebar-item">
+
+                        David Soria vuelve a ser decisivo y se acerca al
+                        récord histórico
+
+                    </a>
+
+                    <a href="noticia-enes-unal.html"
+                       class="article-sidebar-item">
+
+                        Enes Ünal decide el partido y da al Getafe sus primeros
+                        tres puntos
+
+                    </a>
+
+                </div>
+
+
+                <div class="article-sidebar-card">
+
+                    <div class="article-sidebar-title">
+                        🔴 Última hora
+                    </div>
+
+                    <div class="p-4">
+
+                        <div class="mb-4">
+
+                            <strong class="text-danger">
+                                Ahora
+                            </strong>
+
+                            <p class="mt-2 mb-0 text-secondary">
+                                El Getafe ya prepara su próximo compromiso
+                                después de la victoria ante el Racing.
+                            </p>
+
+                        </div>
+
+                        <hr>
+
+                        <div>
+
+                            <strong class="text-danger">
+                                Hoy
+                            </strong>
+
+                            <p class="mt-2 mb-0 text-secondary">
+                                El conjunto azulón suma sus primeros tres
+                                puntos en LaLiga.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </main>
 
 
-<footer class="bg-primary text-white py-5 mt-5">
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-    <div class="container text-center">
+<footer class="article-footer">
 
-        <h3>AZULONES NEWS</h3>
+    <div class="container">
 
-        <p>
-            Toda la actualidad del Getafe Club de Fútbol.
-        </p>
+        <div class="row g-5">
 
-        <small>
+            <div class="col-lg-6">
+
+                <h3 class="fw-bold">
+                    AZULONES NEWS
+                </h3>
+
+                <p class="mt-3">
+                    Toda la actualidad del Getafe Club de Fútbol
+                    desde el corazón del Getafismo.
+                </p>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5 class="fw-bold">
+                    Navegación
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="index.html"
+                       class="text-white text-decoration-none">
+                        Inicio
+                    </a>
+
+                    <a href="noticias.html"
+                       class="text-white text-decoration-none">
+                        Noticias
+                    </a>
+
+                    <a href="rumores.html"
+                       class="text-white text-decoration-none">
+                        Rumores
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <h5 class="fw-bold">
+                    Competición
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="partidos.html"
+                       class="text-white text-decoration-none">
+                        Partidos
+                    </a>
+
+                    <a href="clasificacion.html"
+                       class="text-white text-decoration-none">
+                        Clasificación
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary my-5">
+
+        <p class="text-center mb-0">
+
             © 2026 Azulones News · Proyecto no oficial del Getafe CF.
-        </small>
+
+        </p>
 
     </div>
 
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
+```
+
 ```
