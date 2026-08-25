@@ -31,7 +31,6 @@
         gtag('config', 'G-F0WS5LY799');
     </script>
 
-
     <style>
 
         /* =====================================================
@@ -39,24 +38,19 @@
         ===================================================== */
 
         :root {
-
             --azul-oscuro: #031321;
             --azul-profundo: #06294a;
             --azul: #0077ff;
             --azul-claro: #00b7ff;
             --texto: #071b2e;
             --gris: #718196;
-
         }
-
 
         * {
             box-sizing: border-box;
         }
 
-
         body {
-
             margin: 0;
 
             background:
@@ -73,9 +67,7 @@
                 #f4f7fb;
 
             color: var(--texto);
-
         }
-
 
 
         /* =====================================================
@@ -83,7 +75,6 @@
         ===================================================== */
 
         .home-navbar {
-
             background: rgba(3, 19, 33, .96);
 
             backdrop-filter: blur(18px);
@@ -95,23 +86,15 @@
                 0 10px 35px rgba(0,20,45,.16);
 
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
-
         }
-
 
         .home-navbar .navbar-brand {
-
             letter-spacing: .8px;
-
         }
 
-
         .home-navbar .navbar-brand img {
-
             border-radius: 12px;
 
             filter:
@@ -120,19 +103,13 @@
                 );
 
             transition: .3s;
-
         }
-
 
         .home-navbar .navbar-brand:hover img {
-
             transform: scale(1.05);
-
         }
 
-
         .home-navbar .nav-link {
-
             position: relative;
 
             color: rgba(255,255,255,.72) !important;
@@ -142,12 +119,9 @@
             padding: 10px 14px !important;
 
             transition: .3s;
-
         }
 
-
         .home-navbar .nav-link::after {
-
             content: "";
 
             position: absolute;
@@ -160,38 +134,29 @@
 
             border-radius: 10px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--azul),
-                    var(--azul-claro)
-                );
+            background: linear-gradient(
+                90deg,
+                var(--azul),
+                var(--azul-claro)
+            );
 
             transform: scaleX(0);
 
             transition: .3s;
-
         }
-
 
         .home-navbar .nav-link:hover,
         .home-navbar .nav-link.active {
-
             color: white !important;
 
             text-shadow:
                 0 0 15px rgba(0,183,255,.55);
-
         }
-
 
         .home-navbar .nav-link:hover::after,
         .home-navbar .nav-link.active::after {
-
             transform: scaleX(1);
-
         }
-
 
 
         /* =====================================================
@@ -199,13 +164,11 @@
         ===================================================== */
 
         .home-hero {
-
             position: relative;
 
             min-height: 560px;
 
             display: flex;
-
             align-items: center;
 
             overflow: hidden;
@@ -229,12 +192,9 @@
                     #06294a 52%,
                     #005baa 100%
                 );
-
         }
 
-
         .home-hero::before {
-
             content: "";
 
             position: absolute;
@@ -250,12 +210,9 @@
             background: rgba(0,183,255,.13);
 
             filter: blur(80px);
-
         }
 
-
         .home-hero::after {
-
             content: "";
 
             position: absolute;
@@ -272,27 +229,19 @@
                     #f4f7fb,
                     transparent
                 );
-
         }
 
-
         .home-hero-content {
-
             position: relative;
 
             z-index: 2;
 
             padding: 90px 0 120px;
-
         }
 
-
         .hero-kicker {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
 
             padding: 9px 16px;
@@ -306,23 +255,18 @@
             color: #65ceff;
 
             font-size: 12px;
-
             font-weight: 900;
 
             letter-spacing: 1.5px;
 
             box-shadow:
                 0 0 25px rgba(0,183,255,.08);
-
         }
 
-
         .hero-kicker::before {
-
             content: "";
 
             width: 7px;
-
             height: 7px;
 
             border-radius: 50%;
@@ -331,12 +275,9 @@
 
             box-shadow:
                 0 0 10px rgba(255,49,95,.8);
-
         }
 
-
         .home-hero h1 {
-
             max-width: 850px;
 
             margin-top: 24px;
@@ -348,12 +289,9 @@
             letter-spacing: -4px;
 
             font-weight: 950;
-
         }
 
-
         .home-hero h1 span {
-
             background:
                 linear-gradient(
                     90deg,
@@ -362,16 +300,12 @@
                 );
 
             -webkit-background-clip: text;
-
             background-clip: text;
 
             color: transparent;
-
         }
 
-
         .home-hero p {
-
             max-width: 670px;
 
             margin-top: 25px;
@@ -381,29 +315,20 @@
             font-size: 19px;
 
             line-height: 1.7;
-
         }
 
-
         .hero-buttons {
-
             display: flex;
-
             flex-wrap: wrap;
 
             gap: 12px;
 
             margin-top: 30px;
-
         }
 
-
         .hero-button-primary {
-
             display: inline-flex;
-
             align-items: center;
-
             gap: 8px;
 
             padding: 14px 23px;
@@ -427,26 +352,19 @@
                 0 12px 30px rgba(0,119,255,.28);
 
             transition: .3s;
-
         }
 
-
         .hero-button-primary:hover {
-
             color: white;
 
             transform: translateY(-3px);
 
             box-shadow:
                 0 18px 35px rgba(0,119,255,.38);
-
         }
 
-
         .hero-button-secondary {
-
             display: inline-flex;
-
             align-items: center;
 
             padding: 14px 23px;
@@ -464,20 +382,15 @@
             font-weight: 750;
 
             transition: .3s;
-
         }
 
-
         .hero-button-secondary:hover {
-
             color: white;
 
             background: rgba(255,255,255,.12);
 
             transform: translateY(-3px);
-
         }
-
 
 
         /* =====================================================
@@ -485,36 +398,24 @@
         ===================================================== */
 
         .home-section {
-
             padding: 75px 0;
-
         }
 
-
         .section-heading {
-
             display: flex;
-
             align-items: end;
-
             justify-content: space-between;
 
             gap: 20px;
 
             margin-bottom: 28px;
-
         }
-
 
         .section-heading-left {
-
             position: relative;
-
         }
 
-
         .section-kicker {
-
             display: block;
 
             margin-bottom: 7px;
@@ -522,16 +423,12 @@
             color: var(--azul);
 
             font-size: 11px;
-
             font-weight: 900;
 
             letter-spacing: 1.5px;
-
         }
 
-
         .section-heading h2 {
-
             margin: 0;
 
             color: var(--texto);
@@ -541,14 +438,10 @@
             font-weight: 950;
 
             letter-spacing: -1.5px;
-
         }
 
-
         .section-heading a {
-
             display: inline-flex;
-
             align-items: center;
 
             padding: 10px 16px;
@@ -566,20 +459,15 @@
             font-weight: 800;
 
             transition: .3s;
-
         }
 
-
         .section-heading a:hover {
-
             color: white;
 
             background: var(--azul);
 
             transform: translateY(-2px);
-
         }
-
 
 
         /* =====================================================
@@ -587,7 +475,6 @@
         ===================================================== */
 
         .noticia-principal {
-
             position: relative;
 
             height: 500px;
@@ -602,44 +489,30 @@
                 0 25px 60px rgba(0,35,70,.14);
 
             transition: .4s;
-
         }
 
-
         .noticia-principal img {
-
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
 
             transition: .7s;
-
         }
 
-
         .noticia-principal:hover {
-
             transform: translateY(-6px);
 
             box-shadow:
                 0 30px 70px rgba(0,100,180,.22);
-
         }
-
 
         .noticia-principal:hover img {
-
             transform: scale(1.06);
-
         }
 
-
         .noticia-principal .overlay {
-
             position: absolute;
-
             inset: 0;
 
             background:
@@ -649,12 +522,9 @@
                     rgba(3,15,28,.68) 35%,
                     rgba(3,15,28,.04) 75%
                 );
-
         }
 
-
         .noticia-principal .contenido {
-
             position: absolute;
 
             left: 0;
@@ -664,12 +534,9 @@
             padding: 35px;
 
             color: white;
-
         }
 
-
         .categoria {
-
             display: inline-block;
 
             padding: 7px 13px;
@@ -686,23 +553,18 @@
             color: white;
 
             font-size: 11px;
-
             font-weight: 900;
 
             letter-spacing: 1px;
 
             box-shadow:
                 0 7px 20px rgba(0,119,255,.2);
-
         }
 
-
         .noticia-principal h2 {
-
             max-width: 850px;
 
             margin-top: 16px;
-
             margin-bottom: 12px;
 
             color: white;
@@ -714,20 +576,15 @@
             font-weight: 950;
 
             letter-spacing: -1.5px;
-
         }
 
-
         .noticia-principal p {
-
             margin: 0;
 
             color: rgba(255,255,255,.55);
 
             font-size: 13px;
-
         }
-
 
 
         /* =====================================================
@@ -735,7 +592,6 @@
         ===================================================== */
 
         .mini-noticia {
-
             position: relative;
 
             height: 238px;
@@ -750,44 +606,30 @@
                 0 18px 45px rgba(0,35,70,.11);
 
             transition: .4s;
-
         }
 
-
         .mini-noticia img {
-
             width: 100%;
-
             height: 100%;
 
             object-fit: cover;
 
             transition: .6s;
-
         }
 
-
         .mini-noticia:hover {
-
             transform: translateY(-5px);
 
             box-shadow:
                 0 25px 55px rgba(0,119,255,.18);
-
         }
-
 
         .mini-noticia:hover img {
-
             transform: scale(1.07);
-
         }
 
-
         .mini-noticia .overlay {
-
             position: absolute;
-
             inset: 0;
 
             background:
@@ -796,12 +638,9 @@
                     rgba(3,15,28,.96),
                     rgba(3,15,28,.04) 80%
                 );
-
         }
 
-
         .contenido-mini {
-
             position: absolute;
 
             left: 0;
@@ -809,27 +648,20 @@
             bottom: 0;
 
             padding: 23px;
-
         }
 
-
         .contenido-mini span {
-
             display: inline-block;
 
             color: #65ceff;
 
             font-size: 10px;
-
             font-weight: 900;
 
             letter-spacing: 1.3px;
-
         }
 
-
         .contenido-mini h5 {
-
             margin: 9px 0 0;
 
             color: white;
@@ -839,68 +671,47 @@
             line-height: 1.2;
 
             font-weight: 850;
-
         }
-
 
 
         /* =====================================================
-           EL GETAFE EN UN VISTAZO
+           GETAFE EN UN VISTAZO
         ===================================================== */
 
-        .quick-access {
-
-            padding: 35px 0 35px;
-
+        .overview-section {
+            padding: 35px 0 75px;
         }
 
-
-        .quick-heading {
-
+        .overview-heading {
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             margin-bottom: 25px;
-
         }
 
-
-        .quick-heading-title {
-
+        .overview-title {
             display: flex;
-
             align-items: center;
-
             gap: 12px;
-
         }
 
-
-        .quick-heading-title::before {
-
+        .overview-title::before {
             content: "";
 
             width: 4px;
-
             height: 30px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #0077ff,
-                    #00b7ff
-                );
 
             border-radius: 10px;
 
+            background: linear-gradient(
+                to bottom,
+                #0077ff,
+                #00b7ff
+            );
         }
 
-
-        .quick-heading h2 {
-
+        .overview-title h2 {
             margin: 0;
 
             font-size: 30px;
@@ -908,247 +719,172 @@
             font-weight: 950;
 
             letter-spacing: -1px;
-
         }
 
-
-        .quick-heading > a {
-
+        .overview-link {
             color: #0077ff;
 
             text-decoration: none;
 
-            font-weight: 850;
+            font-weight: 800;
 
+            font-size: 14px;
         }
 
-
-        .quick-heading > a:hover {
-
+        .overview-link:hover {
             color: #005dcc;
-
         }
 
-
-        .quick-card {
-
-            display: block;
-
+        .overview-card {
             height: 100%;
 
             padding: 25px;
 
-            background: rgba(255,255,255,.92);
+            background: white;
 
-            border: 1px solid #dfe7f0;
+            border: 1px solid #e0e7ef;
 
-            border-radius: 18px;
-
-            text-decoration: none;
+            border-radius: 17px;
 
             box-shadow:
-                0 10px 30px rgba(0,35,70,.06);
+                0 12px 35px rgba(0,35,70,.07);
 
-            transition: .3s ease;
-
+            transition: .3s;
         }
 
-
-        .quick-card:hover {
-
+        .overview-card:hover {
             transform: translateY(-5px);
 
             box-shadow:
-                0 18px 40px rgba(0,119,255,.12);
-
-            border-color:
-                rgba(0,119,255,.22);
-
+                0 20px 45px rgba(0,100,180,.12);
         }
 
-
-        .quick-icon {
-
-            width: 40px;
-
-            height: 40px;
+        .overview-icon {
+            width: 42px;
+            height: 42px;
 
             display: flex;
-
             align-items: center;
-
             justify-content: center;
 
             margin-bottom: 18px;
 
-            border-radius: 10px;
+            border-radius: 11px;
 
-            background: #edf5ff;
+            background: #eaf4ff;
 
             font-size: 20px;
-
         }
 
+        .overview-card h3 {
+            margin-bottom: 8px;
 
-        .quick-card h3 {
-
-            margin: 0 0 8px;
-
-            color: #071b2e;
-
-            font-size: 20px;
+            font-size: 19px;
 
             font-weight: 900;
-
         }
 
-
-        .quick-card p {
-
+        .overview-card p {
             margin: 0;
 
             color: #718196;
 
             font-size: 13px;
 
-            line-height: 1.6;
-
+            line-height: 1.65;
         }
-
 
 
         /* =====================================================
            SIGUE AL GETAFE
         ===================================================== */
 
-        .follow-getafe {
-
-            padding: 35px 0 75px;
-
+        .follow-section {
+            padding: 0 0 80px;
         }
-
 
         .follow-heading {
-
             display: flex;
-
             align-items: center;
-
             gap: 12px;
 
-            margin-bottom: 22px;
-
+            margin-bottom: 25px;
         }
 
-
         .follow-heading::before {
-
             content: "";
 
             width: 4px;
-
             height: 30px;
-
-            background:
-                linear-gradient(
-                    to bottom,
-                    #0077ff,
-                    #00b7ff
-                );
 
             border-radius: 10px;
 
+            background: linear-gradient(
+                to bottom,
+                #0077ff,
+                #00b7ff
+            );
         }
 
-
         .follow-heading h2 {
-
             margin: 0;
-
-            color: #071b2e;
 
             font-size: 30px;
 
             font-weight: 950;
 
             letter-spacing: -1px;
-
         }
 
-
         .follow-card {
-
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
-            min-height: 52px;
+            min-height: 50px;
 
-            padding: 14px 18px;
+            padding: 15px 20px;
 
             background: white;
 
-            border: 1px solid #dfe7f0;
+            border: 1px solid #e0e7ef;
 
-            border-radius: 12px;
+            border-radius: 13px;
 
-            color: #071b2e;
+            color: var(--texto);
 
             text-decoration: none;
 
-            font-weight: 850;
-
             box-shadow:
-                0 5px 18px rgba(0,35,70,.04);
+                0 8px 25px rgba(0,35,70,.05);
 
-            transition: .3s ease;
-
+            transition: .3s;
         }
 
-
         .follow-card:hover {
-
             color: #0077ff;
 
             transform: translateY(-3px);
 
-            border-color:
-                rgba(0,119,255,.25);
-
             box-shadow:
-                0 12px 25px rgba(0,119,255,.08);
-
+                0 14px 30px rgba(0,119,255,.1);
         }
 
-
-        .follow-card .follow-name {
-
+        .follow-card-title {
             display: flex;
-
             align-items: center;
+            gap: 10px;
 
-            gap: 9px;
+            font-weight: 850;
 
+            font-size: 14px;
         }
 
-
-        .follow-card .arrow {
-
+        .follow-arrow {
             font-size: 18px;
 
-            transition: .3s;
-
+            color: #0077ff;
         }
-
-
-        .follow-card:hover .arrow {
-
-            transform: translateX(4px);
-
-        }
-
 
 
         /* =====================================================
@@ -1156,7 +892,6 @@
         ===================================================== */
 
         .next-match {
-
             position: relative;
 
             overflow: hidden;
@@ -1179,22 +914,17 @@
 
             box-shadow:
                 0 25px 60px rgba(0,35,70,.16);
-
         }
 
-
         .next-match::after {
-
             content: "";
 
             position: absolute;
 
             width: 300px;
-
             height: 300px;
 
             right: -140px;
-
             bottom: -160px;
 
             border-radius: 50%;
@@ -1202,23 +932,17 @@
             background: rgba(0,183,255,.12);
 
             filter: blur(50px);
-
         }
 
-
         .next-match-inner {
-
             position: relative;
 
             z-index: 2;
 
             padding: 45px 35px;
-
         }
 
-
         .next-match-label {
-
             display: inline-block;
 
             padding: 7px 14px;
@@ -1236,25 +960,18 @@
             font-weight: 900;
 
             letter-spacing: 1.5px;
-
         }
 
-
         .next-match h2 {
-
             margin-top: 15px;
 
             color: white;
 
             font-weight: 900;
-
         }
 
-
         .match-team img {
-
             width: 110px;
-
             height: 110px;
 
             object-fit: contain;
@@ -1265,19 +982,13 @@
                 );
 
             transition: .3s;
-
         }
-
 
         .match-team:hover img {
-
             transform: scale(1.06);
-
         }
 
-
         .match-team h3 {
-
             margin-top: 17px;
 
             color: white;
@@ -1285,12 +996,9 @@
             font-size: 22px;
 
             font-weight: 850;
-
         }
 
-
         .match-vs {
-
             color: #55c8ff;
 
             font-size: 44px;
@@ -1299,20 +1007,15 @@
 
             text-shadow:
                 0 0 20px rgba(0,183,255,.3);
-
         }
 
-
         .match-info {
-
             margin-top: 8px;
 
             color: rgba(255,255,255,.52);
 
             font-size: 13px;
-
         }
-
 
 
         /* =====================================================
@@ -1320,7 +1023,6 @@
         ===================================================== */
 
         .home-footer {
-
             margin-top: 30px;
 
             padding: 65px 0 30px;
@@ -1330,53 +1032,36 @@
             color: white;
 
             border-top: 1px solid rgba(0,183,255,.18);
-
         }
-
 
         .home-footer h3,
         .home-footer h5 {
-
             font-weight: 900;
-
         }
 
-
         .home-footer p {
-
             color: rgba(255,255,255,.52);
 
             line-height: 1.7;
-
         }
 
-
         .home-footer a {
-
             color: rgba(255,255,255,.58);
 
             text-decoration: none;
 
             transition: .25s;
-
         }
 
-
         .home-footer a:hover {
-
             color: #55c8ff;
 
             padding-left: 3px;
-
         }
-
 
         .footer-line {
-
             border-color: rgba(255,255,255,.1);
-
         }
-
 
 
         /* =====================================================
@@ -1386,23 +1071,15 @@
         @media (max-width: 991px) {
 
             .home-hero {
-
                 min-height: 500px;
-
             }
-
 
             .home-hero-content {
-
                 padding: 75px 0 100px;
-
             }
 
-
             .noticia-principal {
-
                 height: 430px;
-
             }
 
         }
@@ -1411,181 +1088,106 @@
         @media (max-width: 768px) {
 
             .home-hero {
-
                 min-height: 500px;
-
             }
-
 
             .home-hero-content {
-
                 padding: 65px 0 85px;
-
             }
-
 
             .home-hero h1 {
-
                 letter-spacing: -2.5px;
 
-                font-size:
-                    clamp(
-                        42px,
-                        12vw,
-                        60px
-                    );
-
+                font-size: clamp(
+                    42px,
+                    12vw,
+                    60px
+                );
             }
-
 
             .home-hero p {
-
                 font-size: 16px;
-
             }
 
-
             .hero-buttons {
-
                 flex-direction: column;
 
                 align-items: stretch;
-
             }
-
 
             .hero-button-primary,
             .hero-button-secondary {
-
                 justify-content: center;
-
             }
-
 
             .home-section {
-
                 padding: 50px 0;
-
             }
 
-
             .section-heading {
-
                 align-items: flex-start;
 
                 flex-direction: column;
-
             }
 
-
             .section-heading a {
-
                 width: 100%;
 
                 justify-content: center;
-
             }
 
-
             .noticia-principal {
-
                 height: 390px;
 
                 border-radius: 21px;
-
             }
-
 
             .noticia-principal .contenido {
-
                 padding: 24px;
-
             }
-
 
             .noticia-principal h2 {
-
                 font-size: 28px;
-
             }
 
-
             .mini-noticia {
-
                 height: 230px;
 
                 border-radius: 20px;
-
             }
 
-
-            .quick-access {
-
-                padding: 45px 0 25px;
-
+            .overview-section {
+                padding-top: 20px;
             }
 
-
-            .quick-heading {
-
+            .overview-heading {
                 align-items: flex-start;
-
-                flex-direction: column;
-
-                gap: 12px;
-
             }
 
-
-            .quick-heading h2,
+            .overview-title h2,
             .follow-heading h2 {
-
                 font-size: 26px;
-
             }
 
-
-            .quick-card {
-
-                padding: 22px;
-
+            .overview-link {
+                display: none;
             }
-
-
-            .follow-getafe {
-
-                padding: 30px 0 60px;
-
-            }
-
 
             .next-match-inner {
-
                 padding: 35px 20px;
-
             }
-
 
             .match-team img {
-
                 width: 85px;
-
                 height: 85px;
-
             }
-
 
             .match-team h3 {
-
                 font-size: 18px;
-
             }
 
-
             .match-vs {
-
                 font-size: 32px;
-
             }
 
         }
@@ -1594,46 +1196,32 @@
         @media (max-width: 480px) {
 
             .home-navbar .navbar-brand img {
-
                 width: 42px;
-
                 height: 42px;
-
             }
-
 
             .home-navbar .navbar-brand .fs-4 {
-
                 font-size: 17px !important;
-
             }
-
 
             .home-navbar .navbar-brand small {
-
                 font-size: 10px;
-
             }
-
 
             .noticia-principal {
-
                 height: 400px;
-
             }
-
 
             .noticia-principal h2 {
-
                 font-size: 25px;
-
             }
 
-
             .contenido-mini h5 {
-
                 font-size: 18px;
+            }
 
+            .overview-card {
+                padding: 22px;
             }
 
         }
@@ -1643,810 +1231,612 @@
 </head>
 
 
-
 <body>
 
 
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
 
-<!-- =====================================================
-     NAVBAR
-===================================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark home-navbar">
 
-<nav class="navbar navbar-expand-lg navbar-dark home-navbar">
+        <div class="container">
 
-    <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
+               href="index.html">
 
-        <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
-           href="index.html">
+                <img src="img/logo/logo.png"
+                     width="50"
+                     height="50"
+                     alt="Azulones News">
 
-            <img
-                src="img/logo/logo.png"
-                width="50"
-                height="50"
-                alt="Azulones News"
-            >
+                <div>
 
-            <div>
+                    <div class="fw-bold">
+                        AZULONES NEWS
+                    </div>
 
-                <div class="fw-bold">
-                    AZULONES NEWS
+                    <small class="text-white-50">
+                        El medio del Getafismo
+                    </small>
+
                 </div>
 
-                <small class="text-white-50">
-                    El medio del Getafismo
-                </small>
+            </a>
 
-            </div>
 
-        </a>
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
 
+                <span class="navbar-toggler-icon"></span>
 
-        <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#menu">
+            </button>
 
-            <span class="navbar-toggler-icon"></span>
 
-        </button>
+            <div class="collapse navbar-collapse" id="menu">
 
+                <ul class="navbar-nav ms-auto">
 
-        <div class="collapse navbar-collapse" id="menu">
+                    <li class="nav-item">
 
-            <ul class="navbar-nav ms-auto">
+                        <a class="nav-link active"
+                           href="index.html">
+                            Inicio
+                        </a>
 
-                <li class="nav-item">
+                    </li>
 
-                    <a
-                        class="nav-link active"
-                        href="index.html">
+                    <li class="nav-item">
 
-                        Inicio
+                        <a class="nav-link"
+                           href="noticias.html">
+                            Noticias
+                        </a>
 
-                    </a>
+                    </li>
 
-                </li>
+                    <li class="nav-item">
 
+                        <a class="nav-link"
+                           href="rumores.html">
+                            Rumores
+                        </a>
 
-                <li class="nav-item">
+                    </li>
 
-                    <a
-                        class="nav-link"
-                        href="noticias.html">
+                    <li class="nav-item">
 
-                        Noticias
+                        <a class="nav-link"
+                           href="plantilla.html">
+                            Plantilla
+                        </a>
 
-                    </a>
+                    </li>
 
-                </li>
+                    <li class="nav-item">
 
+                        <a class="nav-link"
+                           href="partidos.html">
+                            Partidos
+                        </a>
 
-                <li class="nav-item">
+                    </li>
 
-                    <a
-                        class="nav-link"
-                        href="rumores.html">
+                    <li class="nav-item">
 
-                        Rumores
+                        <a class="nav-link"
+                           href="clasificacion.html">
+                            Clasificación
+                        </a>
 
-                    </a>
+                    </li>
 
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="plantilla.html">
-
-                        Plantilla
-
-                    </a>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="partidos.html">
-
-                        Partidos
-
-                    </a>
-
-                </li>
-
-
-                <li class="nav-item">
-
-                    <a
-                        class="nav-link"
-                        href="clasificacion.html">
-
-                        Clasificación
-
-                    </a>
-
-                </li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="home-hero">
-
-    <div class="container">
-
-        <div class="home-hero-content">
-
-            <span class="hero-kicker">
-                ACTUALIDAD AZULONA
-            </span>
-
-
-            <h1>
-
-                Toda la actualidad
-                <span>del Getafe CF.</span>
-
-            </h1>
-
-
-            <p>
-
-                Noticias, fichajes, rumores, resultados y análisis
-                del conjunto azulón. Todo el Getafismo, en un solo lugar.
-
-            </p>
-
-
-            <div class="hero-buttons">
-
-                <a
-                    href="noticias.html"
-                    class="hero-button-primary">
-
-                    Ver últimas noticias →
-
-                </a>
-
-
-                <a
-                    href="rumores.html"
-                    class="hero-button-secondary">
-
-                    Mercado azulón
-
-                </a>
+                </ul>
 
             </div>
 
         </div>
 
-    </div>
+    </nav>
 
-</section>
 
 
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
 
-<!-- =====================================================
-     NOTICIAS DESTACADAS
-===================================================== -->
+    <section class="home-hero">
 
-<section class="container home-section">
+        <div class="container">
 
-    <div class="section-heading">
+            <div class="home-hero-content">
 
-        <div class="section-heading-left">
+                <span class="hero-kicker">
+                    ACTUALIDAD AZULONA
+                </span>
 
-            <span class="section-kicker">
-                ACTUALIDAD
-            </span>
-
-
-            <h2>
-                Noticias destacadas
-            </h2>
-
-        </div>
-
-
-        <a href="noticias.html">
-
-            Ver todas →
-
-        </a>
-
-    </div>
-
-
-
-    <div class="row g-4">
-
-
-        <!-- =================================================
-             NOTICIA PRINCIPAL
-        ================================================= -->
-
-        <div class="col-lg-8">
-
-            <a
-                href="noticia-victoria-racing.html"
-                class="text-decoration-none">
-
-                <article class="noticia-principal">
-
-                    <img
-                        src="img/noticias/victoria-racing.jpg"
-                        alt="Getafe celebra la victoria ante el Racing"
-                    >
-
-
-                    <div class="overlay"></div>
-
-
-                    <div class="contenido">
-
-                        <span class="categoria">
-
-                            🔥 VICTORIA
-
-                        </span>
-
-
-                        <h2>
-
-                            El Getafe se impone al Racing y consigue
-                            su primera victoria liguera
-
-                        </h2>
-
-
-                        <p>
-
-                            23 Agosto 2026 · Redacción Azulones News
-
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- =================================================
-             NOTICIAS SECUNDARIAS
-        ================================================= -->
-
-        <div class="col-lg-4">
-
-
-            <!-- DAVID SORIA -->
-
-            <a
-                href="noticia-david-soria.html"
-                class="text-decoration-none">
-
-                <article class="mini-noticia">
-
-                    <img
-                        src="img/noticias/davidsoria.jpg"
-                        alt="David Soria durante el Getafe Racing"
-                    >
-
-
-                    <div class="overlay"></div>
-
-
-                    <div class="contenido-mini">
-
-                        <span>
-                            PORTERÍA
-                        </span>
-
-
-                        <h5>
-
-                            David Soria vuelve a ser decisivo
-                            y se acerca al récord histórico
-
-                        </h5>
-
-                    </div>
-
-                </article>
-
-            </a>
-
-
-
-            <!-- ENES ÜNAL -->
-
-            <a
-                href="noticia-enes-unal.html"
-                class="text-decoration-none">
-
-                <article class="mini-noticia mt-4">
-
-                    <img
-                        src="img/noticias/enes-unal-racing.jpg"
-                        alt="Enes Ünal celebra su gol ante el Racing"
-                    >
-
-
-                    <div class="overlay"></div>
-
-
-                    <div class="contenido-mini">
-
-                        <span>
-                            LALIGA
-                        </span>
-
-
-                        <h5>
-
-                            Enes Ünal decide el partido y da
-                            al Getafe sus primeros tres puntos
-
-                        </h5>
-
-                    </div>
-
-                </article>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EL GETAFE EN UN VISTAZO
-===================================================== -->
-
-<section class="container quick-access">
-
-    <div class="quick-heading">
-
-        <div class="quick-heading-title">
-
-            <h2>
-                El Getafe, en un vistazo
-            </h2>
-
-        </div>
-
-
-        <a href="noticias.html">
-            Más noticias →
-        </a>
-
-    </div>
-
-
-    <div class="row g-4">
-
-
-        <!-- ÚLTIMAS NOTICIAS -->
-
-        <div class="col-lg-4">
-
-            <a
-                href="noticias.html"
-                class="quick-card">
-
-                <div class="quick-icon">
-                    📰
-                </div>
-
-
-                <h3>
-                    Últimas noticias
-                </h3>
-
+                <h1>
+                    Toda la actualidad
+                    <span>del Getafe CF.</span>
+                </h1>
 
                 <p>
-
-                    Toda la información del Getafe CF:
-                    partidos, protagonistas, declaraciones y
-                    actualidad del club.
-
+                    Noticias, fichajes, rumores, resultados y análisis
+                    del conjunto azulón. Todo el Getafismo, en un solo lugar.
                 </p>
 
-            </a>
+                <div class="hero-buttons">
 
-        </div>
+                    <a href="noticias.html"
+                       class="hero-button-primary">
 
+                        Ver últimas noticias →
 
+                    </a>
 
-        <!-- MERCADO -->
+                    <a href="rumores.html"
+                       class="hero-button-secondary">
 
-        <div class="col-lg-4">
+                        Mercado azulón
 
-            <a
-                href="rumores.html"
-                class="quick-card">
+                    </a>
 
-                <div class="quick-icon">
-                    🔵
                 </div>
 
-
-                <h3>
-                    Mercado azulón
-                </h3>
-
-
-                <p>
-
-                    Fichajes, salidas, intereses y operaciones
-                    que pueden cambiar la plantilla del Getafe.
-
-                </p>
-
-            </a>
+            </div>
 
         </div>
 
-
-
-        <!-- TEMPORADA -->
-
-        <div class="col-lg-4">
-
-            <a
-                href="partidos.html"
-                class="quick-card">
-
-                <div class="quick-icon">
-                    📊
-                </div>
-
-
-                <h3>
-                    La temporada
-                </h3>
-
-
-                <p>
-
-                    Partidos, clasificación y todos los datos
-                    del Getafe durante la temporada 2026/27.
-
-                </p>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
-     SIGUE AL GETAFE
-===================================================== -->
+    <!-- =====================================================
+         NOTICIAS DESTACADAS
+    ===================================================== -->
 
-<section class="container follow-getafe">
+    <section class="container home-section">
 
-    <div class="follow-heading">
+        <div class="section-heading">
 
-        <h2>
-            Sigue al Getafe
-        </h2>
+            <div class="section-heading-left">
 
-    </div>
-
-
-    <div class="row g-3">
-
-
-        <!-- PLANTILLA -->
-
-        <div class="col-lg-4">
-
-            <a
-                href="plantilla.html"
-                class="follow-card">
-
-                <span class="follow-name">
-
-                    👥 Plantilla
-
+                <span class="section-kicker">
+                    ACTUALIDAD
                 </span>
-
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- PARTIDOS -->
-
-        <div class="col-lg-4">
-
-            <a
-                href="partidos.html"
-                class="follow-card">
-
-                <span class="follow-name">
-
-                    ⚽ Partidos
-
-                </span>
-
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
-
-        </div>
-
-
-
-        <!-- CLASIFICACIÓN -->
-
-        <div class="col-lg-4">
-
-            <a
-                href="clasificacion.html"
-                class="follow-card">
-
-                <span class="follow-name">
-
-                    🏆 Clasificación
-
-                </span>
-
-
-                <span class="arrow">
-                    →
-                </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     PRÓXIMO PARTIDO
-===================================================== -->
-
-<section class="container home-section pt-0">
-
-    <div class="next-match">
-
-        <div class="next-match-inner">
-
-
-            <div class="text-center">
-
-                <span class="next-match-label">
-
-                    PRÓXIMO PARTIDO
-
-                </span>
-
 
                 <h2>
-
-                    El siguiente reto del Getafe
-
+                    Noticias destacadas
                 </h2>
 
             </div>
 
+            <a href="noticias.html">
+                Ver todas →
+            </a>
+
+        </div>
 
 
-            <div class="row align-items-center text-center mt-5">
+        <div class="row g-4">
 
 
-                <!-- GETAFE -->
+            <!-- =================================================
+                 NOTICIA PRINCIPAL · PARTIZÁN
+            ================================================= -->
 
-                <div class="col-5">
+            <div class="col-lg-8">
 
-                    <div class="match-team">
+                <a href="noticia-conference-partizan.html"
+                   class="text-decoration-none">
 
-                        <img
-                            src="img/iconos/getafe.png"
-                            alt="Getafe CF"
-                        >
+                    <article class="noticia-principal">
 
+                        <img src="img/noticias/conference-partizan.jpg"
+                             alt="Getafe CF ante su cita contra el Partizán en la Conference League">
 
-                        <h3>
+                        <div class="overlay"></div>
 
-                            Getafe CF
+                        <div class="contenido">
 
-                        </h3>
+                            <span class="categoria">
+                                🏆 CONFERENCE LEAGUE
+                            </span>
 
-                    </div>
+                            <h2>
+                                La cita con la gloria: el Getafe se juega
+                                el pase ante el Partizán
+                            </h2>
 
-                </div>
+                            <p>
+                                Jueves 27 de agosto de 2026 · Redacción Azulones News
+                            </p>
 
+                        </div>
 
+                    </article>
 
-                <!-- VS -->
+                </a>
 
-                <div class="col-2">
-
-                    <div class="match-vs">
-
-                        VS
-
-                    </div>
-
-
-                    <div class="match-info">
-
-                        Próximo partido
-
-                    </div>
-
-                </div>
+            </div>
 
 
 
-                <!-- RIVAL -->
+            <!-- =================================================
+                 NOTICIAS SECUNDARIAS
+            ================================================= -->
 
-                <div class="col-5">
-
-                    <div class="match-team">
-
-                        <img
-                            src="img/iconos/rival.png"
-                            alt="Rival del Getafe"
-                        >
+            <div class="col-lg-4">
 
 
-                        <h3>
+                <!-- DAVID SORIA -->
 
-                            Rival
+                <a href="noticia-david-soria.html"
+                   class="text-decoration-none">
 
-                        </h3>
+                    <article class="mini-noticia">
 
-                    </div>
+                        <img src="img/noticias/davidsoria.jpg"
+                             alt="David Soria durante el Getafe">
 
-                </div>
+                        <div class="overlay"></div>
+
+                        <div class="contenido-mini">
+
+                            <span>
+                                PORTERÍA
+                            </span>
+
+                            <h5>
+                                David Soria vuelve a ser decisivo
+                                y se acerca al récord histórico
+                            </h5>
+
+                        </div>
+
+                    </article>
+
+                </a>
+
+
+
+                <!-- ENES ÜNAL -->
+
+                <a href="noticia-enes-unal.html"
+                   class="text-decoration-none">
+
+                    <article class="mini-noticia mt-4">
+
+                        <img src="img/noticias/enes-unal-racing.jpg"
+                             alt="Enes Ünal durante el partido">
+
+                        <div class="overlay"></div>
+
+                        <div class="contenido-mini">
+
+                            <span>
+                                LALIGA
+                            </span>
+
+                            <h5>
+                                Enes Ünal decide el partido y da
+                                al Getafe sus primeros tres puntos
+                            </h5>
+
+                        </div>
+
+                    </article>
+
+                </a>
 
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+    <!-- =====================================================
+         EL GETAFE EN UN VISTAZO
+    ===================================================== -->
 
-<footer class="home-footer">
+    <section class="container overview-section">
 
-    <div class="container">
+        <div class="overview-heading">
 
-        <div class="row g-5">
+            <div class="overview-title">
+
+                <h2>
+                    El Getafe, en un vistazo
+                </h2>
+
+            </div>
+
+            <a href="noticias.html"
+               class="overview-link">
+
+                Más noticias →
+
+            </a>
+
+        </div>
 
 
-            <!-- DESCRIPCIÓN -->
-
-            <div class="col-lg-6">
-
-                <h3>
-
-                    AZULONES NEWS
-
-                </h3>
+        <div class="row g-4">
 
 
-                <p class="mt-3">
+            <!-- ÚLTIMAS NOTICIAS -->
 
-                    Toda la actualidad del Getafe Club de Fútbol
-                    desde el corazón del Getafismo.
+            <div class="col-lg-4">
 
-                </p>
+                <a href="noticias.html"
+                   class="text-decoration-none text-dark">
+
+                    <article class="overview-card">
+
+                        <div class="overview-icon">
+                            📰
+                        </div>
+
+                        <h3>
+                            Últimas noticias
+                        </h3>
+
+                        <p>
+                            Toda la información del Getafe CF:
+                            partidos, protagonistas, declaraciones
+                            y actualidad del club.
+                        </p>
+
+                    </article>
+
+                </a>
 
             </div>
 
 
 
-            <!-- NAVEGACIÓN -->
+            <!-- MERCADO -->
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
 
-                <h5>
+                <a href="rumores.html"
+                   class="text-decoration-none text-dark">
 
-                    Navegación
+                    <article class="overview-card">
 
-                </h5>
+                        <div class="overview-icon">
+                            🔵
+                        </div>
 
+                        <h3>
+                            Mercado azulón
+                        </h3>
 
-                <div class="d-flex flex-column gap-2 mt-3">
+                        <p>
+                            Fichajes, salidas, intereses y operaciones
+                            que pueden cambiar la plantilla del Getafe.
+                        </p>
 
-                    <a href="index.html">
-                        Inicio
-                    </a>
+                    </article>
 
-
-                    <a href="noticias.html">
-                        Noticias
-                    </a>
-
-
-                    <a href="rumores.html">
-                        Rumores
-                    </a>
-
-                </div>
+                </a>
 
             </div>
 
 
 
-            <!-- COMPETICIÓN -->
+            <!-- TEMPORADA -->
 
-            <div class="col-lg-3">
+            <div class="col-lg-4">
 
-                <h5>
+                <a href="partidos.html"
+                   class="text-decoration-none text-dark">
 
-                    Competición
+                    <article class="overview-card">
 
-                </h5>
+                        <div class="overview-icon">
+                            📊
+                        </div>
+
+                        <h3>
+                            La temporada
+                        </h3>
+
+                        <p>
+                            Partidos, clasificación y todos los datos
+                            del Getafe durante la temporada 2026/27.
+                        </p>
+
+                    </article>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
 
 
-                <div class="d-flex flex-column gap-2 mt-3">
 
-                    <a href="partidos.html">
-                        Partidos
-                    </a>
+    <!-- =====================================================
+         SIGUE AL GETAFE
+    ===================================================== -->
+
+    <section class="container follow-section">
+
+        <div class="follow-heading">
+
+            <h2>
+                Sigue al Getafe
+            </h2>
+
+        </div>
 
 
-                    <a href="clasificacion.html">
-                        Clasificación
-                    </a>
+        <div class="row g-3">
 
 
-                    <a href="plantilla.html">
+            <!-- PLANTILLA -->
+
+            <div class="col-lg-4">
+
+                <a href="plantilla.html"
+                   class="follow-card">
+
+                    <span class="follow-card-title">
+
+                        👥
+
                         Plantilla
-                    </a>
+
+                    </span>
+
+                    <span class="follow-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- PARTIDOS -->
+
+            <div class="col-lg-4">
+
+                <a href="partidos.html"
+                   class="follow-card">
+
+                    <span class="follow-card-title">
+
+                        ⚽
+
+                        Partidos
+
+                    </span>
+
+                    <span class="follow-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- CLASIFICACIÓN -->
+
+            <div class="col-lg-4">
+
+                <a href="clasificacion.html"
+                   class="follow-card">
+
+                    <span class="follow-card-title">
+
+                        🏆
+
+                        Clasificación
+
+                    </span>
+
+                    <span class="follow-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PRÓXIMO PARTIDO
+    ===================================================== -->
+
+    <section class="container home-section pt-0">
+
+        <div class="next-match">
+
+            <div class="next-match-inner">
+
+                <div class="text-center">
+
+                    <span class="next-match-label">
+                        PRÓXIMO PARTIDO
+                    </span>
+
+                    <h2>
+                        La cita con la gloria
+                    </h2>
+
+                </div>
+
+
+                <div class="row align-items-center text-center mt-5">
+
+
+                    <!-- GETAFE -->
+
+                    <div class="col-5">
+
+                        <div class="match-team">
+
+                            <img src="img/iconos/getafe.png"
+                                 alt="Getafe CF">
+
+                            <h3>
+                                Getafe CF
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- VS -->
+
+                    <div class="col-2">
+
+                        <div class="match-vs">
+                            VS
+                        </div>
+
+                        <div class="match-info">
+                            Jueves 27 agosto
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PARTIZÁN -->
+
+                    <div class="col-5">
+
+                        <div class="match-team">
+
+                            <img src="img/iconos/partizan.png"
+                                 alt="Partizán">
+
+                            <h3>
+                                Partizán
+                            </h3>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -2454,27 +1844,107 @@
 
         </div>
 
-
-
-        <hr class="footer-line my-5">
-
-
-
-        <p class="text-center mb-0">
-
-            © 2026 Azulones News · Proyecto no oficial del Getafe CF.
-
-        </p>
-
-    </div>
-
-</footer>
+    </section>
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
 
-<script src="js/script.js"></script>
+    <footer class="home-footer">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+
+                <div class="col-lg-6">
+
+                    <h3>
+                        AZULONES NEWS
+                    </h3>
+
+                    <p class="mt-3">
+                        Toda la actualidad del Getafe Club de Fútbol
+                        desde el corazón del Getafismo.
+                    </p>
+
+                </div>
+
+
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Navegación
+                    </h5>
+
+                    <div class="d-flex flex-column gap-2 mt-3">
+
+                        <a href="index.html">
+                            Inicio
+                        </a>
+
+                        <a href="noticias.html">
+                            Noticias
+                        </a>
+
+                        <a href="rumores.html">
+                            Rumores
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-3">
+
+                    <h5>
+                        Competición
+                    </h5>
+
+                    <div class="d-flex flex-column gap-2 mt-3">
+
+                        <a href="partidos.html">
+                            Partidos
+                        </a>
+
+                        <a href="clasificacion.html">
+                            Clasificación
+                        </a>
+
+                        <a href="plantilla.html">
+                            Plantilla
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="footer-line my-5">
+
+
+            <p class="text-center mb-0">
+
+                © 2026 Azulones News · Proyecto no oficial del Getafe CF.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 

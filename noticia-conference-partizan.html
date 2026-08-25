@@ -1,0 +1,1816 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La cita con la gloria: el Getafe busca volver a Europa | Azulones News</title>
+
+    <meta name="description"
+        content="El Getafe afronta ante el Partizán una noche histórica. Una eliminatoria para volver a Europa seis años después y entrar en la fase liga de la Conference League.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-F0WS5LY799');
+    </script>
+
+
+    <style>
+
+        /* =====================================================
+           NOTICIA CONFERENCE LEAGUE
+        ===================================================== */
+
+        :root {
+            --azul-oscuro: #031321;
+            --azul-profundo: #06294a;
+            --azul: #0077ff;
+            --azul-claro: #00b7ff;
+            --texto: #071b2e;
+            --gris: #718196;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at 10% 15%,
+                    rgba(0,119,255,.07),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 55%,
+                    rgba(0,183,255,.06),
+                    transparent 25%
+                ),
+                #f4f7fb;
+
+            color: var(--texto);
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .article-navbar {
+
+            background: rgba(3,19,33,.97);
+
+            border-bottom:
+                1px solid rgba(0,183,255,.18);
+
+            box-shadow:
+                0 10px 35px rgba(0,20,45,.15);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            backdrop-filter: blur(16px);
+
+        }
+
+        .article-navbar .navbar-brand img {
+
+            border-radius: 12px;
+
+            filter:
+                drop-shadow(
+                    0 0 10px rgba(0,183,255,.25)
+                );
+
+        }
+
+        .article-navbar .nav-link {
+
+            color: rgba(255,255,255,.68) !important;
+
+            font-weight: 650;
+
+            transition: .25s;
+
+        }
+
+        .article-navbar .nav-link:hover,
+        .article-navbar .nav-link.active {
+
+            color: white !important;
+
+        }
+
+
+        /* =====================================================
+           HERO DE LA NOTICIA
+        ===================================================== */
+
+        .article-hero {
+
+            position: relative;
+
+            min-height: 680px;
+
+            display: flex;
+
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            color: white;
+
+            background: #031321;
+
+        }
+
+        .article-hero-image {
+
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            object-position: center;
+
+            opacity: .82;
+
+        }
+
+        .article-hero-overlay {
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+
+                linear-gradient(
+                    to top,
+                    rgba(2,12,22,.98) 0%,
+                    rgba(2,12,22,.90) 23%,
+                    rgba(2,12,22,.48) 55%,
+                    rgba(2,12,22,.10) 100%
+                );
+
+        }
+
+        .article-hero-blue {
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            right: -180px;
+
+            top: -200px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(0,183,255,.18);
+
+            filter: blur(100px);
+
+        }
+
+        .article-hero-content {
+
+            position: relative;
+
+            z-index: 3;
+
+            width: 100%;
+
+            padding:
+
+                90px 0
+                85px;
+
+        }
+
+
+        /* =====================================================
+           ETIQUETA
+        ===================================================== */
+
+        .article-category {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 9px;
+
+            padding: 9px 15px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(0,119,255,.18);
+
+            border:
+                1px solid rgba(82,199,255,.45);
+
+            color: #73d4ff;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+        }
+
+        .article-category::before {
+
+            content: "";
+
+            width: 7px;
+
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #45c6ff;
+
+            box-shadow:
+                0 0 12px rgba(69,198,255,.9);
+
+        }
+
+
+        /* =====================================================
+           TITULAR
+        ===================================================== */
+
+        .article-hero h1 {
+
+            max-width: 1050px;
+
+            margin-top: 23px;
+
+            margin-bottom: 22px;
+
+            font-size:
+                clamp(42px, 6vw, 76px);
+
+            line-height: .98;
+
+            letter-spacing: -3px;
+
+            font-weight: 950;
+
+        }
+
+        .article-hero h1 span {
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #65ceff
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            color: transparent;
+
+        }
+
+        .article-subtitle {
+
+            max-width: 820px;
+
+            color:
+                rgba(255,255,255,.70);
+
+            font-size: 19px;
+
+            line-height: 1.65;
+
+        }
+
+        .article-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 18px;
+
+            margin-top: 28px;
+
+            color:
+                rgba(255,255,255,.50);
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           CONTENEDOR PRINCIPAL
+        ===================================================== */
+
+        .article-wrapper {
+
+            position: relative;
+
+            margin-top: -45px;
+
+            z-index: 10;
+
+        }
+
+        .article-card {
+
+            background: white;
+
+            border-radius: 28px;
+
+            box-shadow:
+                0 25px 70px rgba(0,35,70,.12);
+
+            overflow: hidden;
+
+        }
+
+
+        /* =====================================================
+           INTRO
+        ===================================================== */
+
+        .article-intro {
+
+            padding:
+                55px
+                65px
+                20px;
+
+        }
+
+        .article-intro p {
+
+            font-size: 21px;
+
+            line-height: 1.75;
+
+            color: #25384d;
+
+            font-weight: 500;
+
+        }
+
+        .article-intro p:first-child::first-letter {
+
+            font-size: 72px;
+
+            float: left;
+
+            line-height: .8;
+
+            padding-right: 10px;
+
+            padding-top: 8px;
+
+            font-weight: 950;
+
+            color: var(--azul);
+
+        }
+
+
+        /* =====================================================
+           CUERPO
+        ===================================================== */
+
+        .article-body {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            padding:
+                15px
+                65px
+                70px;
+
+        }
+
+        .article-body h2 {
+
+            margin-top: 48px;
+
+            margin-bottom: 20px;
+
+            color: #071b2e;
+
+            font-size: 31px;
+
+            line-height: 1.15;
+
+            font-weight: 950;
+
+            letter-spacing: -1px;
+
+        }
+
+        .article-body p {
+
+            margin-bottom: 22px;
+
+            color: #435466;
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+        }
+
+        .article-body strong {
+
+            color: #071b2e;
+
+        }
+
+
+        /* =====================================================
+           CITA
+        ===================================================== */
+
+        .article-quote {
+
+            position: relative;
+
+            margin:
+                45px 0;
+
+            padding:
+                32px
+                35px
+                32px
+                40px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #031321,
+                    #063866
+                );
+
+            color: white;
+
+            box-shadow:
+                0 18px 45px rgba(0,35,70,.16);
+
+        }
+
+        .article-quote::before {
+
+            content: "“";
+
+            position: absolute;
+
+            left: 18px;
+
+            top: 15px;
+
+            font-size: 65px;
+
+            color: #4cc8ff;
+
+            opacity: .45;
+
+        }
+
+        .article-quote p {
+
+            margin: 0;
+
+            color: white;
+
+            font-size: 22px;
+
+            line-height: 1.55;
+
+            font-weight: 750;
+
+        }
+
+
+        /* =====================================================
+           MARCADOR DE LA IDA
+        ===================================================== */
+
+        .match-highlight {
+
+            margin:
+                45px 0;
+
+            padding: 35px;
+
+            border-radius: 23px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f1f7ff,
+                    #ffffff
+                );
+
+            border:
+                1px solid #dbe9f7;
+
+            box-shadow:
+                0 12px 35px rgba(0,70,130,.08);
+
+        }
+
+        .match-highlight-label {
+
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            color: var(--azul);
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 1.3px;
+
+        }
+
+        .match-score {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 35px;
+
+            text-align: center;
+
+        }
+
+        .match-score-team {
+
+            flex: 1;
+
+            font-size: 20px;
+
+            font-weight: 900;
+
+            color: #071b2e;
+
+        }
+
+        .match-score-number {
+
+            font-size: 52px;
+
+            line-height: 1;
+
+            font-weight: 950;
+
+            color: var(--azul);
+
+        }
+
+        .match-score-info {
+
+            margin-top: 22px;
+
+            text-align: center;
+
+            color: #748396;
+
+            font-size: 13px;
+
+        }
+
+
+        /* =====================================================
+           CRONOLOGÍA
+        ===================================================== */
+
+        .timeline {
+
+            position: relative;
+
+            margin:
+                35px 0
+                50px;
+
+            padding-left: 30px;
+
+            border-left:
+                3px solid #d9eaf9;
+
+        }
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 32px;
+
+        }
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 12px;
+
+            height: 12px;
+
+            left: -38px;
+
+            top: 5px;
+
+            border-radius: 50%;
+
+            background: var(--azul);
+
+            box-shadow:
+                0 0 0 5px #e7f3ff;
+
+        }
+
+        .timeline-minute {
+
+            color: var(--azul);
+
+            font-size: 12px;
+
+            font-weight: 900;
+
+            letter-spacing: 1px;
+
+        }
+
+        .timeline-item h4 {
+
+            margin:
+                6px 0 5px;
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            color: #071b2e;
+
+        }
+
+        .timeline-item p {
+
+            margin: 0;
+
+            font-size: 15px;
+
+        }
+
+
+        /* =====================================================
+           BLOQUE EUROPA
+        ===================================================== */
+
+        .europe-banner {
+
+            position: relative;
+
+            overflow: hidden;
+
+            margin:
+                55px 0;
+
+            padding:
+                45px;
+
+            border-radius: 25px;
+
+            background:
+
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(0,183,255,.25),
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #02101d,
+                    #064477
+                );
+
+            color: white;
+
+        }
+
+        .europe-banner::after {
+
+            content: "✦";
+
+            position: absolute;
+
+            right: 45px;
+
+            bottom: -25px;
+
+            font-size: 180px;
+
+            color:
+                rgba(255,255,255,.035);
+
+        }
+
+        .europe-banner small {
+
+            color: #66d0ff;
+
+            font-weight: 900;
+
+            letter-spacing: 1.4px;
+
+        }
+
+        .europe-banner h3 {
+
+            margin:
+                12px 0 10px;
+
+            font-size: 31px;
+
+            font-weight: 950;
+
+        }
+
+        .europe-banner p {
+
+            max-width: 760px;
+
+            margin: 0;
+
+            color:
+                rgba(255,255,255,.67);
+
+        }
+
+
+        /* =====================================================
+           VUELTA
+        ===================================================== */
+
+        .return-match {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                auto
+                1fr;
+
+            align-items: center;
+
+            gap: 25px;
+
+            margin:
+                45px 0;
+
+            padding: 30px;
+
+            border-radius: 22px;
+
+            background: #f5f8fc;
+
+            border: 1px solid #e3ebf4;
+
+            text-align: center;
+
+        }
+
+        .return-team {
+
+            font-size: 18px;
+
+            font-weight: 900;
+
+            color: #071b2e;
+
+        }
+
+        .return-date {
+
+            color: var(--azul);
+
+            font-weight: 900;
+
+            font-size: 14px;
+
+        }
+
+        .return-place {
+
+            margin-top: 5px;
+
+            color: #7a8796;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =====================================================
+           CIERRE
+        ===================================================== */
+
+        .article-ending {
+
+            margin-top: 55px;
+
+            padding-top: 35px;
+
+            border-top:
+                1px solid #e4eaf0;
+
+        }
+
+        .article-ending p {
+
+            font-size: 19px;
+
+            color: #25384d;
+
+        }
+
+
+        /* =====================================================
+           COMPARTIR
+        ===================================================== */
+
+        .article-share {
+
+            padding:
+                25px 65px 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            border-top:
+                1px solid #edf0f4;
+
+        }
+
+        .share-title {
+
+            font-weight: 900;
+
+            color: #071b2e;
+
+        }
+
+        .share-links {
+
+            display: flex;
+
+            gap: 9px;
+
+        }
+
+        .share-links a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: #edf5ff;
+
+            color: var(--azul);
+
+            text-decoration: none;
+
+            font-weight: 900;
+
+            transition: .25s;
+
+        }
+
+        .share-links a:hover {
+
+            color: white;
+
+            background: var(--azul);
+
+            transform: translateY(-3px);
+
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        .article-footer {
+
+            margin-top: 70px;
+
+            padding:
+                65px 0 30px;
+
+            background: #031321;
+
+            color: white;
+
+        }
+
+        .article-footer h3,
+        .article-footer h5 {
+
+            font-weight: 900;
+
+        }
+
+        .article-footer p,
+        .article-footer a {
+
+            color:
+                rgba(255,255,255,.55);
+
+        }
+
+        .article-footer a {
+
+            text-decoration: none;
+
+            transition: .2s;
+
+        }
+
+        .article-footer a:hover {
+
+            color: #65ceff;
+
+        }
+
+
+        /* =====================================================
+           MÓVIL
+        ===================================================== */
+
+        @media(max-width:768px) {
+
+            .article-hero {
+
+                min-height: 600px;
+
+            }
+
+            .article-hero-content {
+
+                padding:
+                    70px 0
+                    70px;
+
+            }
+
+            .article-hero h1 {
+
+                font-size: 43px;
+
+                letter-spacing: -2px;
+
+            }
+
+            .article-subtitle {
+
+                font-size: 16px;
+
+            }
+
+            .article-intro {
+
+                padding:
+                    38px
+                    25px
+                    10px;
+
+            }
+
+            .article-intro p {
+
+                font-size: 18px;
+
+            }
+
+            .article-body {
+
+                padding:
+                    10px
+                    25px
+                    45px;
+
+            }
+
+            .article-body h2 {
+
+                font-size: 27px;
+
+            }
+
+            .article-body p {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+
+            }
+
+            .match-score {
+
+                gap: 12px;
+
+            }
+
+            .match-score-number {
+
+                font-size: 40px;
+
+            }
+
+            .match-score-team {
+
+                font-size: 15px;
+
+            }
+
+            .europe-banner {
+
+                padding: 30px 25px;
+
+            }
+
+            .return-match {
+
+                grid-template-columns: 1fr;
+
+                gap: 12px;
+
+            }
+
+            .article-share {
+
+                padding:
+                    25px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark article-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
+           href="index.html">
+
+            <img
+                src="img/logo/logo.png"
+                width="48"
+                height="48"
+                alt="Azulones News"
+            >
+
+            <div>
+
+                <div>
+                    AZULONES NEWS
+                </div>
+
+                <small class="text-white-50">
+                    El medio del Getafismo
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active"
+                       href="noticias.html">
+                        Noticias
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="rumores.html">
+                        Rumores
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="plantilla.html">
+                        Plantilla
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="partidos.html">
+                        Partidos
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="clasificacion.html">
+                        Clasificación
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<header class="article-hero">
+
+    <img
+        src="img/noticias/conference.jpg"
+        class="article-hero-image"
+        alt="Getafe CF y su camino hacia Europa"
+    >
+
+    <div class="article-hero-overlay"></div>
+
+    <div class="article-hero-blue"></div>
+
+
+    <div class="container">
+
+        <div class="article-hero-content">
+
+            <span class="article-category">
+                CONFERENCE LEAGUE · HISTORIA
+            </span>
+
+
+            <h1>
+
+                La cita con la gloria:
+                <span>el Getafe quiere volver a Europa</span>
+
+            </h1>
+
+
+            <p class="article-subtitle">
+
+                Noventa minutos separan al conjunto azulón de una
+                clasificación que puede devolver al Coliseum a las
+                noches europeas. El 3-1 de la ida da ventaja, pero
+                Belgrado espera con un partido que no permite
+                distracciones.
+
+            </p>
+
+
+            <div class="article-meta">
+
+                <span>
+                    📅 24 Agosto 2026
+                </span>
+
+                <span>
+                    ✍️ Redacción Azulones News
+                </span>
+
+                <span>
+                    🏆 UEFA Conference League
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARTÍCULO
+===================================================== -->
+
+<main class="container article-wrapper">
+
+    <article class="article-card">
+
+
+        <!-- INTRO -->
+
+        <div class="article-intro">
+
+            <p>
+
+                Hay partidos que duran noventa minutos y otros que
+                empiezan mucho antes de que el árbitro haga sonar su
+                silbato. Para el Getafe, el viaje a Belgrado pertenece
+                a ese segundo grupo. El jueves no estará en juego
+                únicamente una eliminatoria: estará la posibilidad de
+                recuperar una parte de la historia europea del club.
+
+            </p>
+
+        </div>
+
+
+        <!-- CUERPO -->
+
+        <div class="article-body">
+
+
+            <p>
+
+                El Getafe afronta la vuelta del playoff de la
+                Conference League con una ventaja que hace unas semanas
+                parecía lejana: un <strong>3-1 conseguido en el
+                Coliseum ante el Partizán</strong>. El resultado coloca
+                al equipo de José Bordalás a un paso de regresar a una
+                competición continental.
+
+            </p>
+
+
+            <p>
+
+                Pero precisamente ahí está la dificultad. El fútbol
+                europeo no entiende de cuentas sencillas. Un estadio
+                lleno, un rival obligado a atacar y una noche de máxima
+                tensión pueden convertir una ventaja importante en una
+                prueba completamente distinta.
+
+            </p>
+
+
+            <div class="match-highlight">
+
+                <span class="match-highlight-label">
+                    PLAYOFF · PARTIDO DE IDA
+                </span>
+
+
+                <div class="match-score">
+
+                    <div class="match-score-team">
+                        GETAFE CF
+                    </div>
+
+                    <div class="match-score-number">
+                        3 — 1
+                    </div>
+
+                    <div class="match-score-team">
+                        PARTIZÁN
+                    </div>
+
+                </div>
+
+
+                <div class="match-score-info">
+
+                    Coliseum · 20 de agosto de 2026
+
+                </div>
+
+            </div>
+
+
+
+            <h2>
+                Una noche que volvió a sentirse diferente
+            </h2>
+
+
+            <p>
+
+                El encuentro de ida tuvo prácticamente de todo. El
+                Getafe comenzó golpeando con un gol de
+                <strong>Enes Ünal</strong>, pero el Partizán consiguió
+                responder antes del descanso.
+
+            </p>
+
+
+            <p>
+
+                Además, el conjunto azulón tuvo que afrontar buena parte
+                del segundo tiempo en inferioridad numérica. En cualquier
+                otro contexto, aquello podría haber cambiado por completo
+                la historia del partido.
+
+            </p>
+
+
+            <p>
+
+                Esta vez no.
+
+            </p>
+
+
+            <p>
+
+                El Getafe encontró fuerzas cuando más falta hacían.
+                <strong>Andrés García</strong> apareció para devolver la
+                ventaja al equipo y, ya en los últimos instantes,
+                <strong>Johan Mojica</strong> puso el definitivo 3-1 en
+                el marcador.
+
+            </p>
+
+
+            <div class="article-quote">
+
+                <p>
+
+                    El Getafe no solo ganó un partido. Se ganó el derecho
+                    a viajar a Belgrado soñando con una noche que puede
+                    quedar para siempre en la memoria azulona.
+
+                </p>
+
+            </div>
+
+
+
+            <h2>
+                Cuando Europa vuelve a llamar
+            </h2>
+
+
+            <p>
+
+                Para entender lo que hay en juego hay que mirar un poco
+                más atrás. El Getafe no disputa una competición europea
+                desde la temporada 2019/20. Ahora, seis años después,
+                el club está a un solo paso de regresar al escenario
+                continental.
+
+            </p>
+
+
+            <p>
+
+                Y quizá lo más especial es la forma en la que ha llegado
+                hasta aquí. Sin grandes discursos, sin necesidad de
+                vender una ilusión artificial y con la identidad de
+                siempre: competir, resistir y aprovechar cada momento.
+
+            </p>
+
+
+            <div class="europe-banner">
+
+                <small>
+                    UNA OPORTUNIDAD HISTÓRICA
+                </small>
+
+                <h3>
+                    El Coliseum ya sueña con Europa
+                </h3>
+
+                <p>
+
+                    Si el Getafe supera al Partizán, el conjunto azulón
+                    conseguirá su clasificación para la fase liga de la
+                    UEFA Conference League y volverá a competir en Europa.
+
+                </p>
+
+            </div>
+
+
+
+            <h2>
+                Belgrado será otra historia
+            </h2>
+
+
+            <p>
+
+                La vuelta no tendrá nada que ver con la ida. El Getafe
+                jugará fuera de casa, en el Estadio Partizán, ante una
+                afición que intentará convertir cada minuto en una prueba
+                de resistencia.
+
+            </p>
+
+
+            <p>
+
+                El contexto del conjunto serbio tampoco es sencillo.
+                El Partizán llega obligado a remontar y necesita ganar
+                por al menos dos goles para llevar la eliminatoria a un
+                escenario completamente diferente.
+
+            </p>
+
+
+            <p>
+
+                Eso significa que el Getafe deberá convivir con la
+                presión. Habrá momentos en los que tocará defender,
+                otros en los que será necesario salir a jugar y alguno
+                en el que simplemente habrá que saber sufrir.
+
+            </p>
+
+
+            <h2>
+                La noche que puede cambiar la temporada
+            </h2>
+
+
+            <p>
+
+                En una temporada tan larga, una eliminatoria europea
+                puede convertirse en mucho más que una serie de dos
+                partidos.
+
+            </p>
+
+
+            <p>
+
+                Clasificarse significaría disputar nuevos partidos
+                europeos, recibir rivales diferentes en el Coliseum,
+                viajar por Europa y recuperar una parte de la identidad
+                que el club ya conoció durante sus anteriores aventuras
+                continentales.
+
+            </p>
+
+
+            <p>
+
+                Para los jugadores más jóvenes sería una experiencia
+                nueva. Para los veteranos, una oportunidad de volver a
+                vivir noches que parecían pertenecer a otra época.
+                Y para la afición, simplemente Europa.
+
+            </p>
+
+
+
+            <div class="return-match">
+
+                <div>
+
+                    <div class="return-team">
+                        PARTIZÁN
+                    </div>
+
+                    <div class="return-place">
+                        Estadio Partizán · Belgrado
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="return-date">
+                        JUEVES 27 AGOSTO
+                    </div>
+
+                    <div class="return-place">
+                        21:00 · Vuelta del playoff
+                    </div>
+
+                </div>
+
+
+                <div>
+
+                    <div class="return-team">
+                        GETAFE CF
+                    </div>
+
+                    <div class="return-place">
+                        Ventaja azulona: 3-1
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <h2>
+                Noventa minutos para volver a creer
+            </h2>
+
+
+            <p>
+
+                El Getafe no necesita hacer nada extraordinario.
+                Necesita hacer lo que le ha llevado hasta aquí.
+
+            </p>
+
+
+            <p>
+
+                Competir.
+
+            </p>
+
+
+            <p>
+
+                Mantenerse unido cuando el partido se ponga difícil.
+                Defender cada balón como si fuera el último. Aprovechar
+                las ocasiones que aparezcan. Y recordar durante los
+                noventa minutos que el trabajo del Coliseum ha colocado
+                al equipo en una situación privilegiada.
+
+            </p>
+
+
+            <p>
+
+                Porque el jueves, cuando el balón eche a rodar en
+                Belgrado, no habrá estadísticas, rumores ni mercado.
+                Solo quedará el fútbol.
+
+            </p>
+
+
+            <div class="article-ending">
+
+                <p>
+
+                    <strong>
+
+                        El Getafe está a noventa minutos de volver a
+                        Europa. La cita con la gloria ya tiene fecha,
+                        hora y escenario.
+
+                    </strong>
+
+                </p>
+
+                <p>
+
+                    Y ahora le toca al Getafe escribir el siguiente
+                    capítulo.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- COMPARTIR -->
+
+        <div class="article-share">
+
+            <div class="share-title">
+
+                Comparte esta noticia
+
+            </div>
+
+
+            <div class="share-links">
+
+                <a href="#" aria-label="Compartir en X">
+                    X
+                </a>
+
+                <a href="#" aria-label="Compartir en Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="Compartir">
+                    ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </article>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="article-footer">
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <div class="col-lg-6">
+
+                <h3>
+                    AZULONES NEWS
+                </h3>
+
+                <p class="mt-3">
+
+                    Toda la actualidad del Getafe Club de Fútbol
+                    desde el corazón del Getafismo.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Navegación
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="index.html">
+                        Inicio
+                    </a>
+
+                    <a href="noticias.html">
+                        Noticias
+                    </a>
+
+                    <a href="rumores.html">
+                        Rumores
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3">
+
+                <h5>
+                    Competición
+                </h5>
+
+                <div class="d-flex flex-column gap-2 mt-3">
+
+                    <a href="partidos.html">
+                        Partidos
+                    </a>
+
+                    <a href="clasificacion.html">
+                        Clasificación
+                    </a>
+
+                    <a href="plantilla.html">
+                        Plantilla
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <hr
+            class="my-5"
+            style="border-color:rgba(255,255,255,.1);"
+        >
+
+
+        <p class="text-center mb-0">
+
+            © 2026 Azulones News · Proyecto no oficial del Getafe CF.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
