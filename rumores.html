@@ -3,835 +3,511 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Rumores y mercado | Azulones News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Todos los rumores, fichajes, salidas e intereses del Getafe CF. Sigue el mercado azulón en Azulones News.">
+<title>Mercado | Azulones News</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta name="description"
+content="Últimos rumores, posibles fichajes y salidas del Getafe CF. Toda la actualidad del mercado azulón.">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
 
-    <script>
-        window.dataLayer = window.dataLayer || [];
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+<script>
+window.dataLayer = window.dataLayer || [];
 
-        gtag('js', new Date());
-        gtag('config', 'G-F0WS5LY799');
-    </script>
+function gtag(){
+    dataLayer.push(arguments);
+}
 
+gtag('js', new Date());
+gtag('config', 'G-F0WS5LY799');
+</script>
 
-    <style>
 
-        :root {
-            --azul-oscuro: #031321;
-            --azul-profundo: #06294a;
-            --azul: #0077ff;
-            --azul-claro: #00b7ff;
-            --texto: #071b2e;
-            --gris: #718196;
-            --fondo: #f4f7fb;
-        }
+<style>
 
-        * {
-            box-sizing: border-box;
-        }
+/* =========================================
+   CABECERA
+========================================= */
 
-        body {
-            margin: 0;
-            background:
-                radial-gradient(
-                    circle at 5% 10%,
-                    rgba(0,119,255,.07),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 95% 40%,
-                    rgba(0,183,255,.06),
-                    transparent 30%
-                ),
-                var(--fondo);
-            color: var(--texto);
-        }
+.market-header {
 
+    background:
+        radial-gradient(circle at top right, rgba(255,255,255,.12), transparent 35%),
+        linear-gradient(135deg, #0057b8, #003b7a);
 
-        /* =====================================================
-           NAVBAR
-        ===================================================== */
+    color: white;
 
-        .home-navbar {
-            background: rgba(3,19,33,.97);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
+    padding: 70px 20px 65px;
 
-            border-bottom: 1px solid rgba(0,183,255,.18);
+    text-align: center;
 
-            box-shadow:
-                0 10px 35px rgba(0,20,45,.16);
+    border-radius: 0 0 28px 28px;
 
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    margin-bottom: 55px;
 
-        .home-navbar .navbar-brand {
-            letter-spacing: .8px;
-        }
+}
 
-        .home-navbar .navbar-brand img {
-            border-radius: 12px;
+.market-header .badge {
 
-            filter:
-                drop-shadow(
-                    0 0 10px rgba(0,183,255,.25)
-                );
+    background: rgba(255,255,255,.15);
 
-            transition: .3s;
-        }
+    border: 1px solid rgba(255,255,255,.25);
 
-        .home-navbar .navbar-brand:hover img {
-            transform: scale(1.05);
-        }
+    padding: 9px 16px;
 
-        .home-navbar .nav-link {
-            position: relative;
+    border-radius: 30px;
 
-            color: rgba(255,255,255,.72) !important;
+    font-size: 12px;
 
-            font-weight: 600;
+    font-weight: 800;
 
-            padding: 10px 14px !important;
+    letter-spacing: .5px;
 
-            transition: .3s;
-        }
+}
 
-        .home-navbar .nav-link::after {
-            content: "";
+.market-header h1 {
 
-            position: absolute;
+    font-weight: 900;
 
-            left: 14px;
-            right: 14px;
-            bottom: 2px;
+    letter-spacing: -1.5px;
 
-            height: 2px;
+    margin-top: 18px;
 
-            border-radius: 10px;
+    margin-bottom: 12px;
 
-            background:
-                linear-gradient(
-                    90deg,
-                    var(--azul),
-                    var(--azul-claro)
-                );
+}
 
-            transform: scaleX(0);
+.market-header p {
 
-            transition: .3s;
-        }
+    max-width: 720px;
 
-        .home-navbar .nav-link:hover,
-        .home-navbar .nav-link.active {
-            color: white !important;
+    margin: auto;
 
-            text-shadow:
-                0 0 15px rgba(0,183,255,.55);
-        }
+    opacity: .9;
 
-        .home-navbar .nav-link:hover::after,
-        .home-navbar .nav-link.active::after {
-            transform: scaleX(1);
-        }
+}
 
 
-        /* =====================================================
-           CABECERA
-        ===================================================== */
+/* =========================================
+   RESUMEN MERCADO
+========================================= */
 
-        .rumores-header {
-            position: relative;
+.market-summary {
 
-            overflow: hidden;
+    margin-top: -80px;
 
-            padding: 90px 0 85px;
+    position: relative;
 
-            color: white;
+    z-index: 5;
 
-            background:
-                radial-gradient(
-                    circle at 85% 20%,
-                    rgba(0,183,255,.22),
-                    transparent 32%
-                ),
-                radial-gradient(
-                    circle at 10% 90%,
-                    rgba(0,119,255,.16),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    135deg,
-                    #020e19,
-                    #06294a 55%,
-                    #005baa
-                );
-        }
+    margin-bottom: 55px;
 
-        .rumores-header::before {
-            content: "";
+}
 
-            position: absolute;
+.summary-box {
 
-            width: 500px;
-            height: 500px;
+    background: white;
 
-            right: -180px;
-            top: -300px;
+    border-radius: 18px;
 
-            border-radius: 50%;
+    padding: 24px;
 
-            background: rgba(0,183,255,.12);
+    box-shadow: 0 10px 35px rgba(0,0,0,.10);
 
-            filter: blur(70px);
-        }
+    border: 1px solid #edf0f4;
 
-        .rumores-header-content {
-            position: relative;
-            z-index: 2;
-        }
+}
 
-        .rumores-kicker {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
+.summary-item {
 
-            padding: 8px 15px;
+    text-align: center;
 
-            border-radius: 50px;
+    padding: 10px;
 
-            background: rgba(255,255,255,.07);
+}
 
-            border: 1px solid rgba(0,183,255,.35);
+.summary-number {
 
-            color: #65ceff;
+    font-size: 30px;
 
-            font-size: 11px;
-            font-weight: 900;
+    font-weight: 900;
 
-            letter-spacing: 1.5px;
-        }
+    color: #0057b8;
 
-        .rumores-kicker::before {
-            content: "";
+}
 
-            width: 7px;
-            height: 7px;
+.summary-label {
 
-            border-radius: 50%;
+    font-size: 12px;
 
-            background: #00b7ff;
+    color: #777;
 
-            box-shadow:
-                0 0 12px rgba(0,183,255,.8);
-        }
+    font-weight: 700;
 
-        .rumores-header h1 {
-            margin-top: 20px;
+    text-transform: uppercase;
 
-            font-size: clamp(44px, 7vw, 72px);
+    letter-spacing: .6px;
 
-            line-height: 1;
+}
 
-            letter-spacing: -3px;
 
-            font-weight: 950;
-        }
+/* =========================================
+   TITULO SECCION
+========================================= */
 
-        .rumores-header h1 span {
-            color: #55c8ff;
-        }
+.section-heading {
 
-        .rumores-header p {
-            max-width: 720px;
+    display: flex;
 
-            margin-top: 22px;
+    align-items: center;
 
-            color: rgba(255,255,255,.65);
+    gap: 12px;
 
-            font-size: 17px;
+    margin-bottom: 25px;
 
-            line-height: 1.7;
-        }
+}
 
+.section-heading h2 {
 
-        /* =====================================================
-           CONTENIDO
-        ===================================================== */
+    font-weight: 900;
 
-        .rumores-main {
-            padding: 70px 0;
-        }
+    margin: 0;
 
+}
 
-        /* =====================================================
-           TITULOS
-        ===================================================== */
+.section-line {
 
-        .section-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+    height: 4px;
 
-            margin-bottom: 25px;
-        }
+    width: 45px;
 
-        .section-title::before {
-            content: "";
+    background: #0057b8;
 
-            width: 4px;
-            height: 32px;
+    border-radius: 10px;
 
-            border-radius: 10px;
+}
 
-            background:
-                linear-gradient(
-                    to bottom,
-                    #0077ff,
-                    #00b7ff
-                );
-        }
 
-        .section-title h2 {
-            margin: 0;
+/* =========================================
+   TARJETAS
+========================================= */
 
-            font-size: 30px;
+.rumor-card {
 
-            font-weight: 950;
+    background: white;
 
-            letter-spacing: -1px;
-        }
+    border-radius: 20px;
 
+    overflow: hidden;
 
-        /* =====================================================
-           RUMOR DESTACADO
-        ===================================================== */
+    border: 1px solid #e8edf3;
 
-        .rumor-destacado {
-            position: relative;
+    box-shadow: 0 6px 25px rgba(0,0,0,.07);
 
-            overflow: hidden;
+    height: 100%;
 
-            min-height: 500px;
+    transition: all .3s ease;
 
-            border-radius: 26px;
+}
 
-            background: #061a2c;
+.rumor-card:hover {
 
-            box-shadow:
-                0 25px 65px rgba(0,35,70,.15);
+    transform: translateY(-7px);
 
-            transition: .4s;
-        }
+    box-shadow: 0 16px 35px rgba(0,0,0,.13);
 
-        .rumor-destacado:hover {
-            transform: translateY(-5px);
+}
 
-            box-shadow:
-                0 30px 75px rgba(0,100,180,.2);
-        }
 
-        .rumor-destacado img {
-            position: absolute;
+/* =========================================
+   IMAGEN
+========================================= */
 
-            inset: 0;
+.rumor-image {
 
-            width: 100%;
-            height: 100%;
+    width: 100%;
 
-            object-fit: cover;
+    height: 270px;
 
-            transition: .7s;
-        }
+    object-fit: cover;
 
-        .rumor-destacado:hover img {
-            transform: scale(1.04);
-        }
+    display: block;
 
-        .rumor-destacado::after {
-            content: "";
+}
 
-            position: absolute;
 
-            inset: 0;
+/* =========================================
+   CONTENIDO
+========================================= */
 
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(2,12,24,.98) 0%,
-                    rgba(2,12,24,.75) 40%,
-                    rgba(2,12,24,.10) 80%
-                );
-        }
+.rumor-content {
 
-        .rumor-destacado-contenido {
-            position: absolute;
+    padding: 26px;
 
-            z-index: 2;
+}
 
-            left: 0;
-            right: 0;
-            bottom: 0;
+.rumor-content h2 {
 
-            padding: 38px;
-        }
+    font-size: 23px;
 
-        .rumor-tag {
-            display: inline-block;
+    line-height: 1.25;
 
-            padding: 7px 13px;
+    font-weight: 900;
 
-            border-radius: 50px;
+    margin: 12px 0 13px;
 
-            color: white;
+}
 
-            background:
-                linear-gradient(
-                    90deg,
-                    #0077ff,
-                    #00b7ff
-                );
+.rumor-content p {
 
-            font-size: 10px;
+    color: #555;
 
-            font-weight: 900;
+    line-height: 1.7;
 
-            letter-spacing: 1px;
-        }
+}
 
-        .rumor-destacado h2 {
-            max-width: 850px;
 
-            margin-top: 16px;
+/* =========================================
+   ETIQUETAS
+========================================= */
 
-            color: white;
+.rumor-tag {
 
-            font-size: clamp(29px, 4vw, 44px);
+    display: inline-block;
 
-            line-height: 1.08;
+    background: #0057b8;
 
-            font-weight: 950;
+    color: white;
 
-            letter-spacing: -1.5px;
-        }
+    padding: 7px 12px;
 
-        .rumor-destacado p {
-            max-width: 800px;
+    border-radius: 20px;
 
-            margin-top: 14px;
+    font-size: 11px;
 
-            margin-bottom: 0;
+    font-weight: 800;
 
-            color: rgba(255,255,255,.58);
+    letter-spacing: .4px;
 
-            font-size: 13px;
-        }
+}
 
+.rumor-tag.exit {
 
-        /* =====================================================
-           GRID
-        ===================================================== */
+    background: #dc3545;
 
-        .rumor-card {
-            overflow: hidden;
+}
 
-            height: 100%;
+.rumor-tag.interest {
 
-            background: white;
+    background: #d99b00;
 
-            border: 1px solid #e1e8ef;
+}
 
-            border-radius: 19px;
+.rumor-tag.advanced {
 
-            box-shadow:
-                0 10px 30px rgba(0,35,70,.06);
+    background: #198754;
 
-            transition: .3s;
-        }
+}
 
-        .rumor-card:hover {
-            transform: translateY(-5px);
+.rumor-tag.market {
 
-            box-shadow:
-                0 20px 45px rgba(0,100,180,.13);
-        }
+    background: #343a40;
 
-        .rumor-card-img {
-            width: 100%;
-            height: 210px;
+}
 
-            object-fit: cover;
-        }
+.rumor-tag.official {
 
-        .rumor-card-content {
-            padding: 23px;
-        }
+    background: #198754;
 
-        .rumor-card-tag {
-            display: inline-block;
+}
 
-            color: #0077ff;
 
-            font-size: 10px;
+/* =========================================
+   FECHA
+========================================= */
 
-            font-weight: 900;
+.rumor-date {
 
-            letter-spacing: 1.2px;
-        }
+    color: #888;
 
-        .rumor-card h3 {
-            margin-top: 10px;
+    font-size: 13px;
 
-            margin-bottom: 10px;
+    margin-bottom: 15px;
 
-            color: var(--texto);
+}
 
-            font-size: 21px;
 
-            line-height: 1.2;
+/* =========================================
+   DESTACADO
+========================================= */
 
-            font-weight: 900;
-        }
+.featured-card {
 
-        .rumor-card p {
-            margin: 0;
+    background: linear-gradient(135deg, #0057b8, #003b7a);
 
-            color: var(--gris);
+    color: white;
 
-            font-size: 13px;
+    border-radius: 22px;
 
-            line-height: 1.6;
-        }
+    overflow: hidden;
 
-        .rumor-time {
-            display: block;
+    box-shadow: 0 12px 35px rgba(0,87,184,.22);
 
-            margin-top: 17px;
+    margin-bottom: 50px;
 
-            color: #9aa7b5;
+}
 
-            font-size: 11px;
+.featured-image {
 
-            font-weight: 700;
-        }
+    width: 100%;
 
+    height: 390px;
 
-        /* =====================================================
-           ULTIMOS MOVIMIENTOS
-        ===================================================== */
+    object-fit: cover;
 
-        .movimientos {
-            margin-top: 65px;
-        }
+}
 
-        .movimiento {
-            display: flex;
-            align-items: center;
-            gap: 18px;
+.featured-content {
 
-            padding: 18px 0;
+    padding: 35px;
 
-            border-bottom: 1px solid #dfe6ed;
-        }
+}
 
-        .movimiento:last-child {
-            border-bottom: none;
-        }
+.featured-content h2 {
 
-        .movimiento-hora {
-            min-width: 52px;
+    font-size: 32px;
 
-            color: #0077ff;
+    font-weight: 900;
 
-            font-size: 12px;
+    line-height: 1.15;
 
-            font-weight: 900;
-        }
+    margin: 15px 0;
 
-        .movimiento-punto {
-            width: 9px;
-            height: 9px;
+}
 
-            flex-shrink: 0;
+.featured-content p {
 
-            border-radius: 50%;
+    color: rgba(255,255,255,.88);
 
-            background: #0077ff;
+    line-height: 1.7;
 
-            box-shadow:
-                0 0 0 5px rgba(0,119,255,.08);
-        }
+}
 
-        .movimiento-texto {
-            color: #33475b;
+.featured-tag {
 
-            font-size: 14px;
+    display: inline-block;
 
-            font-weight: 700;
+    background: rgba(255,255,255,.16);
 
-            line-height: 1.5;
-        }
+    border: 1px solid rgba(255,255,255,.25);
 
+    padding: 8px 13px;
 
-        /* =====================================================
-           SIDEBAR
-        ===================================================== */
+    border-radius: 20px;
 
-        .mercado-card {
-            padding: 28px;
+    font-size: 11px;
 
-            background: white;
+    font-weight: 800;
 
-            border: 1px solid #e1e8ef;
+}
 
-            border-radius: 20px;
 
-            box-shadow:
-                0 12px 35px rgba(0,35,70,.07);
-        }
+/* =========================================
+   AVISO
+========================================= */
 
-        .mercado-card h3 {
-            margin-bottom: 22px;
+.market-note {
 
-            font-size: 21px;
+    background: #f5f8fc;
 
-            font-weight: 950;
-        }
+    border-left: 5px solid #0057b8;
 
-        .dato-mercado {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+    border-radius: 14px;
 
-            padding: 15px 0;
+    padding: 24px;
 
-            border-bottom: 1px solid #edf1f5;
-        }
+    margin-top: 50px;
 
-        .dato-mercado:last-child {
-            border-bottom: none;
-        }
+}
 
-        .dato-mercado span:first-child {
-            color: #718196;
+.market-note h4 {
 
-            font-size: 13px;
+    font-weight: 900;
 
-            font-weight: 700;
-        }
+}
 
-        .dato-mercado strong {
-            color: #0077ff;
 
-            font-size: 22px;
+/* =========================================
+   FOOTER
+========================================= */
 
-            font-weight: 950;
-        }
+footer {
 
+    margin-top: 70px;
 
-        /* =====================================================
-           ANALISIS
-        ===================================================== */
+}
 
-        .analisis-card {
-            margin-top: 25px;
 
-            padding: 28px;
+/* =========================================
+   MÓVIL
+========================================= */
 
-            border-radius: 20px;
+@media(max-width:768px) {
 
-            color: white;
+    .market-header {
 
-            background:
-                radial-gradient(
-                    circle at 90% 10%,
-                    rgba(0,183,255,.2),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    135deg,
-                    #031321,
-                    #06294a
-                );
+        padding: 50px 15px 55px;
 
-            box-shadow:
-                0 18px 45px rgba(0,35,70,.14);
-        }
+    }
 
-        .analisis-card h3 {
-            margin-bottom: 14px;
+    .market-header h1 {
 
-            font-size: 21px;
+        font-size: 2.3rem;
 
-            font-weight: 900;
-        }
+    }
 
-        .analisis-card p {
-            margin: 0;
+    .market-summary {
 
-            color: rgba(255,255,255,.62);
+        margin-top: -65px;
 
-            font-size: 13px;
+    }
 
-            line-height: 1.7;
-        }
+    .rumor-image {
 
+        height: 230px;
 
-        /* =====================================================
-           FOOTER
-        ===================================================== */
+    }
 
-        .home-footer {
-            margin-top: 20px;
+    .featured-image {
 
-            padding: 65px 0 30px;
+        height: 260px;
 
-            background: #031321;
+    }
 
-            color: white;
+    .featured-content {
 
-            border-top: 1px solid rgba(0,183,255,.18);
-        }
+        padding: 25px;
 
-        .home-footer h3,
-        .home-footer h5 {
-            font-weight: 900;
-        }
+    }
 
-        .home-footer p {
-            color: rgba(255,255,255,.52);
+    .featured-content h2 {
 
-            line-height: 1.7;
-        }
+        font-size: 25px;
 
-        .home-footer a {
-            color: rgba(255,255,255,.58);
+    }
 
-            text-decoration: none;
+}
 
-            transition: .25s;
-        }
-
-        .home-footer a:hover {
-            color: #55c8ff;
-
-            padding-left: 3px;
-        }
-
-        .footer-line {
-            border-color: rgba(255,255,255,.1);
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
-
-        @media (max-width: 991px) {
-
-            .rumor-destacado {
-                min-height: 460px;
-            }
-
-            .rumor-destacado-contenido {
-                padding: 30px;
-            }
-
-        }
-
-
-        @media (max-width: 768px) {
-
-            .rumores-header {
-                padding: 70px 0;
-            }
-
-            .rumores-header h1 {
-                letter-spacing: -2px;
-            }
-
-            .rumores-main {
-                padding: 50px 0;
-            }
-
-            .rumor-destacado {
-                min-height: 430px;
-
-                border-radius: 21px;
-            }
-
-            .rumor-destacado-contenido {
-                padding: 24px;
-            }
-
-            .rumor-destacado h2 {
-                font-size: 28px;
-            }
-
-            .section-title h2 {
-                font-size: 26px;
-            }
-
-            .movimiento {
-                gap: 12px;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .home-navbar .navbar-brand img {
-                width: 42px;
-                height: 42px;
-            }
-
-            .home-navbar .navbar-brand .fs-4 {
-                font-size: 17px !important;
-            }
-
-            .home-navbar .navbar-brand small {
-                font-size: 10px;
-            }
-
-            .rumores-header h1 {
-                font-size: 43px;
-            }
-
-            .rumor-destacado {
-                min-height: 440px;
-            }
-
-            .rumor-destacado h2 {
-                font-size: 25px;
-            }
-
-            .rumor-card-img {
-                height: 190px;
-            }
-
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -839,759 +515,800 @@
 <body>
 
 
-    <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+<!-- =========================================
+     NAVBAR
+========================================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark home-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-        <div class="container">
+<div class="container">
 
-            <a class="navbar-brand fw-bold d-flex align-items-center gap-3"
-               href="index.html">
+<a class="navbar-brand fw-bold d-flex align-items-center gap-2"
+href="index.html">
 
-                <img src="img/logo/logo.png"
-                     width="50"
-                     height="50"
-                     alt="Azulones News">
+<img
+src="img/logo/logo.png"
+width="42"
+height="42"
+alt="Azulones News"
+>
 
-                <div>
+AZULONES NEWS
 
-                    <div class="fw-bold">
-                        AZULONES NEWS
-                    </div>
+</a>
 
-                    <small class="text-white-50">
-                        El medio del Getafismo
-                    </small>
 
-                </div>
+<button
+class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
 
-            </a>
+<span class="navbar-toggler-icon"></span>
 
+</button>
 
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu">
 
-                <span class="navbar-toggler-icon"></span>
+<div class="collapse navbar-collapse" id="menu">
 
-            </button>
+<ul class="navbar-nav ms-auto">
 
+<li class="nav-item">
+<a class="nav-link" href="index.html">
+Inicio
+</a>
+</li>
 
-            <div class="collapse navbar-collapse" id="menu">
+<li class="nav-item">
+<a class="nav-link" href="noticias.html">
+Noticias
+</a>
+</li>
 
-                <ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link active" href="rumores.html">
+Mercado
+</a>
+</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="index.html">
-                            Inicio
-                        </a>
-                    </li>
+<li class="nav-item">
+<a class="nav-link" href="plantilla.html">
+Plantilla
+</a>
+</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="noticias.html">
-                            Noticias
-                        </a>
-                    </li>
+<li class="nav-item">
+<a class="nav-link" href="partidos.html">
+Partidos
+</a>
+</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active"
-                           href="rumores.html">
-                            Rumores
-                        </a>
-                    </li>
+<li class="nav-item">
+<a class="nav-link" href="clasificacion.html">
+Clasificación
+</a>
+</li>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="plantilla.html">
-                            Plantilla
-                        </a>
-                    </li>
+</ul>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="partidos.html">
-                            Partidos
-                        </a>
-                    </li>
+</div>
 
-                    <li class="nav-item">
-                        <a class="nav-link"
-                           href="clasificacion.html">
-                            Clasificación
-                        </a>
-                    </li>
+</div>
 
-                </ul>
+</nav>
 
-            </div>
 
-        </div>
 
-    </nav>
+<!-- =========================================
+     CABECERA
+========================================= -->
 
+<section class="market-header">
 
+<div class="container">
 
-    <!-- =====================================================
-         CABECERA
-    ===================================================== -->
+<span class="badge">
 
-    <header class="rumores-header">
+MERCADO AZULÓN · 2026/27
 
-        <div class="container">
+</span>
 
-            <div class="rumores-header-content">
+<h1>
 
-                <span class="rumores-kicker">
-                    MERCADO AZULÓN
-                </span>
+Mercado de fichajes
 
-                <h1>
-                    Rumores y <span>fichajes.</span>
-                </h1>
+</h1>
 
-                <p>
-                    El mercado del Getafe, contado desde dentro:
-                    intereses, negociaciones, posibles salidas y todos
-                    los nombres que pueden vestir de azul.
-                </p>
+<p class="lead">
 
-            </div>
+Entradas, salidas e intereses que rodean al Getafe CF.
+Seguimos el mercado para separar los movimientos avanzados de los simples rumores.
 
-        </div>
+</p>
 
-    </header>
+</div>
 
+</section>
 
 
-    <!-- =====================================================
-         MAIN
-    ===================================================== -->
 
-    <main class="rumores-main">
+<!-- =========================================
+     RESUMEN
+========================================= -->
 
-        <div class="container">
+<section class="container market-summary">
 
+<div class="summary-box">
 
-            <!-- =================================================
-                 RUMOR DESTACADO
-            ================================================= -->
+<div class="row">
 
-            <div class="section-title">
+<div class="col-6 col-md-3">
 
-                <h2>
-                    Rumor destacado
-                </h2>
+<div class="summary-item">
 
-            </div>
+<div class="summary-number">
+9
+</div>
 
+<div class="summary-label">
+Rumores
+</div>
 
-            <article class="rumor-destacado">
+</div>
 
-                <img src="img/noticias/pathe-ciss.jpg"
-                     alt="Pathé Ciss">
+</div>
 
-                <div class="rumor-destacado-contenido">
 
-                    <span class="rumor-tag">
-                        🔵 CENTRO DEL CAMPO
-                    </span>
+<div class="col-6 col-md-3">
 
-                    <h2>
-                        Torres mueve ficha por Pathé Ciss:
-                        el Getafe tantea al centrocampista del Rayo
-                    </h2>
+<div class="summary-item">
 
-                    <p>
-                        24 Agosto 2026 · Redacción Azulones News
-                    </p>
+<div class="summary-number">
+3
+</div>
 
-                </div>
+<div class="summary-label">
+Posibles salidas
+</div>
 
-            </article>
+</div>
 
+</div>
 
 
-            <!-- =================================================
-                 GRID DE RUMORES
-            ================================================= -->
+<div class="col-6 col-md-3">
 
-            <div class="row g-4 mt-5">
+<div class="summary-item">
 
+<div class="summary-number">
+4
+</div>
 
-                <!-- OREL MANGALA -->
+<div class="summary-label">
+Llegadas / intereses
+</div>
 
-                <div class="col-lg-4">
+</div>
 
-                    <article class="rumor-card">
+</div>
 
-                        <img src="img/noticias/orel-mangala.jpg"
-                             class="rumor-card-img"
-                             alt="Orel Mangala">
 
-                        <div class="rumor-card-content">
+<div class="col-6 col-md-3">
 
-                            <span class="rumor-card-tag">
-                                MEDIOCAMPO
-                            </span>
+<div class="summary-item">
 
-                            <h3>
-                                Orel Mangala continúa negociando
-                                su llegada al Getafe
-                            </h3>
+<div class="summary-number">
+1
+</div>
 
-                            <p>
-                                El centrocampista sigue siendo una de las
-                                principales opciones para reforzar la sala
-                                de máquinas azulona.
-                            </p>
+<div class="summary-label">
+Muy avanzado
+</div>
 
-                            <span class="rumor-time">
-                                14:47 · Hoy
-                            </span>
+</div>
 
-                        </div>
+</div>
 
-                    </article>
+</div>
 
-                </div>
+</div>
 
+</section>
 
 
-                <!-- ENES ÜNAL -->
 
-                <div class="col-lg-4">
+<!-- =========================================
+     CONTENIDO
+========================================= -->
 
-                    <article class="rumor-card">
+<main class="container pb-5">
 
-                        <img src="img/noticias/enes-unal.jpg"
-                             class="rumor-card-img"
-                             alt="Enes Ünal">
 
-                        <div class="rumor-card-content">
 
-                            <span class="rumor-card-tag">
-                                DELANTERA
-                            </span>
+<!-- =========================================
+     DESTACADO · PATHE CISS
+========================================= -->
 
-                            <h3>
-                                El posible regreso de Enes Ünal
-                                gana fuerza en el Coliseum
-                            </h3>
+<div class="section-heading">
 
-                            <p>
-                                El delantero vuelve a aparecer entre las
-                                alternativas que maneja el Getafe para
-                                reforzar su ataque.
-                            </p>
+<div class="section-line"></div>
 
-                            <span class="rumor-time">
-                                13:10 · Hoy
-                            </span>
+</div>
 
-                        </div>
 
-                    </article>
+<article class="featured-card">
 
-                </div>
+<div class="row g-0 align-items-stretch">
 
 
+<!-- IMAGEN PATHE CISS -->
 
-                <!-- IKER LOSADA -->
+<div class="col-lg-6">
 
-                <div class="col-lg-4">
+<img
+src="img/noticias/pathe-ciss.jpg"
+class="featured-image"
+alt="Pathe Ciss durante un partido">
 
-                    <article class="rumor-card">
+</div>
 
-                        <img src="img/noticias/iker-losada.jpg"
-                             class="rumor-card-img"
-                             alt="Iker Losada">
 
-                        <div class="rumor-card-content">
+<!-- INFORMACIÓN -->
 
-                            <span class="rumor-card-tag">
-                                ATAQUE
-                            </span>
+<div class="col-lg-6">
 
-                            <h3>
-                                Iker Losada sigue siendo una alternativa
-                                para reforzar el ataque
-                            </h3>
+<div class="featured-content">
 
-                            <p>
-                                El nombre del futbolista continúa sobre
-                                la mesa como una opción para aumentar
-                                las alternativas ofensivas.
-                            </p>
+<span class="featured-tag">
 
-                            <span class="rumor-time">
-                                00:12 · Hoy
-                            </span>
+🔵 RUMOR DESTACADO
 
-                        </div>
+</span>
 
-                    </article>
+<h2>
 
-                </div>
+Torres mueve ficha por Pathe Ciss: el Getafe estudia su llegada
 
+</h2>
 
+<p>
 
-                <!-- MATÍAS VIÑA -->
+El Getafe ya trabaja en una de las operaciones que podrían
+marcar los últimos días del mercado. Según la información que
+maneja Azulones News, el presidente azulón, Ángel Torres, habría
+contactado directamente con la cúpula del Rayo Vallecano para
+conocer las condiciones de una posible llegada de Pathe Ciss al
+Coliseum.
 
-                <div class="col-lg-4">
+</p>
 
-                    <article class="rumor-card">
+<p>
 
-                        <img src="img/noticias/matias-vina.jpg"
-                             class="rumor-card-img"
-                             alt="Matías Viña">
+Las conversaciones entre ambos clubes ya se habrían producido,
+aunque la operación no se presenta sencilla. El centrocampista
+senegalés gusta dentro del Getafe y encaja en el perfil que busca
+el club para reforzar la medular, pero antes de poder avanzar
+definitivamente sería necesario liberar espacio en la plantilla.
 
-                        <div class="rumor-card-content">
+</p>
 
-                            <span class="rumor-card-tag">
-                                DEFENSA
-                            </span>
+<p>
 
-                            <h3>
-                                Matías Viña continúa entre las opciones
-                                para el lateral izquierdo
-                            </h3>
+En este escenario, las posibles salidas de Javi Muñoz y Yvan
+Neyou aparecen como una de las claves. El Getafe necesitaría
+encontrar una solución para ambos jugadores antes de poder
+acometer la llegada de Ciss con todas las garantías.
 
-                            <p>
-                                El Getafe mantiene abiertas diferentes
-                                alternativas para reforzar el costado
-                                izquierdo.
-                            </p>
+</p>
 
-                            <span class="rumor-time">
-                                Ayer
-                            </span>
+<p>
 
-                        </div>
+La operación se encuentra todavía en fase de conversaciones y
+no existe ningún acuerdo cerrado. Sin embargo, el contacto entre
+Torres y el Rayo confirma que el nombre de Pathe Ciss está sobre
+la mesa en el tramo decisivo del mercado azulón.
 
-                    </article>
+</p>
 
-                </div>
+<small>
 
+24 Agosto 2026 · Rumor de mercado
 
+</small>
 
-                <!-- JAVI MUÑOZ -->
+</div>
 
-                <div class="col-lg-4">
+</div>
 
-                    <article class="rumor-card">
+</div>
 
-                        <img src="img/noticias/javi-munoz.jpg"
-                             class="rumor-card-img"
-                             alt="Javi Muñoz">
+</article>
 
-                        <div class="rumor-card-content">
 
-                            <span class="rumor-card-tag">
-                                SALIDAS
-                            </span>
 
-                            <h3>
-                                El Almería estudia incorporar
-                                a Javi Muñoz
-                            </h3>
+<!-- =========================================
+     ÚLTIMOS MOVIMIENTOS
+========================================= -->
 
-                            <p>
-                                El futuro del centrocampista puede ser
-                                una de las claves para liberar espacio
-                                en la plantilla.
-                            </p>
+<div class="section-heading">
 
-                            <span class="rumor-time">
-                                Ayer
-                            </span>
+<div class="section-line"></div>
 
-                        </div>
+<h2>Últimos movimientos</h2>
 
-                    </article>
+</div>
 
-                </div>
 
 
+<div class="row g-4">
 
-                <!-- NEYOU -->
 
-                <div class="col-lg-4">
 
-                    <article class="rumor-card">
+<!-- =========================================
+     SANCRIS
+========================================= -->
 
-                        <img src="img/noticias/neyou.jpg"
-                             class="rumor-card-img"
-                             alt="Neyou">
+<div class="col-lg-6">
 
-                        <div class="rumor-card-content">
+<article class="rumor-card">
 
-                            <span class="rumor-card-tag">
-                                SALIDAS
-                            </span>
+<img
+src="img/noticias/sancris.jpg"
+class="rumor-image"
+alt="Álex Sancris"
+>
 
-                            <h3>
-                                Neyou también aparece en el escenario
-                                de posibles salidas
-                            </h3>
+<div class="rumor-content">
 
-                            <p>
-                                Una salida del centrocampista podría abrir
-                                espacio para una nueva incorporación
-                                en la medular.
-                            </p>
+<span class="rumor-tag official">
+🟢 OFICIAL
+</span>
 
-                            <span class="rumor-time">
-                                Ayer
-                            </span>
+<h2>
 
-                        </div>
+Álex Sancris se marcha al Leganés
 
-                    </article>
+</h2>
 
-                </div>
+<p class="rumor-date">
 
-            </div>
+24 Agosto 2026 · Oficial
 
+</p>
 
+<p>
 
-            <!-- =================================================
-                 ÚLTIMOS MOVIMIENTOS
-            ================================================= -->
+Álex Sancris ya no continuará en el Getafe. El atacante
+pone fin a su etapa como azulón y se marcha al Leganés.
 
-            <section class="movimientos">
+</p>
 
-                <div class="section-title">
+<p>
 
-                    <h2>
-                        Últimos movimientos
-                    </h2>
+La salida del futbolista queda así confirmada y se convierte
+en uno de los movimientos del mercado del conjunto azulón
+en este tramo final de la ventana de fichajes.
 
-                </div>
+</p>
 
+</div>
 
-                <div class="row">
+</article>
 
-                    <div class="col-lg-8">
+</div>
 
 
-                        <div class="movimiento">
 
-                            <span class="movimiento-hora">
-                                20:35
-                            </span>
+<!-- =========================================
+     BAJCETIC
+========================================= -->
 
-                            <span class="movimiento-punto"></span>
+<div class="col-lg-6">
 
-                            <span class="movimiento-texto">
-                                El Getafe pregunta por la situación
-                                de Pathé Ciss en Vallecas.
-                            </span>
+<article class="rumor-card">
 
-                        </div>
+<img
+src="img/noticias/bajcetic.jpg"
+class="rumor-image"
+alt="Stefan Bajcetic"
+>
 
+<div class="rumor-content">
 
-                        <div class="movimiento">
+<span class="rumor-tag exit">
+🔴 SALIDA
 
-                            <span class="movimiento-hora">
-                                14:47
-                            </span>
+</span>
 
-                            <span class="movimiento-punto"></span>
+<h2>
 
-                            <span class="movimiento-texto">
-                                Orel Mangala continúa negociando
-                                su llegada al Getafe.
-                            </span>
+Bajčetić se aleja definitivamente del Getafe y apunta al Celta
 
-                        </div>
+</h2>
 
+<p class="rumor-date">
 
-                        <div class="movimiento">
+24 Agosto 2026 · Mercado
 
-                            <span class="movimiento-hora">
-                                13:10
-                            </span>
+</p>
 
-                            <span class="movimiento-punto"></span>
+<p>
 
-                            <span class="movimiento-texto">
-                                El posible regreso de Enes Ünal
-                                gana fuerza en el Coliseum.
-                            </span>
+Stefan Bajčetić había aparecido como una de las alternativas
+para reforzar el centro del campo azulón, pero la operación
+ha perdido fuerza.
 
-                        </div>
+</p>
 
+<p>
 
-                        <div class="movimiento">
+El Celta aparece ahora como el destino que gana enteros para
+el centrocampista, por lo que el Getafe tendría que buscar
+otras alternativas para la medular.
 
-                            <span class="movimiento-hora">
-                                00:12
-                            </span>
+</p>
 
-                            <span class="movimiento-punto"></span>
+</div>
 
-                            <span class="movimiento-texto">
-                                Iker Losada sigue siendo una alternativa
-                                para reforzar el ataque.
-                            </span>
+</article>
 
-                        </div>
+</div>
 
 
-                        <div class="movimiento">
 
-                            <span class="movimiento-hora">
-                                Ayer
-                            </span>
+<!-- =========================================
+     NEYOU
+========================================= -->
 
-                            <span class="movimiento-punto"></span>
+<div class="col-lg-6">
 
-                            <span class="movimiento-texto">
-                                Matías Viña continúa entre las opciones
-                                para el lateral izquierdo.
-                            </span>
+<article class="rumor-card">
 
-                        </div>
+<img
+src="img/noticias/neyou.jpg"
+class="rumor-image"
+alt="Yvan Neyou"
+>
 
+<div class="rumor-content">
 
-                        <div class="movimiento">
+<span class="rumor-tag exit">
+🔴 POSIBLE SALIDA
+</span>
 
-                            <span class="movimiento-hora">
-                                Ayer
-                            </span>
+<h2>
 
-                            <span class="movimiento-punto"></span>
+El Málaga se interesa por Yvan Neyou
 
-                            <span class="movimiento-texto">
-                                El Almería estudia incorporar
-                                a Javi Muñoz.
-                            </span>
+</h2>
 
-                        </div>
+<p class="rumor-date">
 
+24 Agosto 2026 · Salida
 
-                    </div>
+</p>
 
-                </div>
+<p>
 
-            </section>
+El Málaga ha mostrado interés en Yvan Neyou, una alternativa
+que podría abrir la puerta a la salida del centrocampista
+azulón.
 
+</p>
 
+<p>
 
-            <!-- =================================================
-                 MERCADO + ANALISIS
-            ================================================= -->
+La operación podría plantearse mediante un traspaso o una
+cesión. Por ahora no existe acuerdo cerrado, pero el Málaga
+ya sigue de cerca la situación del jugador.
 
-            <div class="row g-4 mt-5">
+</p>
 
+</div>
 
-                <!-- MERCADO EN CIFRAS -->
+</article>
 
-                <div class="col-lg-5">
+</div>
 
-                    <div class="mercado-card">
 
-                        <h3>
-                            Mercado en cifras
-                        </h3>
 
+<!-- =========================================
+     BATISTA MENDY
+========================================= -->
 
-                        <div class="dato-mercado">
+<div class="col-lg-6">
 
-                            <span>
-                                Rumores activos
-                            </span>
+<article class="rumor-card">
 
-                            <strong>
-                                6
-                            </strong>
+<img
+src="img/noticias/mendy.jpg"
+class="rumor-image"
+alt="Batista Mendy"
+>
 
-                        </div>
+<div class="rumor-content">
 
+<span class="rumor-tag interest">
+🟡 INTERÉS
+</span>
 
-                        <div class="dato-mercado">
+<h2>
 
-                            <span>
-                                Negociaciones abiertas
-                            </span>
+Batista Mendy vuelve a aparecer como opción para el Getafe
 
-                            <strong>
-                                2
-                            </strong>
+</h2>
 
-                        </div>
+<p class="rumor-date">
 
+24 Agosto 2026 · Mercado
 
-                        <div class="dato-mercado">
+</p>
 
-                            <span>
-                                Jugadores seguidos
-                            </span>
+<p>
 
-                            <strong>
-                                5
-                            </strong>
+Batista Mendy vuelve a estar relacionado con el Getafe como
+una de las alternativas para reforzar el centro del campo.
 
-                        </div>
+</p>
 
+<p>
 
-                        <div class="dato-mercado">
+El futbolista francés pertenece al Trabzonspor y su situación
+ha despertado el interés de varios clubes. El Getafe mantiene
+su nombre entre las posibilidades del mercado.
 
-                            <span>
-                                Posibles salidas
-                            </span>
+</p>
 
-                            <strong>
-                                2
-                            </strong>
+</div>
 
-                        </div>
+</article>
 
-                    </div>
+</div>
 
-                </div>
 
 
+<!-- =========================================
+     JAVI MUÑOZ
+========================================= -->
 
-                <!-- ANALISIS -->
+<div class="col-lg-6">
 
-                <div class="col-lg-7">
+<article class="rumor-card">
 
-                    <div class="analisis-card">
+<img
+src="img/noticias/javi-munoz.jpg"
+class="rumor-image"
+alt="Javi Muñoz"
+>
 
-                        <h3>
-                            Análisis del mercado
-                        </h3>
+<div class="rumor-content">
 
-                        <p>
-                            El centro del campo sigue siendo una de las
-                            prioridades del Getafe. El nombre de Pathé Ciss
-                            aparece ahora en el escenario mientras el club
-                            estudia cómo hacer espacio en la plantilla.
-                            Las posibles salidas de Javi Muñoz y Neyou
-                            pueden resultar importantes para liberar
-                            fichas y margen de maniobra.
-                            <br><br>
-                            Al mismo tiempo, el Getafe continúa pendiente
-                            de Orel Mangala y mantiene otras alternativas
-                            como Iker Losada, Enes Ünal y Matías Viña.
-                            El mercado azulón sigue abierto y todavía
-                            quedan varias piezas por definir.
-                        </p>
+<span class="rumor-tag exit">
+🔴 FUTURO ABIERTO
+</span>
 
-                    </div>
+<h2>
 
-                </div>
+El futuro de Javi Muñoz continúa en el aire
 
-            </div>
+</h2>
 
+<p class="rumor-date">
 
-        </div>
+24 Agosto 2026 · Salida
 
-    </main>
+</p>
 
+<p>
 
+Javi Muñoz continúa apareciendo entre los jugadores cuyo
+futuro puede cambiar antes del cierre del mercado.
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+</p>
 
-    <footer class="home-footer">
+<p>
 
-        <div class="container">
+El centrocampista cuenta con interés de otros clubes y el
+Getafe valorará las opciones que puedan aparecer durante
+los últimos días de mercado.
 
-            <div class="row g-5">
+</p>
 
+</div>
 
-                <div class="col-lg-6">
+</article>
 
-                    <h3>
-                        AZULONES NEWS
-                    </h3>
+</div>
 
-                    <p class="mt-3">
-                        Toda la actualidad del Getafe Club de Fútbol
-                        desde el corazón del Getafismo.
-                    </p>
 
-                </div>
 
+<!-- =========================================
+     IKER LOSADA
+========================================= -->
 
-                <div class="col-lg-3">
+<div class="col-lg-6">
 
-                    <h5>
-                        Navegación
-                    </h5>
+<article class="rumor-card">
 
-                    <div class="d-flex flex-column gap-2 mt-3">
+<img
+src="img/noticias/losada.jpg"
+class="rumor-image"
+alt="Iker Losada"
+>
 
-                        <a href="index.html">
-                            Inicio
-                        </a>
+<div class="rumor-content">
 
-                        <a href="noticias.html">
-                            Noticias
-                        </a>
+<span class="rumor-tag advanced">
+🟢 OPERACIÓN AVANZADA
+</span>
 
-                        <a href="rumores.html">
-                            Rumores
-                        </a>
+<h2>
 
-                    </div>
+Iker Losada, cada vez más cerca del Getafe
 
-                </div>
+</h2>
 
+<p class="rumor-date">
 
-                <div class="col-lg-3">
+24 Agosto 2026 · Fichaje
 
-                    <h5>
-                        Competición
-                    </h5>
+</p>
 
-                    <div class="d-flex flex-column gap-2 mt-3">
+<p>
 
-                        <a href="partidos.html">
-                            Partidos
-                        </a>
+Iker Losada se encuentra cada vez más cerca de convertirse
+en nuevo jugador del Getafe. El futbolista aparece como una
+de las opciones que más fuerza han ganado en los últimos días.
 
-                        <a href="clasificacion.html">
-                            Clasificación
-                        </a>
+</p>
 
-                        <a href="plantilla.html">
-                            Plantilla
-                        </a>
+<p>
 
-                    </div>
+El conjunto azulón continúa trabajando para cerrar la
+operación y reforzar su parcela ofensiva. Aunque todavía no
+hay confirmación oficial, el nombre de Losada gana posiciones
+en la planificación del Getafe.
 
-                </div>
+</p>
 
-            </div>
+</div>
 
+</article>
 
-            <hr class="footer-line my-5">
+</div>
 
 
-            <p class="text-center mb-0">
 
-                © 2026 Azulones News · Proyecto no oficial del Getafe CF.
+<!-- =========================================
+     FRANCHO
+========================================= -->
 
-            </p>
+<div class="col-lg-6">
 
-        </div>
+<article class="rumor-card">
 
-    </footer>
+<img
+src="img/noticias/francho.jpg"
+class="rumor-image"
+alt="Francho Serrano"
+>
 
+<div class="rumor-content">
 
+<span class="rumor-tag market">
+⚫ MOVIMIENTO
+</span>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<h2>
 
-    <script src="js/script.js"></script>
+Francho Serrano, una incorporación que ya toma protagonismo
+
+</h2>
+
+<p class="rumor-date">
+
+24 Agosto 2026 · Mercado
+
+</p>
+
+<p>
+
+El centrocampista Francho Serrano ya forma parte del proyecto
+azulón y su llegada refuerza una zona en la que el Getafe sigue
+moviendo piezas.
+
+</p>
+
+<p>
+
+Su incorporación se suma a la renovación de la medular y puede
+tener un papel importante en la planificación de Bordalás.
+
+</p>
+
+</div>
+
+</article>
+
+</div>
+
+
+
+<!-- =========================================
+     NOTA
+========================================= -->
+
+<div class="market-note">
+
+<h4>
+
+🔵 ¿Cómo interpretamos los rumores?
+
+</h4>
+
+<p class="mb-0">
+
+En <strong>Azulones News</strong> diferenciamos entre operaciones
+avanzadas, intereses, movimientos oficiales y simples opciones
+de mercado. Que un jugador aparezca en esta página no significa
+que exista un acuerdo cerrado.
+
+Las operaciones oficiales se publicarán como noticias
+independientes.
+
+</p>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="bg-dark text-white py-5">
+
+<div class="container">
+
+<div class="row">
+
+<div class="col-lg-6">
+
+<h3 class="fw-bold">
+AZULONES NEWS
+</h3>
+
+<p>
+Toda la actualidad del Getafe Club de Fútbol en un solo lugar.
+</p>
+
+</div>
+
+
+<div class="col-lg-6 text-lg-end">
+
+<p>
+Mercado • Noticias • Plantilla • Partidos • Clasificación
+</p>
+
+<p class="mb-0">
+© 2026 Azulones News
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
