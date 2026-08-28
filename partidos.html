@@ -8,65 +8,53 @@
 
 <title>Partidos | Azulones News</title>
 
+<meta name="description"
+content="Calendario, resultados y próximos partidos del Getafe CF durante la temporada 2026/27.">
+
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/responsive.css">
 <link rel="stylesheet" href="css/animations.css">
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F0WS5LY799"></script>
-
-<script>
-window.dataLayer = window.dataLayer || [];
-
-function gtag(){
-    dataLayer.push(arguments);
-}
-
-gtag('js', new Date());
-gtag('config', 'G-F0WS5LY799');
-</script>
-
 <style>
 
 /* =====================================================
-   FONDO
+   HERO
 ===================================================== */
 
-body{
+.partidos-hero{
+
+    padding:90px 0 110px;
+
     background:
-    radial-gradient(circle at top right, rgba(0,91,172,.12), transparent 35%),
-    radial-gradient(circle at bottom left, rgba(0,91,172,.08), transparent 35%),
-    #f5f7fb;
-}
+    radial-gradient(circle at top right,rgba(0,183,255,.18),transparent 35%),
+    linear-gradient(135deg,#031321,#06294a);
 
-
-/* =====================================================
-   CABECERA
-===================================================== */
-
-.partidos-header{
-    padding:55px 20px 35px;
-}
-
-.season-badge{
-    display:inline-block;
-    padding:9px 18px;
-    border-radius:50px;
-    background:linear-gradient(135deg,#005BAC,#008cff);
     color:white;
-    font-size:13px;
-    font-weight:800;
-    letter-spacing:1px;
+
 }
 
-.partidos-header h1{
-    font-size:clamp(2.4rem,5vw,4.3rem);
-    font-weight:900;
-    margin-top:20px;
-    background:linear-gradient(90deg,#003b78,#008cff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+.partidos-hero h1{
+
+    font-size:clamp(45px,7vw,75px);
+
+    font-weight:950;
+
+    letter-spacing:-3px;
+
+}
+
+.partidos-hero p{
+
+    color:rgba(255,255,255,.7);
+
+    max-width:700px;
+
+    font-size:18px;
+
+    line-height:1.7;
+
 }
 
 
@@ -74,404 +62,232 @@ body{
    PRÓXIMO PARTIDO
 ===================================================== */
 
-.proximo-partido-futurista{
+.proximo-partido{
+
+    margin-top:-60px;
+
     position:relative;
-    overflow:hidden;
+
+    z-index:10;
+
+}
+
+.proximo-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:45px;
+
+    box-shadow:0 20px 60px rgba(0,35,70,.15);
+
+}
+
+.proximo-label{
+
+    display:inline-block;
+
+    background:#eaf4ff;
+
+    color:#0077ff;
+
+    padding:8px 15px;
+
     border-radius:30px;
-    padding:4px;
-    background:linear-gradient(135deg,#005BAC,#00aaff,#005BAC);
-    box-shadow:0 25px 60px rgba(0,70,140,.18);
-}
 
-.proximo-partido-inner{
-    position:relative;
-    overflow:hidden;
-    border-radius:26px;
-    background:
-    radial-gradient(circle at center,rgba(0,140,255,.14),transparent 45%),
-    #071827;
-    color:white;
-    padding:50px 35px;
-}
+    font-size:11px;
 
-.proximo-badge{
-    display:inline-block;
-    background:linear-gradient(90deg,#ff1744,#ff4d67);
-    padding:8px 18px;
-    border-radius:50px;
-    font-size:12px;
     font-weight:900;
+
     letter-spacing:1px;
+
 }
 
-.partido-equipo{
-    text-align:center;
-}
+.proximo-card h2{
 
-.escudo-futurista{
-    width:145px;
-    height:145px;
-    object-fit:contain;
-    filter:drop-shadow(0 12px 18px rgba(0,0,0,.35));
-}
+    font-size:32px;
 
-.nombre-equipo{
-    margin-top:18px;
-    font-size:1.35rem;
-    font-weight:800;
-}
-
-.versus{
-    text-align:center;
-}
-
-.versus-text{
-    font-size:3.5rem;
     font-weight:950;
-    background:linear-gradient(180deg,#fff,#69c7ff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+
+    margin-top:15px;
+
 }
 
-.fecha-partido{
-    margin-top:20px;
-    color:#b9dfff;
-}
+.proximo-fecha{
 
-.hora-partido{
-    font-size:1.8rem;
-    font-weight:900;
-}
+    color:#718196;
 
-.competicion{
-    display:inline-block;
-    margin-top:12px;
-    padding:7px 15px;
-    border-radius:50px;
-    border:1px solid rgba(255,255,255,.2);
-    background:rgba(255,255,255,.08);
-    color:#aee0ff;
-    font-size:12px;
     font-weight:700;
+
+    margin-bottom:35px;
+
+}
+
+.equipo-principal{
+
+    text-align:center;
+
+}
+
+.equipo-principal img{
+
+    width:110px;
+
+    height:110px;
+
+    object-fit:contain;
+
+}
+
+.equipo-principal h3{
+
+    margin-top:15px;
+
+    font-size:22px;
+
+    font-weight:900;
+
+}
+
+.resultado-principal{
+
+    text-align:center;
+
+}
+
+.resultado-principal .vs{
+
+    font-size:45px;
+
+    font-weight:950;
+
+    color:#0077ff;
+
 }
 
 
 /* =====================================================
-   TÍTULOS
+   COMPETICIÓN
 ===================================================== */
 
 .competicion-titulo{
+
     display:flex;
+
     align-items:center;
+
     gap:15px;
-    margin-top:65px;
-    margin-bottom:28px;
+
+    margin:70px 0 30px;
+
 }
 
 .competicion-titulo .icono{
-    width:48px;
-    height:48px;
+
+    width:50px;
+
+    height:50px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    border-radius:14px;
-    background:linear-gradient(135deg,#005BAC,#008cff);
-    color:white;
+
+    border-radius:15px;
+
+    background:#eaf4ff;
+
     font-size:22px;
+
 }
 
 .competicion-titulo h2{
+
     margin:0;
-    font-size:2rem;
-    font-weight:900;
-    color:#073763;
+
+    font-size:32px;
+
+    font-weight:950;
+
 }
 
 
 /* =====================================================
-   TARJETAS
+   PARTIDOS
 ===================================================== */
 
 .partido-card{
-    height:100%;
-    overflow:hidden;
-    border:1px solid rgba(0,91,172,.10);
-    border-radius:22px;
-    background:rgba(255,255,255,.86);
-    backdrop-filter:blur(12px);
-    box-shadow:0 12px 35px rgba(0,48,100,.08);
-    transition:.35s ease;
-}
 
-.partido-card::before{
-    content:"";
-    display:block;
-    height:4px;
-    background:linear-gradient(90deg,#005BAC,#00aaff);
+    height:100%;
+
+    background:white;
+
+    border-radius:20px;
+
+    border:1px solid #e4eaf0;
+
+    box-shadow:0 10px 30px rgba(0,35,70,.06);
+
+    transition:.3s;
+
 }
 
 .partido-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 20px 45px rgba(0,70,140,.15);
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 40px rgba(0,80,150,.12);
+
 }
 
 .partido-card .card-body{
-    padding:27px;
+
+    padding:28px;
+
 }
 
 .jornada{
-    display:inline-block;
-    padding:6px 12px;
-    border-radius:50px;
-    background:#eaf5ff;
-    color:#005BAC;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:.6px;
-}
 
-.partido-card hr{
-    border:0;
-    border-top:1px solid rgba(0,91,172,.10);
-    margin:18px 0;
+    color:#0077ff;
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
 }
 
 .equipo-linea{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:15px;
-    font-size:16px;
-}
 
-.equipo-linea span:first-child{
-    font-weight:650;
-    color:#263b50;
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    font-size:18px;
+
+    font-weight:850;
+
 }
 
 .fecha-linea{
-    color:#005BAC;
-    font-weight:900;
-    white-space:nowrap;
+
+    color:#071b2e;
+
 }
 
 .hora-linea{
-    color:#718096;
+
+    color:#718196;
+
     font-size:14px;
-    white-space:nowrap;
-}
 
+    font-weight:700;
 
-/* =====================================================
-   RESULTADO
-===================================================== */
-
-.partido-extra{
-    margin-top:28px;
-}
-
-.resultado-futurista{
-    position:relative;
-    overflow:hidden;
-    border-radius:26px;
-    padding:30px;
-    background:linear-gradient(135deg,#071827,#0b2740);
-    color:white;
-    box-shadow:0 20px 50px rgba(0,50,100,.16);
-}
-
-.resultado-label{
-    display:inline-block;
-    padding:7px 14px;
-    border-radius:50px;
-    background:rgba(255,255,255,.09);
-    color:#8fd7ff;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-.resultado-equipos{
-    font-size:1.25rem;
-    font-weight:800;
-}
-
-.resultado-marcador{
-    font-size:clamp(2.8rem,7vw,4.5rem);
-    font-weight:950;
-}
-
-.victoria-texto{
-    color:#55e6a5;
-    font-weight:900;
-    letter-spacing:1px;
-}
-
-
-/* =====================================================
-   ESTADÍSTICAS / TIMELINE / MVP
-===================================================== */
-
-.estadisticas-card,
-.timeline-card,
-.mvp-card{
-    height:100%;
-    border:1px solid rgba(0,91,172,.10);
-    border-radius:22px;
-    background:rgba(255,255,255,.86);
-    box-shadow:0 12px 35px rgba(0,48,100,.08);
-}
-
-.extra-title{
-    font-weight:900;
-    color:#073763;
-    margin-bottom:22px;
-}
-
-.stat-row{
-    margin-bottom:17px;
-}
-
-.stat-head{
-    display:flex;
-    justify-content:space-between;
-    font-size:13px;
-    font-weight:800;
-    color:#425466;
-    margin-bottom:7px;
-}
-
-.stat-bars{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:4px;
-    height:8px;
-}
-
-.stat-bars span{
-    border-radius:20px;
-    background:#dceeff;
-}
-
-.stat-bars span:first-child{
-    background:linear-gradient(90deg,#005BAC,#00aaff);
-}
-
-.timeline-item{
-    position:relative;
-    padding:0 0 22px 48px;
-}
-
-.timeline-item::before{
-    content:"";
-    position:absolute;
-    left:16px;
-    top:4px;
-    bottom:-4px;
-    width:2px;
-    background:#d7eaff;
-}
-
-.timeline-item:last-child::before{
-    display:none;
-}
-
-.timeline-dot{
-    position:absolute;
-    left:5px;
-    top:0;
-    width:24px;
-    height:24px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#005BAC;
-    color:white;
-    font-size:11px;
-}
-
-.timeline-minute{
-    color:#005BAC;
-    font-weight:900;
-    font-size:12px;
-}
-
-.timeline-text{
-    margin-top:3px;
-    font-weight:800;
-    color:#263b50;
-}
-
-.mvp-card{
-    overflow:hidden;
-}
-
-.mvp-content{
-    display:flex;
-    align-items:center;
-    gap:22px;
-}
-
-.mvp-photo{
-    width:105px;
-    height:105px;
-    border-radius:20px;
-    object-fit:cover;
-    object-position:center;
-    box-shadow:0 10px 25px rgba(0,70,140,.18);
-}
-
-.mvp-name{
-    font-size:1.45rem;
-    font-weight:900;
-    color:#073763;
-}
-
-.mvp-data{
-    color:#718096;
-    font-size:14px;
-    line-height:1.7;
-}
-
-
-/* =====================================================
-   CUENTA ATRÁS
-===================================================== */
-
-.countdown-box{
-    margin-top:25px;
-    padding:15px 20px;
-    border-radius:18px;
-    background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.12);
-}
-
-.countdown-label{
-    color:#9edbff;
-    font-size:11px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.countdown{
-    margin-top:5px;
-    font-size:clamp(1.5rem,4vw,2.2rem);
-    font-weight:950;
-    letter-spacing:2px;
-}
-
-.proximo-boton{
-    display:inline-block;
-    margin-top:18px;
-    padding:10px 18px;
-    border-radius:50px;
-    color:white;
-    text-decoration:none;
-    font-weight:800;
-    font-size:13px;
-    border:1px solid rgba(255,255,255,.22);
-    background:rgba(255,255,255,.08);
 }
 
 
@@ -479,68 +295,44 @@ body{
    MÓVIL
 ===================================================== */
 
-@media(max-width:767px){
+@media(max-width:768px){
 
-    .partidos-header{
-        padding:35px 12px 25px;
+    .partidos-hero{
+
+        padding:70px 0 100px;
+
     }
 
-    .partidos-header h1{
-        font-size:2.35rem;
+    .proximo-card{
+
+        padding:30px 20px;
+
     }
 
-    .proximo-partido-inner{
-        padding:35px 15px;
+    .equipo-principal img{
+
+        width:75px;
+
+        height:75px;
+
     }
 
-    .escudo-futurista{
-        width:90px;
-        height:90px;
+    .equipo-principal h3{
+
+        font-size:16px;
+
     }
 
-    .nombre-equipo{
-        font-size:1.05rem;
-    }
+    .resultado-principal .vs{
 
-    .versus{
-        margin:22px 0;
-    }
+        font-size:32px;
 
-    .versus-text{
-        font-size:2.3rem;
-    }
-
-    .competicion-titulo{
-        margin-top:45px;
     }
 
     .competicion-titulo h2{
-        font-size:1.45rem;
-    }
 
-    .partido-card .card-body{
-        padding:22px;
-    }
+        font-size:26px;
 
-    .equipo-linea{
-        font-size:14px;
-    }
-
-    .resultado-futurista{
-        padding:24px 18px;
-    }
-
-    .resultado-equipos{
-        font-size:1rem;
-    }
-
-    .mvp-content{
-        align-items:flex-start;
-    }
-
-    .mvp-photo{
-        width:85px;
-        height:85px;
     }
 
 }
@@ -562,15 +354,19 @@ body{
 <div class="container">
 
 <a class="navbar-brand fw-bold d-flex align-items-center gap-2"
-   href="index.html">
+href="index.html">
 
-<img src="img/logo/logo.png"
-     width="42"
-     alt="Azulones News">
+<img
+src="img/logo/logo.png"
+width="42"
+height="42"
+alt="Azulones News"
+>
 
-<span>AZULONES NEWS</span>
+AZULONES NEWS
 
 </a>
+
 
 <button
 class="navbar-toggler"
@@ -582,32 +378,45 @@ data-bs-target="#menu">
 
 </button>
 
+
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
-<a class="nav-link" href="index.html">Inicio</a>
+<a class="nav-link" href="index.html">
+Inicio
+</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="noticias.html">Noticias</a>
+<a class="nav-link" href="noticias.html">
+Noticias
+</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="rumores.html">Mercado</a>
+<a class="nav-link" href="rumores.html">
+Mercado
+</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="plantilla.html">Plantilla</a>
+<a class="nav-link" href="plantilla.html">
+Plantilla
+</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link active" href="partidos.html">Partidos</a>
+<a class="nav-link active" href="partidos.html">
+Partidos
+</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="clasificacion.html">Clasificación</a>
+<a class="nav-link" href="clasificacion.html">
+Clasificación
+</a>
 </li>
 
 </ul>
@@ -620,23 +429,20 @@ data-bs-target="#menu">
 
 
 <!-- =====================================================
-     CABECERA
+     HERO
 ===================================================== -->
 
-<section class="container partidos-header">
+<section class="partidos-hero">
 
-<div class="text-center">
-
-<span class="season-badge">
-TEMPORADA 2026/27
-</span>
+<div class="container text-center">
 
 <h1>
-Calendario del Getafe CF
+Partidos del Getafe
 </h1>
 
-<p class="lead text-muted">
-Consulta todos los partidos oficiales del conjunto azulón.
+<p>
+Resultados, próximos encuentros y calendario completo
+del Getafe CF durante la temporada 2026/27.
 </p>
 
 </div>
@@ -644,371 +450,82 @@ Consulta todos los partidos oficiales del conjunto azulón.
 </section>
 
 
+<!-- =====================================================
+     ÚLTIMO PARTIDO
+===================================================== -->
+
 <main class="container pb-5">
 
+<section class="proximo-partido">
 
-<!-- =====================================================
-     PRÓXIMO PARTIDO
-===================================================== -->
+<div class="proximo-card">
 
-<div class="proximo-partido-futurista mb-5">
+<div class="text-center">
 
-<div class="proximo-partido-inner">
-
-<div class="text-center mb-4">
-
-<span class="proximo-badge">
-PRÓXIMO PARTIDO
-</span>
-
-</div>
-
-<div class="row align-items-center">
-
-<div class="col-md-4">
-
-<div class="partido-equipo">
-
-<img
-src="img/iconos/getafe.png"
-class="escudo-futurista"
-alt="Getafe CF">
-
-<div class="nombre-equipo">
-Getafe
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-md-4">
-
-<div class="versus">
-
-<div class="versus-text">
-VS
-</div>
-
-<div class="fecha-partido">
-Jueves 27 de agosto
-</div>
-
-<div class="hora-partido">
-21:00
-</div>
-
-<span class="competicion">
-Conference League
-</span>
-
-</div>
-
-</div>
-
-
-<div class="col-md-4">
-
-<div class="partido-equipo">
-
-<img
-src="img/logo/partizan.png"
-class="escudo-futurista"
-alt="Partizan">
-
-<div class="nombre-equipo">
-Partizan
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- =====================================================
-     ÚLTIMO RESULTADO
-===================================================== -->
-
-<section class="partido-extra mb-5">
-
-<div class="resultado-futurista">
-
-<div class="row align-items-center text-center">
-
-<div class="col-md-4">
-
-<span class="resultado-label">
+<span class="proximo-label">
 ÚLTIMO PARTIDO
 </span>
 
-<div class="resultado-equipos mt-3">
-Getafe
-</div>
+<h2>
+Victoria azulona
+</h2>
 
-</div>
-
-<div class="col-md-4">
-
-<div class="resultado-marcador">
-1 — 0
-</div>
-
-<div class="victoria-texto mt-2">
-✓ VICTORIA AZULONA
-</div>
-
-<small class="d-block mt-2" style="color:#9bb8ce;">
-23 AGO · LaLiga EA Sports
-</small>
-
-</div>
-
-<div class="col-md-4">
-
-<div class="resultado-equipos">
-Racing de Santander
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     DATOS DEL PARTIDO
-===================================================== -->
-
-<section class="partido-extra mb-5">
-
-<div class="row g-4">
-
-<div class="col-lg-6">
-
-<div class="estadisticas-card p-4">
-
-<h3 class="extra-title">
-📊 Datos del partido
-</h3>
-
-<div class="stat-row">
-
-<div class="stat-head">
-<span>Posesión</span>
-<span>54% — 46%</span>
-</div>
-
-<div class="stat-bars">
-<span style="width:54%;"></span>
-<span style="width:46%;"></span>
-</div>
+<p class="proximo-fecha">
+Jornada 2 · 23 de agosto de 2026
+</p>
 
 </div>
 
 
-<div class="stat-row">
+<div class="row align-items-center">
 
-<div class="stat-head">
-<span>Tiros</span>
-<span>12 — 8</span>
-</div>
+<div class="col-5">
 
-<div class="stat-bars">
-<span style="width:60%;"></span>
-<span style="width:40%;"></span>
-</div>
-
-</div>
-
-
-<div class="stat-row">
-
-<div class="stat-head">
-<span>Tiros a puerta</span>
-<span>5 — 3</span>
-</div>
-
-<div class="stat-bars">
-<span style="width:63%;"></span>
-<span style="width:37%;"></span>
-</div>
-
-</div>
-
-
-<div class="stat-row mb-0">
-
-<div class="stat-head">
-<span>Córners</span>
-<span>6 — 4</span>
-</div>
-
-<div class="stat-bars">
-<span style="width:60%;"></span>
-<span style="width:40%;"></span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-lg-6">
-
-<div class="timeline-card p-4">
-
-<h3 class="extra-title">
-⏱️ Línea temporal
-</h3>
-
-<div class="timeline-item">
-
-<div class="timeline-dot">⚽</div>
-
-<div class="timeline-minute">
-81'
-</div>
-
-<div class="timeline-text">
-Gol del Getafe · Enes Ünal
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot">🧤</div>
-
-<div class="timeline-minute">
-77'
-</div>
-
-<div class="timeline-text">
-David Soria detiene un penalti
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot">⏸</div>
-
-<div class="timeline-minute">
-45'
-</div>
-
-<div class="timeline-text">
-Descanso · 0-0
-</div>
-
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot">🔵</div>
-
-<div class="timeline-minute">
-1'
-</div>
-
-<div class="timeline-text">
-Comienza el encuentro
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- =====================================================
-     MVP
-===================================================== -->
-
-<section class="partido-extra mb-5">
-
-<div class="mvp-card p-4">
-
-<div class="mvp-content">
+<div class="equipo-principal">
 
 <img
-src="img/noticias/davidsoria.jpg"
-class="mvp-photo"
-alt="David Soria">
+src="img/iconos/getafe.png"
+alt="Getafe CF"
+>
 
-<div>
-
-<span class="resultado-label">
-⭐ JUGADOR DEL PARTIDO
-</span>
-
-<div class="mvp-name mt-2">
-David Soria
-</div>
-
-<div class="mvp-data">
-🧤 Penalti detenido · 🧱 Portería a cero<br>
-Una actuación decisiva para asegurar los tres puntos.
-</div>
+<h3>
+Getafe CF
+</h3>
 
 </div>
 
 </div>
 
-</div>
 
-</section>
+<div class="col-2">
 
+<div class="resultado-principal">
 
-<!-- =====================================================
-     CUENTA ATRÁS
-===================================================== -->
-
-<section class="partido-extra mb-5">
-
-<div class="proximo-partido-futurista">
-
-<div class="proximo-partido-inner text-center">
-
-<span class="proximo-badge">
-NEXT MATCH
-</span>
-
-<div class="countdown-box">
-
-<div class="countdown-label">
-PARTIZAN — GETAFE · BELGRADO
-</div>
-
-<div id="countdown" class="countdown">
-Cargando...
+<div class="vs">
+1 - 0
 </div>
 
 </div>
 
-<a href="#conference" class="proximo-boton">
-Ver calendario de Conference →
-</a>
+</div>
+
+
+<div class="col-5">
+
+<div class="equipo-principal">
+
+<img
+src="img/iconos/racing.png"
+alt="Racing de Santander"
+>
+
+<h3>
+Racing
+</h3>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1140,7 +657,9 @@ LaLiga EA Sports
 <!-- JORNADA 1 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 1</span>
@@ -1148,24 +667,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Alavés 3</span>
-<strong class="fecha-linea">15 AGO</strong>
+
+<strong class="fecha-linea">
+15 AGO
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe 0</span>
-<span class="hora-linea">19:30</span>
+
+<span class="hora-linea">
+19:30
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 2 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 2</span>
@@ -1173,24 +706,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe 1</span>
-<strong class="fecha-linea">23 AGO</strong>
+
+<strong class="fecha-linea">
+23 AGO
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Racing de Santander 0</span>
-<span class="hora-linea">19:30</span>
+
+<span class="hora-linea">
+19:30
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 3 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 3</span>
@@ -1198,24 +745,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Osasuna</span>
-<strong class="fecha-linea">31 AGO</strong>
+
+<strong class="fecha-linea">
+31 AGO
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">19:30</span>
+
+<span class="hora-linea">
+19:30
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 4 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 4</span>
@@ -1223,24 +784,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">7 SEP</strong>
+
+<strong class="fecha-linea">
+7 SEP
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Celta</span>
-<span class="hora-linea">19:00</span>
+
+<span class="hora-linea">
+19:00
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 5 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 5</span>
@@ -1248,24 +823,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">13 SEP</strong>
+
+<strong class="fecha-linea">
+13 SEP
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Deportivo</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 6 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 6</span>
@@ -1273,24 +862,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Real Betis</span>
-<strong class="fecha-linea">16 SEP</strong>
+
+<strong class="fecha-linea">
+16 SEP
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 7 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 7</span>
@@ -1298,24 +901,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">20 SEP</strong>
+
+<strong class="fecha-linea">
+20 SEP
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Málaga</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 8 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 8</span>
@@ -1323,24 +940,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Barcelona</span>
-<strong class="fecha-linea">11 OCT</strong>
+
+<strong class="fecha-linea">
+11 OCT
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 9 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 9</span>
@@ -1348,24 +979,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">18 OCT</strong>
+
+<strong class="fecha-linea">
+18 OCT
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Rayo Vallecano</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 10 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 10</span>
@@ -1373,24 +1018,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Athletic Club</span>
-<strong class="fecha-linea">25 OCT</strong>
+
+<strong class="fecha-linea">
+25 OCT
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 11 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 11</span>
@@ -1398,24 +1057,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">1 NOV</strong>
+
+<strong class="fecha-linea">
+1 NOV
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Sevilla</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 12 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 12</span>
@@ -1423,24 +1096,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Villarreal</span>
-<strong class="fecha-linea">8 NOV</strong>
+
+<strong class="fecha-linea">
+8 NOV
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 13 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 13</span>
@@ -1448,24 +1135,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">22 NOV</strong>
+
+<strong class="fecha-linea">
+22 NOV
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Atlético de Madrid</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 14 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 14</span>
@@ -1473,24 +1174,38 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>RCD Espanyol</span>
-<strong class="fecha-linea">29 NOV</strong>
+
+<strong class="fecha-linea">
+29 NOV
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Getafe</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
 <!-- JORNADA 15 -->
 
 <div class="col-lg-6">
+
 <div class="partido-card">
+
 <div class="card-body">
 
 <span class="jornada">JORNADA 15</span>
@@ -1498,17 +1213,29 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
+
 <span>Getafe</span>
-<strong class="fecha-linea">6 DIC</strong>
+
+<strong class="fecha-linea">
+6 DIC
+</strong>
+
 </div>
 
 <div class="equipo-linea mt-3">
+
 <span>Valencia CF</span>
-<span class="hora-linea">Por definir</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
 </div>
 
 </div>
+
 </div>
+
 </div>
 
 
@@ -1543,75 +1270,6 @@ Calendario del Getafe CF · Temporada 2026/27
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<script>
-
-/* CUENTA ATRÁS PARTIZAN - GETAFE */
-
-const fechaPartido =
-new Date("2026-08-27T21:00:00+02:00").getTime();
-
-const countdown =
-document.getElementById("countdown");
-
-function actualizarCuentaAtras(){
-
-    const ahora =
-    new Date().getTime();
-
-    const diferencia =
-    fechaPartido - ahora;
-
-    if(diferencia <= 0){
-
-        countdown.textContent =
-        "🔴 EN DIRECTO";
-
-        return;
-
-    }
-
-    const dias =
-    Math.floor(
-        diferencia /
-        (1000 * 60 * 60 * 24)
-    );
-
-    const horas =
-    Math.floor(
-        (diferencia /
-        (1000 * 60 * 60)) % 24
-    );
-
-    const minutos =
-    Math.floor(
-        (diferencia /
-        (1000 * 60)) % 60
-    );
-
-    const segundos =
-    Math.floor(
-        (diferencia /
-        1000) % 60
-    );
-
-    countdown.textContent =
-        String(dias).padStart(2,"0") + "D  " +
-        String(horas).padStart(2,"0") + ":" +
-        String(minutos).padStart(2,"0") + ":" +
-        String(segundos).padStart(2,"0");
-
-}
-
-actualizarCuentaAtras();
-
-setInterval(
-    actualizarCuentaAtras,
-    1000
-);
-
-</script>
 
 </body>
 

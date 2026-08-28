@@ -33,10 +33,6 @@
 
     <style>
 
-        /* =====================================================
-           AZULONES NEWS · PORTADA
-        ===================================================== */
-
         :root {
             --azul-oscuro: #031321;
             --azul-profundo: #06294a;
@@ -54,37 +50,24 @@
             margin: 0;
 
             background:
-                radial-gradient(
-                    circle at 5% 15%,
-                    rgba(0,119,255,.08),
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 95% 45%,
-                    rgba(0,183,255,.06),
-                    transparent 28%
-                ),
+                radial-gradient(circle at 5% 15%, rgba(0,119,255,.08), transparent 28%),
+                radial-gradient(circle at 95% 45%, rgba(0,183,255,.06), transparent 28%),
                 #f4f7fb;
 
             color: var(--texto);
         }
 
 
-        /* =====================================================
+        /* =========================
            NAVBAR
-        ===================================================== */
+        ========================= */
 
         .home-navbar {
             background: rgba(3, 19, 33, .96);
-
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-
             border-bottom: 1px solid rgba(0,183,255,.18);
-
-            box-shadow:
-                0 10px 35px rgba(0,20,45,.16);
-
+            box-shadow: 0 10px 35px rgba(0,20,45,.16);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -96,12 +79,7 @@
 
         .home-navbar .navbar-brand img {
             border-radius: 12px;
-
-            filter:
-                drop-shadow(
-                    0 0 10px rgba(0,183,255,.25)
-                );
-
+            filter: drop-shadow(0 0 10px rgba(0,183,255,.25));
             transition: .3s;
         }
 
@@ -111,27 +89,19 @@
 
         .home-navbar .nav-link {
             position: relative;
-
             color: rgba(255,255,255,.72) !important;
-
             font-weight: 600;
-
             padding: 10px 14px !important;
-
             transition: .3s;
         }
 
         .home-navbar .nav-link::after {
             content: "";
-
             position: absolute;
-
             left: 14px;
             right: 14px;
             bottom: 2px;
-
             height: 2px;
-
             border-radius: 10px;
 
             background: linear-gradient(
@@ -141,16 +111,13 @@
             );
 
             transform: scaleX(0);
-
             transition: .3s;
         }
 
         .home-navbar .nav-link:hover,
         .home-navbar .nav-link.active {
             color: white !important;
-
-            text-shadow:
-                0 0 15px rgba(0,183,255,.55);
+            text-shadow: 0 0 15px rgba(0,183,255,.55);
         }
 
         .home-navbar .nav-link:hover::after,
@@ -159,83 +126,49 @@
         }
 
 
-        /* =====================================================
+        /* =========================
            HERO
-        ===================================================== */
+        ========================= */
 
         .home-hero {
             position: relative;
-
             min-height: 560px;
-
             display: flex;
             align-items: center;
-
             overflow: hidden;
-
             color: white;
 
             background:
-                radial-gradient(
-                    circle at 85% 25%,
-                    rgba(0,183,255,.22),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 10% 90%,
-                    rgba(0,119,255,.18),
-                    transparent 35%
-                ),
-                linear-gradient(
-                    135deg,
-                    #020e19 0%,
-                    #06294a 52%,
-                    #005baa 100%
-                );
+                radial-gradient(circle at 85% 25%, rgba(0,183,255,.22), transparent 30%),
+                radial-gradient(circle at 10% 90%, rgba(0,119,255,.18), transparent 35%),
+                linear-gradient(135deg, #020e19 0%, #06294a 52%, #005baa 100%);
         }
 
         .home-hero::before {
             content: "";
-
             position: absolute;
-
             width: 600px;
             height: 600px;
-
             right: -220px;
             top: -280px;
-
             border-radius: 50%;
-
             background: rgba(0,183,255,.13);
-
             filter: blur(80px);
         }
 
         .home-hero::after {
             content: "";
-
             position: absolute;
-
             left: 0;
             right: 0;
             bottom: 0;
-
             height: 140px;
-
-            background:
-                linear-gradient(
-                    to top,
-                    #f4f7fb,
-                    transparent
-                );
+            background: linear-gradient(to top, #f4f7fb, transparent);
         }
 
         .home-hero-content {
             position: relative;
-
             z-index: 2;
-
             padding: 90px 0 120px;
         }
 
@@ -243,159 +176,90 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-
             padding: 9px 16px;
-
             border-radius: 50px;
-
             background: rgba(255,255,255,.08);
-
             border: 1px solid rgba(0,183,255,.38);
-
             color: #65ceff;
-
             font-size: 12px;
             font-weight: 900;
-
             letter-spacing: 1.5px;
-
-            box-shadow:
-                0 0 25px rgba(0,183,255,.08);
         }
 
         .hero-kicker::before {
             content: "";
-
             width: 7px;
             height: 7px;
-
             border-radius: 50%;
-
             background: #ff315f;
-
-            box-shadow:
-                0 0 10px rgba(255,49,95,.8);
+            box-shadow: 0 0 10px rgba(255,49,95,.8);
         }
 
         .home-hero h1 {
             max-width: 850px;
-
             margin-top: 24px;
-
             font-size: clamp(48px, 7vw, 82px);
-
             line-height: .98;
-
             letter-spacing: -4px;
-
             font-weight: 950;
         }
 
         .home-hero h1 span {
-            background:
-                linear-gradient(
-                    90deg,
-                    #ffffff,
-                    #55c8ff
-                );
-
+            background: linear-gradient(90deg, #ffffff, #55c8ff);
             -webkit-background-clip: text;
             background-clip: text;
-
             color: transparent;
         }
 
         .home-hero p {
             max-width: 670px;
-
             margin-top: 25px;
-
             color: rgba(255,255,255,.68);
-
             font-size: 19px;
-
             line-height: 1.7;
         }
 
         .hero-buttons {
             display: flex;
             flex-wrap: wrap;
-
             gap: 12px;
-
             margin-top: 30px;
         }
 
-        .hero-button-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            padding: 14px 23px;
-
-            border-radius: 12px;
-
-            color: white;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #0077ff,
-                    #00a8ff
-                );
-
-            text-decoration: none;
-
-            font-weight: 850;
-
-            box-shadow:
-                0 12px 30px rgba(0,119,255,.28);
-
-            transition: .3s;
-        }
-
-        .hero-button-primary:hover {
-            color: white;
-
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 18px 35px rgba(0,119,255,.38);
-        }
-
+        .hero-button-primary,
         .hero-button-secondary {
             display: inline-flex;
             align-items: center;
-
             padding: 14px 23px;
-
             border-radius: 12px;
-
             color: white;
-
-            background: rgba(255,255,255,.06);
-
-            border: 1px solid rgba(255,255,255,.16);
-
             text-decoration: none;
-
-            font-weight: 750;
-
             transition: .3s;
         }
 
+        .hero-button-primary {
+            gap: 8px;
+            background: linear-gradient(90deg, #0077ff, #00a8ff);
+            font-weight: 850;
+            box-shadow: 0 12px 30px rgba(0,119,255,.28);
+        }
+
+        .hero-button-secondary {
+            background: rgba(255,255,255,.06);
+            border: 1px solid rgba(255,255,255,.16);
+            font-weight: 750;
+        }
+
+        .hero-button-primary:hover,
         .hero-button-secondary:hover {
             color: white;
-
-            background: rgba(255,255,255,.12);
-
             transform: translateY(-3px);
         }
 
 
-        /* =====================================================
+        /* =========================
            SECCIONES
-        ===================================================== */
+        ========================= */
 
         .home-section {
             padding: 75px 0;
@@ -405,278 +269,170 @@
             display: flex;
             align-items: end;
             justify-content: space-between;
-
             gap: 20px;
-
             margin-bottom: 28px;
-        }
-
-        .section-heading-left {
-            position: relative;
         }
 
         .section-kicker {
             display: block;
-
             margin-bottom: 7px;
-
             color: var(--azul);
-
             font-size: 11px;
             font-weight: 900;
-
             letter-spacing: 1.5px;
         }
 
         .section-heading h2 {
             margin: 0;
-
             color: var(--texto);
-
             font-size: clamp(28px, 4vw, 38px);
-
             font-weight: 950;
-
             letter-spacing: -1.5px;
         }
 
         .section-heading a {
-            display: inline-flex;
-            align-items: center;
-
             padding: 10px 16px;
-
             border-radius: 10px;
-
             color: var(--azul);
-
             background: rgba(0,119,255,.06);
-
             border: 1px solid rgba(0,119,255,.12);
-
             text-decoration: none;
-
             font-weight: 800;
-
-            transition: .3s;
-        }
-
-        .section-heading a:hover {
-            color: white;
-
-            background: var(--azul);
-
-            transform: translateY(-2px);
         }
 
 
-        /* =====================================================
+        /* =========================
            NOTICIA PRINCIPAL
-        ===================================================== */
+        ========================= */
 
         .noticia-principal {
             position: relative;
-
             height: 500px;
-
             overflow: hidden;
-
             border-radius: 26px;
-
             background: #061a2c;
-
-            box-shadow:
-                0 25px 60px rgba(0,35,70,.14);
-
+            box-shadow: 0 25px 60px rgba(0,35,70,.14);
             transition: .4s;
         }
 
         .noticia-principal img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
             transition: .7s;
         }
 
         .noticia-principal:hover {
             transform: translateY(-6px);
-
-            box-shadow:
-                0 30px 70px rgba(0,100,180,.22);
         }
 
         .noticia-principal:hover img {
             transform: scale(1.06);
         }
 
-        .noticia-principal .overlay {
+        .overlay {
             position: absolute;
             inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(3,15,28,.97) 0%,
-                    rgba(3,15,28,.68) 35%,
-                    rgba(3,15,28,.04) 75%
-                );
+            background: linear-gradient(
+                to top,
+                rgba(3,15,28,.97) 0%,
+                rgba(3,15,28,.68) 35%,
+                rgba(3,15,28,.04) 75%
+            );
         }
 
-        .noticia-principal .contenido {
+        .contenido {
             position: absolute;
-
             left: 0;
             right: 0;
             bottom: 0;
-
             padding: 35px;
-
             color: white;
         }
 
         .categoria {
             display: inline-block;
-
             padding: 7px 13px;
-
             border-radius: 50px;
-
-            background:
-                linear-gradient(
-                    90deg,
-                    #0077ff,
-                    #00b7ff
-                );
-
+            background: linear-gradient(90deg, #0077ff, #00b7ff);
             color: white;
-
             font-size: 11px;
             font-weight: 900;
-
             letter-spacing: 1px;
-
-            box-shadow:
-                0 7px 20px rgba(0,119,255,.2);
         }
 
         .noticia-principal h2 {
-            max-width: 850px;
-
             margin-top: 16px;
             margin-bottom: 12px;
-
             color: white;
-
             font-size: clamp(28px, 4vw, 43px);
-
             line-height: 1.08;
-
             font-weight: 950;
-
-            letter-spacing: -1.5px;
         }
 
         .noticia-principal p {
             margin: 0;
-
             color: rgba(255,255,255,.55);
-
             font-size: 13px;
         }
 
 
-        /* =====================================================
-           NOTICIAS MINI
-        ===================================================== */
+        /* =========================
+           MINI NOTICIAS
+        ========================= */
 
         .mini-noticia {
             position: relative;
-
             height: 238px;
-
             overflow: hidden;
-
             border-radius: 22px;
-
             background: #061a2c;
-
-            box-shadow:
-                0 18px 45px rgba(0,35,70,.11);
-
+            box-shadow: 0 18px 45px rgba(0,35,70,.11);
             transition: .4s;
         }
 
         .mini-noticia img {
             width: 100%;
             height: 100%;
-
             object-fit: cover;
-
             transition: .6s;
         }
 
         .mini-noticia:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 25px 55px rgba(0,119,255,.18);
         }
 
         .mini-noticia:hover img {
             transform: scale(1.07);
         }
 
-        .mini-noticia .overlay {
-            position: absolute;
-            inset: 0;
-
-            background:
-                linear-gradient(
-                    to top,
-                    rgba(3,15,28,.96),
-                    rgba(3,15,28,.04) 80%
-                );
-        }
-
         .contenido-mini {
             position: absolute;
-
             left: 0;
             right: 0;
             bottom: 0;
-
             padding: 23px;
         }
 
         .contenido-mini span {
-            display: inline-block;
-
             color: #65ceff;
-
             font-size: 10px;
             font-weight: 900;
-
             letter-spacing: 1.3px;
         }
 
         .contenido-mini h5 {
             margin: 9px 0 0;
-
             color: white;
-
             font-size: 20px;
-
             line-height: 1.2;
-
             font-weight: 850;
         }
 
 
-        /* =====================================================
-           GETAFE EN UN VISTAZO
-        ===================================================== */
+        /* =========================
+           OVERVIEW
+        ========================= */
 
         .overview-section {
             padding: 35px 0 75px;
@@ -686,7 +442,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             margin-bottom: 25px;
         }
 
@@ -696,108 +451,71 @@
             gap: 12px;
         }
 
-        .overview-title::before {
+        .overview-title::before,
+        .follow-heading::before {
             content: "";
-
             width: 4px;
             height: 30px;
-
             border-radius: 10px;
-
-            background: linear-gradient(
-                to bottom,
-                #0077ff,
-                #00b7ff
-            );
+            background: linear-gradient(to bottom, #0077ff, #00b7ff);
         }
 
-        .overview-title h2 {
+        .overview-title h2,
+        .follow-heading h2 {
             margin: 0;
-
             font-size: 30px;
-
             font-weight: 950;
-
-            letter-spacing: -1px;
         }
 
         .overview-link {
             color: #0077ff;
-
             text-decoration: none;
-
             font-weight: 800;
-
-            font-size: 14px;
-        }
-
-        .overview-link:hover {
-            color: #005dcc;
         }
 
         .overview-card {
             height: 100%;
-
             padding: 25px;
-
             background: white;
-
             border: 1px solid #e0e7ef;
-
             border-radius: 17px;
-
-            box-shadow:
-                0 12px 35px rgba(0,35,70,.07);
-
+            box-shadow: 0 12px 35px rgba(0,35,70,.07);
             transition: .3s;
         }
 
         .overview-card:hover {
             transform: translateY(-5px);
-
-            box-shadow:
-                0 20px 45px rgba(0,100,180,.12);
         }
 
         .overview-icon {
             width: 42px;
             height: 42px;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             margin-bottom: 18px;
-
             border-radius: 11px;
-
             background: #eaf4ff;
-
             font-size: 20px;
         }
 
         .overview-card h3 {
             margin-bottom: 8px;
-
             font-size: 19px;
-
             font-weight: 900;
         }
 
         .overview-card p {
             margin: 0;
-
             color: #718196;
-
             font-size: 13px;
-
             line-height: 1.65;
         }
 
 
-        /* =====================================================
+        /* =========================
            SIGUE AL GETAFE
-        ===================================================== */
+        ========================= */
 
         .follow-section {
             padding: 0 0 80px;
@@ -807,231 +525,51 @@
             display: flex;
             align-items: center;
             gap: 12px;
-
             margin-bottom: 25px;
-        }
-
-        .follow-heading::before {
-            content: "";
-
-            width: 4px;
-            height: 30px;
-
-            border-radius: 10px;
-
-            background: linear-gradient(
-                to bottom,
-                #0077ff,
-                #00b7ff
-            );
-        }
-
-        .follow-heading h2 {
-            margin: 0;
-
-            font-size: 30px;
-
-            font-weight: 950;
-
-            letter-spacing: -1px;
         }
 
         .follow-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             min-height: 50px;
-
             padding: 15px 20px;
-
             background: white;
-
             border: 1px solid #e0e7ef;
-
             border-radius: 13px;
-
             color: var(--texto);
-
             text-decoration: none;
-
-            box-shadow:
-                0 8px 25px rgba(0,35,70,.05);
-
             transition: .3s;
         }
 
         .follow-card:hover {
             color: #0077ff;
-
             transform: translateY(-3px);
-
-            box-shadow:
-                0 14px 30px rgba(0,119,255,.1);
         }
 
         .follow-card-title {
             display: flex;
             align-items: center;
             gap: 10px;
-
             font-weight: 850;
-
             font-size: 14px;
         }
 
         .follow-arrow {
             font-size: 18px;
-
             color: #0077ff;
         }
 
 
-        /* =====================================================
-           PRÓXIMO PARTIDO
-        ===================================================== */
-
-        .next-match {
-            position: relative;
-
-            overflow: hidden;
-
-            border-radius: 27px;
-
-            background:
-                radial-gradient(
-                    circle at 50% -20%,
-                    rgba(0,183,255,.18),
-                    transparent 45%
-                ),
-                linear-gradient(
-                    135deg,
-                    #031321,
-                    #06294a
-                );
-
-            color: white;
-
-            box-shadow:
-                0 25px 60px rgba(0,35,70,.16);
-        }
-
-        .next-match::after {
-            content: "";
-
-            position: absolute;
-
-            width: 300px;
-            height: 300px;
-
-            right: -140px;
-            bottom: -160px;
-
-            border-radius: 50%;
-
-            background: rgba(0,183,255,.12);
-
-            filter: blur(50px);
-        }
-
-        .next-match-inner {
-            position: relative;
-
-            z-index: 2;
-
-            padding: 45px 35px;
-        }
-
-        .next-match-label {
-            display: inline-block;
-
-            padding: 7px 14px;
-
-            border-radius: 50px;
-
-            background: rgba(0,183,255,.11);
-
-            border: 1px solid rgba(0,183,255,.3);
-
-            color: #65ceff;
-
-            font-size: 10px;
-
-            font-weight: 900;
-
-            letter-spacing: 1.5px;
-        }
-
-        .next-match h2 {
-            margin-top: 15px;
-
-            color: white;
-
-            font-weight: 900;
-        }
-
-        .match-team img {
-            width: 110px;
-            height: 110px;
-
-            object-fit: contain;
-
-            filter:
-                drop-shadow(
-                    0 10px 20px rgba(0,0,0,.3)
-                );
-
-            transition: .3s;
-        }
-
-        .match-team:hover img {
-            transform: scale(1.06);
-        }
-
-        .match-team h3 {
-            margin-top: 17px;
-
-            color: white;
-
-            font-size: 22px;
-
-            font-weight: 850;
-        }
-
-        .match-vs {
-            color: #55c8ff;
-
-            font-size: 44px;
-
-            font-weight: 950;
-
-            text-shadow:
-                0 0 20px rgba(0,183,255,.3);
-        }
-
-        .match-info {
-            margin-top: 8px;
-
-            color: rgba(255,255,255,.52);
-
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
+        /* =========================
            FOOTER
-        ===================================================== */
+        ========================= */
 
         .home-footer {
             margin-top: 30px;
-
             padding: 65px 0 30px;
-
             background: #031321;
-
             color: white;
-
-            border-top: 1px solid rgba(0,183,255,.18);
         }
 
         .home-footer h3,
@@ -1041,47 +579,15 @@
 
         .home-footer p {
             color: rgba(255,255,255,.52);
-
-            line-height: 1.7;
         }
 
         .home-footer a {
             color: rgba(255,255,255,.58);
-
             text-decoration: none;
-
-            transition: .25s;
-        }
-
-        .home-footer a:hover {
-            color: #55c8ff;
-
-            padding-left: 3px;
         }
 
         .footer-line {
             border-color: rgba(255,255,255,.1);
-        }
-
-
-        /* =====================================================
-           RESPONSIVE
-        ===================================================== */
-
-        @media (max-width: 991px) {
-
-            .home-hero {
-                min-height: 500px;
-            }
-
-            .home-hero-content {
-                padding: 75px 0 100px;
-            }
-
-            .noticia-principal {
-                height: 430px;
-            }
-
         }
 
 
@@ -1096,13 +602,8 @@
             }
 
             .home-hero h1 {
+                font-size: clamp(42px, 12vw, 60px);
                 letter-spacing: -2.5px;
-
-                font-size: clamp(
-                    42px,
-                    12vw,
-                    60px
-                );
             }
 
             .home-hero p {
@@ -1111,117 +612,15 @@
 
             .hero-buttons {
                 flex-direction: column;
-
-                align-items: stretch;
-            }
-
-            .hero-button-primary,
-            .hero-button-secondary {
-                justify-content: center;
-            }
-
-            .home-section {
-                padding: 50px 0;
-            }
-
-            .section-heading {
-                align-items: flex-start;
-
-                flex-direction: column;
-            }
-
-            .section-heading a {
-                width: 100%;
-
-                justify-content: center;
             }
 
             .noticia-principal {
                 height: 390px;
-
-                border-radius: 21px;
             }
 
-            .noticia-principal .contenido {
-                padding: 24px;
-            }
-
-            .noticia-principal h2 {
-                font-size: 28px;
-            }
-
-            .mini-noticia {
-                height: 230px;
-
-                border-radius: 20px;
-            }
-
-            .overview-section {
-                padding-top: 20px;
-            }
-
-            .overview-heading {
+            .section-heading {
+                flex-direction: column;
                 align-items: flex-start;
-            }
-
-            .overview-title h2,
-            .follow-heading h2 {
-                font-size: 26px;
-            }
-
-            .overview-link {
-                display: none;
-            }
-
-            .next-match-inner {
-                padding: 35px 20px;
-            }
-
-            .match-team img {
-                width: 85px;
-                height: 85px;
-            }
-
-            .match-team h3 {
-                font-size: 18px;
-            }
-
-            .match-vs {
-                font-size: 32px;
-            }
-
-        }
-
-
-        @media (max-width: 480px) {
-
-            .home-navbar .navbar-brand img {
-                width: 42px;
-                height: 42px;
-            }
-
-            .home-navbar .navbar-brand .fs-4 {
-                font-size: 17px !important;
-            }
-
-            .home-navbar .navbar-brand small {
-                font-size: 10px;
-            }
-
-            .noticia-principal {
-                height: 400px;
-            }
-
-            .noticia-principal h2 {
-                font-size: 25px;
-            }
-
-            .contenido-mini h5 {
-                font-size: 18px;
-            }
-
-            .overview-card {
-                padding: 22px;
             }
 
         }
@@ -1234,9 +633,7 @@
 <body>
 
 
-    <!-- =====================================================
-         NAVBAR
-    ===================================================== -->
+    <!-- NAVBAR -->
 
     <nav class="navbar navbar-expand-lg navbar-dark home-navbar">
 
@@ -1280,57 +677,39 @@
                 <ul class="navbar-nav ms-auto">
 
                     <li class="nav-item">
-
-                        <a class="nav-link active"
-                           href="index.html">
+                        <a class="nav-link active" href="index.html">
                             Inicio
                         </a>
-
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link"
-                           href="noticias.html">
+                        <a class="nav-link" href="noticias.html">
                             Noticias
                         </a>
-
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link"
-                           href="rumores.html">
+                        <a class="nav-link" href="rumores.html">
                             Rumores
                         </a>
-
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link"
-                           href="plantilla.html">
+                        <a class="nav-link" href="plantilla.html">
                             Plantilla
                         </a>
-
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link"
-                           href="partidos.html">
+                        <a class="nav-link" href="partidos.html">
                             Partidos
                         </a>
-
                     </li>
 
                     <li class="nav-item">
-
-                        <a class="nav-link"
-                           href="clasificacion.html">
+                        <a class="nav-link" href="clasificacion.html">
                             Clasificación
                         </a>
-
                     </li>
 
                 </ul>
@@ -1343,9 +722,7 @@
 
 
 
-    <!-- =====================================================
-         HERO
-    ===================================================== -->
+    <!-- HERO -->
 
     <section class="home-hero">
 
@@ -1371,16 +748,12 @@
 
                     <a href="noticias.html"
                        class="hero-button-primary">
-
                         Ver últimas noticias →
-
                     </a>
 
                     <a href="rumores.html"
                        class="hero-button-secondary">
-
                         Mercado azulón
-
                     </a>
 
                 </div>
@@ -1393,9 +766,7 @@
 
 
 
-    <!-- =====================================================
-         NOTICIAS DESTACADAS
-    ===================================================== -->
+    <!-- NOTICIAS DESTACADAS -->
 
     <section class="container home-section">
 
@@ -1423,116 +794,114 @@
         <div class="row g-4">
 
 
-   <!-- =================================================
-     NOTICIA PRINCIPAL · EUROPA
-================================================= -->
+            <!-- NOTICIA PRINCIPAL -->
 
-<div class="col-lg-8">
+            <div class="col-lg-8">
 
-    <a href="noticia-clasificacion.html"
-       class="text-decoration-none">
+                <a href="noticia-conference-partizan.html"
+                   class="text-decoration-none">
 
-        <article class="noticia-principal">
+                    <article class="noticia-principal">
 
-            <img src="img/noticias/conference-partizan.jpg"
-                 alt="El Getafe vuelve a Europa">
+                        <img src="img/noticias/conference-partizan.jpg"
+                             alt="Getafe CF en la Conference League">
 
-            <div class="overlay"></div>
+                        <div class="overlay"></div>
 
-            <div class="contenido">
+                        <div class="contenido">
 
-                <span class="categoria">
-                    🏆 EUROPA
-                </span>
+                            <span class="categoria">
+                                🏆 CONFERENCE LEAGUE
+                            </span>
 
-                <h2>
-                    El Getafe vuelve a Europa:
-                    siete años después, el sueño es una realidad
-                </h2>
+                            <h2>
+                                El Getafe vuelve a Europa:
+                                una nueva aventura para el Getafismo
+                            </h2>
 
-                <p>
-                    27 de agosto de 2026 · Redacción Azulones News
-                </p>
+                            <p>
+                                Agosto de 2026 · Redacción Azulones News
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </a>
 
             </div>
 
-        </article>
 
-    </a>
-
-</div>
-
-            <!-- =================================================
-                 NOTICIAS SECUNDARIAS
-            ================================================= -->
+            <!-- NOTICIAS SECUNDARIAS -->
 
             <div class="col-lg-4">
 
 
-  <!-- SORTEO CONFERENCE -->
+                <a href="noticia-sorteo-conference.html"
+                   class="text-decoration-none">
 
-<a href="noticia-sorteo-conference.html"
-   class="text-decoration-none">
+                    <article class="mini-noticia">
 
-    <article class="mini-noticia">
+                        <img src="img/noticias/davidsoria.jpg"
+                             alt="Conference League">
 
-        <img src="img/noticias/conference.jpg"
-             alt="El Getafe estará en el sorteo de la Conference League">
+                        <div class="overlay"></div>
 
-        <div class="overlay"></div>
+                        <div class="contenido-mini">
 
-        <div class="contenido-mini">
+                            <span>
+                                CONFERENCE LEAGUE
+                            </span>
 
-            <span>
-                🏆 CONFERENCE LEAGUE
-            </span>
+                            <h5>
+                                El Getafe estará presente en el sorteo
+                                de la Conference League
+                            </h5>
 
-            <h5>
-                El Getafe estará en el sorteo:
-                hoy conocerá su camino en Europa
-            </h5>
+                        </div>
+
+                    </article>
+
+                </a>
+
+
+                <a href="noticia-enes-unal.html"
+                   class="text-decoration-none">
+
+                    <article class="mini-noticia mt-4">
+
+                        <img src="img/noticias/enes-unal-racing.jpg"
+                             alt="Enes Ünal">
+
+                        <div class="overlay"></div>
+
+                        <div class="contenido-mini">
+
+                            <span>
+                                EUROPA
+                            </span>
+
+                            <h5>
+                                El gol de Enes Ünal que mete
+                                al Getafe en Europa
+                            </h5>
+
+                        </div>
+
+                    </article>
+
+                </a>
+
+
+            </div>
 
         </div>
 
-    </article>
-
-</a>
-
-
-<!-- ENES ÜNAL -->
-
-<a href="noticia-enes-unal.html"
-   class="text-decoration-none">
-
-    <article class="mini-noticia mt-4">
-
-        <img src="img/noticias/enes-unal-racing.jpg"
-             alt="Enes Ünal celebra su gol con el Getafe">
-
-        <div class="overlay"></div>
-
-        <div class="contenido-mini">
-
-            <span>
-                ⚽ CONFERENCE LEAGUE
-            </span>
-
-            <h5>
-                El gol de Enes Ünal que
-                llevó al Getafe de vuelta a Europa
-            </h5>
-
-        </div>
-
-    </article>
-
-</a>
+    </section>
 
 
 
-    <!-- =====================================================
-         EL GETAFE EN UN VISTAZO
-    ===================================================== -->
+    <!-- EL GETAFE EN UN VISTAZO -->
 
     <section class="container overview-section">
 
@@ -1558,8 +927,6 @@
 
         <div class="row g-4">
 
-
-            <!-- ÚLTIMAS NOTICIAS -->
 
             <div class="col-lg-4">
 
@@ -1589,9 +956,6 @@
             </div>
 
 
-
-            <!-- MERCADO -->
-
             <div class="col-lg-4">
 
                 <a href="rumores.html"
@@ -1618,9 +982,6 @@
 
             </div>
 
-
-
-            <!-- TEMPORADA -->
 
             <div class="col-lg-4">
 
@@ -1654,9 +1015,7 @@
 
 
 
-    <!-- =====================================================
-         SIGUE AL GETAFE
-    ===================================================== -->
+    <!-- SIGUE AL GETAFE -->
 
     <section class="container follow-section">
 
@@ -1672,19 +1031,13 @@
         <div class="row g-3">
 
 
-            <!-- PLANTILLA -->
-
             <div class="col-lg-4">
 
                 <a href="plantilla.html"
                    class="follow-card">
 
                     <span class="follow-card-title">
-
-                        👥
-
-                        Plantilla
-
+                        👥 Plantilla
                     </span>
 
                     <span class="follow-arrow">
@@ -1695,9 +1048,6 @@
 
             </div>
 
-
-
-            <!-- PARTIDOS -->
 
             <div class="col-lg-4">
 
@@ -1705,11 +1055,7 @@
                    class="follow-card">
 
                     <span class="follow-card-title">
-
-                        ⚽
-
-                        Partidos
-
+                        ⚽ Partidos
                     </span>
 
                     <span class="follow-arrow">
@@ -1720,9 +1066,6 @@
 
             </div>
 
-
-
-            <!-- CLASIFICACIÓN -->
 
             <div class="col-lg-4">
 
@@ -1730,11 +1073,7 @@
                    class="follow-card">
 
                     <span class="follow-card-title">
-
-                        🏆
-
-                        Clasificación
-
+                        🏆 Clasificación
                     </span>
 
                     <span class="follow-arrow">
@@ -1751,97 +1090,7 @@
 
 
 
-    <!-- =====================================================
-         PRÓXIMO PARTIDO
-    ===================================================== -->
-
-    <section class="container home-section pt-0">
-
-        <div class="next-match">
-
-            <div class="next-match-inner">
-
-                <div class="text-center">
-
-                    <span class="next-match-label">
-                        PRÓXIMO PARTIDO
-                    </span>
-
-                    <h2>
-                        La cita con la gloria
-                    </h2>
-
-                </div>
-
-
-                <div class="row align-items-center text-center mt-5">
-
-
-                    <!-- GETAFE -->
-
-                    <div class="col-5">
-
-                        <div class="match-team">
-
-                            <img src="img/iconos/getafe.png"
-                                 alt="Getafe CF">
-
-                            <h3>
-                                Getafe CF
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- VS -->
-
-                    <div class="col-2">
-
-                        <div class="match-vs">
-                            VS
-                        </div>
-
-                        <div class="match-info">
-                            Jueves 27 agosto
-                        </div>
-
-                    </div>
-
-
-
-                    <!-- PARTIZÁN -->
-
-                    <div class="col-5">
-
-                        <div class="match-team">
-
-                            <img src="img/iconos/partizan.png"
-                                 alt="Partizán">
-
-                            <h3>
-                                Partizán
-                            </h3>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
+    <!-- FOOTER -->
 
     <footer class="home-footer">
 
@@ -1862,7 +1111,6 @@
                     </p>
 
                 </div>
-
 
 
                 <div class="col-lg-3">
@@ -1888,7 +1136,6 @@
                     </div>
 
                 </div>
-
 
 
                 <div class="col-lg-3">
@@ -1922,15 +1169,12 @@
 
 
             <p class="text-center mb-0">
-
                 © 2026 Azulones News · Proyecto no oficial del Getafe CF.
-
             </p>
 
         </div>
 
     </footer>
-
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
