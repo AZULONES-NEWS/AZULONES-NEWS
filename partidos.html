@@ -24,272 +24,166 @@ content="Calendario, resultados y próximos partidos del Getafe CF durante la te
 ===================================================== */
 
 .partidos-hero{
-
     padding:90px 0 110px;
-
     background:
     radial-gradient(circle at top right,rgba(0,183,255,.18),transparent 35%),
     linear-gradient(135deg,#031321,#06294a);
-
     color:white;
-
 }
 
 .partidos-hero h1{
-
     font-size:clamp(45px,7vw,75px);
-
     font-weight:950;
-
     letter-spacing:-3px;
-
 }
 
 .partidos-hero p{
-
     color:rgba(255,255,255,.7);
-
     max-width:700px;
-
     font-size:18px;
-
     line-height:1.7;
-
 }
-
 
 /* =====================================================
    PRÓXIMO PARTIDO
 ===================================================== */
 
 .proximo-partido{
-
     margin-top:-60px;
-
     position:relative;
-
     z-index:10;
-
 }
 
 .proximo-card{
-
     background:white;
-
     border-radius:25px;
-
     padding:45px;
-
     box-shadow:0 20px 60px rgba(0,35,70,.15);
-
 }
 
 .proximo-label{
-
     display:inline-block;
-
     background:#eaf4ff;
-
     color:#0077ff;
-
     padding:8px 15px;
-
     border-radius:30px;
-
     font-size:11px;
-
     font-weight:900;
-
     letter-spacing:1px;
-
 }
 
 .proximo-card h2{
-
     font-size:32px;
-
     font-weight:950;
-
     margin-top:15px;
-
 }
 
 .proximo-fecha{
-
     color:#718196;
-
     font-weight:700;
-
     margin-bottom:35px;
-
 }
 
 .equipo-principal{
-
     text-align:center;
-
 }
 
 .equipo-principal img{
-
     width:110px;
-
     height:110px;
-
     object-fit:contain;
-
 }
 
 .equipo-principal h3{
-
     margin-top:15px;
-
     font-size:22px;
-
     font-weight:900;
-
 }
 
 .resultado-principal{
-
     text-align:center;
-
 }
 
 .resultado-principal .vs{
-
     font-size:45px;
-
     font-weight:950;
-
     color:#0077ff;
-
 }
-
 
 /* =====================================================
    COMPETICIÓN
 ===================================================== */
 
 .competicion-titulo{
-
     display:flex;
-
     align-items:center;
-
     gap:15px;
-
     margin:70px 0 30px;
-
 }
 
 .competicion-titulo .icono{
-
     width:50px;
-
     height:50px;
-
     display:flex;
-
     align-items:center;
-
     justify-content:center;
-
     border-radius:15px;
-
     background:#eaf4ff;
-
     font-size:22px;
-
 }
 
 .competicion-titulo h2{
-
     margin:0;
-
     font-size:32px;
-
     font-weight:950;
-
 }
-
 
 /* =====================================================
    PARTIDOS
 ===================================================== */
 
 .partido-card{
-
     height:100%;
-
     background:white;
-
     border-radius:20px;
-
     border:1px solid #e4eaf0;
-
     box-shadow:0 10px 30px rgba(0,35,70,.06);
-
     transition:.3s;
-
 }
 
 .partido-card:hover{
-
     transform:translateY(-5px);
-
     box-shadow:0 18px 40px rgba(0,80,150,.12);
-
 }
 
 .partido-card .card-body{
-
     padding:28px;
-
 }
 
 .jornada{
-
     color:#0077ff;
-
     font-size:11px;
-
     font-weight:900;
-
     letter-spacing:1px;
-
 }
 
 .equipo-linea{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     font-size:18px;
-
     font-weight:850;
-
 }
 
 .fecha-linea{
-
     color:#071b2e;
-
 }
 
 .hora-linea{
-
     color:#718196;
-
     font-size:14px;
-
     font-weight:700;
-
 }
-
 
 /* =====================================================
    MÓVIL
@@ -298,41 +192,28 @@ content="Calendario, resultados y próximos partidos del Getafe CF durante la te
 @media(max-width:768px){
 
     .partidos-hero{
-
         padding:70px 0 100px;
-
     }
 
     .proximo-card{
-
         padding:30px 20px;
-
     }
 
     .equipo-principal img{
-
         width:75px;
-
         height:75px;
-
     }
 
     .equipo-principal h3{
-
         font-size:16px;
-
     }
 
     .resultado-principal .vs{
-
         font-size:32px;
-
     }
 
     .competicion-titulo h2{
-
         font-size:26px;
-
     }
 
 }
@@ -341,9 +222,7 @@ content="Calendario, resultados y próximos partidos del Getafe CF durante la te
 
 </head>
 
-
 <body>
-
 
 <!-- =====================================================
      NAVBAR
@@ -367,7 +246,6 @@ AZULONES NEWS
 
 </a>
 
-
 <button
 class="navbar-toggler"
 type="button"
@@ -378,45 +256,32 @@ data-bs-target="#menu">
 
 </button>
 
-
 <div class="collapse navbar-collapse" id="menu">
 
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
-<a class="nav-link" href="index.html">
-Inicio
-</a>
+<a class="nav-link" href="index.html">Inicio</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="noticias.html">
-Noticias
-</a>
+<a class="nav-link" href="noticias.html">Noticias</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="rumores.html">
-Mercado
-</a>
+<a class="nav-link" href="rumores.html">Mercado</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="plantilla.html">
-Plantilla
-</a>
+<a class="nav-link" href="plantilla.html">Plantilla</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link active" href="partidos.html">
-Partidos
-</a>
+<a class="nav-link active" href="partidos.html">Partidos</a>
 </li>
 
 <li class="nav-item">
-<a class="nav-link" href="clasificacion.html">
-Clasificación
-</a>
+<a class="nav-link" href="clasificacion.html">Clasificación</a>
 </li>
 
 </ul>
@@ -427,7 +292,6 @@ Clasificación
 
 </nav>
 
-
 <!-- =====================================================
      HERO
 ===================================================== -->
@@ -436,9 +300,7 @@ Clasificación
 
 <div class="container text-center">
 
-<h1>
-Partidos del Getafe
-</h1>
+<h1>Partidos del Getafe</h1>
 
 <p>
 Resultados, próximos encuentros y calendario completo
@@ -449,12 +311,11 @@ del Getafe CF durante la temporada 2026/27.
 
 </section>
 
+<main class="container pb-5">
 
 <!-- =====================================================
-     ÚLTIMO PARTIDO
+     PRÓXIMO PARTIDO
 ===================================================== -->
-
-<main class="container pb-5">
 
 <section class="proximo-partido">
 
@@ -463,19 +324,18 @@ del Getafe CF durante la temporada 2026/27.
 <div class="text-center">
 
 <span class="proximo-label">
-ÚLTIMO PARTIDO
+PRÓXIMO PARTIDO
 </span>
 
 <h2>
-Victoria azulona
+Próximo partido en el Coliseum
 </h2>
 
 <p class="proximo-fecha">
-Jornada 2 · 23 de agosto de 2026
+Jornada 4 · 7 de septiembre de 2026 · 19:00
 </p>
 
 </div>
-
 
 <div class="row align-items-center">
 
@@ -488,40 +348,34 @@ src="img/iconos/getafe.png"
 alt="Getafe CF"
 >
 
-<h3>
-Getafe CF
-</h3>
+<h3>Getafe CF</h3>
 
 </div>
 
 </div>
-
 
 <div class="col-2">
 
 <div class="resultado-principal">
 
 <div class="vs">
-1 - 0
+VS
 </div>
 
 </div>
 
 </div>
-
 
 <div class="col-5">
 
 <div class="equipo-principal">
 
 <img
-src="img/iconos/racing.png"
-alt="Racing de Santander"
+src="img/iconos/celta.png"
+alt="Celta de Vigo"
 >
 
-<h3>
-Racing
-</h3>
+<h3>Celta</h3>
 
 </div>
 
@@ -532,7 +386,6 @@ Racing
 </div>
 
 </section>
-
 
 <!-- =====================================================
      CONFERENCE LEAGUE
@@ -550,9 +403,9 @@ UEFA Conference League
 
 </div>
 
-
 <div class="row g-4 mb-5">
 
+<!-- PARTIZAN IDA -->
 
 <div class="col-lg-6">
 
@@ -592,6 +445,7 @@ ELIMINATORIA · IDA
 
 </div>
 
+<!-- PARTIZAN VUELTA -->
 
 <div class="col-lg-6">
 
@@ -631,8 +485,247 @@ ELIMINATORIA · VUELTA
 
 </div>
 
+<!-- CONFERENCE 1 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 1
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Getafe</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
 </div>
 
+<div class="equipo-linea mt-3">
+
+<span>U. Craiova</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONFERENCE 2 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 2
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Lugano</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
+</div>
+
+<div class="equipo-linea mt-3">
+
+<span>Getafe</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONFERENCE 3 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 3
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Getafe</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
+</div>
+
+<div class="equipo-linea mt-3">
+
+<span>Brighton</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONFERENCE 4 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 4
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Iberia Tbilisi</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
+</div>
+
+<div class="equipo-linea mt-3">
+
+<span>Getafe</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONFERENCE 5 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 5
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Getafe</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
+</div>
+
+<div class="equipo-linea mt-3">
+
+<span>Inter Escaldes</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- CONFERENCE 6 -->
+
+<div class="col-lg-6">
+
+<div class="partido-card">
+
+<div class="card-body">
+
+<span class="jornada">
+FASE LIGA · JORNADA 6
+</span>
+
+<hr>
+
+<div class="equipo-linea">
+
+<span>Ajax</span>
+
+<strong class="fecha-linea">
+POR DEFINIR
+</strong>
+
+</div>
+
+<div class="equipo-linea mt-3">
+
+<span>Getafe</span>
+
+<span class="hora-linea">
+Por definir
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 <!-- =====================================================
      LALIGA
@@ -650,16 +743,12 @@ LaLiga EA Sports
 
 </div>
 
-
 <div class="row g-4">
-
 
 <!-- JORNADA 1 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 1</span>
@@ -667,38 +756,23 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
-
 <span>Alavés 3</span>
-
-<strong class="fecha-linea">
-15 AGO
-</strong>
-
+<strong class="fecha-linea">15 AGO</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe 0</span>
-
-<span class="hora-linea">
-19:30
-</span>
-
+<span class="hora-linea">19:30</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 2 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 2</span>
@@ -706,38 +780,23 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe 1</span>
-
-<strong class="fecha-linea">
-23 AGO
-</strong>
-
+<strong class="fecha-linea">23 AGO</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Racing de Santander 0</span>
-
-<span class="hora-linea">
-19:30
-</span>
-
+<span class="hora-linea">19:30</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 3 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 3</span>
@@ -745,38 +804,23 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
-
-<span>Osasuna</span>
-
-<strong class="fecha-linea">
-31 AGO
-</strong>
-
+<span>Osasuna 1</span>
+<strong class="fecha-linea">31 AGO</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
-<span>Getafe</span>
-
-<span class="hora-linea">
-19:30
-</span>
-
+<span>Getafe 0</span>
+<span class="hora-linea">19:30</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 4 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 4</span>
@@ -784,38 +828,23 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-7 SEP
-</strong>
-
+<strong class="fecha-linea">7 SEP</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Celta</span>
-
-<span class="hora-linea">
-19:00
-</span>
-
+<span class="hora-linea">19:00</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 5 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 5</span>
@@ -823,38 +852,23 @@ LaLiga EA Sports
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-13 SEP
-</strong>
-
+<strong class="fecha-linea">13 SEP</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Deportivo</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 6 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 6</span>
@@ -862,38 +876,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Real Betis</span>
-
-<strong class="fecha-linea">
-16 SEP
-</strong>
-
+<strong class="fecha-linea">16 SEP</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 7 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 7</span>
@@ -901,38 +900,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-20 SEP
-</strong>
-
+<strong class="fecha-linea">20 SEP</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Málaga</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 8 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 8</span>
@@ -940,38 +924,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Barcelona</span>
-
-<strong class="fecha-linea">
-11 OCT
-</strong>
-
+<strong class="fecha-linea">11 OCT</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 9 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 9</span>
@@ -979,38 +948,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-18 OCT
-</strong>
-
+<strong class="fecha-linea">18 OCT</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Rayo Vallecano</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 10 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 10</span>
@@ -1018,38 +972,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Athletic Club</span>
-
-<strong class="fecha-linea">
-25 OCT
-</strong>
-
+<strong class="fecha-linea">25 OCT</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 11 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 11</span>
@@ -1057,38 +996,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-1 NOV
-</strong>
-
+<strong class="fecha-linea">1 NOV</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Sevilla</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 12 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 12</span>
@@ -1096,38 +1020,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Villarreal</span>
-
-<strong class="fecha-linea">
-8 NOV
-</strong>
-
+<strong class="fecha-linea">8 NOV</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 13 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 13</span>
@@ -1135,38 +1044,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-22 NOV
-</strong>
-
+<strong class="fecha-linea">22 NOV</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Atlético de Madrid</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 14 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 14</span>
@@ -1174,38 +1068,23 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>RCD Espanyol</span>
-
-<strong class="fecha-linea">
-29 NOV
-</strong>
-
+<strong class="fecha-linea">29 NOV</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Getafe</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 <!-- JORNADA 15 -->
 
 <div class="col-lg-6">
-
 <div class="partido-card">
-
 <div class="card-body">
 
 <span class="jornada">JORNADA 15</span>
@@ -1213,36 +1092,22 @@ Por definir
 <hr>
 
 <div class="equipo-linea">
-
 <span>Getafe</span>
-
-<strong class="fecha-linea">
-6 DIC
-</strong>
-
+<strong class="fecha-linea">6 DIC</strong>
 </div>
 
 <div class="equipo-linea mt-3">
-
 <span>Valencia CF</span>
-
-<span class="hora-linea">
-Por definir
-</span>
-
+<span class="hora-linea">Por definir</span>
 </div>
 
 </div>
-
 </div>
-
 </div>
-
 
 </div>
 
 </main>
-
 
 <!-- =====================================================
      FOOTER
@@ -1267,7 +1132,6 @@ Calendario del Getafe CF · Temporada 2026/27
 </div>
 
 </footer>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
